@@ -20,7 +20,7 @@
         "node_modules",
         "dist",
         "esm",
-        "example",
+        "_",
         "tests",
     ]
 }
