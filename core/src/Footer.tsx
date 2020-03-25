@@ -7,9 +7,10 @@ import { PageContainer } from './layout'
 export const Footer = ({
     columns = {} as { [k: string]: ReactNode[] },
     businessName = 'Monster Inc.',
+    ...rest
 }) => {
     return (
-        <PageContainer minHeight='200px'>
+        <PageContainer minHeight='200px' {...rest}>
             <Stack isInline flexWrap='wrap' justifyContent='space-evenly'>
                 {Object.keys(columns).map((k) => {
                     return (

@@ -1,14 +1,22 @@
 import React from 'react'
-import { Image, Flex, Box, Stack } from '@chakra-ui/core'
+import { Image, Flex, Box, Stack, Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { Heading } from './Heading'
 import { Button } from './Button'
 import { Col, Row, Spacer, PageContainer } from './layout'
 
-export const Hero = ({ heading, subhead, cta, image, ...rest }) => (
+export const Hero = ({
+    heading,
+    subhead,
+    cta,
+    image,
+    bullett = '',
+    ...rest
+}) => (
     <PageContainer {...rest}>
         <Row justify='flex-start' w='100%'>
             <Stack spacing='30px' maxW='500px'>
+                <Bullett>{bullett}</Bullett>
                 <Heading fontSize='46px'>{heading}</Heading>
                 <SubHeading fontSize='22px'>{subhead}</SubHeading>
                 <Col align={['center', 'center', 'flex-start']}>
@@ -22,3 +30,15 @@ export const Hero = ({ heading, subhead, cta, image, ...rest }) => (
         </Row>
     </PageContainer>
 )
+
+export const Bullett = (props) => {
+    return (
+        <Text
+            w='fit-content'
+            px='20px'
+            bg='gray.200'
+            borderRadius='10px'
+            {...props}
+        />
+    )
+}
