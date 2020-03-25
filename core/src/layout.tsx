@@ -17,7 +17,9 @@ export const Spacer = ({ x = '0px', y = '0px' }) => {
 export const PageContainer: FC<FlexProps> = ({ children, ...props }) => {
     return (
         <Col width='100%' align='center' {...props}>
-            <Col w='100%' align='flex-start' maxW='pageContainer'>{children}</Col>
+            <Col w='100%' maxW='pageContainer'>
+                {children}
+            </Col>
         </Col>
     )
 }

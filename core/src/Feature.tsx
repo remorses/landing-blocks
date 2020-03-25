@@ -9,10 +9,11 @@ export const Feature = ({
     image,
     flip = false,
     backgroundColor = 'transparent',
+    ...rest
 }) => {
     const dir = flip ? 'row-reverse' : 'row'
     return (
-        <PageContainer py='120px' bg={backgroundColor}>
+        <PageContainer py='120px' bg={backgroundColor} {...rest}>
             <Row flexDir={dir} >
                 <Stack spacing={8} flex='1'>
                     <Heading

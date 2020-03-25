@@ -3,15 +3,17 @@ import React, { FC } from 'react'
 import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
+import { PageContainer } from './layout'
 
 export const FeaturesList = ({
     heading,
     subhead = '',
     features,
     backgroundColor = 'transparent',
+    ...rest
 }) => {
     return (
-        <Col py='120px' bg={backgroundColor}>
+        <PageContainer py='120px' bg={backgroundColor} {...rest}>
             <Stack spacing={2} flex='1' textAlign='center' align='center'>
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
@@ -33,7 +35,7 @@ export const FeaturesList = ({
                     <Feature key={i} {...step} />
                 ))}
             </Stack>
-        </Col>
+        </PageContainer>
     )
 }
 

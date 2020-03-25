@@ -5,8 +5,8 @@ import { Heading } from './Heading'
 import { Button } from './Button'
 import { Col, Row, Spacer, PageContainer } from './layout'
 
-export const Hero = ({ heading, subhead, cta, image }) => (
-    <PageContainer>
+export const Hero = ({ heading, subhead, cta, image, ...rest }) => (
+    <PageContainer {...rest}>
         <Row justify='flex-start' w='100%'>
             <Stack spacing='30px' maxW='500px'>
                 <Heading fontSize='46px'>{heading}</Heading>

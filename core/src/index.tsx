@@ -42,7 +42,7 @@ export const LandingProvider = ({ children }) => {
     return (
         <ThemeProvider theme={theme}>
             <CSSReset />
-            <Stack spacing={24} >{children}</Stack>
+            <Stack spacing='60px'>{children}</Stack>
         </ThemeProvider>
     )
 }
