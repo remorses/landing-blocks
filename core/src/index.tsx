@@ -6,6 +6,7 @@ export { Feature } from './Feature'
 export { HowItWorks } from './HowItWorks'
 export { FeaturesList } from './FeaturesList'
 export { NavBar } from './NavBar'
+export { Footer } from './Footer'
 export * from './layout'
 import {
     ThemeProvider,

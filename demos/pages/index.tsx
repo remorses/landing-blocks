@@ -11,6 +11,7 @@ import {
     HowItWorks,
     FeaturesList,
     NavBar,
+    Footer,
 } from 'react-landing/src'
 
 const Page = () => (
@@ -94,6 +95,26 @@ const Page = () => (
                 },
             ]}
             backgroundColor='gray.100'
+        />
+        <Footer
+            businessName='Prismic'
+            columns={{
+                Developers: [
+                    <a>Quickstart</a>,
+                    <a>Documentation</a>,
+                    <a>Samples</a>,
+                ],
+                Company: [
+                    <a>Quickstart</a>,
+                    <a>Documentation</a>,
+                    <a>Samples</a>,
+                ],
+                Product: [
+                    <a>Quickstart</a>,
+                    <a>Documentation</a>,
+                    <a>Samples</a>,
+                ],
+            }}
         />
     </LandingProvider>
 )
