@@ -4,6 +4,7 @@ export { Heading } from './Heading'
 export { SubHeading } from './SubHeading'
 export { Feature } from './Feature'
 export { HowItWorks } from './HowItWorks'
+export { FeaturesList } from './FeaturesList'
 export * from './layout'
 import {
     ThemeProvider,

@@ -9,6 +9,7 @@ import {
     Col,
     Feature,
     HowItWorks,
+    FeaturesList,
 } from 'react-landing/src'
 
 const Page = () => (
@@ -52,6 +53,36 @@ const Page = () => (
                         'We take care of hosting and scaling the publishing tools. All you have to do is host the website, but you can choose whichever hosting platform you prefer.',
                 },
             ]}
+        />
+        <FeaturesList
+            heading='Why we think Prismic is good for developers '
+            features={[
+                {
+                    heading: 'API to fetch content',
+                    icon: (
+                        <img src='https://images.prismic.io/prismic-website%2F4e288d2e-66cd-4209-9ada-fbfb6f1c19c1_api.svg?auto=compress,format' />
+                    ),
+                    subhead:
+                        'Unlike a traditional CMS, an API-based approach is much simpler and more secure. This includes options for REST, GraphQL, and SDKs that help our users to make the most of Prismic.',
+                },
+                {
+                    heading: 'No maintenance or server setup',
+                    icon: (
+                        <img src='https://images.prismic.io/prismic-website%2F4080f213-f9e0-47f1-ae57-1d26874f1a08_setup.svg?auto=compress,format' />
+                    ),
+                    subhead:
+                        "We offer a high-level SLAs, scalability, and a global CDN. We'll make sure that everything is running smoothly in the background so that you can focus on your projects.",
+                },
+                {
+                    heading: 'A growing ecosystem',
+                    icon: (
+                        <img src='https://images.prismic.io/prismic-website%2F4268d459-cec4-4e46-856b-d2eaba8d71f8_ecosystem.svg?auto=compress,format' />
+                    ),
+                    subhead:
+                        'Built by developers for developers - we actively engage with the community. Enjoy content that is created specifically for our community and join our Slack to discuss your Prismic projects.',
+                },
+            ]}
+            backgroundColor='gray.100'
         />
     </LandingProvider>
 )
