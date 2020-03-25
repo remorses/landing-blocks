@@ -1,9 +1,9 @@
 import React from 'react'
 import { Image, Flex, Box, Stack } from '@chakra-ui/core'
-import { SubHeading } from '../SubHeading'
-import { Heading } from '../Heading'
-import { Button } from '../Button'
-import { Col, Row, Spacer } from '../layout'
+import { SubHeading } from './SubHeading'
+import { Heading } from './Heading'
+import { Button } from './Button'
+import { Col, Row, Spacer } from './layout'
 
 export const Hero = ({
     bg = 'white',
@@ -54,7 +54,7 @@ export const Hero = ({
                     </Button>
                 </Col>
             </Stack>
-            <Spacer y={40} />
+            <Box flex='0.1' />
             <Col flex='1'>{image}</Col>
         </Row>
     </Box>

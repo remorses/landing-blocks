@@ -10,8 +10,8 @@ export const Row: FC<FlexProps> = (props) => {
     return <Flex flexDir='row' {...props} />
 }
 
-export const Spacer = ({ x = 0, y = 0 }) => {
-    return <Box mt={y + 'px'} ml={y + 'px'} />
+export const Spacer = ({ x = '0px', y = '0px' }) => {
+    return <Box mt={y} ml={x} />
 }
 
 export {Divider} from '@chakra-ui/core'

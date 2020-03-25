@@ -7,6 +7,7 @@ import {
     SubHeading,
     Divider,
     Col,
+    Feature,
 } from 'react-landing/src'
 
 const Page = () => (
@@ -18,7 +19,13 @@ const Page = () => (
             image={<img src='/code.png' />}
             cta='Test it out'
         />
-        <Divider w='100%' />
+        <Feature
+            heading='Prismic is a Content Management System, a tool for editing online content'
+            subhead="Also known as a headless CMS, an API CMS, a content platform, a disruptive content-as-a-service digital experience...basically we've built a tool that lets you choose your technology, framework, and language and then easily manage your content."
+            image={<img src='feature1.jpg' width='500px' />}
+            backgroundColor='gray.100'
+            flip
+        />
     </LandingProvider>
 )
 

@@ -2,6 +2,7 @@ import React from 'react'
 export { Hero } from './Hero'
 export { Heading } from './Heading'
 export { SubHeading } from './SubHeading'
+export { Feature } from './Feature'
 export * from './layout'
 import {
     ThemeProvider,
@@ -30,7 +31,7 @@ export const LandingProvider = ({ children }) => {
     }
     return (
         <ThemeProvider theme={theme}>
-            <Stack spacing={8}>{children}</Stack>
+            <Stack spacing={24}>{children}</Stack>
         </ThemeProvider>
     )
 }
