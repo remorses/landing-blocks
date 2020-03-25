@@ -44,8 +44,8 @@ export const Hero = ({
             bg={bg}
             style={{ opacity: backgroundImage ? bgOpacity : 1, height: '100%' }}
         />
-        <Row {...props}>
-            <Stack spacing={4} flex='1'>
+        <Row {...props} justify='center' align='flex-start'>
+            <Stack spacing={4} maxW='500px'>
                 <Heading fontSize='46px'>{heading}</Heading>
                 <SubHeading fontSize='22px'>{subhead}</SubHeading>
                 <Col align={['center', 'center', 'flex-start']}>
@@ -54,8 +54,8 @@ export const Hero = ({
                     </Button>
                 </Col>
             </Stack>
-            <Box flex='0.1' />
-            <Col flex='1'>{image}</Col>
+            <Box ml='40px' />
+            <Col maxW='500px'>{image}</Col>
         </Row>
     </Box>
 )

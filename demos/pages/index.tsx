@@ -18,7 +18,7 @@ const Page = () => (
             heading='Make your website editable for the whole team'
             subhead='Choose your technology. Use the API to fetch content. Empower
         your content team.'
-            image={<img src='/code.png' />}
+            image={<img width='500px' src='/code.png' />}
             cta='Test it out'
         />
         <Feature
