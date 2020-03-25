@@ -3,5 +3,8 @@
     "workspaces": [
         "core",
         "demos"
-    ]
+    ],
+    "scripts": {
+        "example": "cd demos && yarn dev"
+    }
 }

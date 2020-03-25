@@ -1,12 +1,19 @@
 import React from 'react'
-import { Image, Flex, Box } from '@chakra-ui/core'
+import { Image, Flex, Box, Stack } from '@chakra-ui/core'
+import { SubHeading } from '../SubHeading'
+import { Heading } from '../Heading'
+import { Button } from '../Button'
+import { Col, Row, Spacer } from '../layout'
 
 export const Hero = ({
     bg = 'white',
+    heading,
+    subhead,
+    cta,
+    image,
     backgroundImage = null,
     bgOpacity = 1,
     style = {},
-    children = [],
     ...props
 }) => (
     <Box display='relative'>
@@ -37,14 +44,18 @@ export const Hero = ({
             bg={bg}
             style={{ opacity: backgroundImage ? bgOpacity : 1, height: '100%' }}
         />
-        <Flex
-            style={{
-                minHeight: '100vh',
-                ...style,
-            }}
-            {...props}
-        >
-            {children}
-        </Flex>
+        <Row {...props}>
+            <Stack spacing={4} flex='1'>
+                <Heading fontSize='46px'>{heading}</Heading>
+                <SubHeading fontSize='22px'>{subhead}</SubHeading>
+                <Col align={['center', 'center', 'flex-start']}>
+                    <Button bg='primary' d='block' width='auto'>
+                        {cta}
+                    </Button>
+                </Col>
+            </Stack>
+            <Spacer y={40} />
+            <Col flex='1'>{image}</Col>
+        </Row>
     </Box>
 )
