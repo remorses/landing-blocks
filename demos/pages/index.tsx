@@ -10,10 +10,21 @@ import {
     Feature,
     HowItWorks,
     FeaturesList,
+    NavBar,
 } from 'react-landing/src'
 
 const Page = () => (
     <LandingProvider>
+        <NavBar
+            logo={<img width='120px' src='logo.svg' />}
+            navs={[
+                <a>Features</a>,
+                <a>Use Cases</a>,
+                <a>Pricing</a>,
+                <a>About Us</a>,
+                <a>Login</a>,
+            ]}
+        />
         <Hero
             heading='Make your website editable for the whole team'
             subhead='Choose your technology. Use the API to fetch content. Empower
