@@ -3,6 +3,7 @@ export { Hero } from './Hero'
 export { Heading } from './Heading'
 export { SubHeading } from './SubHeading'
 export { Feature } from './Feature'
+export { HowItWorks } from './HowItWorks'
 export * from './layout'
 import {
     ThemeProvider,
