@@ -13,6 +13,7 @@ import {
     NavBar,
     Footer,
     SectionTitle,
+    TestimonialsLogos,
 } from 'react-landing/src'
 import { Button } from 'react-landing/src/Button'
 
@@ -44,6 +45,15 @@ const Page = () => (
             subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
             image={null}
             cta='Try it now for free!'
+        />
+        <TestimonialsLogos
+            testimonials={[
+                <img src='datocms/dropbox.svg' />,
+                <img src='datocms/hashicorp.svg' />,
+                <img src='datocms/verizon.svg' />,
+                <img src='datocms/vmware.svg' />,
+                <img src='datocms/linkedin.svg' />,
+            ]}
         />
         <SectionTitle
             heading={
