@@ -14,7 +14,7 @@ export const FeaturesList = ({
 }) => {
     return (
         <PageContainer py='120px' bg={backgroundColor} {...rest}>
-            <Stack spacing={2} flex='1' textAlign='center' align='center'>
+            <Stack spacing='40px' flex='1' textAlign='center' align='center'>
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
                 </Heading>
@@ -29,8 +29,7 @@ export const FeaturesList = ({
                     {subhead}
                 </Text>
             </Stack>
-            <Box mt='60px' />
-            <Stack isInline spacing={4} flex='1'>
+            <Stack isInline spacing={4} flex='1' flexWrap='wrap'>
                 {features.map((step, i) => (
                     <Feature key={i} {...step} />
                 ))}
