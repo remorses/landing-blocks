@@ -3,10 +3,20 @@ import Color from 'color-js'
 import { Box, Text, Stack } from '@chakra-ui/core'
 import { Row } from '.'
 import { PageContainer, Col } from './layout'
+import { useFadeUpAnimation } from './hooks'
+import { animated } from 'react-spring'
 
-export const TestimonialsLogos = ({ testimonials, ...rest }) => {
+export const TestimonialsLogos = ({
+    testimonials,
+    animate = true,
+    ...rest
+}) => {
+    const { ref, animations } = useFadeUpAnimation({
+        enabled: animate,
+        number: testimonials.length,
+    })
     return (
-        <PageContainer py='20px' {...rest}>
+        <PageContainer ref={ref} py='20px' {...rest}>
             <Stack
                 flexDir='row'
                 flexWrap='wrap'
@@ -15,12 +25,12 @@ export const TestimonialsLogos = ({ testimonials, ...rest }) => {
                 spacing='40px'
                 align='center'
             >
-                {testimonials.map((x) => (
+                {testimonials.map((x, i) => (
                     <Col
-                        key={x}
+                        key={i}
                         minW={{ sm: '100%', lg: '160px' }}
-                        // flex='1'
-                        // justify='center'
+                        as={animated.div}
+                        style={animations[i]}
                         align='center'
                         opacity={0.6}
                     >

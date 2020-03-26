@@ -4,6 +4,6 @@ import { Children } from 'react'
 
 export const SubHeading: FC<HeadingProps> = (props) => {
     return (
-        <H m={0} opacity={0.6} fontWeight='normal' fontSize='24px' {...props} />
+        <H as='div' m={0} opacity={0.6} fontWeight='normal' fontSize='24px' {...props} />
     )
 }
