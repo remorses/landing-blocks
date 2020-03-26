@@ -11,10 +11,14 @@ export const Footer = ({
 }) => {
     return (
         <PageContainer minHeight='200px' {...rest}>
-            <Stack isInline flexWrap='wrap' justifyContent='space-evenly'>
+            <Stack flexDir='row' flexWrap='wrap' justifyContent='space-evenly' spacing='40px'>
                 {Object.keys(columns).map((k) => {
                     return (
-                        <Stack spacing='10px' key={k}>
+                        <Stack
+                            minW={{ sm: '100%', lg: '0px' }}
+                            spacing='10px'
+                            key={k}
+                        >
                             <Text
                                 d='block'
                                 fontSize='16px'
@@ -31,7 +35,6 @@ export const Footer = ({
                     )
                 })}
             </Stack>
-            <Box mt='40px' />
             <Text width='auto' opacity={0.6} fontSize='14px' alignSelf='center'>
                 Copyright © 2019 {businessName}
             </Text>
