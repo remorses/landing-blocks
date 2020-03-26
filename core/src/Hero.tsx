@@ -26,7 +26,7 @@ export const Hero = ({
                 align={{sm: 'center', lg: 'flex-start'}}
                 textAlign={{ sm: 'center', lg: 'left' }}
             >
-                <Bullett>{bullett}</Bullett>
+                {/* <Bullett>{bullett}</Bullett> */}
                 <Heading fontSize='46px'>{heading}</Heading>
                 <SubHeading fontSize='22px'>{subhead}</SubHeading>
                 <Col align={['center', 'center', 'flex-start']}>
