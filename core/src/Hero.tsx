@@ -13,9 +13,10 @@ export const Hero = ({
     cta,
     image,
     bullett = '',
+    animate = true,
     ...rest
 }) => {
-    const { ref, animaitons } = useFadeUpAnimation()
+    const { ref, animations } = useFadeUpAnimation({ enabled: animate, number: 4 })
     return (
         <PageContainer {...rest}>
             <Row
@@ -37,14 +38,14 @@ export const Hero = ({
                     {/* <Bullett>{bullett}</Bullett> */}
                     <Heading
                         as={animated.h1}
-                        style={animaitons[0]}
+                        style={animations[0]}
                         fontSize='46px'
                     >
                         {heading}
                     </Heading>
                     <SubHeading
                         as={animated.h2}
-                        style={animaitons[1]}
+                        style={animations[1]}
                         fontSize='22px'
                         maxW='700px'
                     >
@@ -52,7 +53,7 @@ export const Hero = ({
                     </SubHeading>
                     <Col
                         as={animated.div}
-                        style={animaitons[2]}
+                        style={animations[2]}
                         align={['center', 'center', 'flex-start']}
                     >
                         <Button px='40px' bg='primary' d='block' width='auto'>
@@ -65,7 +66,7 @@ export const Hero = ({
                         <Box ml='40px' mt='40px' flex='1' />
                         <Col
                             as={animated.div}
-                            style={animaitons[3]}
+                            style={animations[3]}
                             align='center'
                             maxW={{ sm: 'none', lg: '500px' }}
                         >

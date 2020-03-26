@@ -5,6 +5,7 @@
         "demos"
     ],
     "scripts": {
-        "example": "cd demos && yarn dev"
+        "example": "cd demos && yarn dev",
+        "build": "cd demos && yarn build"
     }
 }
