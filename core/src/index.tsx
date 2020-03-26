@@ -14,11 +14,12 @@ import {
     DefaultTheme,
     Stack,
     CSSReset,
+    ColorModeProvider,
 } from '@chakra-ui/core'
 import { useTheme } from 'emotion-theming'
 import { Col } from './layout'
 
-export const LandingProvider = ({ children }) => {
+export const LandingProvider = ({ dark = false, children }) => {
     const existingTheme = useTheme()
     if (existingTheme && Object.keys(existingTheme).length) {
         console.log(existingTheme)
@@ -42,8 +43,10 @@ export const LandingProvider = ({ children }) => {
     }
     return (
         <ThemeProvider theme={theme}>
-            <CSSReset />
-            <Stack spacing='60px'>{children}</Stack>
+            <ColorModeProvider value={dark ? 'dark' : 'light'}>
+                <CSSReset />
+                <Stack spacing='60px'>{children}</Stack>
+            </ColorModeProvider>
         </ThemeProvider>
     )
 }
