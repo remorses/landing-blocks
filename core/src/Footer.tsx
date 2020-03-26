@@ -11,13 +11,18 @@ export const Footer = ({
 }) => {
     return (
         <PageContainer minHeight='200px' {...rest}>
-            <Stack flexDir='row' flexWrap='wrap' justifyContent='space-evenly' spacing='40px'>
-                {Object.keys(columns).map((k) => {
+            <Stack
+                flexDir='row'
+                flexWrap='wrap'
+                justifyContent='space-evenly'
+                spacing='40px'
+            >
+                {Object.keys(columns).map((k, i) => {
                     return (
                         <Stack
                             minW={{ sm: '100%', lg: '0px' }}
                             spacing='10px'
-                            key={k}
+                            key={i}
                         >
                             <Text
                                 d='block'
@@ -28,8 +33,8 @@ export const Footer = ({
                             >
                                 {k}
                             </Text>
-                            {columns[k].map((x) => (
-                                <Text>{x}</Text>
+                            {columns[k].map((x, i) => (
+                                <Text key={i}>{x}</Text>
                             ))}
                         </Stack>
                     )

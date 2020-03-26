@@ -4357,6 +4357,11 @@ lodash.templatesettings@^4.0.0:
   dependencies:
     lodash._reinterpolate "^3.0.0"
 
+lodash.throttle@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
+  integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
+
 lodash@^4.17.11, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.15.tgz#b447f6670a0455bbfeedd11392eff330ea097548"
@@ -5907,6 +5912,11 @@ react-focus-lock@^2.2.1:
     use-callback-ref "^1.2.1"
     use-sidecar "^1.0.1"
 
+react-hooks-visible@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-hooks-visible/-/react-hooks-visible-1.1.0.tgz#943450f0f3b56509e7c9d08a7fa1dac95ec24c87"
+  integrity sha512-1+BDW1hpFDUDWImzPsImI69N+yjZav8e5HS1y46vm/qzJQ0nvumYencEOeFc5ovxp8Pqzx/ehKIGP25pnFxBgg==
+
 react-is@16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
@@ -5930,7 +5940,7 @@ react-spring@^8.0.27:
     "@babel/runtime" "^7.3.1"
     prop-types "^15.5.8"
 
-react@16.13.1, react@^16.13.1:
+react@16.13.1, react@^16.13.1, react@^16.8.4:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -7066,6 +7076,14 @@ use-dark-mode@2.3.1:
   dependencies:
     "@use-it/event-listener" "^0.1.2"
     use-persisted-state "^0.3.0"
+
+use-in-view@^1.0.15:
+  version "1.0.15"
+  resolved "https://registry.yarnpkg.com/use-in-view/-/use-in-view-1.0.15.tgz#f86123d81db0360f0f2dd0125953ff9093f7b91d"
+  integrity sha512-Qhy3Nm28S1kLcVfT4vdIP2NhXNbakQtDpKRGk3hX1XDmxe5GrkkhTUulXjdcF/BYEFaeDXnagPnIQFJQZKWAOw==
+  dependencies:
+    lodash.throttle "^4.1.1"
+    react "^16.8.4"
 
 use-persisted-state@^0.3.0:
   version "0.3.0"

@@ -4,6 +4,8 @@ import { SubHeading } from './SubHeading'
 import { Heading } from './Heading'
 import { Button } from './Button'
 import { Col, Row, Spacer, PageContainer } from './layout'
+import { useFadeUpAnimation } from './hooks'
+import { animated } from 'react-spring'
 
 export const Hero = ({
     heading,
@@ -12,40 +14,69 @@ export const Hero = ({
     image,
     bullett = '',
     ...rest
-}) => (
-    <PageContainer {...rest}>
-        <Row
-            justify='flex-start'
-            w='100%'
-            flexDir={{ sm: 'column', lg: 'row' }}
-            align='center'
-        >
-            <Stack
-                maxW={{ sm: 'none', lg: image ? '500px' : 'none' }}
-                spacing='30px'
-                align={{ sm: 'center', lg: image ? 'flex-start' : 'center' }}
-                textAlign={{ sm: 'center', lg: image ? 'left' : 'center' }}
+}) => {
+    const { ref, animaitons } = useFadeUpAnimation()
+    return (
+        <PageContainer {...rest}>
+            <Row
+                justify='flex-start'
+                w='100%'
+                flexDir={{ sm: 'column', lg: 'row' }}
+                align='center'
+                ref={ref}
             >
-                {/* <Bullett>{bullett}</Bullett> */}
-                <Heading fontSize='46px'>{heading}</Heading>
-                <SubHeading fontSize='22px' maxW='700px'>{subhead}</SubHeading>
-                <Col align={['center', 'center', 'flex-start']}>
-                    <Button px='40px' bg='primary' d='block' width='auto'>
-                        {cta}
-                    </Button>
-                </Col>
-            </Stack>
-            {image && (
-                <Fragment>
-                    <Box ml='40px' mt='40px' flex='1' />
-                    <Col align='center' maxW={{ sm: 'none', lg: '500px' }}>
-                        {image}
+                <Stack
+                    maxW={{ sm: 'none', lg: image ? '500px' : 'none' }}
+                    spacing='30px'
+                    align={{
+                        sm: 'center',
+                        lg: image ? 'flex-start' : 'center',
+                    }}
+                    textAlign={{ sm: 'center', lg: image ? 'left' : 'center' }}
+                >
+                    {/* <Bullett>{bullett}</Bullett> */}
+                    <Heading
+                        as={animated.h1}
+                        style={animaitons[0]}
+                        fontSize='46px'
+                    >
+                        {heading}
+                    </Heading>
+                    <SubHeading
+                        as={animated.h2}
+                        style={animaitons[1]}
+                        fontSize='22px'
+                        maxW='700px'
+                    >
+                        {subhead}
+                    </SubHeading>
+                    <Col
+                        as={animated.div}
+                        style={animaitons[2]}
+                        align={['center', 'center', 'flex-start']}
+                    >
+                        <Button px='40px' bg='primary' d='block' width='auto'>
+                            {cta}
+                        </Button>
                     </Col>
-                </Fragment>
-            )}
-        </Row>
-    </PageContainer>
-)
+                </Stack>
+                {image && (
+                    <Fragment>
+                        <Box ml='40px' mt='40px' flex='1' />
+                        <Col
+                            as={animated.div}
+                            style={animaitons[3]}
+                            align='center'
+                            maxW={{ sm: 'none', lg: '500px' }}
+                        >
+                            {image}
+                        </Col>
+                    </Fragment>
+                )}
+            </Row>
+        </PageContainer>
+    )
+}
 
 export const Bullett = (props) => {
     return (
