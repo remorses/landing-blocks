@@ -12,6 +12,7 @@ import { useTheme } from 'emotion-theming'
 export interface ThemeExtension extends DefaultTheme {
     colors: {
         primary: string
+        secondary: string
     } & DefaultTheme['colors']
     sizes: {
         pageContainer: any
@@ -21,6 +22,7 @@ export interface ThemeExtension extends DefaultTheme {
 export interface LandingProviderProps {
     dark?: boolean
     primary?: string
+    secondary?: string
 }
 
 /*
@@ -38,6 +40,7 @@ should customize
 export const LandingProvider: FC<LandingProviderProps> = ({
     dark = false,
     primary='purple',
+    secondary='purple',
     children,
 }) => {
     const existingTheme = useTheme()
@@ -50,6 +53,7 @@ export const LandingProvider: FC<LandingProviderProps> = ({
         colors: {
             ...defaultTheme.colors,
             primary,
+            secondary,
         },
         sizes: {
             ...defaultTheme.sizes,

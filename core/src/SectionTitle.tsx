@@ -1,9 +1,10 @@
 import { Box, Stack } from '@chakra-ui/core'
 import React from 'react'
 import { Row, SubHeading, Heading, Button } from '.'
-import { PageContainer, Col } from './layout'
+import { PageContainer, Col, FloatingElement } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
+import { GradientRect } from './decorations'
 
 export const SectionTitle = ({
     heading,
@@ -17,7 +18,17 @@ export const SectionTitle = ({
         number: 3,
     })
     return (
-        <PageContainer ref={ref} {...rest}>
+        <PageContainer
+            floatingElement={
+                <GradientRect
+                    maxW='pageContainer'
+                    width='60%'
+                    distortion={-0.3}
+                />
+            }
+            ref={ref}
+            {...rest}
+        >
             <Stack
                 alignSelf='center'
                 maxW='700px'

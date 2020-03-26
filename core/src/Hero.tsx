@@ -3,9 +3,10 @@ import { Image, Flex, Box, Stack, Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { Heading } from './Heading'
 import { Button } from './Button'
-import { Col, Row, Spacer, PageContainer } from './layout'
+import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
+import { GradientRect } from './decorations'
 
 export const Hero = ({
     heading,
@@ -16,9 +17,17 @@ export const Hero = ({
     animate = true,
     ...rest
 }) => {
-    const { ref, animations } = useFadeUpAnimation({ enabled: animate, number: 4 })
+    const { ref, animations } = useFadeUpAnimation({
+        enabled: animate,
+        number: 4,
+    })
     return (
-        <PageContainer {...rest}>
+        <PageContainer
+            floatingElement={
+                <GradientRect maxW='pageContainer' distortion={0.3} />
+            }
+            {...rest}
+        >
             <Row
                 justify='flex-start'
                 w='100%'
@@ -33,7 +42,10 @@ export const Hero = ({
                         sm: 'center',
                         lg: image ? 'flex-start' : 'center',
                     }}
-                    textAlign={{ sm: 'center', lg: image ? 'left' : 'center' }}
+                    textAlign={{
+                        sm: 'center',
+                        lg: image ? 'left' : 'center',
+                    }}
                 >
                     {/* <Bullett>{bullett}</Bullett> */}
                     <Heading

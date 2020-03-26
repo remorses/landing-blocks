@@ -4,10 +4,10 @@ import { Children } from 'react'
 import get from 'lodash.get'
 import Color from 'color-js'
 import { useTheme } from 'emotion-theming'
+import { useColor } from './support'
 
 export const Button: FC<ButtonProps> = ({ bg = 'primary', ...props }) => {
-    const theme = useTheme() as any
-    const realBg = get(theme.colors, bg)
+    const realBg = useColor(bg)
     const lightness = Color(realBg as any).getLightness()
     console.log({ lightness })
     const isDark = lightness < 0.7
