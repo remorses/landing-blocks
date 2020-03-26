@@ -42,13 +42,25 @@ export const HowItWorks = ({
 const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
     const dir = flip ? 'row-reverse' : 'row'
     return (
-        <Row flexDir={dir} justify='center' align='center' {...rest}>
-            <Stack maxW='500px' flex='1' spacing={6}>
-                <Stack isInline  align='flex-end' opacity={0.1}>
+        <Stack
+            flexDir={dir}
+            justify='center'
+            align='center'
+            flexWrap='wrap'
+            spacing='40px'
+            {...rest}
+        >
+            <Stack minW='400px' maxW='500px' flex='1' spacing={6}>
+                <Stack isInline align='flex-end' opacity={0.1}>
                     <Heading lineHeight='70px' fontSize='80px'>
                         {number}
                     </Heading>
-                    <Heading isTruncated maxW='300px' fontWeight='bold' fontSize='18px'>
+                    <Heading
+                        isTruncated
+                        maxW='300px'
+                        fontWeight='bold'
+                        fontSize='18px'
+                    >
                         {'  .  ' + heading}
                     </Heading>
                 </Stack>
@@ -63,8 +75,9 @@ const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
                     {subhead}
                 </Text>
             </Stack>
-            <Box ml='40px'/>
-            <Col maxW='500px' flex='1'>{image}</Col>
-        </Row>
+            <Col minW='400px' maxW='500px' flex='1'>
+                {image}
+            </Col>
+        </Stack>
     )
 }
