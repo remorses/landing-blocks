@@ -5,18 +5,24 @@ import get from 'lodash.get'
 import Color from 'color-js'
 import { useTheme } from 'emotion-theming'
 
-export const Button: FC<ButtonProps> = (props) => {
-    let { bg = 'gray' } = props
+export const Button: FC<ButtonProps> = ({ bg = 'primary', ...props }) => {
     const theme = useTheme() as any
     const realBg = get(theme.colors, bg)
-    const isDark = Color(realBg as any).getLightness() < 0.5
+    const lightness = Color(realBg as any).getLightness()
+    console.log({ lightness })
+    const isDark = lightness < 0.7
     const color = isDark ? 'white' : 'black'
     // console.log('bg', bg)
     // console.log('color', color)
     return (
         <B
+            px='40px'
+            d='block'
+            width='auto'
             color={color}
-            px='20px'
+            bg={bg}
+            fontSize='18px'
+            fontWeight='medium'
             _hover={{ bg: color, color: bg as string }}
             {...props}
         />

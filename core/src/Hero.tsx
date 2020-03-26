@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import { Image, Flex, Box, Stack, Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { Heading } from './Heading'
@@ -21,24 +21,28 @@ export const Hero = ({
             align='center'
         >
             <Stack
-                maxW={{ sm: 'none', lg: '500px' }}
+                maxW={{ sm: 'none', lg: image ? '500px' : 'none' }}
                 spacing='30px'
-                align={{sm: 'center', lg: 'flex-start'}}
-                textAlign={{ sm: 'center', lg: 'left' }}
+                align={{ sm: 'center', lg: image ? 'flex-start' : 'center' }}
+                textAlign={{ sm: 'center', lg: image ? 'left' : 'center' }}
             >
                 {/* <Bullett>{bullett}</Bullett> */}
                 <Heading fontSize='46px'>{heading}</Heading>
-                <SubHeading fontSize='22px'>{subhead}</SubHeading>
+                <SubHeading fontSize='22px' maxW='700px'>{subhead}</SubHeading>
                 <Col align={['center', 'center', 'flex-start']}>
                     <Button px='40px' bg='primary' d='block' width='auto'>
                         {cta}
                     </Button>
                 </Col>
             </Stack>
-            <Box ml='40px' mt='40px' flex='1' />
-            <Col align='center' maxW={{ sm: 'none', lg: '500px' }}>
-                {image}
-            </Col>
+            {image && (
+                <Fragment>
+                    <Box ml='40px' mt='40px' flex='1' />
+                    <Col align='center' maxW={{ sm: 'none', lg: '500px' }}>
+                        {image}
+                    </Col>
+                </Fragment>
+            )}
         </Row>
     </PageContainer>
 )

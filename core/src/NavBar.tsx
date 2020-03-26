@@ -9,7 +9,7 @@ export const NavBar = ({ logo, navs, ...rest }) => {
             <Row py='40px'>
                 <Box display={{sm: 'none', lg: 'block'}} alignSelf='flexStart'>{logo}</Box>
                 <Box flex='1' />
-                <Stack isInline spacing='20px'>
+                <Stack isInline spacing='20px' align='center'>
                     {navs.map((x) => (
                         <Box fontSize='16px' fontWeight='medium'>
                             {x}
