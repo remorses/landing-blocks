@@ -14,8 +14,18 @@ export const Hero = ({
     ...rest
 }) => (
     <PageContainer {...rest}>
-        <Row justify='flex-start' w='100%'>
-            <Stack spacing='30px' maxW='500px'>
+        <Row
+            justify='flex-start'
+            w='100%'
+            flexDir={{ sm: 'column', lg: 'row' }}
+            align='center'
+        >
+            <Stack
+                maxW={{ sm: 'none', lg: '500px' }}
+                spacing='30px'
+                align={{sm: 'center', lg: 'flex-start'}}
+                textAlign={{ sm: 'center', lg: 'left' }}
+            >
                 <Bullett>{bullett}</Bullett>
                 <Heading fontSize='46px'>{heading}</Heading>
                 <SubHeading fontSize='22px'>{subhead}</SubHeading>
@@ -25,8 +35,10 @@ export const Hero = ({
                     </Button>
                 </Col>
             </Stack>
-            <Box ml='40px' flex='1' />
-            <Col maxW='500px'>{image}</Col>
+            <Box ml='40px' mt='40px' flex='1' />
+            <Col align='center' maxW={{ sm: 'none', lg: '500px' }}>
+                {image}
+            </Col>
         </Row>
     </PageContainer>
 )
