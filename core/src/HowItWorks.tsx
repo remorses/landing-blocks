@@ -44,14 +44,14 @@ const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
     return (
         <Stack
             flexDir={dir}
-            justify='center'
+            justify='space-between'
             align='center'
             flexWrap='wrap'
             spacing='40px'
             {...rest}
         >
-            <Stack minW='400px' maxW='500px' flex='1' spacing={6}>
-                <Stack isInline align='flex-end' opacity={0.1}>
+            <Stack minW='400px' maxW='500px' flex='1' spacing='20px'>
+                <Stack flexDir='row' align='flex-end' opacity={0.1}>
                     <Heading lineHeight='70px' fontSize='80px'>
                         {number}
                     </Heading>
@@ -75,6 +75,7 @@ const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
                     {subhead}
                 </Text>
             </Stack>
+            {/* <Box display={{sm: 'none', lg: 'block'}} ml='40px' /> */}
             <Col minW='400px' maxW='500px' flex='1'>
                 {image}
             </Col>
