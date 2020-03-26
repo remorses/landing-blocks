@@ -1,15 +1,13 @@
-import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
-import React, { FC } from 'react'
-import { Col, Row, Heading, Spacer } from '.'
-import { Text } from '@chakra-ui/core'
-import { SubHeading } from './SubHeading'
+import { Box, Stack } from '@chakra-ui/core'
+import React from 'react'
+import { Row } from '.'
 import { PageContainer } from './layout'
 
 export const NavBar = ({ logo, navs, ...rest }) => {
     return (
         <PageContainer {...rest}>
             <Row py='40px'>
-                <Box alignSelf='flexStart'>{logo}</Box>
+                <Box display={{sm: 'none', lg: 'block'}} alignSelf='flexStart'>{logo}</Box>
                 <Box flex='1' />
                 <Stack isInline spacing='20px'>
                     {navs.map((x) => (
