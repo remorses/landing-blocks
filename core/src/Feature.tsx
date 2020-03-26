@@ -14,8 +14,8 @@ export const Feature = ({
     const dir = flip ? 'row-reverse' : 'row'
     return (
         <PageContainer py='120px' bg={backgroundColor} {...rest}>
-            <Row flexDir={dir} >
-                <Stack spacing={8} flex='1'>
+            <Stack spacing='40px' flexDir={dir} flexWrap='wrap'>
+                <Stack spacing={8} flex='1' minW='400px'>
                     <Heading
                         lineHeight='50px'
                         fontWeight='medium'
@@ -33,9 +33,11 @@ export const Feature = ({
                         {subhead}
                     </Text>
                 </Stack>
-                <Box flex='0.1' />
-                <Col flex='1'>{image}</Col>
-            </Row>
+
+                <Col align='center' flex='1' minW='400px'>
+                    {image}
+                </Col>
+            </Stack>
         </PageContainer>
     )
 }
