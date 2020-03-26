@@ -14,7 +14,7 @@ export const FeaturesList = ({
     ...rest
 }) => {
     return (
-        <PageContainer py='120px' bg={backgroundColor} {...rest}>
+        <PageContainer py='40px' bg={backgroundColor} {...rest}>
             <Stack spacing='40px' flex='1' textAlign='center' align='center'>
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}

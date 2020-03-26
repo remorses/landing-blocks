@@ -23,7 +23,7 @@ import { Button } from 'react-landing/src/Button'
 const Page = () => (
     <LandingProvider primary='#FF593D'>
         <NavBar
-            logo={<img width='120px' src='/datocms/logo.png' />}
+            logo={<img width='120px' src='/datocms/logo.svg' />}
             navs={[
                 <a>Why DatoCMS</a>,
                 <a>Learn</a>,
@@ -87,7 +87,7 @@ const Page = () => (
             flip
         />
         <FeaturesList
-            heading='Why we think Prismic is good for developers '
+            heading=''
             centerText
             features={[
                 {
