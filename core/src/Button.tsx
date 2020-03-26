@@ -8,10 +8,17 @@ import { useTheme } from 'emotion-theming'
 export const Button: FC<ButtonProps> = (props) => {
     let { bg = 'gray' } = props
     const theme = useTheme() as any
-    console.log(theme)
-    bg = get(theme.colors, bg)
-    const isDark = Color(bg as any).getLightness() < 0.5
+    const realBg = get(theme.colors, bg)
+    const isDark = Color(realBg as any).getLightness() < 0.5
     const color = isDark ? 'white' : 'black'
-    console.log('bg', bg)
-    return <B color={color} _hover={{ bg: color, color: bg as string }} {...props} />
+    // console.log('bg', bg)
+    // console.log('color', color)
+    return (
+        <B
+            color={color}
+            px='20px'
+            _hover={{ bg: color, color: bg as string }}
+            {...props}
+        />
+    )
 }
