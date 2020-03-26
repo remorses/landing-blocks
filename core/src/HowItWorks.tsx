@@ -4,12 +4,15 @@ import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { PageContainer } from './layout'
+import { useFadeUpAnimation } from './hooks'
+import { animated } from 'react-spring'
 
 export const HowItWorks = ({
     heading,
     subhead,
     steps,
     backgroundColor = 'transparent',
+    animate = true,
     ...rest
 }) => {
     return (
@@ -32,15 +35,33 @@ export const HowItWorks = ({
             <Box mt='60px' />
             <Stack spacing={12} flex='1'>
                 {steps.map((step, i) => (
-                    <Step key={i} {...step} number={i + 1} flip={i % 2 !== 0} />
+                    <Step
+                        key={i}
+                        {...step}
+                        animate={animate}
+                        number={i + 1}
+                        flip={i % 2 !== 0}
+                    />
                 ))}
             </Stack>
         </PageContainer>
     )
 }
 
-const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
+const Step = ({
+    heading,
+    subhead,
+    number,
+    image,
+    flip = false,
+    animate = true,
+    ...rest
+}) => {
     const dir = flip ? 'row-reverse' : 'row'
+    const { ref, animations } = useFadeUpAnimation({
+        enabled: animate,
+        number: 4,
+    })
     return (
         <Stack
             flexDir={dir}
@@ -48,10 +69,17 @@ const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
             align='center'
             flexWrap='wrap'
             spacing='40px'
+            ref={ref}
             {...rest}
         >
             <Stack minW='400px' maxW='500px' flex='1' spacing='20px'>
-                <Stack flexDir='row' align='flex-end' opacity={0.1}>
+                <Stack
+                    as={animated.div}
+                    style={animations[0]}
+                    flexDir='row'
+                    align='flex-end'
+                    opacity={0.1}
+                >
                     <Heading lineHeight='70px' fontSize='80px'>
                         {number}
                     </Heading>
@@ -64,8 +92,12 @@ const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
                         {'  .  ' + heading}
                     </Heading>
                 </Stack>
-                <Heading fontSize='20px'>{heading}</Heading>
+                <Heading as={animated.h2} style={animations[1]} fontSize='20px'>
+                    {heading}
+                </Heading>
                 <Text
+                    as={animated.p}
+                    style={animations[2]}
                     fontWeight='normal'
                     m={0}
                     lineHeight='28px'
@@ -76,7 +108,13 @@ const Step = ({ heading, subhead, number, image, flip = false, ...rest }) => {
                 </Text>
             </Stack>
             {/* <Box display={{sm: 'none', lg: 'block'}} ml='40px' /> */}
-            <Col minW='400px' maxW='500px' flex='1'>
+            <Col
+                as={animated.div}
+                style={animations[3]}
+                minW='400px'
+                maxW='500px'
+                flex='1'
+            >
                 {image}
             </Col>
         </Stack>

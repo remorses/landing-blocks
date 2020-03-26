@@ -4,6 +4,8 @@ import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { PageContainer } from './layout'
+import { useFadeUpAnimation } from './hooks'
+import { animated } from 'react-spring'
 
 export const FeaturesList = ({
     heading,
@@ -11,10 +13,15 @@ export const FeaturesList = ({
     features,
     centerText = false,
     backgroundColor = 'transparent',
+    animate = true,
     ...rest
 }) => {
+    const { ref, animations } = useFadeUpAnimation({
+        enabled: animate,
+        number: features.length,
+    })
     return (
-        <PageContainer py='40px' bg={backgroundColor} {...rest}>
+        <PageContainer ref={ref} py='40px' bg={backgroundColor} {...rest}>
             <Stack spacing='40px' flex='1' textAlign='center' align='center'>
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
@@ -37,6 +44,8 @@ export const FeaturesList = ({
                         flex='1'
                         key={i}
                         centerText={centerText}
+                        as={animated.div}
+                        style={animations[i]}
                         {...step}
                     />
                 ))}
