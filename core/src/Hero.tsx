@@ -8,8 +8,10 @@ import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
 import { UniquelyIdentifiable } from './UniquelyIdentifiable'
+import { Editable } from './EditableProvider'
 
 export const Hero = UniquelyIdentifiable(
+    'Hero',
     ({
         heading,
         subhead,
@@ -55,7 +57,7 @@ export const Hero = UniquelyIdentifiable(
                             style={animations[0]}
                             fontSize='46px'
                         >
-                            {heading}
+                            <Editable>{heading}</Editable>
                         </Heading>
                         <SubHeading
                             as={animated.h2}

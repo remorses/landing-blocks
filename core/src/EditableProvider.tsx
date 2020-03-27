@@ -3,9 +3,19 @@ import { createContext } from 'react'
 import reactElementToJSXString from 'react-element-to-jsx-string'
 import { forwardRef } from 'react'
 import { useRef } from 'react'
+import ContentEditable from 'react-contenteditable'
+import { useContext } from 'react'
+import { renderToString } from 'react-dom/server'
 
-const EditableContext = createContext({})
+export const EditableContext = createContext({ enabled: false })
 
+export function useEditableContext(): {
+    enabled: boolean
+    onChange: (x: any) => void
+} {
+    const ctx = useContext(EditableContext)
+    return ctx as any
+}
 
 function recursiveMap(children, fn) {
     return React.Children.map(children, (child: any) => {
@@ -24,8 +34,26 @@ function recursiveMap(children, fn) {
     })
 }
 
+export function Editable({ children }) {
+    const ref = useRef()
+    const { onChange, enabled } = useEditableContext()
+    if (!enabled) {
+        return children
+    }
+    return (
+        <ContentEditable
+            innerRef={ref}
+            html={renderToString(children)} // innerHTML of the editable div
+            disabled={!enabled} // use true to disable editing
+            onChange={onChange} // handle innerHTML change
+            // tagName='article'
+        />
+    )
+}
+
 export const EditableProvider = ({ children, onChange }) => {
     const value = {
+        enabled: true,
         onChange: ({ key, newProps }) => {
             const newChildren = recursiveMap(children, (c: ReactElement) => {
                 if (c.props && c.props.key === key) {

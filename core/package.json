@@ -49,6 +49,7 @@
         "emotion-theming": "^10.0.27",
         "lodash.get": "^4.4.2",
         "lodash.uniqueid": "^4.0.1",
+        "react-contenteditable": "^3.3.3",
         "react-hooks-visible": "^1.1.0",
         "react-spring": "^8.0.27",
         "tinycolor2": "^1.4.1",
