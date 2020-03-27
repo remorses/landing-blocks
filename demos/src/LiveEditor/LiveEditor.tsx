@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from 'react'
+import React, { useContext, useRef, forwardRef, Ref } from 'react'
 import { Box } from '@chakra-ui/core'
 import { LiveEditorProps, LiveContext } from 'react-live'
 import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api'
@@ -41,83 +41,100 @@ type Props = {
         editor: monacoEditor.editor.IStandaloneCodeEditor
     }) => void
     typesCode?: string
+    ref?: any
 } & EditorProps
 
-export const MonacoEditor = ({
-    language = 'typescript',
-    extraLibs = [],
-    options = {} as monacoEditor.editor.IEditorConstructionOptions,
-    tsconfig = {},
-    buildEditor = null,
-    extension = '.tsx',
-    hiddenTopCode = '',
-    typesCode = '',
-    ...rest
-}: Props) => {
-    // extraLibs = [...defaultExtraLibs, ...extraLibs]
-    const { code, onChange: _onChange }: LiveEditorProps = useContext(
-        LiveContext,
-    )
-    const value: string = hiddenTopCode + (code || '')
-    const onChange: ControlledEditorOnChange = (ev, v) => {
-        v = v || ''
-        console.log(v)
-        _onChange && _onChange(v)
-    }
+export const MonacoEditor = forwardRef(
+    (
+        {
+            language = 'typescript',
+            extraLibs = [],
+            options = {} as monacoEditor.editor.IEditorConstructionOptions,
+            tsconfig = {},
+            buildEditor = null,
+            extension = '.tsx',
+            hiddenTopCode = '',
+            typesCode = '',
+            ...rest
+        }: Props,
+        ref,
+    ) => {
+        // extraLibs = [...defaultExtraLibs, ...extraLibs]
+        const { code, onChange: _onChange }: LiveEditorProps = useContext(
+            LiveContext,
+        )
+        const value: string = hiddenTopCode + (code || '')
+        const onChange: ControlledEditorOnChange = (ev, v) => {
+            v = v || ''
+            console.log(v)
+            _onChange && _onChange(v)
+        }
 
-    return (
-        <Editor
-            height='200px'
-            value={value}
-            onChange={onChange}
-            theme={'dark'}
-            language={language}
-            editorDidMount={(_valueGetter, editor) => {
-                monaco.init().then((monaco) => {
-                    const model = monaco.editor.createModel(
-                        value,
-                        language,
-                        monaco.Uri.parse('file://index' + extension),
-                    )
-                    editor.setModel(null)
-                    editor.setModel(model)
-                    monaco.languages.typescript.typescriptDefaults.setCompilerOptions(
-                        {
-                            target:
-                                monaco.languages.typescript.ScriptTarget.ES2016,
-                            allowNonTsExtensions: true,
-                            moduleResolution:
-                                monaco.languages.typescript.ModuleResolutionKind
-                                    .NodeJs,
-                            module:
-                                monaco.languages.typescript.ModuleKind.CommonJS,
-                            noEmit: true,
-                            strict: false,
-                            resolveJsonModule: true,
-                            allowJs: true,
-                            typeRoots: ['node_modules/@types'],
-                            lib: ['DOM'],
-                            jsx: monaco.languages.typescript.JsxEmit.React,
-                            ...tsconfig,
-                        },
-                    )
-                    monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions(
-                        {
-                            noSemanticValidation: false,
-                            noSyntaxValidation: false,
-                        },
-                    )
-                    addExtraLibs({ monaco, extraLibs })
-                    monaco.languages.typescript.typescriptDefaults.addExtraLib(
-                        typesCode,
-                    )
-                    buildEditor && buildEditor({ monaco, editor })
+        return (
+            <Editor
+                // ref={ref}
+                height='200px'
+                value={value}
+                onChange={onChange}
+                theme={'dark'}
+                language={language}
+                editorDidMount={(_valueGetter, editor) => {
+                    if (ref) {
+                        if (typeof ref === 'function') {
+                            ref(editor)
+                        } else {
+                            ;(ref as any).current = editor
+                        }
+                    }
 
-                    // console.log({ model: monaco.editor.getModels() })
-                })
-            }}
-            options={options}
-            {...rest}
-        />
-    )
-}
+                    monaco.init().then((monaco) => {
+                        const model = monaco.editor.createModel(
+                            value,
+                            language,
+                            monaco.Uri.parse('file://index' + extension),
+                        )
+                        editor.setModel(null)
+                        editor.setModel(model)
+                        monaco.languages.typescript.typescriptDefaults.setCompilerOptions(
+                            {
+                                target:
+                                    monaco.languages.typescript.ScriptTarget
+                                        .ES2016,
+                                allowNonTsExtensions: true,
+                                moduleResolution:
+                                    monaco.languages.typescript
+                                        .ModuleResolutionKind.NodeJs,
+                                module:
+                                    monaco.languages.typescript.ModuleKind
+                                        .CommonJS,
+                                noEmit: true,
+                                strict: false,
+                                resolveJsonModule: true,
+                                allowJs: true,
+                                typeRoots: ['node_modules/@types'],
+                                lib: ['DOM'],
+                                jsx: monaco.languages.typescript.JsxEmit.React,
+                                ...tsconfig,
+                            },
+                        )
+                        monaco.languages.typescript.typescriptDefaults.setDiagnosticsOptions(
+                            {
+                                noSemanticValidation: false,
+                                noSyntaxValidation: false,
+                            },
+                        )
+                        addExtraLibs({ monaco, extraLibs })
+                        monaco.languages.typescript.typescriptDefaults.addExtraLib(
+                            typesCode,
+                        )
+                        buildEditor && buildEditor({ monaco, editor })
+
+                        // console.log({ model: monaco.editor.getModels() })
+                    })
+                }}
+                options={options}
+                {...rest}
+            />
+        )
+    },
+)

@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useRef } from 'react'
+import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api'
+
 import { ThemeProvider, Box, CSSReset, Flex } from '@chakra-ui/core'
 import { MonacoEditor } from '../LiveEditor'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { usePromise } from 'react-extra-hooks'
+import { EditableProvider } from 'react-landing/src'
 
 const code = `
 import React from 'react'
 import { Hero, Heading, LandingProvider, SubHeading, Divider, Col, Feature, HowItWorks, FeaturesList, NavBar, Footer, SectionTitle, TestimonialsLogos, Button, } from 'react-landing'
 
 render(
+    <EditableProvider onChange={onChange}>
     <LandingProvider primary='#FF593D'>
         <NavBar
             logo={<img width='120px' src='/datocms/logo.svg' />}
@@ -35,6 +39,7 @@ render(
             cta='Try it now for free!'
         />
     </LandingProvider>
+    </EditableProvider>
 )
 
 `
@@ -48,15 +53,6 @@ function transformCode(code) {
     return code
 }
 
-function getScope() {
-    const landing = require('react-landing')
-    return {
-        ...landing
-    }
-}
-
-console.log({ scope: getScope() })
-
 async function getExtraLibs() {
     const res = await fetch('/api/extraLibs')
     const { extraLibs } = await res.json()
@@ -68,6 +64,18 @@ const Page = ({}) => {
     const { result: extraLibs, loading } = usePromise(getExtraLibs, {
         cache: true,
     })
+    const editor = useRef<monacoEditor.editor.IStandaloneCodeEditor>()
+    const scope = {
+        ...require('react-landing'),
+        onChange: (code) => {
+            // TODO throttle this to run only after 3 seconds
+            console.log({ editor: editor.current })
+            // TODO should add imports and render function, wrap around the component
+            // TODO every element must have a display name
+            // editor.current.setValue(code)
+        },
+    }
+
     if (loading) {
         return 'loading'
     }
@@ -79,11 +87,12 @@ const Page = ({}) => {
                     language='typescript'
                     code={code}
                     noInline
-                    scope={getScope()}
+                    scope={scope}
                     transformCode={transformCode}
                 >
                     <Flex flexDir='row'>
                         <MonacoEditor
+                            ref={editor}
                             height='600px'
                             extraLibs={extraLibs || []}
                         />
