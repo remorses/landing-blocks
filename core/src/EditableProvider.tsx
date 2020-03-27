@@ -12,13 +12,14 @@ export const EditableContext = createContext({ enabled: false })
 
 export function useEditableContext(): {
     enabled: boolean
-    onChange: (arg: { uid: string; newProps: any }) => void
+    onChange: (arg: { key: string; newProps: any }) => void
 } {
     const ctx = useContext(EditableContext)
     return ctx as any
 }
 
 function recursiveMap(children, fn) {
+    // TODO recursiveMap should be breadth first
     return React.Children.map(children, (child: any) => {
         if (!React.isValidElement(child)) {
             return child
@@ -35,7 +36,7 @@ function recursiveMap(children, fn) {
     })
 }
 
-export function Editable({ children, tagName = 'div', uid, prop }) {
+export function Editable({ children, tagName = 'div', key, prop }) {
     const ref = useRef()
     const { onChange, enabled } = useEditableContext()
     if (!enabled) {
@@ -44,25 +45,56 @@ export function Editable({ children, tagName = 'div', uid, prop }) {
     const onHtmlChange = (e) => {
         const html = e.target.value
         console.log({ html })
-        onChange({ uid, newProps: { [prop]: html } })
+        onChange({ key, newProps: { [prop]: html } })
     }
     return (
         <ContentEditable
             innerRef={ref}
-            html={renderToString(children)} // TODO renderTOString should be passed to editable context to not include it in bundle
+            html={renderToString(children)}
             disabled={!enabled}
             onChange={onHtmlChange}
             tagName={tagName}
         />
     )
+    // TODO if children are jsx elements recursivley make the mcontenteditables, but to update these should have a key prop set in the code
+    // TODO renderTOString should be passed to editable context to not include it in bundle
+    const childrenArr = Children.toArray(children)
+    console.log({ childrenArr })
+    if (childrenArr.length === 1 && typeof childrenArr[0] === 'string') {
+        console.log('found string element')
+        return (
+            <ContentEditable
+                innerRef={ref}
+                html={children[0]}
+                disabled={!enabled}
+                onChange={onHtmlChange}
+                tagName={tagName}
+            />
+        )
+    }
+    children = recursiveMap(children, (child) => {
+        const newC = cloneElement(child, {
+            ...child.props,
+            children: (
+                <Editable
+                    children={child.props.children}
+                    key={key}
+                    prop={prop}
+                    // TODO there should be a special key to represent child, then the onChange receives the new prop as a jsx element 
+                />
+            ),
+        })
+        return newC
+    })
+    return children
 }
 
 export const EditableProvider = ({ children, onChange }) => {
     const value = {
         enabled: true,
-        onChange: ({ uid, newProps }) => {
+        onChange: ({ key, newProps }) => {
             const newChildren = recursiveMap(children, (c: ReactElement) => {
-                if (c.props && c.props.uid === uid) {
+                if (c.props && c.props.key === key) {
                     // @ts-ignore
                     console.log(
                         `adding new props to ${getDisplayName(c)}: ${newProps}`,
@@ -76,7 +108,7 @@ export const EditableProvider = ({ children, onChange }) => {
                 // console.log({ props: c.props })
                 return c
             })
-            console.log({jsxchildren: newChildren[0]})
+            console.log({ jsxchildren: newChildren[0] })
             const newChildrenJsx = reactElementToJSXString(newChildren[0]) // TODO should support array
             onChange(newChildrenJsx)
         },

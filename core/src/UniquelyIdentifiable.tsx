@@ -5,11 +5,11 @@ import uniqueId from 'lodash.uniqueid'
 export function UniquelyIdentifiable<P=any>(
     name: string,
     Comp: FC<P>,
-): FC<Omit<P, 'uid'>> {
+): FC<Omit<P, 'key'>> {
     const c = (props) => {
         const [id] = useState(() => uniqueId())
         console.log({ id })
-        return <Comp {...props} uid={id} />
+        return <Comp {...props} key={id} />
     }
     // console.log('Comp.name', Comp.name)
     c.displayName = name

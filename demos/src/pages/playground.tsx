@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import debounce from 'lodash/throttle'
 import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api'
 import reactElementToJSXString from 'react-element-to-jsx-string'
 
@@ -28,7 +29,7 @@ const initialComponent = (
             ]}
         />
         <Hero
-            uid='1'
+            key='1'
             heading={
                 <Heading
                     fontFamily='tiempos-headline, Georgia'
@@ -51,16 +52,14 @@ import React from 'react'
 import { Hero, Heading, LandingProvider, SubHeading, Divider, Col, Feature, HowItWorks, FeaturesList, NavBar, Footer, SectionTitle, TestimonialsLogos, Button, } from 'react-landing'
 
 render(
+    <EditableProvider onChange={onChange}>
     ${code}
+    </EditableProvider>
 )
 `
 }
 
-const initialCode = wrapJsxCode(`
-<EditableProvider onChange={onChange}>
-${reactElementToJSXString(initialComponent)}
-</EditableProvider>
-`)
+const initialCode = wrapJsxCode(reactElementToJSXString(initialComponent))
 
 const transformCode = function transformCode(code) {
     code = code
@@ -85,14 +84,16 @@ const Page = ({}) => {
     const editor = useRef<monacoEditor.editor.IStandaloneCodeEditor>()
     const scope = {
         ...require('react-landing'),
-        onChange: (code) => {
-            // TODO throttle this to run only after 3 seconds
-            console.log({ editor: editor.current })
-            // TODO should add imports and render function, wrap around the component
-            // TODO every element must have a display name
-            code = wrapJsxCode(code)
-            editor.current.setValue(code)
-        },
+        onChange: debounce(
+            (code) => {
+                console.log({ editor: editor.current })
+                // TODO every element must have a display name
+                code = wrapJsxCode(code)
+                editor.current.setValue(code)
+            },
+            3000,
+            { leading: false },
+        ),
     }
 
     if (loading) {
@@ -121,7 +122,7 @@ const Page = ({}) => {
                             maxWidth='100%'
                             border='1px solid black '
                         >
-                            <LivePreview  style={{ overflowY: 'scroll' }} />
+                            <LivePreview style={{ overflowY: 'scroll' }} />
                         </Box>
                     </Flex>
                 </LiveProvider>

@@ -76,7 +76,7 @@ describe('reactElementToJSXString react-element-to-jsx-string', () => {
                 <div>
                     <h1>ciao</h1>
                     <Hero
-                        uid='1'
+                        key='1'
                         heading={
                             <Heading
                                 fontFamily='tiempos-headline, Georgia'
