@@ -27,10 +27,12 @@ render(
 `
 
 function transformCode(code) {
-    return code
+    code = code
         .split('\n')
         .filter((x) => !x.startsWith('import'))
         .join('\n')
+    // TODO transform `export default` to `render`
+    return code
 }
 
 const scope = {}
