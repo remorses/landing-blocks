@@ -30,6 +30,7 @@
         "typescript": "^3.8.3"
     },
     "devDependencies": {
+        "@testing-library/react": "^10.0.1",
         "@types/chai": "^4.2.11",
         "@types/mocha": "^7.0.2",
         "chai": "^4.2.0",
