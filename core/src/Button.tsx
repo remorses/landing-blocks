@@ -6,7 +6,7 @@ import Color from 'color-js'
 import { useTheme } from 'emotion-theming'
 import { useColor } from './support'
 
-export const Button: FC<ButtonProps> = ({ bg = 'primary', ...props }) => {
+export function Button({ bg = 'primary', ...props }: ButtonProps) {
     const realBg = useColor(bg)
     const lightness = Color(realBg as any).getLightness()
     console.log({ lightness })

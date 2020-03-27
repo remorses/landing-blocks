@@ -6,13 +6,13 @@ import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
 
-export const SectionTitle = ({
+export function SectionTitle({
     heading,
     subhead,
     cta = '',
     animate = true,
     ...rest
-}) => {
+}) {
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: 3,

@@ -3,7 +3,6 @@ const withTM = require('next-transpile-modules')(['react-landing']) // pass the 
 
 module.exports = withTM({
     webpack: (config) => {
-        config.resolve.alias['src'] = path.resolve(__dirname) + '/../src'
         return config
     },
 })

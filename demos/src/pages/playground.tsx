@@ -1,18 +1,21 @@
 import React, { useRef } from 'react'
 import * as monacoEditor from 'monaco-editor/esm/vs/editor/editor.api'
+import reactElementToJSXString from 'react-element-to-jsx-string'
 
 import { ThemeProvider, Box, CSSReset, Flex } from '@chakra-ui/core'
 import { MonacoEditor } from '../LiveEditor'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { usePromise } from 'react-extra-hooks'
-import { EditableProvider } from 'react-landing/src'
+import {
+    EditableProvider,
+    LandingProvider,
+    NavBar,
+    Button,
+    Hero,
+    Heading,
+} from 'react-landing'
 
-const code = `
-import React from 'react'
-import { Hero, Heading, LandingProvider, SubHeading, Divider, Col, Feature, HowItWorks, FeaturesList, NavBar, Footer, SectionTitle, TestimonialsLogos, Button, } from 'react-landing'
-
-render(
-    <EditableProvider onChange={onChange}>
+const initialComponent = (
     <LandingProvider primary='#FF593D'>
         <NavBar
             logo={<img width='120px' src='/datocms/logo.svg' />}
@@ -25,6 +28,7 @@ render(
             ]}
         />
         <Hero
+            uid='1'
             heading={
                 <Heading
                     fontFamily='tiempos-headline, Georgia'
@@ -39,12 +43,26 @@ render(
             cta='Try it now for free!'
         />
     </LandingProvider>
-    </EditableProvider>
 )
 
-`
+function wrapJsxCode(code) {
+    return `
+import React from 'react'
+import { Hero, Heading, LandingProvider, SubHeading, Divider, Col, Feature, HowItWorks, FeaturesList, NavBar, Footer, SectionTitle, TestimonialsLogos, Button, } from 'react-landing'
 
-function transformCode(code) {
+render(
+    ${code}
+)
+`
+}
+
+const initialCode = wrapJsxCode(`
+<EditableProvider onChange={onChange}>
+${reactElementToJSXString(initialComponent)}
+</EditableProvider>
+`)
+
+const transformCode = function transformCode(code) {
     code = code
         .split('\n')
         .filter((x) => !x.startsWith('import'))
@@ -72,7 +90,8 @@ const Page = ({}) => {
             console.log({ editor: editor.current })
             // TODO should add imports and render function, wrap around the component
             // TODO every element must have a display name
-            // editor.current.setValue(code)
+            code = wrapJsxCode(code)
+            editor.current.setValue(code)
         },
     }
 
@@ -85,7 +104,7 @@ const Page = ({}) => {
             <Box minWidth='100%' maxWidth='1200px'>
                 <LiveProvider
                     language='typescript'
-                    code={code}
+                    code={initialCode}
                     noInline
                     scope={scope}
                     transformCode={transformCode}
@@ -102,7 +121,7 @@ const Page = ({}) => {
                             maxWidth='100%'
                             border='1px solid black '
                         >
-                            <LivePreview style={{ overflowY: 'scroll' }} />
+                            <LivePreview  style={{ overflowY: 'scroll' }} />
                         </Box>
                     </Flex>
                 </LiveProvider>

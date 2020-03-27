@@ -7,7 +7,7 @@ import { PageContainer } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 
-export const FeaturesList = ({
+export function FeaturesList({
     heading,
     subhead = '',
     features,
@@ -15,7 +15,7 @@ export const FeaturesList = ({
     backgroundColor = 'transparent',
     animate = true,
     ...rest
-}) => {
+}) {
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: features.length,

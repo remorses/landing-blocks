@@ -4,11 +4,11 @@ import { Box, Text, Stack } from '@chakra-ui/core'
 import { Row } from '.'
 import { PageContainer } from './layout'
 
-export const Footer = ({
+export function Footer({
     columns = {} as { [k: string]: ReactNode[] },
     businessName = 'Monster Inc.',
     ...rest
-}) => {
+}) {
     return (
         <PageContainer minHeight='200px' {...rest}>
             <Stack

@@ -5,7 +5,7 @@ import { Text } from '@chakra-ui/core'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 
-export const Feature = ({
+export function Feature({
     heading,
     subhead,
     image,
@@ -13,7 +13,7 @@ export const Feature = ({
     backgroundColor = 'transparent',
     animate = true,
     ...rest
-}) => {
+}) {
     const dir = flip ? 'row-reverse' : 'row'
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,

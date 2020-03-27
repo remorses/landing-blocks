@@ -7,14 +7,14 @@ import { PageContainer } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 
-export const HowItWorks = ({
+export function HowItWorks({
     heading,
     subhead,
     steps,
     backgroundColor = 'transparent',
     animate = true,
     ...rest
-}) => {
+}) {
     return (
         <PageContainer py='120px' {...rest}>
             <Stack spacing={2} flex='1' textAlign='center' align='center'>

@@ -23,6 +23,7 @@ export interface LandingProviderProps {
     dark?: boolean
     primary?: string
     secondary?: string
+    children?: any
 }
 
 /*
@@ -37,12 +38,12 @@ should customize
 - white color for text, ... if dark mode
 */
 
-export const LandingProvider: FC<LandingProviderProps> = ({
+export function LandingProvider({
     dark = false,
-    primary='purple',
-    secondary='purple',
+    primary = 'purple',
+    secondary = 'purple',
     children,
-}) => {
+}: LandingProviderProps) {
     const existingTheme = useTheme()
     // if (existingTheme && Object.keys(existingTheme).length) {
     //     console.log(existingTheme)

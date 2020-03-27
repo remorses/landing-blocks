@@ -6,11 +6,7 @@ import { PageContainer, Col } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 
-export const TestimonialsLogos = ({
-    testimonials,
-    animate = true,
-    ...rest
-}) => {
+export function TestimonialsLogos({ testimonials, animate = true, ...rest }) {
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: testimonials.length,
