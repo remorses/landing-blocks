@@ -82,7 +82,7 @@ const Page = ({}) => {
     return (
         <ThemeProvider>
             <CSSReset />
-            <Box p='40px' minWidth='100%' maxWidth='1200px'>
+            <Box minWidth='100%' maxWidth='1200px'>
                 <LiveProvider
                     language='typescript'
                     code={code}
@@ -93,7 +93,7 @@ const Page = ({}) => {
                     <Flex flexDir='row'>
                         <MonacoEditor
                             ref={editor}
-                            height='600px'
+                            height='100vh'
                             extraLibs={extraLibs || []}
                         />
                         <LiveError />
@@ -102,7 +102,7 @@ const Page = ({}) => {
                             maxWidth='100%'
                             border='1px solid black '
                         >
-                            <LivePreview />
+                            <LivePreview style={{ overflowY: 'scroll' }} />
                         </Box>
                     </Flex>
                 </LiveProvider>
