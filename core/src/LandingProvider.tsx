@@ -44,10 +44,10 @@ export const LandingProvider: FC<LandingProviderProps> = ({
     children,
 }) => {
     const existingTheme = useTheme()
-    if (existingTheme && Object.keys(existingTheme).length) {
-        console.log(existingTheme)
-        return <Fragment>children</Fragment>
-    }
+    // if (existingTheme && Object.keys(existingTheme).length) {
+    //     console.log(existingTheme)
+    //     return <Fragment>children</Fragment>
+    // }
     const theme: ThemeExtension = {
         ...defaultTheme,
         colors: {

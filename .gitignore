@@ -9,6 +9,7 @@ play*
 !playground*
 dist/*
 esm
+dist
 
 # Runtime data
 pids

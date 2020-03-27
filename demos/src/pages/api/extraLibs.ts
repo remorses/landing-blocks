@@ -7,7 +7,9 @@ function makePath(name) {
     return `node_modules/@types/${name}/index.d.ts`
 }
 
-const libs = ['prop-types', 'react']
+const libs = ['prop-types', 'react', '@chakra-ui/core', 'react-landing']
+
+// TODO resolve resursively all .d.ts files, or just read recursively all the .d.ts files inside the package folder and return those
 
 const handler: NextApiHandler = async (req, res) => {
     res.statusCode = 200

@@ -10,7 +10,7 @@
     },
     "mocha": {
         "require": "tests/init.js",
-        "spec": "tests/**.ts",
+        "spec": "tests/**",
         "timeout": 9999999999
     },
     "dependencies": {
@@ -21,6 +21,7 @@
         "next": "^9.3.1",
         "react": "16.13.1",
         "react-dom": "16.13.1",
+        "react-element-to-jsx-string": "^14.3.1",
         "react-extra-hooks": "^2.3.1",
         "react-landing": "0.0.2",
         "react-live": "^2.2.2",

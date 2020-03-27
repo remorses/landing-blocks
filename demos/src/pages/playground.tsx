@@ -5,23 +5,36 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { usePromise } from 'react-extra-hooks'
 
 const code = `
-
-import React, { render } from 'react'
-
-const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
-];
+import React from 'react'
+import { Hero, Heading, LandingProvider, SubHeading, Divider, Col, Feature, HowItWorks, FeaturesList, NavBar, Footer, SectionTitle, TestimonialsLogos, Button, } from 'react-landing'
 
 render(
-  <div  >
-    So functional. Much wow!
-    so shit
-        <pre>
-      FUCK YOU
-        </pre>
-  </div>
+    <LandingProvider primary='#FF593D'>
+        <NavBar
+            logo={<img width='120px' src='/datocms/logo.svg' />}
+            navs={[
+                <a>Why DatoCMS</a>,
+                <a>Learn</a>,
+                <a>Marketplace</a>,
+                <a>Pricing</a>,
+                <Button>try for free!</Button>,
+            ]}
+        />
+        <Hero
+            heading={
+                <Heading
+                    fontFamily='tiempos-headline, Georgia'
+                    fontSize='74px'
+                    fontWeight='bold'
+                >
+                    The best companies are built on unified content
+                </Heading>
+            }
+            subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+            image={null}
+            cta='Try it now for free!'
+        />
+    </LandingProvider>
 )
 
 `
@@ -35,7 +48,14 @@ function transformCode(code) {
     return code
 }
 
-const scope = {}
+function getScope() {
+    const landing = require('react-landing')
+    return {
+        ...landing
+    }
+}
+
+console.log({ scope: getScope() })
 
 async function getExtraLibs() {
     const res = await fetch('/api/extraLibs')
@@ -45,9 +65,12 @@ async function getExtraLibs() {
 }
 
 const Page = ({}) => {
-    const { result: extraLibs } = usePromise(getExtraLibs, {
+    const { result: extraLibs, loading } = usePromise(getExtraLibs, {
         cache: true,
     })
+    if (loading) {
+        return 'loading'
+    }
     return (
         <ThemeProvider>
             <CSSReset />
@@ -56,7 +79,7 @@ const Page = ({}) => {
                     language='typescript'
                     code={code}
                     noInline
-                    scope={scope}
+                    scope={getScope()}
                     transformCode={transformCode}
                 >
                     <Flex flexDir='row'>
