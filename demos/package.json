@@ -8,13 +8,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "@monaco-editor/react": "^3.1.2",
     "@types/node": "^13.9.3",
     "@types/react": "^16.9.25",
+    "monaco-editor": "^0.20.0",
     "next": "^9.3.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "typescript": "^3.8.3",
-    "react-landing": "0.0.2"
+    "react-extra-hooks": "^2.3.1",
+    "react-landing": "0.0.2",
+    "react-live": "^2.2.2",
+    "typescript": "^3.8.3"
   },
   "devDependencies": {
     "next-transpile-modules": "^3.1.0"
