@@ -5,23 +5,25 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { usePromise } from 'react-extra-hooks'
 
 const code = `
-import React, {render} from 'react'
+
+import React, { render } from 'react'
 
 const options = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
-  ];
+  { value: 'chocolate', label: 'Chocolate' },
+  { value: 'strawberry', label: 'Strawberry' },
+  { value: 'vanilla', label: 'Vanilla' },
+];
 
 render(
-    <div >
-      So functional. Much wow!
-      so shit
+  <div  >
+    So functional. Much wow!
+    so shit
         <pre>
-        FUCK YOU
+      FUCK YOU
         </pre>
-    </div>
-  )
+  </div>
+)
+
 `
 
 function transformCode(code) {

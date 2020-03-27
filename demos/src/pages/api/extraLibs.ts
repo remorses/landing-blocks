@@ -1,31 +1,35 @@
 import fs from 'fs'
+import path from 'path'
 import { NextApiHandler } from 'next'
+import { resolve } from '../../support/resolve'
 
 function makePath(name) {
     return `node_modules/@types/${name}/index.d.ts`
 }
 
-export function getExtraLibs({
-    libs,
-    readFile = (x) => '',
-}): Promise<{ filePath; content }[]> {
-    const extraLibs = libs.map(async (name) => {
+const libs = ['prop-types', 'react']
+
+const handler: NextApiHandler = async (req, res) => {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'application/json')
+    const extraLibsPromises = libs.map(async (name) => {
         const filePath = makePath(name)
-        const content = await readFile(name)
+        const here = path.resolve('.')
+        const resolvedPath = resolve(name, here)
+        if (!resolvedPath.found) {
+            console.error('ERROR could not resolve ' + name)
+            return {
+                filePath,
+                content: '',
+            }
+        }
+        const content = await fs.promises.readFile(resolvedPath.path, 'utf-8')
         return {
             filePath,
             content: content.toString(),
         }
     })
-    return Promise.all(extraLibs)
-}
-
-const libs = ['csstypes', 'prop-types', 'react']
-
-const handler: NextApiHandler = (req, res) => {
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'application/json')
-    const extraLibs = []
+    const extraLibs = await Promise.all(extraLibsPromises)
     res.end(JSON.stringify({ extraLibs }))
 }
 
