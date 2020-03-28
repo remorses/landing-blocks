@@ -7,15 +7,9 @@ import { ThemeProvider, Box, CSSReset, Flex } from '@chakra-ui/core'
 import { MonacoEditor } from '../LiveEditor'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { usePromise } from 'react-extra-hooks'
-import {
-    EditableProvider,
-    LandingProvider,
-    NavBar,
-    Button,
-    Hero,
-    Heading,
-} from 'react-landing'
+import { LandingProvider, NavBar, Button, Hero, Heading } from 'react-landing'
 
+// TODO every element must have a display name
 const initialComponent = (
     <LandingProvider primary='#FF593D'>
         <NavBar
@@ -52,9 +46,9 @@ import React from 'react'
 import { Hero, Heading, LandingProvider, SubHeading, Divider, Col, Feature, HowItWorks, FeaturesList, NavBar, Footer, SectionTitle, TestimonialsLogos, Button, } from 'react-landing'
 
 render(
-    <EditableProvider onChange={onChange}>
+    
     ${code}
-    </EditableProvider>
+    
 )
 `
 }
@@ -84,16 +78,16 @@ const Page = ({}) => {
     const editor = useRef<monacoEditor.editor.IStandaloneCodeEditor>()
     const scope = {
         ...require('react-landing'),
-        onChange: debounce(
-            (code) => {
-                console.log({ editor: editor.current })
-                // TODO every element must have a display name
-                code = wrapJsxCode(code)
-                editor.current.setValue(code)
-            },
-            3000,
-            { leading: false },
-        ),
+        // onChange: debounce(
+        //     (code) => {
+        //         console.log({ editor: editor.current })
+
+        //         code = wrapJsxCode(code)
+        //         editor.current.setValue(code)
+        //     },
+        //     3000,
+        //     { leading: false },
+        // ),
     }
 
     if (loading) {

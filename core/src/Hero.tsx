@@ -12,7 +12,6 @@ import { Editable } from './EditableProvider'
 
 export function Hero({
     heading,
-    key = 'hero',
     subhead,
     cta,
     image,
@@ -20,7 +19,6 @@ export function Hero({
     animate = true,
     ...rest
 }) {
-    console.log({ key })
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: 4,
@@ -57,9 +55,7 @@ export function Hero({
                         style={animations[0]}
                         fontSize='46px'
                     >
-                        <Editable key={key} prop={'heading'}>
-                            {heading}
-                        </Editable>
+                        {heading}
                     </Heading>
                     <SubHeading
                         as={animated.h2}
