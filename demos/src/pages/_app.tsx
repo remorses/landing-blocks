@@ -51,10 +51,10 @@ const getConfig: CSSResetProps['config'] = (_, def) => {
 
 export default class MyApp extends App {
     componentDidMount() {
-        const token = getToken()
-        if (token) {
-            graphqlClient.setHeader('Authorization', token)
-        }
+        // const token = getToken()
+        // if (token) {
+        //     graphqlClient.setHeader('Authorization', token)
+        // }
     }
     render() {
         const { Component, pageProps } = this.props
@@ -72,7 +72,7 @@ export default class MyApp extends App {
                         >
                             <Component {...pageProps} />
                         </Box>
-                        <Box mt='300px' />
+                        {/* <Box mt='300px' /> */}
                     </Layout>
                 </ColorModeProvider>
             </ThemeProvider>
