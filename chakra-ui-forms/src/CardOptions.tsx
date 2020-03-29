@@ -65,11 +65,12 @@ function Option(
                 align='center'
                 justify='flex-start'
                 spacing='10px'
+                // fontWeight='normal'
             >
                 <Flex fontSize='32px' w='100%' align='center' justify='center'>
                     {option.icon}
                 </Flex>
-                <Text fontSize='16px'>{option.label}</Text>
+                <Text>{option.label}</Text>
                 <Text opacity={0.6} fontSize='14px'>
                     {option.sublabel}
                 </Text>

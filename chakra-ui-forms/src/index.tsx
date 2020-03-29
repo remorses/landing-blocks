@@ -97,7 +97,7 @@ export function Switch({ name, validate, ...rest }: BaseProps & c.SwitchProps) {
         type: 'option',
         parse: (x) => x,
     })
-    return <c.Switch d='block' {...rest} {...input} />
+    return <c.Switch d='block' {...input} {...rest} />
 }
 
 export function Slider({ name, validate, ...rest }: BaseProps & c.SliderProps) {
@@ -278,7 +278,7 @@ export function Labelled({
     field: React.ReactElement
 } & c.FormControlProps) {
     return (
-        <Control m='0' name={name} {...rest}>
+        <Control p='0' m='0' name={name} {...rest}>
             <c.Stack spacing='2px'>
                 <c.FormLabel m='0' htmlFor={name}>
                     {label}
