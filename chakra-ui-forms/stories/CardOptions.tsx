@@ -17,7 +17,16 @@ export default {
             <ThemeProvider>
                 <Box maxW='600px' p='30px' border='1px solid red'>
                     <CSSReset />
-                    <Form onSubmit={() => null}>{() => storyFn()}</Form>
+                    <Form onSubmit={() => null}>
+                        {({ values }) => (
+                            <Box>
+                                {storyFn()}
+                                <Box mt='100px' as='pre'>
+                                    {JSON.stringify(values, null, 4)}
+                                </Box>
+                            </Box>
+                        )}
+                    </Form>
                 </Box>
             </ThemeProvider>
         ),
