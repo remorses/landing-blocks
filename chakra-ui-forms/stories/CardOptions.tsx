@@ -2,7 +2,12 @@ import React from 'react'
 import { FiAirplay, FiAlertOctagon, FiAnchor } from 'react-icons/fi'
 import { CardOptions } from '../src/CardOptions'
 import { Form } from 'react-final-form'
-import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
+import {
+    ThemeProvider,
+    CSSReset,
+    Box,
+    ColorModeProvider,
+} from '@chakra-ui/core'
 
 export default {
     title: 'CardOptions',
@@ -84,4 +89,34 @@ export const WithIcons = () => (
         ]}
         name='sdf'
     />
+)
+
+export const DarkMode = () => (
+    <ColorModeProvider value='dark'>
+        <Box bg='black' m='-30px' p='20px'>
+            <CardOptions
+                options={[
+                    {
+                        icon: <FiAirplay />,
+                        value: 'x',
+                        label: 'The x option is the first',
+                        sublabel: 'Sublabels add text no one reads',
+                    },
+                    {
+                        icon: <FiAlertOctagon />,
+                        value: 'y',
+                        label: 'The y option',
+                        sublabel: 'maybe true',
+                    },
+                    {
+                        icon: <FiAnchor />,
+                        value: 'z',
+                        label: 'The Z makes sleep',
+                        sublabel: 'Sublabels add text no one reads',
+                    },
+                ]}
+                name='sdf'
+            />
+        </Box>
+    </ColorModeProvider>
 )
