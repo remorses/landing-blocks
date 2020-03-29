@@ -7,7 +7,7 @@
             "es2017",
             "es7",
             "es6",
-            "dom"
+            "DOM"
         ],
         "declaration": true,
         "outDir": "dist",

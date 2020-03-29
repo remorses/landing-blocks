@@ -118,8 +118,8 @@ export const NumberInput = ({
 
 export const SingleCheckbox = ({
     name,
-    children,
-}: { name } & c.CheckboxProps) => {
+    label,
+}: { name; label } & Omit<c.CheckboxProps, 'children'>) => {
     const {
         input: { checked, ...input },
         meta: { error, touched, invalid },
@@ -129,14 +129,14 @@ export const SingleCheckbox = ({
     return (
         <c.FormControl isInvalid={touched && invalid} my={4}>
             <c.Checkbox {...input} isInvalid={touched && invalid} my={4}>
-                {children}
+                {label}
             </c.Checkbox>
             <c.FormErrorMessage>{error}</c.FormErrorMessage>
         </c.FormControl>
     )
 }
 
-const CheckboxArray = ({ name, value, children, ...rest }) => {
+const CheckboxArray = ({ name, value, label, ...rest }) => {
     const {
         input: { checked, ...input },
         meta: { error, touched },
@@ -151,7 +151,7 @@ const CheckboxArray = ({ name, value, children, ...rest }) => {
             isInvalid={error && touched}
             {...rest}
         >
-            {children}
+            {label}
         </c.Checkbox>
     )
 }
@@ -160,21 +160,18 @@ export const CheckboxGroup = ({
     items,
     name,
     ...rest
-}: Omit<c.BoxProps, 'name'> & { items; name }) => {
+}: Omit<c.StackProps, 'name'> & { items; name }) => {
     return (
-        <c.Box {...rest}>
+        <c.Stack spacing='10px' {...rest}>
             {items.map(({ value, label }) => (
-                <c.Box>
-                    <CheckboxArray
-                        value={value}
-                        name={name}
-                        key={label || value}
-                    >
-                        {label || value}
-                    </CheckboxArray>
-                </c.Box>
+                <CheckboxArray
+                    value={value}
+                    name={name}
+                    key={label || value}
+                    label={label || value}
+                />
             ))}
-        </c.Box>
+        </c.Stack>
     )
 }
 export const RadioGroup = ({ label, name, children }) => {
