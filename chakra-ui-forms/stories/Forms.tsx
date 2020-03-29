@@ -11,7 +11,7 @@ import {
     Switch,
 } from '../src'
 import { Form } from 'react-final-form'
-import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
+import { ThemeProvider, CSSReset, Box, Stack } from '@chakra-ui/core'
 
 export default {
     title: 'Forms',
@@ -23,13 +23,13 @@ export const All = () => {
         <ThemeProvider>
             <CSSReset />
             <Form
-                onSubmit={(x) => alert(JSON.stringify(x, null, 4))}
+                onSubmit={(x) => console.log(JSON.stringify(x, null, 4))}
                 validate={() => ({ name: 'error' })}
                 render={({ values }) => (
-                    <Box p='40px' maxWidth='400px'>
+                    <Stack p='40px' maxWidth='400px' spacing='40px'>
                         <Labelled
-                            name='name'
-                            field={<TextInput name='name' />}
+                            name='input'
+                            field={<TextInput />}
                             label='Label'
                         />
                         <Labelled
@@ -37,8 +37,6 @@ export const All = () => {
                             label='textArea'
                             field={
                                 <CheckboxGroup
-                                    flexDir='column'
-                                    name='items'
                                     items={[
                                         { value: 'cosa' },
                                         { value: 'altro' },
@@ -49,7 +47,7 @@ export const All = () => {
 
                         <Labelled
                             name='area'
-                            field={<TextArea name='area' />}
+                            field={<TextArea />}
                             label='labell'
                         />
                         <Labelled
@@ -57,7 +55,6 @@ export const All = () => {
                             label='select an option'
                             field={
                                 <Select
-                                    name='sele'
                                     items={[{ value: '1' }, { value: '2' }]}
                                     isRequired
                                 />
@@ -71,11 +68,12 @@ export const All = () => {
                         <Labelled
                             name='slider'
                             label='switch this'
-                            field={<Switch name='switch' />}
+                            field={<Switch />}
                         />
-
-                        <pre>{JSON.stringify(values, null, 4)}</pre>
-                    </Box>
+                        <Box>
+                            <pre>{JSON.stringify(values, null, 4)}</pre>
+                        </Box>
+                    </Stack>
                 )}
             />
         </ThemeProvider>

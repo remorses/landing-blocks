@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, cloneElement } from 'react'
 import * as c from '@chakra-ui/core'
 import { Form, Field, useField, useForm } from 'react-final-form'
 import Editor from 'react-simple-code-editor'
@@ -7,21 +7,10 @@ import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-yaml'
 import 'prismjs/themes/prism.css'
 import { FieldValidator } from 'final-form'
-
-export const Label = ({ children, ...rest }: c.BoxProps) => {
-    return <c.Text {...rest}>{children}</c.Text>
-}
-
-export const SubLabel = ({ children }) => {
-    return (
-        <c.Text my='5px' opacity={0.5}>
-            {children}
-        </c.Text>
-    )
-}
+import { FormControlProps } from '@chakra-ui/core'
 
 export interface BaseProps {
-    name: string
+    name?: string
     validate?: FieldValidator<any>
 }
 
@@ -101,20 +90,14 @@ export function TextInput({
     )
 }
 
-export function Switch({
-    name,
-    validate,
-    ...rest
-}: BaseProps & c.SwitchProps) {
+export function Switch({ name, validate, ...rest }: BaseProps & c.SwitchProps) {
     const { input, meta } = useField(name, {
         initialValue: rest.defaultValue,
         validate,
         type: 'option',
         parse: (x) => x,
     })
-    return (
-        <c.Switch d='block' {...rest} {...input} />
-    )
+    return <c.Switch d='block' {...rest} {...input} />
 }
 
 export function Slider({ name, validate, ...rest }: BaseProps & c.SliderProps) {
@@ -204,7 +187,7 @@ export const CheckboxGroup = ({
     items,
     name,
     ...rest
-}: Omit<c.StackProps, 'name'> & { items; name }) => {
+}: Omit<c.StackProps, 'name'> & { items } & BaseProps) => {
     return (
         <c.Stack spacing='10px' {...rest}>
             {items.map(({ value, label }) => (
@@ -229,7 +212,7 @@ export const RadioGroup = ({ label, name, children }) => {
     )
 }
 
-const Control = ({ name, ...rest }) => {
+const Control = ({ name, ...rest }: { name } & FormControlProps) => {
     const {
         meta: { error, touched },
     } = useField(name, { subscription: { touched: true, error: true } })
@@ -246,7 +229,7 @@ export const Select = ({
     name,
     items,
     ...rest
-}: { name; items: Item[] } & c.SelectProps) => {
+}: { items: Item[] } & c.SelectProps & BaseProps) => {
     const {
         input,
         meta: { error, touched },
@@ -282,11 +265,16 @@ export const ValidationError = ({ name }) => {
     )
 }
 
-export const Labelled = ({ name, label, field }) => {
+export function Labelled({
+    name,
+    label,
+    field,
+    ...rest
+}: { name; label?: string; field: React.ReactElement } & c.FormControlProps) {
     return (
-        <Control name={name} my={4}>
+        <Control name={name} {...rest}>
             <c.FormLabel htmlFor={name}>{label}</c.FormLabel>
-            {field}
+            {cloneElement(field, { name })}
             <ValidationError name={name} />
         </Control>
     )
