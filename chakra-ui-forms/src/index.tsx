@@ -101,6 +101,30 @@ export function TextInput({
     )
 }
 
+export function Slider({ name, validate, ...rest }: BaseProps & c.SliderProps) {
+    const { input, meta } = useField(name, {
+        initialValue: rest.defaultValue,
+        validate,
+        parse: (x) => x,
+    })
+    return (
+        <c.Slider {...input} {...rest}>
+            <c.SliderTrack />
+            <c.SliderFilledTrack />
+            <c.SliderThumb size='18px'>
+                <c.Box
+                    shadow='lg'
+                    w='100%'
+                    h='100%'
+                    border='1px solid'
+                    borderColor='gray.300'
+                    borderRadius='100%'
+                />
+            </c.SliderThumb>
+        </c.Slider>
+    )
+}
+
 export const NumberInput = ({
     name,
     validate,

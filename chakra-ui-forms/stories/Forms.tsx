@@ -7,6 +7,7 @@ import {
     TextArea,
     Labelled,
     Select,
+    Slider,
 } from '../src'
 import { Form } from 'react-final-form'
 import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
@@ -60,6 +61,11 @@ export const All = () => {
                                     isRequired
                                 />
                             }
+                        />
+                        <Labelled
+                            name='slider'
+                            label='select an option'
+                            field={<Slider max={10} name='slide' />}
                         />
 
                         <pre>{JSON.stringify(values, null, 4)}</pre>
