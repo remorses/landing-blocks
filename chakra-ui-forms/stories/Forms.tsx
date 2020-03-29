@@ -9,6 +9,7 @@ import {
     Select,
     Slider,
     Switch,
+    SingleCheckbox,
 } from '../src'
 import { Form } from 'react-final-form'
 import { ThemeProvider, CSSReset, Box, Stack } from '@chakra-ui/core'
@@ -24,16 +25,22 @@ export const All = () => {
             <CSSReset />
             <Form
                 onSubmit={(x) => console.log(JSON.stringify(x, null, 4))}
-                validate={() => ({ name: 'error' })}
+                validate={() => ({ input: 'error' })}
                 render={({ values }) => (
-                    <Stack p='40px' maxWidth='400px' spacing='40px'>
+                    <Stack p='40px' maxWidth='700px' spacing='40px'>
                         <Labelled
                             name='input'
+                            sublabel='description of input'
                             field={<TextInput />}
                             label='Label'
                         />
                         <Labelled
-                            name='area'
+                            name='checkbox'
+                            field={<SingleCheckbox label='single one' />}
+                            label='checkbox'
+                        />
+                        <Labelled
+                            name='checkboxgroup'
                             label='textArea'
                             field={
                                 <CheckboxGroup
@@ -66,7 +73,7 @@ export const All = () => {
                             field={<Slider max={10} name='slide' />}
                         />
                         <Labelled
-                            name='slider'
+                            name='switch'
                             label='switch this'
                             field={<Switch />}
                         />

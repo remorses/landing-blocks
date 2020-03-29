@@ -145,8 +145,9 @@ export const NumberInput = ({
 
 export const SingleCheckbox = ({
     name,
-    label,
-}: { name; label } & Omit<c.CheckboxProps, 'children'>) => {
+    label = '',
+    ...rest
+}: BaseProps & { label?: string } & Omit<c.CheckboxProps, 'children'>) => {
     const {
         input: { checked, ...input },
         meta: { error, touched, invalid },
@@ -154,12 +155,11 @@ export const SingleCheckbox = ({
         type: 'checkbox', // important for RFF to manage the checked prop
     })
     return (
-        <c.FormControl isInvalid={touched && invalid} my={4}>
-            <c.Checkbox {...input} isInvalid={touched && invalid} my={4}>
+        <c.Box>
+            <c.Checkbox {...input} {...rest}>
                 {label}
             </c.Checkbox>
-            <c.FormErrorMessage>{error}</c.FormErrorMessage>
-        </c.FormControl>
+        </c.Box>
     )
 }
 
@@ -250,14 +250,14 @@ export const Select = ({
     )
 }
 
-export const ValidationError = ({ name }) => {
+export const ValidationError = ({ name, ...rest }) => {
     const {
         meta: { error, touched },
     } = useField(name, { subscription: { error: true, touched: true } })
     return (
         <>
             {touched && error && (
-                <c.Text my='10px' color='red.500'>
+                <c.Text color='red.500' {...rest}>
                     {error}
                 </c.Text>
             )}
@@ -268,14 +268,27 @@ export const ValidationError = ({ name }) => {
 export function Labelled({
     name,
     label,
+    sublabel,
     field,
     ...rest
-}: { name; label?: string; field: React.ReactElement } & c.FormControlProps) {
+}: {
+    name
+    label?: string
+    sublabel?: string
+    field: React.ReactElement
+} & c.FormControlProps) {
     return (
-        <Control name={name} {...rest}>
-            <c.FormLabel htmlFor={name}>{label}</c.FormLabel>
-            {cloneElement(field, { name })}
-            <ValidationError name={name} />
+        <Control m='0' name={name} {...rest}>
+            <c.Stack spacing='2px'>
+                <c.FormLabel m='0' htmlFor={name}>
+                    {label}
+                </c.FormLabel>
+                <c.FormLabel m='0' opacity={0.6}>
+                    {sublabel}
+                </c.FormLabel>
+                {cloneElement(field, { name })}
+                <ValidationError name={name} />
+            </c.Stack>
         </Control>
     )
 }
