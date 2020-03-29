@@ -8,6 +8,7 @@ import {
     Labelled,
     Select,
     Slider,
+    Switch,
 } from '../src'
 import { Form } from 'react-final-form'
 import { ThemeProvider, CSSReset, Box } from '@chakra-ui/core'
@@ -66,6 +67,11 @@ export const All = () => {
                             name='slider'
                             label='select an option'
                             field={<Slider max={10} name='slide' />}
+                        />
+                        <Labelled
+                            name='slider'
+                            label='switch this'
+                            field={<Switch name='switch' />}
                         />
 
                         <pre>{JSON.stringify(values, null, 4)}</pre>

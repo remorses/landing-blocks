@@ -101,6 +101,22 @@ export function TextInput({
     )
 }
 
+export function Switch({
+    name,
+    validate,
+    ...rest
+}: BaseProps & c.SwitchProps) {
+    const { input, meta } = useField(name, {
+        initialValue: rest.defaultValue,
+        validate,
+        type: 'option',
+        parse: (x) => x,
+    })
+    return (
+        <c.Switch d='block' {...rest} {...input} />
+    )
+}
+
 export function Slider({ name, validate, ...rest }: BaseProps & c.SliderProps) {
     const { input, meta } = useField(name, {
         initialValue: rest.defaultValue,
