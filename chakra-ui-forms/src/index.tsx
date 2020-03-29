@@ -34,6 +34,7 @@ export function TextArea({
     const { input, meta } = useField(name, {
         initialValue: defaultValue,
         validate,
+        parse: (x) => x,
     })
     return (
         <c.Textarea
@@ -59,6 +60,7 @@ export function CodeEditor({
         defaultValue: defaultValue,
         type: 'string',
         validate,
+        parse: (x) => x,
     })
     const { colorMode } = c.useColorMode()
     return (
@@ -92,6 +94,7 @@ export function TextInput({
     const { input, meta } = useField(name, {
         initialValue: rest.defaultValue,
         validate,
+        parse: (x) => x,
     })
     return (
         <c.Input {...input} {...rest} isInvalid={meta.error && meta.touched} />
@@ -106,6 +109,7 @@ export const NumberInput = ({
     const { input, meta } = useField(name, {
         initialValue: rest.defaultValue,
         validate,
+        parse: (x) => x,
     })
     return (
         <c.NumberInput
