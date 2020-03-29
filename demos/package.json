@@ -14,10 +14,13 @@
         "timeout": 9999999999
     },
     "dependencies": {
+        "@chakra-ui/core": "^0.7.0",
         "@monaco-editor/react": "^3.1.2",
         "@types/lodash": "^4.14.149",
         "@types/node": "^13.9.3",
         "@types/react": "^16.9.25",
+        "chakra-ui-forms": "0.0.1",
+        "color-js": "^1.0.5",
         "lodash": "^4.17.15",
         "monaco-editor": "^0.20.0",
         "next": "^9.3.1",
@@ -25,8 +28,10 @@
         "react-dom": "16.13.1",
         "react-element-to-jsx-string": "^14.3.1",
         "react-extra-hooks": "^2.3.1",
+        "react-final-form": "^6.3.5",
         "react-landing": "0.0.2",
         "react-live": "^2.2.2",
+        "react-multi-steps": "^1.0.3",
         "tiny-glob": "^0.2.6",
         "tsconfig-paths": "^3.9.0",
         "typescript": "^3.8.3"

@@ -2,7 +2,8 @@
     "private": true,
     "workspaces": [
         "core",
-        "demos"
+        "demos",
+        "chakra-ui-forms"
     ],
     "scripts": {
         "example": "cd demos && yarn dev",

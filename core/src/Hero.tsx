@@ -7,8 +7,6 @@ import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
-import { UniquelyIdentifiable } from './UniquelyIdentifiable'
-import { Editable } from './EditableProvider'
 
 export function Hero({
     heading,

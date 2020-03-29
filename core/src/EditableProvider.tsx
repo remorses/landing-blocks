@@ -95,7 +95,6 @@ export const EditableProvider = ({ children, onChange }) => {
         onChange: ({ key, newProps }) => {
             const newChildren = recursiveMap(children, (c: ReactElement) => {
                 if (c.props && c.props.key === key) {
-                    // @ts-ignore
                     console.log(
                         `adding new props to ${getDisplayName(c)}: ${newProps}`,
                     )

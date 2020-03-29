@@ -9,7 +9,8 @@ import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
 import { usePromise } from 'react-extra-hooks'
 import { LandingProvider, NavBar, Button, Hero, Heading } from 'react-landing'
 
-// TODO every element must have a display name
+// TODO every element must have a display name, and this must be equal to the imported component name in scope
+// TODO generate the component from input like, elements (hero, features, ), primary color, buttons style, font family, illustrations to use, decorations, ...
 const initialComponent = (
     <LandingProvider primary='#FF593D'>
         <NavBar
@@ -108,12 +109,12 @@ const Page = ({}) => {
                         <MonacoEditor
                             ref={editor}
                             height='100vh'
+                            width='300px'
                             extraLibs={extraLibs || []}
                         />
                         <LiveError />
                         <Box
-                            minWidth='50%'
-                            maxWidth='100%'
+                            flex='1'
                             border='1px solid black '
                         >
                             <LivePreview style={{ overflowY: 'scroll' }} />
