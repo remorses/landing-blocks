@@ -82,7 +82,8 @@ export function Hero({
                             as={animated.div}
                             style={animations[3]}
                             align='center'
-                            maxW={{ sm: 'none', lg: '500px' }}
+                            // h='100%'
+                            // maxW={{ sm: 'none', lg: '500px' }}
                         >
                             {image}
                         </Col>

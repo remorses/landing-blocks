@@ -59,7 +59,7 @@ const Step = ({
 }) => {
     const dir = flip ? 'row-reverse' : 'row'
     const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
+        enabled: false, // TODO wait for chakra ui Stack ref to be ready
         number: 4,
     })
     return (
@@ -78,12 +78,12 @@ const Step = ({
                     style={animations[0]}
                     flexDir='row'
                     align='flex-end'
-                    opacity={0.1}
                 >
-                    <Heading lineHeight='70px' fontSize='80px'>
+                    <Heading opacity={0.14} lineHeight='70px' fontSize='80px'>
                         {number}
                     </Heading>
                     <Heading
+                        opacity={0.2}
                         isTruncated
                         maxW='300px'
                         fontWeight='bold'
@@ -92,20 +92,20 @@ const Step = ({
                         {'  .  ' + heading}
                     </Heading>
                 </Stack>
-                <Heading as={animated.h2} style={animations[1]} fontSize='20px'>
-                    {heading}
-                </Heading>
-                <Text
-                    as={animated.p}
-                    style={animations[2]}
-                    fontWeight='normal'
-                    m={0}
-                    lineHeight='28px'
-                    opacity={0.7}
-                    fontSize='16px'
-                >
-                    {subhead}
-                </Text>
+                <Box as={animated.h2} style={animations[1]}>
+                    <Heading fontSize='20px'>{heading}</Heading>
+                </Box>
+                <Box as={animated.h2} style={animations[2]}>
+                    <Text
+                        fontWeight='normal'
+                        m={0}
+                        lineHeight='28px'
+                        opacity={0.7}
+                        fontSize='16px'
+                    >
+                        {subhead}
+                    </Text>
+                </Box>
             </Stack>
             {/* <Box display={{sm: 'none', lg: 'block'}} ml='40px' /> */}
             <Col

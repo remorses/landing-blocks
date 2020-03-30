@@ -5,8 +5,8 @@ import { PageContainer } from './layout'
 
 export function NavBar({ logo, navs, ...rest }) {
     return (
-        <PageContainer {...rest}>
-            <Row py='40px'>
+        <PageContainer py='40px' {...rest}>
+            <Row>
                 <Box
                     display={{ sm: 'none', lg: 'block' }}
                     alignSelf='flexStart'
