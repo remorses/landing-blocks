@@ -10,7 +10,7 @@ export function Footer({
     ...rest
 }) {
     return (
-        <PageContainer minHeight='200px' {...rest}>
+        <PageContainer py='100px' minHeight='200px' {...rest}>
             <Stack
                 flexDir='row'
                 flexWrap='wrap'

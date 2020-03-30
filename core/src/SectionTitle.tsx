@@ -18,17 +18,7 @@ export function SectionTitle({
         number: 3,
     })
     return (
-        <PageContainer
-            floatingElement={
-                <GradientRect
-                    maxW='pageContainer'
-                    width='60%'
-                    distortion={-0.3}
-                />
-            }
-            ref={ref}
-            {...rest}
-        >
+        <PageContainer ref={ref} {...rest}>
             <Stack
                 alignSelf='center'
                 maxW='700px'
@@ -37,13 +27,13 @@ export function SectionTitle({
                 textAlign='center'
             >
                 {/* <Bullett>{bullett}</Bullett> */}
-                <Heading as={animated.h2} style={animations[0]} fontSize='46px'>
+                <Heading as={animated.h2} style={animations[0]} fontSize='32px'>
                     {heading}
                 </Heading>
                 <SubHeading
                     as={animated.h4}
                     style={animations[1]}
-                    fontSize='22px'
+                    fontSize='18px'
                     maxW='700px'
                 >
                     {subhead}

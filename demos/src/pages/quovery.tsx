@@ -13,12 +13,14 @@ import {
     NavBar,
     Footer,
     TestimonialsLogos,
+    SectionTitle,
+    Button,
 } from 'react-landing/src'
 import { Box, Stack, Image } from '@chakra-ui/core'
 
 const Page = () => (
-    <LandingProvider>
-        <Stack spacing='60px' bg='#323452' pb='40px'>
+    <LandingProvider primary='white'>
+        <Stack spacing='60px' bg='#323452' pb='100px'>
             <NavBar
                 dark
                 logo={
@@ -35,6 +37,7 @@ const Page = () => (
                     <a>Community</a>,
                     <a>Enterprise</a>,
                     <a>Blog</a>,
+                    <Button px='10px'>Sign up</Button>
                 ]}
             />
             <Hero
@@ -46,6 +49,7 @@ const Page = () => (
                 cta='DEPLOY MY APPLICATION'
                 fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
             />
+            <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
             <TestimonialsLogos
                 testimonials={[
                     <img src='quovery/google.png' />,
@@ -56,10 +60,16 @@ const Page = () => (
                 ]}
             />
         </Stack>
+        <SectionTitle
+            heading='Deploy your application with ease'
+            subhead='Deploying an application with Qovery is as simple as pushing code with git'
+            image={null}
+        />
         <Feature
             heading='Fully integrated to git'
             subhead='Qovery is fully integrated to Github, Bitbucket and Gitlab. Once you have pushed your code, Qovery launches all the necessaries steps to make your application available online.'
             image={<img src='/quovery/feature1.png' width='500px' />}
+            bg='#F8F8FF'
         />
         <Feature
             heading='1 branch = 1 environment'
@@ -71,6 +81,7 @@ const Page = () => (
             heading='Designed for real world applications'
             subhead={`We know that today's applications do not just have just one piece of code and a database, but multiple applications (micro-services) and multiple databases (SQL, NoSQL, Cache..). Qovery has been designed for these complex cases and manages it in an incredible way.`}
             image={<img src='/quovery/feature3.png' width='500px' />}
+            bg='#F8F8FF'
         />
 
         <FeaturesList
@@ -105,7 +116,8 @@ const Page = () => (
             ]}
         />
         <Footer
-            businessName='Prismic'
+            businessName='Quovery'
+            bg='#F8F8FF'
             columns={{
                 Developers: [
                     <a>Quickstart</a>,

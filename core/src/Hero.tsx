@@ -26,12 +26,7 @@ export function Hero({
         number: 4,
     })
     return (
-        <PageContainer
-            floatingElement={
-                <GradientRect maxW='pageContainer' distortion={0.3} />
-            }
-            {...rest}
-        >
+        <PageContainer {...rest}>
             <Row
                 justify='flex-start'
                 w='100%'
@@ -97,4 +92,3 @@ export function Hero({
         </PageContainer>
     )
 }
-

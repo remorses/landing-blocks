@@ -16,6 +16,7 @@ import {
     TestimonialsLogos,
 } from 'react-landing/src'
 import { Button } from 'react-landing/src/Button'
+import { GradientRect } from 'react-landing/src/decorations'
 
 // background: linear-gradient(45deg,#e9fcff 30%,#fdf2ed 60%);
 // FF593D
@@ -45,6 +46,9 @@ const Page = () => (
             subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
             image={null}
             cta='Try it now for free!'
+            floatingElement={
+                <GradientRect maxW='pageContainer' distortion={0.3} />
+            }
         />
         <TestimonialsLogos
             testimonials={[
@@ -68,6 +72,13 @@ const Page = () => (
             }
             subhead='HERE’S 3 SYMPTOMS TO WATCH OUT'
             image={null}
+            floatingElement={
+                <GradientRect
+                    maxW='pageContainer'
+                    width='60%'
+                    distortion={-0.3}
+                />
+            }
         />
         <Feature
             heading='Is content spread across endless different CMSs?'
