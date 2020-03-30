@@ -12,12 +12,13 @@ import {
     FeaturesList,
     NavBar,
     Footer,
+    TestimonialsLogos,
 } from 'react-landing/src'
 import { Box, Stack, Image } from '@chakra-ui/core'
 
 const Page = () => (
     <LandingProvider>
-        <Stack spacing='60px' bg='#323452' pb='100px'>
+        <Stack spacing='60px' bg='#323452' pb='40px'>
             <NavBar
                 dark
                 logo={
@@ -38,12 +39,21 @@ const Page = () => (
             />
             <Hero
                 dark
-                bullett='SUPERPOWERS FOR DEVELOPER'
+                bullet='SUPERPOWERS FOR DEVELOPER'
                 heading='Deploy complex application, seamlessly'
                 subhead='Just push your code, we handle the rest'
                 image={<img width='600px' src='/quovery/hero.png' />}
                 cta='DEPLOY MY APPLICATION'
                 fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
+            />
+            <TestimonialsLogos
+                testimonials={[
+                    <img src='quovery/google.png' />,
+                    <img src='quovery/datadog.png' />,
+                    <img src='quovery/itiviti.png' />,
+                    <img src='quovery/redhat.png' />,
+                    <img src='quovery/criteol.png' />,
+                ]}
             />
         </Stack>
         <Feature

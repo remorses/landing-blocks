@@ -28,9 +28,9 @@ export function TestimonialsLogos({ testimonials, animate = true, ...rest }) {
                         as={animated.div}
                         style={animations[i]}
                         align='center'
-                        opacity={0.6}
                     >
                         <Col
+                            opacity={0.7}
                             minH='80px'
                             w='160px'
                             justify='center'

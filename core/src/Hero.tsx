@@ -9,13 +9,14 @@ import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
 import { useColor } from './support'
 import Color from 'color-js'
+import { Bullet } from './Bullet'
 
 export function Hero({
     heading,
     subhead,
     cta,
     image,
-    bullett = '',
+    bullet = '',
     animate = true,
     fingerprint = '',
     ...rest
@@ -50,7 +51,7 @@ export function Hero({
                         lg: image ? 'left' : 'center',
                     }}
                 >
-                    <Bullett>{bullett}</Bullett>
+                    {bullet && <Bullet>{bullet}</Bullet>}
                     <Heading
                         as={animated.h1}
                         style={animations[0]}
@@ -97,27 +98,3 @@ export function Hero({
     )
 }
 
-export const Bullett = (props) => {
-    const { colorMode } = useColorMode()
-    return (
-        <Text
-            w='fit-content'
-            p='4px'
-            px='6px'
-            bg={
-                {
-                    light: Color('black')
-                        .setAlpha(0.2)
-                        .toCSS(),
-                    dark: Color('white')
-                        .setAlpha(0.2)
-                        .toCSS(),
-                }[colorMode]
-            }
-            fontWeight='medium'
-            fontSize='13px'
-            borderRadius='4px'
-            {...props}
-        />
-    )
-}
