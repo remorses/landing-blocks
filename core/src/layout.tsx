@@ -23,7 +23,7 @@ const Dark = ({ children }) => {
 }
 
 const darkStyles = {
-    bg: 'gray.800',
+    // bg: 'gray.800',
     color: 'whiteAlpha.900',
     borderColor: 'whiteAlpha.300',
     placeholder: 'whiteAlpha.400',
