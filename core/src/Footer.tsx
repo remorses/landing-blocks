@@ -41,7 +41,7 @@ export function Footer({
                 })}
             </Stack>
             <Text width='auto' opacity={0.6} fontSize='14px' alignSelf='center'>
-                Copyright © 2019 {businessName}
+                Copyright © {new Date().getFullYear()} {businessName}
             </Text>
         </PageContainer>
     )
