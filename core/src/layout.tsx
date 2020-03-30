@@ -17,16 +17,16 @@ export const Spacer = ({ x = '0px', y = '0px' }) => {
 const Dark = ({ children }) => {
     return (
         <DarkMode>
-            <Box
-                bg='gray.800'
-                color='whiteAlpha.900'
-                borderColor='whiteAlpha.300'
-                placeholder='whiteAlpha.400'
-            >
-                {children}
-            </Box>
+            <Box>{children}</Box>
         </DarkMode>
     )
+}
+
+const darkStyles = {
+    bg: 'gray.800',
+    color: 'whiteAlpha.900',
+    borderColor: 'whiteAlpha.300',
+    placeholder: 'whiteAlpha.400',
 }
 
 export const PageContainer: FC<{
@@ -34,17 +34,18 @@ export const PageContainer: FC<{
     dark?: boolean
 } & FlexProps> = forwardRef(
     ({ children, floatingElement = null, dark = false, ...props }, ref) => {
-        const Mode = dark ? Dark : Fragment
-        console.log({ Mode })
+        const Mode = dark ? DarkMode : Fragment
+        const styles = dark ? darkStyles : {}
         return (
-            <Mode>
-                <Col
-                    position='relative'
-                    ref={ref}
-                    width='100%'
-                    align='center'
-                    {...props}
-                >
+            <Col
+                position='relative'
+                ref={ref}
+                width='100%'
+                align='center'
+                {...styles}
+                {...props}
+            >
+                <Mode>
                     <Col
                         position='absolute'
                         width='100%'
@@ -61,8 +62,8 @@ export const PageContainer: FC<{
                     <Col px='20px' w='100%' maxW='pageContainer'>
                         {children}
                     </Col>
-                </Col>
-            </Mode>
+                </Mode>
+            </Col>
         )
     },
 )

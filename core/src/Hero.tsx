@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Image, Flex, Box, Stack, Text } from '@chakra-ui/core'
+import { Image, Flex, Box, Stack, Text, useColorMode } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { Heading } from './Heading'
 import { Button } from './Button'
@@ -7,6 +7,8 @@ import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
+import { useColor } from './support'
+import Color from 'color-js'
 
 export function Hero({
     heading,
@@ -15,6 +17,7 @@ export function Hero({
     image,
     bullett = '',
     animate = true,
+    fingerprint = '',
     ...rest
 }) {
     const { ref, animations } = useFadeUpAnimation({
@@ -37,7 +40,7 @@ export function Hero({
             >
                 <Stack
                     maxW={{ sm: 'none', lg: image ? '500px' : 'none' }}
-                    spacing='30px'
+                    spacing='40px'
                     align={{
                         sm: 'center',
                         lg: image ? 'flex-start' : 'center',
@@ -47,7 +50,7 @@ export function Hero({
                         lg: image ? 'left' : 'center',
                     }}
                 >
-                    {/* <Bullett>{bullett}</Bullett> */}
+                    <Bullett>{bullett}</Bullett>
                     <Heading
                         as={animated.h1}
                         style={animations[0]}
@@ -63,7 +66,7 @@ export function Hero({
                     >
                         {subhead}
                     </SubHeading>
-                    <Col
+                    <Stack
                         as={animated.div}
                         style={animations[2]}
                         align={['center', 'center', 'flex-start']}
@@ -71,7 +74,10 @@ export function Hero({
                         <Button px='40px' bg='primary' d='block' width='auto'>
                             {cta}
                         </Button>
-                    </Col>
+                        <Box opacity={0.8} fontSize='13px' lineHeight='26px'>
+                            {fingerprint}
+                        </Box>
+                    </Stack>
                 </Stack>
                 {image && (
                     <Fragment>
@@ -92,12 +98,25 @@ export function Hero({
 }
 
 export const Bullett = (props) => {
+    const { colorMode } = useColorMode()
     return (
         <Text
             w='fit-content'
-            px='20px'
-            bg='gray.200'
-            borderRadius='10px'
+            p='4px'
+            px='6px'
+            bg={
+                {
+                    light: Color('black')
+                        .setAlpha(0.2)
+                        .toCSS(),
+                    dark: Color('white')
+                        .setAlpha(0.2)
+                        .toCSS(),
+                }[colorMode]
+            }
+            fontWeight='medium'
+            fontSize='13px'
+            borderRadius='4px'
             {...props}
         />
     )

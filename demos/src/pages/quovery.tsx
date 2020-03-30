@@ -13,11 +13,21 @@ import {
     NavBar,
     Footer,
 } from 'react-landing/src'
+import { Box, Stack, Image } from '@chakra-ui/core'
 
 const Page = () => (
     <LandingProvider>
         <NavBar
-            logo={<img width='120px' src='/prismic/logo.svg' />}
+            bg='#323452'
+            dark
+            logo={
+                <Stack align='center' direction='row' spacing='20px'>
+                    <Image width='30px' src='/quovery/logo.png' />
+                    <Box fontWeight='medium' fontSize='20px'>
+                        Quovery
+                    </Box>
+                </Stack>
+            }
             navs={[
                 <a>Home</a>,
                 <a>Pricing</a>,
@@ -29,18 +39,28 @@ const Page = () => (
         <Hero
             dark
             bg='#323452'
-            heading='Make your website editable for the whole team'
-            subhead='Choose your technology. Use the API to fetch content. Empower
-        your content team.'
-            image={<img width='500px' src='/prismic/code.png' />}
-            cta='Test it out'
+            bullett='SUPERPOWERS FOR DEVELOPER'
+            heading='Deploy complex application, seamlessly'
+            subhead='Just push your code, we handle the rest'
+            image={<img width='600px' src='/quovery/hero.png' />}
+            cta='DEPLOY MY APPLICATION'
+            fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
         />
         <Feature
-            heading='Prismic is a Content Management System, a tool for editing online content'
-            subhead="Also known as a headless CMS, an API CMS, a content platform, a disruptive content-as-a-service digital experience...basically we've built a tool that lets you choose your technology, framework, and language and then easily manage your content."
-            image={<img src='/prismic/feature1.jpg' width='500px' />}
-            backgroundColor='gray.100'
+            heading='Fully integrated to git'
+            subhead='Qovery is fully integrated to Github, Bitbucket and Gitlab. Once you have pushed your code, Qovery launches all the necessaries steps to make your application available online.'
+            image={<img src='/quovery/feature1.png' width='500px' />}
+        />
+        <Feature
+            heading='1 branch = 1 environment'
+            subhead={`Every branch is an isolated environment. For instance, the "master\" branch is the production. Every new branch clones the services (databases, data, brokers..) and the apps from the source branch.`}
+            image={<img src='/quovery/feature2.png' width='500px' />}
             flip
+        />
+        <Feature
+            heading='Designed for real world applications'
+            subhead={`We know that today's applications do not just have just one piece of code and a database, but multiple applications (micro-services) and multiple databases (SQL, NoSQL, Cache..). Qovery has been designed for these complex cases and manages it in an incredible way.`}
+            image={<img src='/quovery/feature3.png' width='500px' />}
         />
         <HowItWorks
             heading='How Prismic works'
@@ -48,21 +68,21 @@ const Page = () => (
             steps={[
                 {
                     heading: 'Model your editor',
-                    image: <img width='500px' src='/prismic/step1.jpg' />,
+                    image: <img width='500px' src='/quovery/step1.jpg' />,
                     subhead:
                         "Model custom types to match your desired design. Create reusable fields and custom components (we call them Slices...you'll hear us talk about them a lot) to enable dynamic layouts and build the editor experience that you want",
                 },
                 {
                     heading:
                         'Hand over to your content team to start creating content',
-                    image: <img width='500px' src='/prismic/step2.jpg' />,
+                    image: <img width='500px' src='/quovery/step2.jpg' />,
                     subhead:
                         "Once you've managed the initial setup, you can hand the management over to your content team so that editors can start filling content while you're choosing the framework. With Prismic, creating beautiful content becomes simple enough that even non-technical employees can handle it. ",
                 },
                 {
                     heading:
                         'Deploy on Zeit Now, Netlify, Heroku or your favorite hosting platform',
-                    image: <img width='500px' src='/prismic/step3.png' />,
+                    image: <img width='500px' src='/quovery/step3.png' />,
                     subhead:
                         'We take care of hosting and scaling the publishing tools. All you have to do is host the website, but you can choose whichever hosting platform you prefer.',
                 },
@@ -74,7 +94,7 @@ const Page = () => (
                 {
                     heading: 'API to fetch content',
                     icon: (
-                        <img src='https://images.prismic.io/prismic-website%2F4e288d2e-66cd-4209-9ada-fbfb6f1c19c1_api.svg?auto=compress,format' />
+                        <img src='https://images.prismic.io/quovery-website%2F4e288d2e-66cd-4209-9ada-fbfb6f1c19c1_api.svg?auto=compress,format' />
                     ),
                     subhead:
                         'Unlike a traditional CMS, an API-based approach is much simpler and more secure. This includes options for REST, GraphQL, and SDKs that help our users to make the most of Prismic.',
@@ -82,7 +102,7 @@ const Page = () => (
                 {
                     heading: 'No maintenance or server setup',
                     icon: (
-                        <img src='https://images.prismic.io/prismic-website%2F4080f213-f9e0-47f1-ae57-1d26874f1a08_setup.svg?auto=compress,format' />
+                        <img src='https://images.prismic.io/quovery-website%2F4080f213-f9e0-47f1-ae57-1d26874f1a08_setup.svg?auto=compress,format' />
                     ),
                     subhead:
                         "We offer a high-level SLAs, scalability, and a global CDN. We'll make sure that everything is running smoothly in the background so that you can focus on your projects.",
@@ -90,7 +110,7 @@ const Page = () => (
                 {
                     heading: 'A growing ecosystem',
                     icon: (
-                        <img src='https://images.prismic.io/prismic-website%2F4268d459-cec4-4e46-856b-d2eaba8d71f8_ecosystem.svg?auto=compress,format' />
+                        <img src='https://images.prismic.io/quovery-website%2F4268d459-cec4-4e46-856b-d2eaba8d71f8_ecosystem.svg?auto=compress,format' />
                     ),
                     subhead:
                         'Built by developers for developers - we actively engage with the community. Enjoy content that is created specifically for our community and join our Slack to discuss your Prismic projects.',

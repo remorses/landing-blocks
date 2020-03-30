@@ -20,8 +20,8 @@ export function Feature({
         number: 3,
     })
     return (
-        <PageContainer ref={ref} py='120px' bg={backgroundColor} {...rest}>
-            <Stack spacing='40px' flexDir={dir} flexWrap='wrap'>
+        <PageContainer ref={ref} py='80px' bg={backgroundColor} {...rest}>
+            <Stack align='center' spacing='40px' flexDir={dir} flexWrap='wrap'>
                 <Stack spacing={8} flex='1' minW='400px'>
                     <Heading
                         as={animated.h2}
