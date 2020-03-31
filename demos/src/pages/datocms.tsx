@@ -126,7 +126,7 @@ const Page = () => (
                     subhead: 'Faster loading times',
                 },
             ]}
-            backgroundColor='gray.100'
+            bg='gray.100'
         />
         <Footer
             businessName='Prismic'

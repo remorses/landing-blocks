@@ -8,9 +8,8 @@ import { animated } from 'react-spring'
 export function Feature({
     heading,
     subhead,
-    image=null as any,
+    image = null as any,
     flip = false,
-    backgroundColor = 'transparent',
     animate = true,
     direction = 'row',
     ...rest
@@ -21,7 +20,7 @@ export function Feature({
         number: 3,
     })
     return (
-        <PageContainer ref={ref} py='80px' bg={backgroundColor} {...rest}>
+        <PageContainer ref={ref} py='80px' {...rest}>
             <Stack
                 align='center'
                 spacing='40px'

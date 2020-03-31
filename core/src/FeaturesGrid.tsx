@@ -18,7 +18,6 @@ export function FeaturesGrid({
     subhead = '',
     features,
     centerText = false,
-    backgroundColor = 'transparent',
     animate = true,
     ...rest
 }) {
@@ -27,7 +26,7 @@ export function FeaturesGrid({
         number: features.length,
     })
     return (
-        <PageContainer spacing='40px' ref={ref} py='40px' bg={backgroundColor} {...rest}>
+        <PageContainer spacing='40px' ref={ref} py='40px' {...rest}>
             <Stack spacing='40px' flex='1' textAlign='center' align='center'>
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}

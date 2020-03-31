@@ -70,6 +70,7 @@ export const PageContainer: FC<{
                         {floatingElement}
                     </Col>
                     <Stack
+                        zIndex={1}
                         px='20px'
                         w='100%'
                         maxW='pageContainer'

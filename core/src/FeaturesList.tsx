@@ -12,7 +12,6 @@ export function FeaturesList({
     subhead = '',
     features,
     centerText = false,
-    backgroundColor = 'transparent',
     animate = true,
     ...rest
 }) {
@@ -21,7 +20,7 @@ export function FeaturesList({
         number: features.length,
     })
     return (
-        <PageContainer ref={ref} py='40px' bg={backgroundColor} {...rest}>
+        <PageContainer ref={ref} py='40px' {...rest}>
             <Stack spacing='40px' flex='1' textAlign='center' align='center'>
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
@@ -54,7 +53,11 @@ const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
             p='40px'
             {...rest}
         >
-            <Col minW='40px' maxW='100px' alignSelf={centerText ? 'center' : 'flex-start'}>
+            <Col
+                minW='40px'
+                maxW='140px'
+                alignSelf={centerText ? 'center' : 'flex-start'}
+            >
                 {icon}
             </Col>
             <Heading fontSize='20px'>{heading}</Heading>

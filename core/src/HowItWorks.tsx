@@ -11,7 +11,6 @@ export function HowItWorks({
     heading,
     subhead,
     steps,
-    backgroundColor = 'transparent',
     animate = true,
     ...rest
 }) {

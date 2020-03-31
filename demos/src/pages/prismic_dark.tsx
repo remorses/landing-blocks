@@ -37,7 +37,7 @@ const Page = () => (
             heading='Prismic is a Content Management System, a tool for editing online content'
             subhead="Also known as a headless CMS, an API CMS, a content platform, a disruptive content-as-a-service digital experience...basically we've built a tool that lets you choose your technology, framework, and language and then easily manage your content."
             image={<img src='/prismic/feature1.jpg' width='500px' />}
-            backgroundColor='gray.900'
+            bg='gray.900'
             flip
         />
         <HowItWorks
@@ -94,7 +94,7 @@ const Page = () => (
                         'Built by developers for developers - we actively engage with the community. Enjoy content that is created specifically for our community and join our Slack to discuss your Prismic projects.',
                 },
             ]}
-            backgroundColor='gray.900'
+            bg='gray.900'
         />
         <Footer
             businessName='Prismic'
