@@ -10,7 +10,7 @@ export function SubHeading(props: HeadingProps) {
             m={0}
             opacity={0.6}
             fontWeight='normal'
-            fontSize='24px'
+            fontSize='18px'
             {...props}
         />
     )

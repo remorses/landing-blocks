@@ -1,18 +1,28 @@
 import React, { ReactNode, useContext } from 'react'
 import Color from 'color-js'
 import { Box, Text, Stack } from '@chakra-ui/core'
-import { Row } from '.'
+import { Row, Heading, SubHeading } from '.'
 import { PageContainer, Col } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 
-export function TestimonialsLogos({ testimonials, animate = true, ...rest }) {
+export function TestimonialsLogos({
+    heading = '',
+    subhead = '',
+    testimonials,
+    animate = true,
+    ...rest
+}) {
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: testimonials.length,
     })
     return (
-        <PageContainer ref={ref} py='20px' {...rest}>
+        <PageContainer spacing='20px' ref={ref} py='20px' {...rest}>
+            <Stack align='center' spacing='20px'>
+                <Heading as='h2'>{heading}</Heading>
+                <SubHeading>{subhead}</SubHeading>
+            </Stack>
             <Stack
                 flexDir='row'
                 flexWrap='wrap'

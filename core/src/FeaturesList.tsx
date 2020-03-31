@@ -63,7 +63,9 @@ const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
             p='40px'
             {...rest}
         >
-            <Col align={centerText ? 'center' : 'flex-start'}>{icon}</Col>
+            <Col w='100px' alignSelf={centerText ? 'center' : 'flex-start'}>
+                {icon}
+            </Col>
             <Heading fontSize='20px'>{heading}</Heading>
             <Text m={0} fontSize='18px' opacity={0.6} lineHeight='30px'>
                 {subhead}

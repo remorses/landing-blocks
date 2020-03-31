@@ -1,4 +1,4 @@
-import { Flex, FlexProps, Box, DarkMode } from '@chakra-ui/core'
+import { Flex, FlexProps, Box, DarkMode, Stack } from '@chakra-ui/core'
 
 import React, { FC, forwardRef, Fragment } from 'react'
 
@@ -32,8 +32,18 @@ const darkStyles = {
 export const PageContainer: FC<{
     floatingElement?: any
     dark?: boolean
+    spacing?: string
 } & FlexProps> = forwardRef(
-    ({ children, floatingElement = null, dark = false, ...props }, ref) => {
+    (
+        {
+            children,
+            spacing = '0px',
+            floatingElement = null,
+            dark = false,
+            ...props
+        },
+        ref,
+    ) => {
         const Mode = dark ? DarkMode : Fragment
         const styles = dark ? darkStyles : {}
         return (
@@ -59,9 +69,14 @@ export const PageContainer: FC<{
                     >
                         {floatingElement}
                     </Col>
-                    <Col px='20px' w='100%' maxW='pageContainer'>
+                    <Stack
+                        px='20px'
+                        w='100%'
+                        maxW='pageContainer'
+                        spacing={spacing}
+                    >
                         {children}
-                    </Col>
+                    </Stack>
                 </Mode>
             </Col>
         )
