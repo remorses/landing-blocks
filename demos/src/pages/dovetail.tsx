@@ -144,10 +144,10 @@ const Page = () => (
                     icon: <img width='60px' src='dovetail/feature2.svg' />,
                 },
                 {
-                    heading: 'Tag management',
+                    heading: 'Filtering',
                     subhead:
                         'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Search',
@@ -156,16 +156,16 @@ const Page = () => (
                     icon: <img width='60px' src='dovetail/feature3.svg' />,
                 },
                 {
-                    heading: 'Highlights',
+                    heading: 'Bulk Edit',
                     subhead:
                         'Select text and highlight paragraphs, sentences, or words to tag them.',
-                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                    icon: <img width='60px' src='dovetail/feature3.svg' />,
                 },
                 {
-                    heading: 'Charts',
+                    heading: 'Project',
                     subhead:
                         'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
-                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                    icon: <img width='60px' src='dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Tag management',
