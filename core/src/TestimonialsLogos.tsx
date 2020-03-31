@@ -19,10 +19,12 @@ export function TestimonialsLogos({
     })
     return (
         <PageContainer spacing='20px' ref={ref} py='20px' {...rest}>
-            <Stack align='center' spacing='20px'>
-                <Heading as='h2'>{heading}</Heading>
-                <SubHeading>{subhead}</SubHeading>
-            </Stack>
+            {(heading || subhead) && (
+                <Stack align='center' spacing='20px'>
+                    <Heading as='h2'>{heading}</Heading>
+                    <SubHeading>{subhead}</SubHeading>
+                </Stack>
+            )}
             <Stack
                 flexDir='row'
                 flexWrap='wrap'

@@ -6,6 +6,7 @@ import {
     Stack,
     theme as defaultTheme,
     ThemeProvider,
+    FlexProps,
 } from '@chakra-ui/core'
 import { useTheme } from 'emotion-theming'
 
@@ -19,12 +20,12 @@ export interface ThemeExtension extends DefaultTheme {
     } & DefaultTheme['sizes']
 }
 
-export interface LandingProviderProps {
+export type LandingProviderProps = {
     dark?: boolean
     primary?: string
     secondary?: string
     children?: any
-}
+} & FlexProps
 
 /*
 should customize 
@@ -43,6 +44,7 @@ export function LandingProvider({
     primary = 'purple',
     secondary = 'purple',
     children,
+    ...rest
 }: LandingProviderProps) {
     const existingTheme = useTheme()
     // if (existingTheme && Object.keys(existingTheme).length) {
@@ -70,7 +72,9 @@ export function LandingProvider({
         <ThemeProvider theme={theme}>
             <ColorModeProvider value={dark ? 'dark' : 'light'}>
                 <CSSReset />
-                <Stack spacing='60px'>{children}</Stack>
+                <Stack spacing='60px' {...rest}>
+                    {children}
+                </Stack>
             </ColorModeProvider>
         </ThemeProvider>
     )

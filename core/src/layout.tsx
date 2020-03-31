@@ -65,7 +65,7 @@ export const PageContainer: FC<{
                         bottom='0'
                         align='center'
                         justify='center'
-                        overflow='hidden'
+                        // overflow='hidden'
                     >
                         {floatingElement}
                     </Col>

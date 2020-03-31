@@ -8,7 +8,7 @@ import { animated } from 'react-spring'
 export function Feature({
     heading,
     subhead,
-    image,
+    image=null as any,
     flip = false,
     backgroundColor = 'transparent',
     animate = true,
