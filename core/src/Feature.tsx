@@ -12,16 +12,22 @@ export function Feature({
     flip = false,
     backgroundColor = 'transparent',
     animate = true,
+    direction = 'row',
     ...rest
 }) {
-    const dir = flip ? 'row-reverse' : 'row'
+    const dir: any = flip ? `${direction}-reverse` : direction
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: 3,
     })
     return (
         <PageContainer ref={ref} py='80px' bg={backgroundColor} {...rest}>
-            <Stack align='center' spacing='40px' flexDir={dir} flexWrap='wrap'>
+            <Stack
+                align='center'
+                spacing='40px'
+                direction={dir}
+                flexWrap='wrap'
+            >
                 <Stack spacing={8} flex='1' minW='400px'>
                     <Heading
                         as={animated.h2}

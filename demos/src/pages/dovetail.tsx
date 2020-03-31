@@ -14,9 +14,11 @@ import {
     Footer,
     SectionTitle,
     TestimonialsLogos,
+    FeaturesGrid,
 } from 'react-landing/src'
 import { Button } from 'react-landing/src/Button'
 import { GradientRect, CurlyWire } from 'react-landing/src/decorations'
+import { Box } from '@chakra-ui/core'
 
 // background: linear-gradient(45deg,#e9fcff 30%,#fdf2ed 60%);
 // FF593D
@@ -24,7 +26,7 @@ import { GradientRect, CurlyWire } from 'react-landing/src/decorations'
 const Page = () => (
     <LandingProvider primary='#5A38AC'>
         <NavBar
-            logo={<img width='120px' src='/dovetail/logo.svg' />}
+            logo={<img width='140px' src='/dovetail/logo.svg' />}
             navs={[
                 <a>Why DatoCMS</a>,
                 <a>Learn</a>,
@@ -41,7 +43,13 @@ const Page = () => (
         />
         <FeaturesList
             heading=''
-            floatingElement={<CurlyWire opacity={.1} stroke='#5A38AC' maxW='pageContainer' />}
+            floatingElement={
+                <CurlyWire
+                    opacity={0.1}
+                    stroke='#5A38AC'
+                    maxW='pageContainer'
+                />
+            }
             features={[
                 {
                     heading: 'Make sense of data',
@@ -63,54 +71,109 @@ const Page = () => (
                 },
             ]}
         />
-        <TestimonialsLogos
-            testimonials={[
-                <img src='dovetail/dropbox.svg' />,
-                <img src='dovetail/hashicorp.svg' />,
-                <img src='dovetail/verizon.svg' />,
-                <img src='dovetail/vmware.svg' />,
-                <img src='dovetail/linkedin.svg' />,
-            ]}
-        />
-        <SectionTitle
-            heading={
-                <Heading
-                    fontFamily='tiempos-headline, Georgia'
-                    fontSize='60px'
-                    fontWeight='semibold'
-                >
-                    Are you losing money because of legacy content
-                    infrastructure?
-                </Heading>
-            }
-            subhead='HERE’S 3 SYMPTOMS TO WATCH OUT'
-            image={null}
+        <Feature
+            heading='From raw data to insights'
+            subhead='Simply select text and highlight to add tags. Discover patterns across interview transcripts, usability testing notes, survey responses, and more.'
+            bg='#FFF0D4'
+            direction='column'
             floatingElement={
-                <GradientRect
-                    maxW='pageContainer'
-                    width='60%'
-                    distortion={-0.3}
+                <CurlyWire
+                    opacity={0.6}
+                    stroke='#FFB300'
+                    // maxW='pageContainer'
                 />
             }
+            image={
+                <Box shadow='lg'>
+                    <video
+                        autoPlay
+                        muted
+                        src='/dovetail/video1.mp4'
+                        poster='/dovetail/videoposter.webp'
+                        width='100%'
+                    />
+                </Box>
+            }
         />
-        <Feature
-            heading='Is content spread across endless different CMSs?'
-            subhead='How can you deliver a cohesive brand and message strategy if your company functions in silos and information is manually copy-pasted across tens of different platforms?'
-            image={<img src='/dovetail/illustration1.svg' width='400px' />}
-            flip
+        <FeaturesGrid
+            heading='Analysis features'
+            subhead='Make sense of interview notes, transcripts, survey responses, and more.'
+            features={[
+                {
+                    heading: 'Highlights',
+                    subhead:
+                        'Select text and highlight paragraphs, sentences, or words to tag them.',
+                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                },
+                {
+                    heading: 'Charts',
+                    subhead:
+                        'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
+                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                },
+                {
+                    heading: 'Tag management',
+                    subhead:
+                        'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
+                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                },
+                {
+                    heading: 'Search',
+                    subhead:
+                        'Search the full text of research data and insights across all projects in your workspace.',
+                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                },
+                {
+                    heading: 'Highlights',
+                    subhead:
+                        'Select text and highlight paragraphs, sentences, or words to tag them.',
+                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                },
+                {
+                    heading: 'Charts',
+                    subhead:
+                        'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
+                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                },
+                {
+                    heading: 'Tag management',
+                    subhead:
+                        'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
+                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                },
+                {
+                    heading: 'Search',
+                    subhead:
+                        'Search the full text of research data and insights across all projects in your workspace.',
+                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                },
+                {
+                    heading: 'Highlights',
+                    subhead:
+                        'Select text and highlight paragraphs, sentences, or words to tag them.',
+                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                },
+                {
+                    heading: 'Charts',
+                    subhead:
+                        'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
+                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                },
+                {
+                    heading: 'Tag management',
+                    subhead:
+                        'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
+                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                },
+                {
+                    heading: 'Search',
+                    subhead:
+                        'Search the full text of research data and insights across all projects in your workspace.',
+                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                },
+            ]}
         />
-        <Feature
-            heading='Are you slowed down by legacy technology?'
-            subhead='Your customers demand blazing-fast digital products, web standards are evolving at the speed of light, yet you rely on 15-years-old solutions like Wordpress that force you to deliver heavy, low-quality user experiences.'
-            image={<img src='/dovetail/illustration2.svg' width='400px' />}
-        />
-        <Feature
-            heading='Is your infrastructure ready for scale?'
-            subhead='New channels, new markets, complex use cases, fast iterations. You can no longer afford to think locally. You need to have a reliable solution that is capable of following your growth, globally, and lets you adapt along the journey.'
-            image={<img src='/dovetail/illustration3.svg' width='400px' />}
-            flip
-        />
-
+        <Divider />
         <Footer
             businessName='Prismic'
             columns={{
