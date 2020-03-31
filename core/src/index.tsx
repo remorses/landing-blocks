@@ -1,8 +1,6 @@
+// molecules
 export { Hero } from './Hero'
-export { Heading } from './Heading'
-export { SubHeading } from './SubHeading'
 export { Feature } from './Feature'
-export { Button } from './Button'
 export { HowItWorks } from './HowItWorks'
 export { FeaturesList } from './FeaturesList'
 export { FeaturesGrid } from './FeaturesGrid'
@@ -11,6 +9,12 @@ export { Footer } from './Footer'
 export { SectionTitle } from './SectionTitle'
 export { TestimonialsLogos } from './TestimonialsLogos'
 export { LandingProvider } from './LandingProvider'
+export { TopBanner } from './TopBanner'
+
+// atoms
+export { Heading } from './Heading'
+export { SubHeading } from './SubHeading'
+export { Button } from './Button'
+export { Bullet } from './Bullet'
 export { Divider } from './Divider'
-// export { EditableProvider, Editable } from './EditableProvider'
 export * from './layout'

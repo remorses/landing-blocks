@@ -15,6 +15,7 @@ import {
     SectionTitle,
     TestimonialsLogos,
     FeaturesGrid,
+    TopBanner,
 } from 'react-landing/src'
 import { Button } from 'react-landing/src/Button'
 import { GradientRect, CurlyWire } from 'react-landing/src/decorations'
@@ -25,6 +26,13 @@ import { Box } from '@chakra-ui/core'
 
 const Page = () => (
     <LandingProvider primary='#5A38AC'>
+        <TopBanner
+            dark
+            bg='#24114D'
+            heading='Check out more landing pages, we have plenty'
+            cta='Learn More'
+            bullet='New'
+        />
         <NavBar
             logo={<img width='140px' src='/dovetail/logo.svg' />}
             navs={[
