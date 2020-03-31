@@ -20,7 +20,6 @@
     "example": "parcel serve --no-autoinstall example/index.html",
     "compile": "sucrase -q ./src -d ./dist --transforms typescript,imports",
     "dev": "yarn compile && node dist",
-    "svgs": "svgr -d src/svgs --no-dimensions --typescript svgs",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
