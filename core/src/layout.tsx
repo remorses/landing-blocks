@@ -51,7 +51,9 @@ export const PageContainer: FC<{
                 position='relative'
                 ref={ref}
                 width='100%'
+                px='10px'
                 align='center'
+                overflow='hidden'
                 {...styles}
                 {...props}
             >
@@ -71,7 +73,7 @@ export const PageContainer: FC<{
                     </Col>
                     <Stack
                         zIndex={1}
-                        px='20px'
+                        px={['0px', '0px', '20px']}
                         w='100%'
                         maxW='pageContainer'
                         spacing={spacing}

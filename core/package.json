@@ -49,6 +49,7 @@
         "lodash.get": "^4.4.2",
         "react-contenteditable": "^3.3.3",
         "react-hooks-visible": "^1.1.0",
+        "react-icons": "^3.9.0",
         "react-intersection-observer": "^8.26.1",
         "react-spring": "^8.0.27"
     }

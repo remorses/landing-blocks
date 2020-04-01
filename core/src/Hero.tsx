@@ -30,21 +30,19 @@ export function Hero({
             <Row
                 justify='flex-start'
                 w='100%'
-                flexDir={{ sm: 'column', lg: 'row' }}
+                flexDir={['column', 'row', 'row']}
                 align='center'
                 ref={ref}
             >
                 <Stack
-                    maxW={{ sm: 'none', lg: image ? '500px' : 'none' }}
+                    maxW={['none', 'none', image ? '500px' : 'none']}
                     spacing='40px'
-                    align={{
-                        sm: 'center',
-                        lg: image ? 'flex-start' : 'center',
-                    }}
-                    textAlign={{
-                        sm: 'center',
-                        lg: image ? 'left' : 'center',
-                    }}
+                    align={[
+                        'center',
+                        'center',
+                        image ? 'flex-start' : 'center',
+                    ]}
+                    textAlign={['center', 'center', image ? 'left' : 'center']}
                 >
                     {bullet && <Bullet>{bullet}</Bullet>}
                     <Heading
@@ -83,7 +81,6 @@ export function Hero({
                             style={animations[3]}
                             align='center'
                             // h='100%'
-                            // maxW={{ sm: 'none', lg: '500px' }}
                         >
                             {image}
                         </Col>

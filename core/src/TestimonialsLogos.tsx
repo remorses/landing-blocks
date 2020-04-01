@@ -36,7 +36,7 @@ export function TestimonialsLogos({
                 {testimonials.map((x, i) => (
                     <Col
                         key={i}
-                        minW={{ sm: '100%', lg: '160px' }}
+                        minW={['100%', '100%', '160px']}
                         as={animated.div}
                         style={animations[i]}
                         align='center'

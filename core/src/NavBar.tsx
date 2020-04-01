@@ -1,27 +1,79 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack, useDisclosure } from '@chakra-ui/core'
+import {
+    Drawer,
+    DrawerBody,
+    DrawerFooter,
+    DrawerHeader,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    Button,
+} from '@chakra-ui/core'
 import React from 'react'
 import { Row } from '.'
 import { PageContainer } from './layout'
+import { FiMenu as Menu } from 'react-icons/fi'
 
 export function NavBar({ logo, navs, ...rest }) {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
     return (
         <PageContainer py='40px' {...rest}>
             <Row>
-                <Box
-                    display={{ sm: 'none', lg: 'block' }}
-                    alignSelf='flexStart'
-                >
-                    {logo}
-                </Box>
+                <Box alignSelf='flexStart'>{logo}</Box>
                 <Box flex='1' />
-                <Stack isInline spacing='20px' align='center'>
+                <Stack
+                    maxW='100%'
+                    isTruncated
+                    direction='row'
+                    spacing='20px'
+                    align='center'
+                    display={['none', 'none', 'flex']}
+                >
                     {navs.map((x, i) => (
                         <Box key={i} fontSize='16px' fontWeight='medium'>
                             {x}
                         </Box>
                     ))}
                 </Stack>
+                <Button
+                    display={['block', 'block', 'none']}
+                    variant='link'
+                    onClick={onOpen}
+                >
+                    <Box stroke='black' as={Menu} size='40px' />
+                </Button>
             </Row>
+            <Drawer
+                isOpen={isOpen}
+                placement='left'
+                onClose={onClose}
+                // finalFocusRef={btnRef}
+            >
+                <DrawerOverlay />
+                <DrawerContent>
+                    {/* <DrawerCloseButton /> */}
+                    <DrawerHeader>Menu</DrawerHeader>
+                    <DrawerBody>
+                        <Stack
+                            maxW='100%'
+                            isTruncated
+                            spacing='20px'
+                            align='center'
+                        >
+                            {navs.map((x, i) => (
+                                <Box
+                                    key={i}
+                                    fontSize='16px'
+                                    fontWeight='medium'
+                                >
+                                    {x}
+                                </Box>
+                            ))}
+                        </Stack>
+                    </DrawerBody>
+                </DrawerContent>
+            </Drawer>
         </PageContainer>
     )
 }

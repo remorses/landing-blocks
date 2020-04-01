@@ -30,7 +30,7 @@ export function FeaturesList({
             <Stack flexDir='row' spacing='20px' flex='1' flexWrap='wrap'>
                 {features.map((step, i) => (
                     <Feature
-                        minW={{ sm: '100%', lg: '0' }}
+                        minW={['100%', '100%', '0']}
                         flex='1'
                         key={i}
                         centerText={centerText}

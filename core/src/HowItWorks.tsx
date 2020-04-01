@@ -106,7 +106,6 @@ const Step = ({
                     </Text>
                 </Box>
             </Stack>
-            {/* <Box display={{sm: 'none', lg: 'block'}} ml='40px' /> */}
             <Col
                 as={animated.div}
                 style={animations[3]}

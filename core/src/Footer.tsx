@@ -20,7 +20,7 @@ export function Footer({
                 {Object.keys(columns).map((k, i) => {
                     return (
                         <Stack
-                            minW={{ sm: '100%', lg: '0px' }}
+                            minW={['100%', '100%', '0']}
                             spacing='10px'
                             key={i}
                         >
