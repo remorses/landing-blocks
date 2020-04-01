@@ -1,4 +1,4 @@
-import { Box, Stack, useDisclosure } from '@chakra-ui/core'
+import { Box, Stack, useDisclosure, useColorMode } from '@chakra-ui/core'
 import {
     Drawer,
     DrawerBody,
@@ -16,7 +16,7 @@ import { FiMenu as Menu } from 'react-icons/fi'
 
 export function NavBar({ logo, navs, ...rest }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
-
+    const {colorMode} = useColorMode()
     return (
         <PageContainer py='40px' {...rest}>
             <Row>
@@ -41,7 +41,7 @@ export function NavBar({ logo, navs, ...rest }) {
                     variant='link'
                     onClick={onOpen}
                 >
-                    <Box stroke='black' as={Menu} size='40px' />
+                    <Box stroke={{light: 'black', dark: 'white'}[colorMode]} as={Menu} size='40px' />
                 </Button>
             </Row>
             <Drawer

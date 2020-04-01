@@ -26,10 +26,9 @@ export function TestimonialsLogos({
                 </Stack>
             )}
             <Stack
-                flexDir='row'
-                flexWrap='wrap'
-                isInline
+                flexDir={['column', 'column', 'row']}
                 justify='space-evenly'
+                isInline // TODO Stack should get isInline from flexDir if it is an array
                 spacing='40px'
                 align='center'
             >

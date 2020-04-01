@@ -14,7 +14,7 @@ export function Feature({
     direction = 'row',
     ...rest
 }) {
-    const dir: any = flip ? `${direction}-reverse` : direction
+    const dir: any = (direction) => (flip ? `${direction}-reverse` : direction)
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: 3,
@@ -24,10 +24,10 @@ export function Feature({
             <Stack
                 align='center'
                 spacing='40px'
-                direction={dir}
-                flexWrap='wrap'
+                isReversed={flip}
+                flexDir={[dir('column'), null, dir(direction)]}
             >
-                <Stack spacing={8} flex='1' minW='400px'>
+                <Stack spacing='20px' flex='1' minW='400px'>
                     <Heading
                         as={animated.h2}
                         style={animations[0]}
