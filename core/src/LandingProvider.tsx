@@ -64,15 +64,15 @@ export function LandingProvider({
         },
         fonts: {
             ...defaultTheme.fonts,
-            body: 'Roboto',
-            heading: 'Roboto',
+            // body: 'Roboto',
+            // heading: 'Roboto',
         },
     }
     return (
         <ThemeProvider theme={theme}>
             <ColorModeProvider value={dark ? 'dark' : 'light'}>
                 <CSSReset />
-                <Stack spacing='60px' {...rest}>
+                <Stack fontFamily='Arial, Roboto' spacing='60px' {...rest}>
                     {children}
                 </Stack>
             </ColorModeProvider>
