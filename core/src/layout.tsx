@@ -53,7 +53,6 @@ export const PageContainer: FC<{
                 width='100%'
                 px='10px'
                 align='center'
-                overflow='hidden'
                 {...styles}
                 {...props}
             >

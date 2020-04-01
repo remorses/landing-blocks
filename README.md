@@ -8,6 +8,51 @@
   <pre>npm i react-landing</pre>
 </div>
 
+## project generation
+a wizard takes the values to continue, every step is made by a single sorm element
+the form shows the next button only after the user has made the form dirty and validation passes
+at the end the form stores the values in memory and redirects to a page that takes these values, calls the function generatePage that creates the jsx tree for the page and then converts it to code adding the imports and exports.
+
+the function creates the tree adding elements gradually, with components and styling based on user choices
+
+finally you can download the file
+
+
+### 1 content
+select content to use from `Dolor amet sit`, `Contentful`, `DatoCMS`
+
+### 2 font
+
+font family
+
+### 3 colors
+
+primary, secondary,
+
+### 4 illustrations e images
+
+illustrations library, mockups
+
+### 5 components to include
+
+hero, faq, pricing, cta, ...
+
+### 7 decorations
+
+decorations like backgrounds, floating elements, ...
+
+### 8 page preview
+
+preview the page and pay if you want
+
+### 9 content editing, change the content on screen
+
+use contenteditable and replace the props in the editor when clicing save
+
+### 6 project export
+
+typescript or javascript, cra or nextjs or gatsby or single file
+
 ## how to manage multiple styles for the same component
 
 for every component type make a folder, the index will be the component types and structure

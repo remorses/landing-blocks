@@ -30,7 +30,7 @@ export function Hero({
             <Row
                 justify='flex-start'
                 w='100%'
-                flexDir={['column', 'row', 'row']}
+                flexDir={['column', 'column', 'row']}
                 align='center'
                 ref={ref}
             >
