@@ -2204,13 +2204,6 @@
   dependencies:
     "@types/lodash" "*"
 
-"@types/lodash.uniqueid@^4.0.6":
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/@types/lodash.uniqueid/-/lodash.uniqueid-4.0.6.tgz#63f1354f9193896f77e4510d4b7bc763d1479b9a"
-  integrity sha512-WXXsDm7Q1SiAeCG9ubCiDxOuLEDi5x+Crx8SgwTFgBtofATwK1jAeSbGz2bHlfqWezi7mcjynenlBFCeDLhHlw==
-  dependencies:
-    "@types/lodash" "*"
-
 "@types/lodash@*", "@types/lodash@^4.14.149":
   version "4.14.149"
   resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.149.tgz#1342d63d948c6062838fbf961012f74d4e638440"
@@ -2345,11 +2338,6 @@
     "@types/react-dom" "*"
     "@types/testing-library__dom" "*"
     pretty-format "^25.1.0"
-
-"@types/tinycolor2@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@types/tinycolor2/-/tinycolor2-1.4.2.tgz#721ca5c5d1a2988b4a886e35c2ffc5735b6afbdf"
-  integrity sha512-PeHg/AtdW6aaIO2a+98Xj7rWY4KC1E6yOy7AFknJQ7VXUGNrMlyxDFxJo7HqLtjQms/ZhhQX52mLVW/EX3JGOw==
 
 "@types/uglify-js@*":
   version "3.0.4"
@@ -6416,6 +6404,11 @@ interpret@^2.0.0:
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-2.0.0.tgz#b783ffac0b8371503e9ab39561df223286aa5433"
   integrity sha512-e0/LknJ8wpMMhTiWcjivB+ESwIuvHnBSlBbmP/pSb8CQJldoj1p2qv7xGZ/+BtbTziYRFSz8OsvdbiX45LtYQA==
 
+intersection-observer@^0.7.0:
+  version "0.7.0"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.7.0.tgz#ee16bee978db53516ead2f0a8154b09b400bbdc9"
+  integrity sha512-Id0Fij0HsB/vKWGeBe9PxeY45ttRiBmhFyyt/geBdDHBYNctMRTE3dC1U3ujzz3lap+hVXlEcVaB56kZP/eEUg==
+
 invariant@^2.2.2, invariant@^2.2.3, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
@@ -7182,11 +7175,6 @@ lodash.throttle@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/lodash.throttle/-/lodash.throttle-4.1.1.tgz#c23e91b710242ac70c37f1e1cda9274cc39bf2f4"
   integrity sha1-wj6RtxAkKscMN/HhzaknTMOb8vQ=
-
-lodash.uniqueid@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/lodash.uniqueid/-/lodash.uniqueid-4.0.1.tgz#3268f26a7c88e4f4b1758d679271814e31fa5b26"
-  integrity sha1-MmjyanyI5PSxdY1nknGBTjH6WyY=
 
 lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.13, lodash@^4.17.15, lodash@^4.17.4:
   version "4.17.15"
@@ -9377,6 +9365,13 @@ react-inspector@^4.0.0:
     is-dom "^1.0.9"
     prop-types "^15.6.1"
 
+react-intersection-observer@^8.26.1:
+  version "8.26.1"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.26.1.tgz#0d72e54eb00d7710d9e8dc1109cc09791e06bb1b"
+  integrity sha512-eMA7K1G5CqJYkl8TjWJFEd8FtIXWHb93RAWMtZ4duEJ5DYh5E7KQcuzTGI155vTwfJ257JD+Jk5S/NJzz+DhlQ==
+  dependencies:
+    tiny-invariant "^1.1.0"
+
 react-is@16.8.6:
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
@@ -9498,7 +9493,7 @@ react-transition-group@^4.3.0:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
 
-react@16.13.1, react@^16.13.1, react@^16.8.3, react@^16.8.4:
+react@16.13.1, react@^16.13.1, react@^16.8.3:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
   integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
@@ -10797,10 +10792,10 @@ tiny-glob@^0.2.6:
     globalyzer "^0.1.0"
     globrex "^0.1.1"
 
-tinycolor2@^1.4.1:
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.1.tgz#f4fad333447bc0b07d4dc8e9209d8f39a8ac77e8"
-  integrity sha1-9PrTM0R7wLB9TcjpIJ2POaisd+g=
+tiny-invariant@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"
+  integrity sha512-ytxQvrb1cPc9WBEI/HSeYYoGD0kWnGEOR8RY6KomWLBVhqz0RgTwVO9dLrGz7dC+nN9llyI7OKAgRq8Vq4ZBSw==
 
 tmp@^0.0.33:
   version "0.0.33"
@@ -11136,14 +11131,6 @@ use-dark-mode@2.3.1:
   dependencies:
     "@use-it/event-listener" "^0.1.2"
     use-persisted-state "^0.3.0"
-
-use-in-view@^1.0.15:
-  version "1.0.15"
-  resolved "https://registry.yarnpkg.com/use-in-view/-/use-in-view-1.0.15.tgz#f86123d81db0360f0f2dd0125953ff9093f7b91d"
-  integrity sha512-Qhy3Nm28S1kLcVfT4vdIP2NhXNbakQtDpKRGk3hX1XDmxe5GrkkhTUulXjdcF/BYEFaeDXnagPnIQFJQZKWAOw==
-  dependencies:
-    lodash.throttle "^4.1.1"
-    react "^16.8.4"
 
 use-persisted-state@^0.3.0:
   version "0.3.0"
