@@ -14,6 +14,7 @@ import { ThemeProvider } from '@chakra-ui/core'
 import { MDXProvider } from '@mdx-js/react'
 import MDXComponents from '../components/mdx'
 
+
 const customTheme = {
     ...theme,
     colors: {

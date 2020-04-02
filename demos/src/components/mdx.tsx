@@ -131,7 +131,7 @@ const MDXComponents = {
     table: Table,
     th: THead,
     td: TData,
-    a: ({ href, ...props }) => (
+    a: ({ href='', ...props }) => (
         <NextLink href={href} passHref>
             <Link {...props} />
         </NextLink>

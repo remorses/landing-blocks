@@ -13,3 +13,35 @@ ed una lista
 ```jsx
 <Box>ciao</Box>
 ```
+
+```jsx
+<LandingProvider primary='#FF593D'>
+        <NavBar
+            logo={<img width='120px' src='/datocms/logo.svg' />}
+            navs={[
+                <a>Why DatoCMS</a>,
+                <a>Learn</a>,
+                <a>Marketplace</a>,
+                <a>Pricing</a>,
+                <Button>try for free!</Button>,
+            ]}
+        />
+        <Hero
+            heading={
+                <Heading
+                    fontFamily='tiempos-headline, Georgia'
+                    fontSize='74px'
+                    fontWeight='bold'
+                >
+                    The best companies are built on unified content
+                </Heading>
+            }
+            subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+            image={null}
+            cta='Try it now for free!'
+            floatingElement={
+                <GradientRect maxW='pageContainer' distortion={0.3} />
+            }
+        />
+    </LandingProvider>
+```

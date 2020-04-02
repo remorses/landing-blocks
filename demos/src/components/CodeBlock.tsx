@@ -2,7 +2,8 @@ import React, { useState, CSSProperties } from 'react'
 import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
 import darkTheme from 'prism-react-renderer/themes/nightOwl'
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live'
-// import Highlight, { defaultProps } from "prism-react-renderer";
+import * as ReactLanding from 'react-landing/src'
+import * as ReactLandingDecorations from 'react-landing/src/decorations'
 import { mdx } from '@mdx-js/react'
 import * as Chakra from '@chakra-ui/core'
 import * as ReactIcons from 'react-icons/md'
@@ -134,6 +135,8 @@ const CodeBlock = ({
             mdx,
             StarIcon,
             FocusLock,
+            ...ReactLanding,
+            ...ReactLandingDecorations,
         },
         noInline: isManual,
         ...props,
