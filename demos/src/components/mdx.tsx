@@ -8,12 +8,18 @@ import {
     PseudoBox,
     Text,
     useColorMode,
-    Link as ChakraLink
+    Link as ChakraLink,
 } from '@chakra-ui/core'
 import { jsx } from '@emotion/core'
 import NextLink from 'next/link'
 import { forwardRef } from 'react'
 import CodeBlock from './CodeBlock'
+import {
+    NavBar,
+    Button,
+    LandingProvider,
+    PageContainer,
+} from 'react-landing/src'
 
 const Pre = (props) => <Box my='2em' rounded='sm' {...props} />
 
@@ -102,8 +108,26 @@ const DocsHeading = (props) => (
     </Heading>
 )
 
+export function Wrapper(props) {
+    return (
+        <LandingProvider primary='#FF593D'>
+            <NavBar
+                logo={<img width='120px' src='/datocms/logo.svg' />}
+                navs={[
+                    <a>Why DatoCMS</a>,
+                    <a>Learn</a>,
+                    <a>Marketplace</a>,
+                    <a>Pricing</a>,
+                    <Button>try for free!</Button>,
+                ]}
+            />
+            <PageContainer>{props.children}</PageContainer>
+        </LandingProvider>
+    )
+}
+
 const MDXComponents = {
-    wrapper: (props) => <Box m='40px' {...props} />,
+    wrapper: Wrapper,
     h1: (props) => <Heading as='h1' size='xl' my='1em' {...props}></Heading>,
     h2: (props) => (
         <DocsHeading
@@ -132,7 +156,7 @@ const MDXComponents = {
     table: Table,
     th: THead,
     td: TData,
-    a: ({ href='', ...props }) => (
+    a: ({ href = '', ...props }) => (
         <NextLink href={href} passHref>
             <Link {...props} />
         </NextLink>

@@ -18,7 +18,7 @@ export function NavBar({ logo, navs, ...rest }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const {colorMode} = useColorMode()
     return (
-        <PageContainer py='40px' {...rest}>
+        <PageContainer py='20px' {...rest}>
             <Row>
                 <Box alignSelf='flexStart'>{logo}</Box>
                 <Box flex='1' />
