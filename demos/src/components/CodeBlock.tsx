@@ -17,7 +17,8 @@ export const liveEditorStyle: CSSProperties = {
     overflowX: 'auto',
     margin: 0,
     fontFamily: 'Menlo,monospace',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    padding: '20px',
 }
 
 // const highlightStyle = {
@@ -108,7 +109,6 @@ const CodeBlock = ({
                 isInline
                 flexDir='row'
                 p='10px'
-                
             >
                 <Box h='1' flex='1' />
                 <Button
@@ -159,18 +159,6 @@ const CodeBlock = ({
                 )}
                 <LiveError style={liveErrorStyle} />
             </Stack>
-        </LiveProvider>
-    )
-
-    return (
-        <LiveProvider disabled {...liveProviderProps}>
-            <Box position='relative'>
-                <LiveEditor style={liveEditorStyle} />
-
-                <CopyButton top='1.25em' onClick={onCopy}>
-                    {hasCopied ? 'copied' : 'copy'}
-                </CopyButton>
-            </Box>
         </LiveProvider>
     )
 

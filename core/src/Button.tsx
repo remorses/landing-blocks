@@ -9,7 +9,7 @@ import { useColor } from './support'
 export function Button({ bg = 'primary', ...props }: ButtonProps) {
     const realBg = useColor(bg)
     const lightness = Color(realBg as any).getLightness()
-    console.log({ lightness })
+    // console.log({ lightness })
     const isDark = lightness < 0.7
     const color = isDark ? 'white' : 'black'
     // console.log('bg', bg)

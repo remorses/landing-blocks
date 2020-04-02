@@ -1,0 +1,237 @@
+export const breadcrumbs = ['Components', 'Hero']
+
+# Hero
+
+## Example on white
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider primary='#FF593D'>
+    <NavBar
+        logo={<img width='120px' src='/datocms/logo.svg' />}
+        navs={[
+            <a>Why DatoCMS</a>,
+            <a>Learn</a>,
+            <a>Marketplace</a>,
+            <a>Pricing</a>,
+            <Button>try for free!</Button>,
+        ]}
+    />
+    <Hero
+        heading={
+            <Heading
+                fontFamily='tiempos-headline, Georgia'
+                fontSize='74px'
+                fontWeight='bold'
+            >
+                The best companies are built on unified content
+            </Heading>
+        }
+        subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+        image={null}
+        cta='Try it now for free!'
+        floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
+    />
+</LandingProvider>
+```
+
+## Example on dark background
+
+The following is the Qovery landing page recreated using just a bunch of components
+
+```jsx
+<LandingProvider spacing='60px' primary='white' bg='#323452'>
+    <NavBar
+        dark
+        logo={
+            <Stack align='center' direction='row' spacing='20px'>
+                <Image width='30px' src='/quovery/logo.png' />
+                <Box fontWeight='medium' fontSize='20px'>
+                    Quovery
+                </Box>
+            </Stack>
+        }
+        navs={[
+            <a>Home</a>,
+            <a>Pricing</a>,
+            <a>Community</a>,
+            <a>Enterprise</a>,
+            <a>Blog</a>,
+            <Button px='10px'>Sign up</Button>,
+        ]}
+    />
+    <Hero
+        dark
+        bullet='SUPERPOWERS FOR DEVELOPER'
+        heading='Deploy complex application, seamlessly'
+        subhead='Just push your code, we handle the rest'
+        image={<img width='600px' src='/quovery/hero.png' />}
+        cta='DEPLOY MY APPLICATION'
+        fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
+    />
+    <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
+    <TestimonialsLogos
+        testimonials={[
+            <img src='/quovery/google.png' />,
+            <img src='/quovery/datadog.png' />,
+            <img src='/quovery/itiviti.png' />,
+            <img src='/quovery/redhat.png' />,
+            <img src='/quovery/criteol.png' />,
+        ]}
+    />
+</LandingProvider>
+```
+
+## With background image
+
+The following example uses a sky background image
+
+```jsx
+<LandingProvider
+    backgroundImage='url("/rocketchat/sky.jpg")'
+    backgroundRepeat='repeat'
+    backgroundPosition='center'
+    backgroundSize='100% auto'
+    primary='white'
+>
+    <NavBar
+        dark
+        logo={<Image width='200px' src='/rocketchat/logo2.svg' />}
+        navs={[
+            <a>Home</a>,
+            <a>Pricing</a>,
+            <a>Community</a>,
+            <a>Enterprise</a>,
+            <a>Blog</a>,
+            <Button px='10px'>Sign up</Button>,
+        ]}
+    />
+    <Hero
+        dark
+        bullet='SUPERPOWERS FOR DEVELOPER'
+        heading='Workstream Collaboration & Omnichannel Customer Engagement'
+        subhead='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
+        image={<img width='600px' src='/rocketchat/hero.png' />}
+        cta='Start cloud trial'
+    />
+    <Divider heading='trusted by' dark />
+    <TestimonialsLogos
+        testimonials={[
+            <img src='/quovery/google.png' />,
+            <img src='/quovery/datadog.png' />,
+            <img src='/quovery/itiviti.png' />,
+            <img src='/quovery/redhat.png' />,
+            <img src='/quovery/criteol.png' />,
+        ]}
+    />
+</LandingProvider>
+```
+
+## With gradient background
+
+The following example uses a cool gradient bg
+
+```jsx
+<LandingProvider
+    primary='white'
+    spacing='60px'
+    background='linear-gradient(-225deg,#9a7ced,#9c78e4 24%,#7777f7 50%,#547eff 75%,#2a91cc)'
+    pb='100px'
+>
+    <NavBar
+        dark
+        bg='rgba(255,255,255,.1)'
+        logo={<Image width='200px' src='/kintohub/whitelogo.svg' />}
+        py='20px'
+        navs={[
+            <a>Home</a>,
+            <a>Pricing</a>,
+            <a>Community</a>,
+            <a>Enterprise</a>,
+            <a>Blog</a>,
+            <Button px='10px'>Sign up</Button>,
+        ]}
+    />
+    <Hero
+        dark
+        heading='Develop. Combine. Promote.'
+        subhead='KintoHub is an all-in-one platform to combine and deploy your backend services, websites, cron jobs, databases and everything your app needs in one place.'
+        image={
+            <Box mb='-100px' mr='-200px'>
+                <Image
+                    alignSelf='flex-end'
+                    width='800px'
+                    src='/kintohub/hero.png'
+                />
+            </Box>
+        }
+        cta={
+            <Stack direction='row' align='center'>
+                <Box>Deploy Free</Box>
+                <img src='/kintohub/arrow.svg' />
+            </Stack>
+        }
+        fingerprint='No credit card required.'
+    />
+</LandingProvider>
+```
+
+## With Banner
+
+The following example uses a cool gradient bg
+
+```jsx
+<LandingProvider primary='#5A38AC'>
+    <TopBanner
+        dark
+        bg='#24114D'
+        heading='Check out more landing pages, we have plenty'
+        cta='Learn More'
+        bullet='New'
+    />
+    <NavBar
+        logo={<img width='140px' src='/dovetail/logo.svg' />}
+        navs={[
+            <a>Why DatoCMS</a>,
+            <a>Learn</a>,
+            <a>Marketplace</a>,
+            <a>Pricing</a>,
+            <Button>try for free!</Button>,
+        ]}
+    />
+    <Hero
+        heading={'Make analysis enjoyable'}
+        subhead='Discover patterns across a variety of qualitative research methods and unstructured data. Dovetail is analysis software you’ll love to use.'
+        image={<img src='/dovetail/hero.png' />}
+        cta='Try free for 7 days'
+    />
+</LandingProvider>
+```
+
+## With floating element
+
+The following example uses a cool gradient bg
+
+```jsx
+<LandingProvider primary='#5D21D2'>
+    <NavBar
+        logo={<img width='200px' src='/spendesk/logo.svg' />}
+        navs={[
+            <a>Features</a>,
+            <a>Use Cases</a>,
+            <a>Pricing</a>,
+            <a>About Us</a>,
+            <a>Login</a>,
+            <Button px='10px'>Try 1 month free</Button>,
+        ]}
+    />
+    <Hero
+        heading='Smart spend management for modern businesses'
+        subhead='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
+        image={<img width='400px' src='/spendesk/hero.png' />}
+        cta='Book a demo'
+        floatingElement={<GradientCurtains mt='-600px' />}
+    />
+</LandingProvider>
+```

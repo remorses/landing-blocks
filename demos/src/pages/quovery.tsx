@@ -52,11 +52,11 @@ const Page = () => (
             <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
             <TestimonialsLogos
                 testimonials={[
-                    <img src='quovery/google.png' />,
-                    <img src='quovery/datadog.png' />,
-                    <img src='quovery/itiviti.png' />,
-                    <img src='quovery/redhat.png' />,
-                    <img src='quovery/criteol.png' />,
+                    <img src='/quovery/google.png' />,
+                    <img src='/quovery/datadog.png' />,
+                    <img src='/quovery/itiviti.png' />,
+                    <img src='/quovery/redhat.png' />,
+                    <img src='/quovery/criteol.png' />,
                 ]}
             />
         </Stack>

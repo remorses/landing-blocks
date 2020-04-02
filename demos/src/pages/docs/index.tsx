@@ -41,6 +41,7 @@ export const LaindgCardsLinks = ({ ...rest }) => {
                             mx='20px'
                             h='auto'
                             variant='link'
+                            
                         >
                             <Stack spacing='20px'>
                                 <Box
@@ -48,6 +49,7 @@ export const LaindgCardsLinks = ({ ...rest }) => {
                                     borderColor='gray.200'
                                     borderRadius='8px'
                                     width='240px'
+                                    shadow='md'
                                     as={icon}
                                 />
                                 <Text>{k}</Text>

@@ -9,6 +9,7 @@ import {
     Text,
     useColorMode,
     Link as ChakraLink,
+    Link,
 } from '@chakra-ui/core'
 import { jsx } from '@emotion/core'
 import NextLink from 'next/link'
@@ -55,19 +56,6 @@ const TData = (props) => (
     />
 )
 
-const Link = forwardRef((props, ref) => (
-    <PseudoBox
-        as='a'
-        ref={ref}
-        color='teal.500'
-        cursor='pointer'
-        textDecoration='underline'
-        outline='none'
-        _hover={{ opacity: 0.8 }}
-        _focus={{ boxShadow: 'outline' }}
-        {...props}
-    />
-))
 
 const DocsHeading = (props) => (
     <Heading
@@ -110,6 +98,8 @@ const DocsHeading = (props) => (
 )
 
 export function Wrapper(props) {
+    // console.log({wrapperPorps: props})
+    // TODO show breadcrumbs based on exported breadcrumbs array
     return (
         <LandingProvider primary='#FF593D'>
             <NavBar
