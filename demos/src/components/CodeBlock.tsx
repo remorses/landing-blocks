@@ -136,7 +136,7 @@ const CodeBlock = ({
             <Stack
                 w='100%'
                 border='1px solid'
-                borderColor='gray.400'
+                borderColor='gray.300'
                 borderRadius='8px'
                 overflow='hidden'
                 shadow='lg'

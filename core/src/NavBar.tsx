@@ -11,12 +11,13 @@ import {
 } from '@chakra-ui/core'
 import React from 'react'
 import { Row } from '.'
-import { PageContainer } from './layout'
+import { PageContainer, darkStyles } from './layout'
 import { FiMenu as Menu } from 'react-icons/fi'
+import { useMyColorMode } from './hooks'
 
-export function NavBar({ logo, navs, ...rest }) {
+export const NavBar = ({ logo, navs, ...rest }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
-    const {colorMode} = useColorMode()
+    const { colorMode } = useMyColorMode(rest)
     return (
         <PageContainer py='20px' {...rest}>
             <Row>
@@ -41,38 +42,45 @@ export function NavBar({ logo, navs, ...rest }) {
                     variant='link'
                     onClick={onOpen}
                 >
-                    <Box stroke={{light: 'black', dark: 'white'}[colorMode]} as={Menu} size='40px' />
+                    <Box
+                        stroke={{ light: 'black', dark: 'white' }[colorMode]}
+                        as={Menu}
+                        size='40px'
+                    />
                 </Button>
             </Row>
             <Drawer
                 isOpen={isOpen}
                 placement='left'
                 onClose={onClose}
+
                 // finalFocusRef={btnRef}
             >
-                <DrawerOverlay />
-                <DrawerContent>
-                    {/* <DrawerCloseButton /> */}
-                    <DrawerHeader>Menu</DrawerHeader>
-                    <DrawerBody>
-                        <Stack
-                            maxW='100%'
-                            isTruncated
-                            spacing='20px'
-                            align='center'
-                        >
-                            {navs.map((x, i) => (
-                                <Box
-                                    key={i}
-                                    fontSize='16px'
-                                    fontWeight='medium'
-                                >
-                                    {x}
-                                </Box>
-                            ))}
-                        </Stack>
-                    </DrawerBody>
-                </DrawerContent>
+                <Box {...(colorMode == 'dark' ? darkStyles : {})}>
+                    <DrawerOverlay />
+                    <DrawerContent>
+                        {/* <DrawerCloseButton /> */}
+                        <DrawerHeader>Menu</DrawerHeader>
+                        <DrawerBody>
+                            <Stack
+                                maxW='100%'
+                                isTruncated
+                                spacing='20px'
+                                align='center'
+                            >
+                                {navs.map((x, i) => (
+                                    <Box
+                                        key={i}
+                                        fontSize='16px'
+                                        fontWeight='medium'
+                                    >
+                                        {x}
+                                    </Box>
+                                ))}
+                            </Stack>
+                        </DrawerBody>
+                    </DrawerContent>
+                </Box>
             </Drawer>
         </PageContainer>
     )

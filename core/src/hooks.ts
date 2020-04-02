@@ -3,6 +3,7 @@ import { useTrail, config } from 'react-spring'
 // import { useVisible } from 'react-hooks-visible'
 import { useInView } from 'react-intersection-observer'
 import { useRef } from 'react'
+import { useColorMode } from '@chakra-ui/core'
 
 export function useFadeUpAnimation({
     enabled = false,
@@ -20,4 +21,12 @@ export function useFadeUpAnimation({
         immediate: !enabled,
     })
     return { ref, animations }
+}
+
+export function useMyColorMode({ dark = false }) {
+    const { colorMode } = useColorMode()
+    if (dark) {
+        return { colorMode: 'dark' }
+    }
+    return { colorMode }
 }

@@ -19,6 +19,7 @@ import {
     Button,
     LandingProvider,
     PageContainer,
+    Footer,
 } from 'react-landing/src'
 
 const Pre = (props) => <Box my='2em' rounded='sm' {...props} />
@@ -122,6 +123,27 @@ export function Wrapper(props) {
                 ]}
             />
             <PageContainer>{props.children}</PageContainer>
+            <Footer
+                businessName='Quovery'
+                bg='#F8F8FF'
+                columns={{
+                    Developers: [
+                        <a>Quickstart</a>,
+                        <a>Documentation</a>,
+                        <a>Samples</a>,
+                    ],
+                    Company: [
+                        <a>Quickstart</a>,
+                        <a>Documentation</a>,
+                        <a>Samples</a>,
+                    ],
+                    Product: [
+                        <a>Quickstart</a>,
+                        <a>Documentation</a>,
+                        <a>Samples</a>,
+                    ],
+                }}
+            />
         </LandingProvider>
     )
 }

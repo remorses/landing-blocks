@@ -22,12 +22,24 @@ const Dark = ({ children }) => {
     )
 }
 
-const darkStyles = {
+export const darkStyles = {
     // bg: 'gray.800',
     color: 'whiteAlpha.900',
     borderColor: 'whiteAlpha.300',
     placeholder: 'whiteAlpha.400',
 }
+
+// export function withColorMode(C) {
+//     return (p: any) => {
+//         const Mode = p.dark ? DarkMode : Fragment
+//         const styles = p.dark ? darkStyles : {}
+//         return (
+//             <Mode>
+//                 <C {...p} />
+//             </Mode>
+//         )
+//     }
+// }
 
 export const PageContainer: FC<{
     floatingElement?: any
