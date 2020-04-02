@@ -8,16 +8,15 @@ import { mdx } from '@mdx-js/react'
 import * as Chakra from '@chakra-ui/core'
 import * as ReactIcons from 'react-icons/md'
 import FocusLock from 'react-focus-lock'
+import { Flex, Stack, Divider } from '@chakra-ui/core'
 
 const { Box, Button, useClipboard, useColorMode } = Chakra
 
 export const liveEditorStyle: CSSProperties = {
     fontSize: 14,
-    marginBottom: 32,
-    marginTop: 32,
     overflowX: 'auto',
+    margin: 0,
     fontFamily: 'Menlo,monospace',
-    borderRadius: 10,
 }
 
 // const highlightStyle = {
@@ -37,60 +36,15 @@ export const liveErrorStyle: CSSProperties = {
     backgroundColor: 'red',
 }
 
-const LiveCodePreview = (props) => (
-    <Box
-        as={LivePreview}
-        fontFamily='body'
-        mt={5}
-        p={3}
-        border='1px'
-        borderColor='inherit'
-        rounded='md'
-        {...props}
-    />
-)
-
 const CopyButton = (props) => (
     <Button
         size='sm'
-        position='absolute'
-        textTransform='uppercase'
+        // textTransform='uppercase'
         variantColor='teal'
-        fontSize='xs'
-        height='24px'
-        top={0}
-        zIndex='1'
-        right='1.25em'
+        // fontSize='xs'
         {...props}
     />
 )
-
-const EditableNotice = (props) => {
-    const { colorMode } = useColorMode()
-    const bg = { light: '#fbfbfb', dark: '#011627' }
-
-    return (
-        <Box
-            position='absolute'
-            width='full'
-            top='-1.25em'
-            roundedTop='10px'
-            bg={bg['dark']}
-            py='2'
-            zIndex='0'
-            letterSpacing='wide'
-            color='gray.400'
-            fontSize='xs'
-            fontWeight='semibold'
-            textAlign='center'
-            textTransform='uppercase'
-            pointerEvents='none'
-            {...props}
-        >
-            Editable Example
-        </Box>
-    )
-}
 
 const StarIcon = (props) => {
     return (
@@ -116,7 +70,7 @@ const CodeBlock = ({
     ...props
 }) => {
     const [editorCode, setEditorCode] = useState(children.trim())
-
+    const [showCode, setShowCode] = useState(false)
     const language = className && className.replace(/language-/, '')
     const { onCopy, hasCopied } = useClipboard(editorCode)
 
@@ -147,29 +101,58 @@ const CodeBlock = ({
     if (language === 'jsx' && live === true) {
         return (
             <LiveProvider {...liveProviderProps}>
-                <LiveCodePreview />
-                <Box position='relative'>
-                    <LiveEditor
-                        onChange={handleCodeChange}
-                        style={liveEditorStyle}
-                    />
-                    <CopyButton onClick={onCopy}>
-                        {hasCopied ? 'copied' : 'copy'}
-                    </CopyButton>
-                    <EditableNotice />
-                </Box>
-                <LiveError style={liveErrorStyle} />
+                <Stack
+                    w='100%'
+                    border='1px solid'
+                    borderColor='gray.400'
+                    borderRadius='8px'
+                    overflow='hidden'
+                >
+                    <Stack
+                        spacing='20px'
+                        h='auto'
+                        w='100%'
+                        isInline
+                        flexDir='row'
+                        p='10px'
+                    >
+                        <Box h='1' flex='1' />
+                        <Button
+                            variant={!showCode ? 'solid' : 'unstyled'}
+                            onClick={() => setShowCode(false)}
+                            size='sm'
+                        >
+                            preview
+                        </Button>
+                        <Button
+                            variant={showCode ? 'solid' : 'unstyled'}
+                            onClick={() => setShowCode(true)}
+                            size='sm'
+                        >
+                            Code
+                        </Button>
+                        <CopyButton onClick={onCopy}>
+                            copy
+                        </CopyButton>
+                    </Stack>
+                    <Divider m='0'/>
+                    {!showCode && (
+                        <Box
+                            as={LivePreview}
+                            fontFamily='body'
+                            w='100%'
+                            {...props}
+                        />
+                    )}
+                    {showCode && (
+                        <LiveEditor
+                            onChange={handleCodeChange}
+                            style={liveEditorStyle}
+                        />
+                    )}
+                    <LiveError style={liveErrorStyle} />
+                </Stack>
             </LiveProvider>
-        )
-    }
-
-    if (render) {
-        return (
-            <div style={{ marginTop: '40px' }}>
-                <LiveProvider {...liveProviderProps}>
-                    <LiveCodePreview />
-                </LiveProvider>
-            </div>
         )
     }
 
