@@ -3,7 +3,8 @@
     "workspaces": [
         "core",
         "demos",
-        "chakra-ui-forms"
+        "chakra-ui-forms",
+        "docs"
     ],
     "scripts": {
         "example": "cd demos && yarn dev",

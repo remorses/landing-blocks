@@ -11,6 +11,8 @@ import {
     CSSResetProps,
 } from '@chakra-ui/core'
 import { ThemeProvider } from '@chakra-ui/core'
+import { MDXProvider } from '@mdx-js/react'
+import MDXComponents from '../components/mdx'
 
 const customTheme = {
     ...theme,
@@ -70,7 +72,9 @@ export default class MyApp extends App {
                             fontSize='16px'
                             fontWeight={400}
                         >
-                            <Component {...pageProps} />
+                            <MDXProvider components={MDXComponents}>
+                                <Component {...pageProps} />
+                            </MDXProvider>
                         </Box>
                         {/* <Box mt='300px' /> */}
                     </Layout>

@@ -1,8 +1,15 @@
 const path = require('path')
-const withTM = require('next-transpile-modules')(['react-landing', 'chakra-ui-forms']) // pass the modules you would like to see transpiled
+const withTM = require('next-transpile-modules')([
+    'react-landing',
+    'chakra-ui-forms',
+]) // pass the modules you would like to see transpiled
+const withMDX = require('@next/mdx')()
 
-module.exports = withTM({
-    webpack: (config) => {
-        return config
-    },
-})
+module.exports = withMDX(
+    withTM({
+        pageExtensions: ['js', 'jsx', 'md', 'mdx', 'tsx'],
+        webpack: (config) => {
+            return config
+        },
+    }),
+)
