@@ -17,6 +17,7 @@ export const liveEditorStyle: CSSProperties = {
     overflowX: 'auto',
     margin: 0,
     fontFamily: 'Menlo,monospace',
+    overflow: 'hidden'
 }
 
 // const highlightStyle = {
@@ -70,14 +71,14 @@ const CodeBlock = ({
     ...props
 }) => {
     const [editorCode, setEditorCode] = useState(children.trim())
-    const [showCode, setShowCode] = useState(false)
     const language = className && className.replace(/language-/, '')
+    const previewEnabled = language === 'jsx' && live === true
+    const [showCode, setShowCode] = useState(!previewEnabled)
     const { onCopy, hasCopied } = useClipboard(editorCode)
 
     const { colorMode } = useColorMode()
     const themes = { light: lightTheme, dark: darkTheme }
     const theme = themes['dark']
-
     const liveProviderProps = {
         theme,
         language,
@@ -98,63 +99,68 @@ const CodeBlock = ({
 
     const handleCodeChange = (newCode) => setEditorCode(newCode.trim())
 
-    if (language === 'jsx' && live === true) {
-        return (
-            <LiveProvider {...liveProviderProps}>
-                <Stack
-                    w='100%'
-                    border='1px solid'
-                    borderColor='gray.400'
-                    borderRadius='8px'
-                    overflow='hidden'
+    const editorBar = (
+        <>
+            <Stack
+                spacing='20px'
+                h='auto'
+                w='100%'
+                isInline
+                flexDir='row'
+                p='10px'
+                
+            >
+                <Box h='1' flex='1' />
+                <Button
+                    variant={!showCode ? 'solid' : 'unstyled'}
+                    onClick={() => setShowCode(false)}
+                    size='sm'
                 >
-                    <Stack
-                        spacing='20px'
-                        h='auto'
+                    preview
+                </Button>
+                <Button
+                    variant={showCode ? 'solid' : 'unstyled'}
+                    onClick={() => setShowCode(true)}
+                    size='sm'
+                >
+                    Code
+                </Button>
+                <CopyButton onClick={onCopy}>copy</CopyButton>
+            </Stack>
+            <Divider m='0' />
+        </>
+    )
+
+    return (
+        <LiveProvider {...liveProviderProps}>
+            <Stack
+                w='100%'
+                border='1px solid'
+                borderColor='gray.400'
+                borderRadius='8px'
+                overflow='hidden'
+                shadow='lg'
+            >
+                {previewEnabled && editorBar}
+                {!showCode && (
+                    <Box
+                        as={LivePreview}
+                        fontFamily='body'
                         w='100%'
-                        isInline
-                        flexDir='row'
-                        p='10px'
-                    >
-                        <Box h='1' flex='1' />
-                        <Button
-                            variant={!showCode ? 'solid' : 'unstyled'}
-                            onClick={() => setShowCode(false)}
-                            size='sm'
-                        >
-                            preview
-                        </Button>
-                        <Button
-                            variant={showCode ? 'solid' : 'unstyled'}
-                            onClick={() => setShowCode(true)}
-                            size='sm'
-                        >
-                            Code
-                        </Button>
-                        <CopyButton onClick={onCopy}>
-                            copy
-                        </CopyButton>
-                    </Stack>
-                    <Divider m='0'/>
-                    {!showCode && (
-                        <Box
-                            as={LivePreview}
-                            fontFamily='body'
-                            w='100%'
-                            {...props}
-                        />
-                    )}
-                    {showCode && (
-                        <LiveEditor
-                            onChange={handleCodeChange}
-                            style={liveEditorStyle}
-                        />
-                    )}
-                    <LiveError style={liveErrorStyle} />
-                </Stack>
-            </LiveProvider>
-        )
-    }
+                        overflow='hidden'
+                        {...props}
+                    />
+                )}
+                {showCode && (
+                    <LiveEditor
+                        onChange={handleCodeChange}
+                        style={liveEditorStyle}
+                    />
+                )}
+                <LiveError style={liveErrorStyle} />
+            </Stack>
+        </LiveProvider>
+    )
 
     return (
         <LiveProvider disabled {...liveProviderProps}>
