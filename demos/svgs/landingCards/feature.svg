@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>feature</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="280" height="140"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-879.000000, -68.000000)">
+            <g id="feature" transform="translate(879.000000, 68.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Rectangle"></g>
+                <g id="Group" mask="url(#mask-2)">
+                    <rect id="Rectangle" fill="#F4F5F7" x="0" y="0" width="280" height="140"></rect>
+                    <g id="Group-3" transform="translate(30.000000, 56.000000)">
+                        <rect id="Rectangle" fill="#6B7280" x="0" y="0" width="52" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle" fill="#D2D6DC" x="0" y="7" width="98" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill="#D2D6DC" x="0" y="12" width="105" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill="#D2D6DC" x="0" y="17" width="92" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill="#6B7280" x="0" y="35" width="52" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle" fill="#D2D6DC" x="0" y="42" width="98" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill="#D2D6DC" x="0" y="47" width="105" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill="#D2D6DC" x="0" y="52" width="92" height="2" rx="1"></rect>
+                    </g>
+                    <g transform="translate(155.000000, 33.000000)" id="Path">
+                        <path d="M0,3.2 C0,1.43272 0.708219545,0 1.58181818,0 L85.4181818,0 C86.2917409,0 87,1.43272 87,3.2 L87,84 L0,84 L0,3.2 Z" fill="#FFFFFF"></path>
+                        <path d="M1.39041096,1 L85.609589,1 C86.3774932,1 87,2.25058654 87,3.79326923 L87,84 L0,84 L0,3.79326923 C0,2.25058654 0.622506849,1 1.39041096,1 Z" stroke="#D2D6DC"></path>
+                    </g>
+                    <rect id="Rectangle" fill="#D2D6DC" x="0" y="15" width="280" height="1"></rect>
+                    <rect id="Rectangle" fill="#6B7280" x="30" y="44" width="30" height="4" rx="2"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
