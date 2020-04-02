@@ -103,6 +103,7 @@ const DocsHeading = (props) => (
 )
 
 const MDXComponents = {
+    wrapper: (props) => <Box m='40px' {...props} />,
     h1: (props) => <Heading as='h1' size='xl' my='1em' {...props}></Heading>,
     h2: (props) => (
         <DocsHeading
