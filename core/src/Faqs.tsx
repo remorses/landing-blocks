@@ -49,7 +49,7 @@ export function Faqs({
                 </SubHeading>
                 <Accordion allowToggle minWidth='100%'>
                     {faqs.map((x) => (
-                        <AccordionItem minWidth='100%'>
+                        <AccordionItem key={x.question} minWidth='100%'>
                             <AccordionHeader minH='60px'>
                                 <Box
                                     fontSize='24px'

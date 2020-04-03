@@ -23,41 +23,45 @@ import * as landingCards from '../../svgs/landingCards'
 import { IndexCardsPaths } from '../../constants'
 
 export const LaindgCardsLinks = ({ ...rest }) => {
-    const links = { ...landingCards }
     return (
         <PageContainer>
             <Stack
-                justifyItems='center'
-                justifyContent='flex-start'
+                width='auto'
+                justify={['center', null, 'flex-start']}
+                alignSelf='center'
                 flexDirection='row'
                 flexWrap='wrap'
                 spacing='40px'
+                flexGrow={0}
+                flex='0 0 auto'
                 {...rest}
             >
                 {IndexCardsPaths.map((k) => {
                     const { icon, path, title } = k
                     return (
-                        <NextLink href={path}>
-                            <Button
-                                borderRadius='8px'
-                                p='20px'
-                                mx='20px'
-                                h='auto'
-                                variant='ghost'
-                            >
-                                <Stack spacing='20px'>
-                                    <Box
-                                        // border='1px solid'
-                                        borderColor='gray.200'
-                                        borderRadius='8px'
-                                        width='240px'
-                                        shadow='md'
-                                        as={icon}
-                                    />
-                                    <Text>{title}</Text>
-                                </Stack>
-                            </Button>
-                        </NextLink>
+                        <Box key={k.path}>
+                            <NextLink href={path}>
+                                <Button
+                                    borderRadius='8px'
+                                    p='20px'
+                                    mx='20px'
+                                    h='auto'
+                                    variant='ghost'
+                                >
+                                    <Stack spacing='20px'>
+                                        <Box
+                                            // border='1px solid'
+                                            borderColor='gray.200'
+                                            borderRadius='8px'
+                                            width='300px'
+                                            shadow='md'
+                                            as={icon}
+                                        />
+                                        <Text>{title}</Text>
+                                    </Stack>
+                                </Button>
+                            </NextLink>
+                        </Box>
                     )
                 })}
             </Stack>

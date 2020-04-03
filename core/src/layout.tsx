@@ -88,6 +88,7 @@ export const PageContainer: FC<{
                         w='100%'
                         maxW='pageContainer'
                         spacing={spacing}
+                        flex='0'
                     >
                         {children}
                     </Stack>

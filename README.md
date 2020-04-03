@@ -8,6 +8,14 @@
   <pre>npm i react-landing</pre>
 </div>
 
+TODO pricing
+TODO team
+TODO banner
+TODO email capture
+TODO testimonials
+TODO secondary buttons
+TODO featuresGrid not using grid or grid polyfill
+
 ## project generation
 a wizard takes the values to continue, every step is made by a single sorm element
 the form shows the next button only after the user has made the form dirty and validation passes
