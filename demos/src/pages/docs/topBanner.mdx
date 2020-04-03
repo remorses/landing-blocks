@@ -1,0 +1,37 @@
+export const breadcrumbs = ['Components', 'Hero']
+
+# Features Grid
+
+## Example on white
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider bg='#24114D'>
+    <TopBanner
+        dark
+        heading='Check out more landing pages, we have plenty'
+        cta='Learn More'
+        bullet='New'
+    />
+    <NavBar
+        dark
+        logo={
+            <Stack align='center' direction='row' spacing='20px'>
+                <Image width='30px' src='/quovery/logo.png' />
+                <Box fontWeight='medium' fontSize='20px'>
+                    Quovery
+                </Box>
+            </Stack>
+        }
+        navs={[
+            <a>Home</a>,
+            <a>Pricing</a>,
+            <a>Community</a>,
+            <a>Enterprise</a>,
+            <a>Blog</a>,
+            <Button px='10px'>Sign up</Button>,
+        ]}
+    />
+</LandingProvider>
+```

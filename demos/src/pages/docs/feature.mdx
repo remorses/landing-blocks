@@ -1,0 +1,81 @@
+export const breadcrumbs = ['Components', 'Hero']
+
+# Feature
+
+## Example on white
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider primary='#FF593D'>
+    <Feature
+        heading='Is content spread across endless different CMSs?'
+        subhead='How can you deliver a cohesive brand and message strategy if your company functions in silos and information is manually copy-pasted across tens of different platforms?'
+        image={<img src='/datocms/illustration1.svg' width='400px' />}
+        flip
+    />
+</LandingProvider>
+```
+
+## Example on white
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider primary='#FF593D'>
+    <Feature
+        heading='Fully integrated to git'
+        subhead='Qovery is fully integrated to Github, Bitbucket and Gitlab. Once you have pushed your code, Qovery launches all the necessaries steps to make your application available online.'
+        image={<img src='/quovery/feature1.png' width='500px' />}
+        bg='#F8F8FF'
+    />
+</LandingProvider>
+```
+
+## Dark
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider primary='white'>
+    <Feature
+        heading='Fit your process'
+        subhead='Testim integrates with the tools you already use so you can stay in your flow.'
+        image={<img src='/testim/feature.png' width='700px' />}
+        bg='#1A2230'
+        py='0'
+        animate={false}
+        dark
+    />
+</LandingProvider>
+```
+
+## With bg image
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider
+    backgroundImage='url("/rocketchat/sky.jpg")'
+    backgroundRepeat='repeat'
+    backgroundPosition='center'
+    backgroundSize='100% auto'
+    primary='white'
+>
+    <Feature
+        dark
+        heading='Team Chat'
+        subhead='Open up the conversation and remove the need for CC/BCC by using Rocket.Chat Channels and Private Groups to speak to your team openly for greater transparency.'
+        floatingElement={
+            <Image
+                minW='700px'
+                src='/rocketchat/feature2.svg'
+                // position='absolute'
+                alignSelf='flex-end'
+                mr='-600px'
+                mt='200px'
+            />
+        }
+    />
+</LandingProvider>
+```

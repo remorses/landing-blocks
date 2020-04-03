@@ -10,8 +10,8 @@ export const IndexCardsPaths = [
     },
     {
         icon: landingCards.FeatureList,
-        title: 'Feature List',
-        path: BASE_PATH + 'featureList',
+        title: 'Features List',
+        path: BASE_PATH + 'featuresList',
     },
     {
         icon: landingCards.FeaturesGrid,
@@ -34,5 +34,10 @@ export const IndexCardsPaths = [
         icon: landingCards.TopBanner,
         title: 'TopBanner',
         path: BASE_PATH + 'topBanner',
+    },
+    {
+        icon: landingCards.Text,
+        title: 'SectionTitle',
+        path: BASE_PATH + 'sectionTitle',
     },
 ]

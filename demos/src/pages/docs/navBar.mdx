@@ -1,0 +1,22 @@
+export const breadcrumbs = ['Components', 'Hero']
+
+# Footer
+
+## Example on white
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider>
+    <NavBar
+        logo={<img width='140px' src='/dovetail/logo.svg' />}
+        navs={[
+            <a>Why DatoCMS</a>,
+            <a>Learn</a>,
+            <a>Marketplace</a>,
+            <a>Pricing</a>,
+            <Button>try for free!</Button>,
+        ]}
+    />
+</LandingProvider>
+```
