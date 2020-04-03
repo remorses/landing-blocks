@@ -40,4 +40,9 @@ export const IndexCardsPaths = [
         title: 'SectionTitle',
         path: BASE_PATH + 'sectionTitle',
     },
+    {
+        icon: landingCards.Faq,
+        title: 'Faqs',
+        path: BASE_PATH + 'faqs',
+    },
 ]

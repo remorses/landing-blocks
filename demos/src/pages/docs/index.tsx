@@ -27,11 +27,11 @@ export const LaindgCardsLinks = ({ ...rest }) => {
     return (
         <PageContainer>
             <Stack
-                justify='space-evenly'
+                justifyItems='center'
+                justifyContent='flex-start'
                 flexDirection='row'
                 flexWrap='wrap'
                 spacing='40px'
-                mx='auto'
                 {...rest}
             >
                 {IndexCardsPaths.map((k) => {

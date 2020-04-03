@@ -1,0 +1,46 @@
+export const breadcrumbs = ['Components', 'Hero']
+
+# Faqs
+
+## Example on white
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider>
+    <Faqs
+        faqs={[
+            {
+                question: 'What is Spendesk',
+                answer: (
+                    <Box>
+                        Spendesk is the first spend management platform built
+                        for both finance teams and employees. It gives finance
+                        leaders visibility across all company spending.
+                    </Box>
+                ),
+            },
+            {
+                question: 'Should i care?',
+                answer: (
+                    <Box>
+                        Spendesk is the first spend management platform built
+                        for both finance teams and employees. It gives finance
+                        leaders visibility across all company spending.
+                    </Box>
+                ),
+            },
+            {
+                question: 'Why is this useful',
+                answer: (
+                    <Box>
+                        Spendesk is the first spend management platform built
+                        for both finance teams and employees. It gives finance
+                        leaders visibility across all company spending.
+                    </Box>
+                ),
+            },
+        ]}
+    />
+</LandingProvider>
+```

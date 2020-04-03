@@ -14,6 +14,7 @@ import {
     Footer,
     SectionTitle,
     TestimonialsLogos,
+    Faqs,
 } from 'react-landing/src'
 import { Button } from 'react-landing/src/Button'
 import { GradientRect } from 'react-landing/src/decorations'

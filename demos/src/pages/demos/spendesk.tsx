@@ -13,8 +13,10 @@ import {
     NavBar,
     Footer,
     Button,
+    Faqs,
 } from 'react-landing/src'
 import { GradientCurtains } from 'react-landing/src/decorations'
+import { Box } from '@chakra-ui/core'
 
 const Page = () => (
     <LandingProvider primary='#5D21D2'>
@@ -34,9 +36,7 @@ const Page = () => (
             subhead='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
             image={<img width='400px' src='/spendesk/hero.png' />}
             cta='Book a demo'
-            floatingElement={
-                <GradientCurtains mt='-600px' />
-            }
+            floatingElement={<GradientCurtains mt='-600px' />}
         />
         <FeaturesList
             heading='Take control of company spending'
@@ -72,6 +72,43 @@ const Page = () => (
             image={<img src='/spendesk/feature1.png' width='500px' />}
             flip
         /> */}
+        <Faqs
+            faqs={[
+                {
+                    question: 'What is Spendesk',
+                    answer: (
+                        <Box>
+                            Spendesk is the first spend management platform
+                            built for both finance teams and employees. It gives
+                            finance leaders visibility across all company
+                            spending.
+                        </Box>
+                    ),
+                },
+                {
+                    question: 'Should i care?',
+                    answer: (
+                        <Box>
+                            Spendesk is the first spend management platform
+                            built for both finance teams and employees. It gives
+                            finance leaders visibility across all company
+                            spending.
+                        </Box>
+                    ),
+                },
+                {
+                    question: 'Why is this useful',
+                    answer: (
+                        <Box>
+                            Spendesk is the first spend management platform
+                            built for both finance teams and employees. It gives
+                            finance leaders visibility across all company
+                            spending.
+                        </Box>
+                    ),
+                },
+            ]}
+        />
 
         <Footer
             businessName='Prismic'
