@@ -63,19 +63,19 @@ const Page = () => (
                     heading: 'Make sense of data',
                     subhead:
                         'Dovetail is a powerful way to discover patterns across interviews, usability testing, survey responses, and more',
-                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Build your taxonomy',
                     subhead:
                         'Organize tags into a hierarchy with intuitive controls like drag & drop, and extend your project with global tags.',
-                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Visualize your research',
                     subhead:
                         'Turn qualitative data into quantitative data with highlights, and visualize your work with a variety of beautiful charts.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
             ]}
         />
@@ -111,73 +111,73 @@ const Page = () => (
                     heading: 'Highlights',
                     subhead:
                         'Select text and highlight paragraphs, sentences, or words to tag them.',
-                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Charts',
                     subhead:
                         'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
-                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Tag management',
                     subhead:
                         'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Search',
                     subhead:
                         'Search the full text of research data and insights across all projects in your workspace.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Highlights',
                     subhead:
                         'Select text and highlight paragraphs, sentences, or words to tag them.',
-                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Charts',
                     subhead:
                         'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
-                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Filtering',
                     subhead:
                         'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
-                    icon: <img width='60px' src='dovetail/feature2.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Search',
                     subhead:
                         'Search the full text of research data and insights across all projects in your workspace.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Bulk Edit',
                     subhead:
                         'Select text and highlight paragraphs, sentences, or words to tag them.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Project',
                     subhead:
                         'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
-                    icon: <img width='60px' src='dovetail/feature1.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Tag management',
                     subhead:
                         'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Search',
                     subhead:
                         'Search the full text of research data and insights across all projects in your workspace.',
-                    icon: <img width='60px' src='dovetail/feature3.svg' />,
+                    icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
             ]}
         />

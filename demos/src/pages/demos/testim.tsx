@@ -50,11 +50,11 @@ const Page = () => (
             heading='Trusted by happy customers worldwide'
             // subhead='Trusted by happy customers worldwide'
             testimonials={[
-                <img src='datocms/dropbox.svg' />,
-                <img src='datocms/hashicorp.svg' />,
-                <img src='datocms/verizon.svg' />,
-                <img src='datocms/vmware.svg' />,
-                <img src='datocms/linkedin.svg' />,
+                <img src='/datocms/dropbox.svg' />,
+                <img src='/datocms/hashicorp.svg' />,
+                <img src='/datocms/verizon.svg' />,
+                <img src='/datocms/vmware.svg' />,
+                <img src='/datocms/linkedin.svg' />,
             ]}
         />
 
@@ -64,19 +64,19 @@ const Page = () => (
             features={[
                 {
                     heading: 'Expand test coverage',
-                    icon: <img src='testim/step1.svg' />,
+                    icon: <img src='/testim/step1.svg' />,
                     subhead:
                         'Fast authoring increases coverage and quality across your application..',
                 },
                 {
                     heading: 'Reduce maintenance',
-                    icon: <img src='testim/step2.svg' />,
+                    icon: <img src='/testim/step2.svg' />,
                     subhead:
                         'AI-based stabilizers eliminate flaky tests that consume resources.',
                 },
                 {
                     heading: 'Increase test agility',
-                    icon: <img src='testim/step3.svg' />,
+                    icon: <img src='/testim/step3.svg' />,
                     subhead:
                         'Code, record and manage tests your way with your tools for greater flexibility.',
                 },
