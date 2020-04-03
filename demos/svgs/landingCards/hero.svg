@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
     <title>hero</title>
     <desc>Created with Sketch.</desc>
     <defs>
@@ -9,8 +9,8 @@
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard" transform="translate(-87.000000, -316.000000)">
             <g id="hero" transform="translate(87.000000, 316.000000)">
-                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="280" height="140"></rect>
-                <rect id="Rectangle" fill="#F4F5F7" x="0" y="0" width="280" height="140"></rect>
+                <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
+                <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
                 <g id="Clipped">
                     <mask id="mask-2" fill="white">
                         <use xlink:href="#path-1"></use>
@@ -19,22 +19,22 @@
                     <g id="Group" mask="url(#mask-2)">
                         <g transform="translate(-1.000000, -1.000000)">
                             <g id="Group" stroke-width="1" fill="none">
-                                <rect id="Rectangle" fill="#FFFFFF" x="1" y="1" width="280" height="126"></rect>
-                                <rect id="Rectangle" stroke-opacity="0.04" stroke="#000000" x="0.5" y="0.5" width="281" height="127"></rect>
+                                <rect id="Rectangle" fill="#323452" x="1" y="1" width="280" height="126"></rect>
+                                <rect id="Rectangle" stroke-opacity="0.04" stroke="#FFFFFF" x="0.5" y="0.5" width="281" height="127"></rect>
                             </g>
-                            <rect id="Rectangle" fill="#6B7280" x="95" y="43" width="92" height="4" rx="2"></rect>
-                            <rect id="Rectangle" fill="#6B7280" x="79" y="53" width="124" height="4" rx="2"></rect>
-                            <rect id="Rectangle" fill="#D2D6DC" x="93" y="65" width="95" height="2" rx="1"></rect>
-                            <rect id="Rectangle" fill="#D2D6DC" x="91" y="71" width="100" height="2" rx="1"></rect>
-                            <rect id="Rectangle" fill="#D2D6DC" x="97" y="77" width="88" height="2" rx="1"></rect>
-                            <rect id="Rectangle" fill="#4B5563" x="98" y="89" width="40" height="12" rx="3"></rect>
-                            <rect id="Rectangle" fill="#9FA6B2" x="109" y="94" width="18" height="2" rx="1"></rect>
-                            <rect id="Rectangle" fill="#E5E7EB" x="144" y="89" width="40" height="12" rx="3"></rect>
-                            <rect id="Rectangle" fill="#9FA6B2" x="155" y="94" width="18" height="2" rx="1"></rect>
-                            <rect id="Rectangle" fill="#6B7280" x="31" y="17" width="10" height="10" rx="5"></rect>
-                            <rect id="Rectangle" fill="#9FA6B2" x="235" y="21" width="16" height="2" rx="1"></rect>
-                            <rect id="Rectangle" fill="#9FA6B2" x="211" y="21" width="16" height="2" rx="1"></rect>
-                            <rect id="Rectangle" fill="#9FA6B2" x="187" y="21" width="16" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.651852054" fill="#FFFFFF" x="95" y="43" width="92" height="4" rx="2"></rect>
+                            <rect id="Rectangle" fill-opacity="0.651852054" fill="#FFFFFF" x="79" y="53" width="124" height="4" rx="2"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="93" y="65" width="95" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="91" y="71" width="100" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="97" y="77" width="88" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.610085227" fill="#FFFFFF" x="98" y="89" width="40" height="12" rx="3"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="109" y="94" width="18" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.370875219" fill="#FFFFFF" x="144" y="89" width="40" height="12" rx="3"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="155" y="94" width="18" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.651852054" fill="#FFFFFF" x="31" y="17" width="10" height="10" rx="5"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="235" y="21" width="16" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="211" y="21" width="16" height="2" rx="1"></rect>
+                            <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="187" y="21" width="16" height="2" rx="1"></rect>
                         </g>
                     </g>
                 </g>

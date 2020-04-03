@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
     <title>sectionTitle</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard" transform="translate(-65.000000, -824.000000)">
             <g id="sectionTitle" transform="translate(65.000000, 824.000000)">
-                <rect id="Rectangle" fill="#FFFFFF" x="0" y="0" width="280" height="140"></rect>
-                <rect id="Rectangle" fill="#F4F5F7" x="0" y="0" width="280" height="140"></rect>
+                <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
+                <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
                 <g id="Group" transform="translate(49.000000, 42.000000)">
-                    <path d="M1,5 C1,2.7909 2.7909,1 5,1 L177,1 C179.209,1 181,2.7909 181,5 L181,51 C181,53.2091 179.209,55 177,55 L5,55 C2.7909,55 1,53.2091 1,51 L1,5 Z" id="Path" fill="#FFFFFF"></path>
-                    <path d="M177,0.5 L5,0.5 C2.5147,0.5 0.5,2.5147 0.5,5 L0.5,51 C0.5,53.4853 2.5147,55.5 5,55.5 L177,55.5 C179.485,55.5 181.5,53.4853 181.5,51 L181.5,5 C181.5,2.5147 179.485,0.5 177,0.5 Z" id="Path" stroke-opacity="0.04" stroke="#000000"></path>
+                    <path d="M1,5 C1,2.7909 2.7909,1 5,1 L177,1 C179.209,1 181,2.7909 181,5 L181,51 C181,53.2091 179.209,55 177,55 L5,55 C2.7909,55 1,53.2091 1,51 L1,5 Z" id="Path" fill="#323452"></path>
+                    <path d="M177,0.5 L5,0.5 C2.5147,0.5 0.5,2.5147 0.5,5 L0.5,51 C0.5,53.4853 2.5147,55.5 5,55.5 L177,55.5 C179.485,55.5 181.5,53.4853 181.5,51 L181.5,5 C181.5,2.5147 179.485,0.5 177,0.5 Z" id="Path" stroke-opacity="0.04" stroke="#FFFFFF"></path>
                 </g>
-                <rect id="Rectangle" fill="#4B5563" x="58" y="79" width="24" height="10" rx="3"></rect>
-                <rect id="Rectangle" fill="#E5E7EB" x="86" y="79" width="24" height="10" rx="3"></rect>
-                <rect id="Rectangle" fill="#6B7280" x="58" y="51" width="76" height="3" rx="1.5"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="58" y="59" width="160" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="58" y="64" width="164" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="58" y="69" width="132" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.610085227" fill="#FFFFFF" x="58" y="79" width="24" height="10" rx="3"></rect>
+                <rect id="Rectangle" fill-opacity="0.370875219" fill="#FFFFFF" x="86" y="79" width="24" height="10" rx="3"></rect>
+                <rect id="Rectangle" fill-opacity="0.651852054" fill="#FFFFFF" x="58" y="51" width="76" height="3" rx="1.5"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="58" y="59" width="160" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="58" y="64" width="164" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="58" y="69" width="132" height="2" rx="1"></rect>
             </g>
         </g>
     </g>

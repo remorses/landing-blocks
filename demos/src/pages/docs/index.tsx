@@ -1,4 +1,5 @@
 import React from 'react'
+import NextLink from 'next/link'
 import Head from 'next/head'
 import {
     Hero,
@@ -14,11 +15,12 @@ import {
     Footer,
     TestimonialsLogos,
     SectionTitle,
-    Button,
     PageContainer,
 } from 'react-landing/src'
-import { Box, Stack, Image, Flex, Text } from '@chakra-ui/core'
+
+import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
 import * as landingCards from '../../svgs/landingCards'
+import { IndexCardsPaths } from '../../constants'
 
 export const LaindgCardsLinks = ({ ...rest }) => {
     const links = { ...landingCards }
@@ -32,29 +34,30 @@ export const LaindgCardsLinks = ({ ...rest }) => {
                 mx='auto'
                 {...rest}
             >
-                {Object.keys(links).map((k) => {
-                    const icon = links[k]
+                {IndexCardsPaths.map((k) => {
+                    const { icon, path, title } = k
                     return (
-                        <Button
-                            borderRadius='8px'
-                            p='20px'
-                            mx='20px'
-                            h='auto'
-                            variant='link'
-                            
-                        >
-                            <Stack spacing='20px'>
-                                <Box
-                                    border='1px solid'
-                                    borderColor='gray.200'
-                                    borderRadius='8px'
-                                    width='240px'
-                                    shadow='md'
-                                    as={icon}
-                                />
-                                <Text>{k}</Text>
-                            </Stack>
-                        </Button>
+                        <NextLink href={path}>
+                            <Button
+                                borderRadius='8px'
+                                p='20px'
+                                mx='20px'
+                                h='auto'
+                                variant='ghost'
+                            >
+                                <Stack spacing='20px'>
+                                    <Box
+                                        // border='1px solid'
+                                        borderColor='gray.200'
+                                        borderRadius='8px'
+                                        width='240px'
+                                        shadow='md'
+                                        as={icon}
+                                    />
+                                    <Text>{title}</Text>
+                                </Stack>
+                            </Button>
+                        </NextLink>
                     )
                 })}
             </Stack>

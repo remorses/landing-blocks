@@ -7,59 +7,78 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
         <path id="stats_svg__a" d="M0 0h280v140H0z" />
       </defs>
       <g fill="none" fillRule="evenodd">
-        <path fill="#FFF" d="M0 0h280v140H0z" />
+        <path fill="#323452" d="M0 0h280v140H0z" />
         <g>
           <mask id="stats_svg__b" fill="#fff">
             <use xlinkHref="#stats_svg__a" />
           </mask>
           <g mask="url(#stats_svg__b)">
             <g transform="translate(0 -1)">
-              <path fill="#F4F5F7" d="M0 1h280v140H0z" />
-              <path fill="#FFF" d="M60 .992h220v16.116H60z" />
+              <path fill="#323452" d="M0 1h280v140H0z" />
+              <path fill="#323452" d="M60 .992h220v16.116H60z" />
               <path
                 strokeOpacity={0.05}
-                stroke="#000"
+                stroke="#FFF"
                 d="M59.5.492h221v17.116h-221z"
               />
-              <path fill="#4B5563" d="M0 1h60v140H0z" />
-              <path fill="#374151" d="M0 1h60v16H0z" />
-              <circle fill="#6B7280" cx={12} cy={9} r={3} />
+              <path fillOpacity={0.61} fill="#FFF" d="M0 1h60v140H0z" />
+              <path fillOpacity={0.163} fill="#FFF" d="M0 1h60v16H0z" />
+              <circle fillOpacity={0.652} fill="#FFF" cx={12} cy={9} r={3} />
               <path
                 d="M90 41a4 4 0 014-4h152a4 4 0 014 4v16a4 4 0 01-4 4H94a4 4 0 01-4-4V41z"
-                fill="#FFF"
+                fill="#323452"
               />
               <path
                 d="M94 36.5a4.5 4.5 0 00-4.5 4.5v16a4.5 4.5 0 004.5 4.5h152a4.5 4.5 0 004.5-4.5V41a4.5 4.5 0 00-4.5-4.5H94z"
                 strokeOpacity={0.04}
-                stroke="#000"
+                stroke="#FFF"
               />
               <path
                 d="M90 73a4 4 0 014-4h152a4 4 0 014 4v77a4 4 0 01-4 4H94a4 4 0 01-4-4V73z"
-                fill="#FFF"
+                fill="#323452"
               />
               <path
                 d="M94 68.5a4.5 4.5 0 00-4.5 4.5v77a4.5 4.5 0 004.5 4.5h152a4.5 4.5 0 004.5-4.5V73a4.5 4.5 0 00-4.5-4.5H94z"
                 strokeOpacity={0.04}
-                stroke="#000"
+                stroke="#FFF"
               />
               <path
-                stroke="#D2D6DC"
+                strokeOpacity={0.354}
+                stroke="#FFF"
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M242 75l2 2-2 2M242 91l2 2-2 2M242 107l2 2-2 2M242 123l2 2-2 2M242 139l2 2-2 2"
               />
-              <rect fill="#9FA6B2" x={96} y={74} width={30} height={2} rx={1} />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
+                x={96}
+                y={74}
+                width={30}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={74}
                 width={35}
                 height={2}
                 rx={1}
               />
-              <rect fill="#9FA6B2" x={96} y={90} width={40} height={2} rx={1} />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
+                x={96}
+                y={90}
+                width={40}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={90}
                 width={30}
@@ -67,7 +86,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={96}
                 y={106}
                 width={35}
@@ -75,7 +95,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={96}
                 y={122}
                 width={35}
@@ -83,7 +104,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={96}
                 y={138}
                 width={35}
@@ -91,7 +113,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={106}
                 width={37}
@@ -99,7 +122,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={122}
                 width={37}
@@ -107,25 +131,44 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#9FA6B2"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={138}
                 width={37}
                 height={2}
                 rx={1}
               />
-              <rect fill="#D2D6DC" x={96} y={79} width={24} height={2} rx={1} />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
+                x={96}
+                y={79}
+                width={24}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={79}
                 width={17}
                 height={2}
                 rx={1}
               />
-              <rect fill="#D2D6DC" x={96} y={95} width={20} height={2} rx={1} />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
+                x={96}
+                y={95}
+                width={20}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={95}
                 width={24}
@@ -133,7 +176,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={96}
                 y={111}
                 width={25}
@@ -141,7 +185,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={96}
                 y={127}
                 width={25}
@@ -149,7 +194,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={111}
                 width={22}
@@ -157,7 +203,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={170}
                 y={127}
                 width={22}
@@ -165,12 +212,22 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <path
-                fill="#E5E7EB"
+                fillOpacity={0.371}
+                fill="#FFF"
                 d="M90 85h160v1H90zM90 101h160v1H90zM90 117h160v1H90zM90 133h160v1H90zM143 37h1v24h-1zM197 37h1v24h-1z"
               />
-              <rect fill="#D2D6DC" x={96} y={43} width={20} height={2} rx={1} />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
+                x={96}
+                y={43}
+                width={20}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={150}
                 y={43}
                 width={20}
@@ -178,7 +235,8 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#D2D6DC"
+                fillOpacity={0.354}
+                fill="#FFF"
                 x={204}
                 y={43}
                 width={20}
@@ -186,7 +244,7 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#F98080"
+                fill="#067F7F"
                 x={118}
                 y={51}
                 width={12}
@@ -194,7 +252,7 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#31C48D"
+                fill="#CE3B72"
                 x={172}
                 y={51}
                 width={12}
@@ -202,7 +260,7 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
                 rx={1}
               />
               <rect
-                fill="#31C48D"
+                fill="#CE3B72"
                 x={226}
                 y={51}
                 width={12}
@@ -211,15 +269,64 @@ function SvgStats(props: React.SVGProps<SVGSVGElement>) {
               />
               <path
                 d="M96.582 55h4.487v-.99h-2.851v-.045l1.128-1.148c1.272-1.22 1.624-1.815 1.624-2.553 0-1.097-.892-1.899-2.209-1.899-1.297 0-2.218.805-2.218 2.049h1.128c0-.668.422-1.087 1.074-1.087.624 0 1.087.38 1.087.997 0 .547-.332.937-.978 1.592l-2.272 2.228V55zm7.865.09c1.384 0 2.349-.94 2.349-2.24 0-1.26-.876-2.168-2.064-2.168-.531 0-1.001.211-1.244.499h-.038l.188-1.736h2.816v-.99h-3.797l-.342 3.375 1.071.175c.221-.243.636-.406 1.029-.402.719.003 1.237.533 1.234 1.275.003.732-.502 1.253-1.202 1.253-.591 0-1.067-.374-1.109-.911h-1.15c.031 1.087.981 1.87 2.259 1.87zm6.919-1.317c.004.76.486 1.41 1.384 1.41.895 0 1.387-.65 1.384-1.41v-.345c.003-.767-.476-1.41-1.384-1.41-.885 0-1.38.649-1.384 1.41v.345zm-3.327-3.746c.004.76.486 1.403 1.387 1.403.892 0 1.384-.636 1.381-1.403v-.345c.003-.767-.476-1.41-1.381-1.41-.882 0-1.383.643-1.387 1.41v.345zm.288 4.973h.802l4.5-6.545h-.802l-4.5 6.545zm3.874-1.572c.003-.34.147-.681.549-.681.422 0 .547.342.544.68v.346c.003.338-.135.674-.544.674-.409 0-.546-.339-.549-.674v-.345zm-3.321-3.746c.003-.336.141-.68.546-.68.422 0 .544.341.541.68v.345c.003.339-.131.674-.541.674-.409 0-.543-.335-.546-.674v-.345zM152.931 55.09c1.4 0 2.419-.803 2.416-1.909.003-.818-.508-1.406-1.425-1.537v-.051c.709-.153 1.185-.68 1.182-1.416.003-.997-.847-1.812-2.154-1.812-1.272 0-2.256.758-2.282 1.854h1.141c.019-.55.53-.892 1.135-.892.61 0 1.016.37 1.013.92.003.573-.47.953-1.148.953h-.578v.914h.578c.828 0 1.32.416 1.317 1.007.003.578-.499.974-1.198.974-.659 0-1.167-.341-1.196-.875h-1.201c.031 1.106 1.019 1.87 2.4 1.87zm5.932.035c1.579.003 2.522-1.244 2.522-3.391 0-2.135-.949-3.369-2.522-3.369-1.572 0-2.518 1.23-2.521 3.369 0 2.144.943 3.39 2.521 3.39zm0-1c-.815 0-1.326-.819-1.323-2.391.003-1.56.512-2.381 1.323-2.381.815 0 1.324.821 1.327 2.38 0 1.573-.508 2.391-1.327 2.391zm7.084-.352c.003.76.485 1.41 1.383 1.41.895 0 1.388-.65 1.384-1.41v-.345c.004-.767-.476-1.41-1.384-1.41-.885 0-1.38.649-1.383 1.41v.345zm-3.328-3.746c.004.76.486 1.403 1.388 1.403.891 0 1.383-.636 1.38-1.403v-.345c.003-.767-.476-1.41-1.38-1.41-.883 0-1.384.643-1.388 1.41v.345zm.288 4.973h.802l4.5-6.545h-.802l-4.5 6.545zm3.874-1.572c.003-.34.147-.681.549-.681.422 0 .547.342.544.68v.346c.003.338-.134.674-.544.674-.409 0-.546-.339-.549-.674v-.345zm-3.321-3.746c.003-.336.141-.68.547-.68.421 0 .543.341.54.68v.345c.003.339-.131.674-.54.674-.41 0-.544-.335-.547-.674v-.345zM204.463 53.785h3.123V55h1.131v-1.215h.838v-.974h-.838v-4.356h-1.476l-2.778 4.388v.942zm3.136-.974h-1.921v-.051l1.87-2.963h.051v3.014zm5.252 2.279c1.384 0 2.349-.94 2.349-2.24 0-1.26-.875-2.168-2.064-2.168-.531 0-1.001.211-1.243.499h-.039l.189-1.736h2.815v-.99h-3.796l-.342 3.375 1.07.175c.221-.243.636-.406 1.029-.402.72.003 1.237.533 1.234 1.275.003.732-.502 1.253-1.202 1.253-.591 0-1.067-.374-1.109-.911h-1.15c.032 1.087.981 1.87 2.259 1.87zm6.92-1.317c.003.76.486 1.41 1.384 1.41.895 0 1.387-.65 1.384-1.41v-.345c.003-.767-.477-1.41-1.384-1.41-.886 0-1.381.649-1.384 1.41v.345zm-3.327-3.746c.003.76.486 1.403 1.387 1.403.891 0 1.384-.636 1.38-1.403v-.345c.004-.767-.476-1.41-1.38-1.41-.882 0-1.384.643-1.387 1.41v.345zm.287 4.973h.803l4.5-6.545h-.803l-4.5 6.545zm3.874-1.572c.003-.34.147-.681.55-.681.422 0 .546.342.543.68v.346c.003.338-.134.674-.543.674-.409 0-.547-.339-.55-.674v-.345zm-3.321-3.746c.003-.336.141-.68.547-.68.422 0 .543.341.54.68v.345c.003.339-.131.674-.54.674-.409 0-.544-.335-.547-.674v-.345z"
-                fill="#6B7280"
+                fillOpacity={0.652}
+                fill="#FFF"
                 fillRule="nonzero"
               />
-              <rect fill="#6B7280" x={90} y={25} width={30} height={4} rx={2} />
-              <rect fill="#6B7280" x={9} y={25} width={20} height={2} rx={1} />
-              <rect fill="#6B7280" x={9} y={33} width={24} height={2} rx={1} />
-              <rect fill="#6B7280" x={9} y={41} width={19} height={2} rx={1} />
-              <rect fill="#6B7280" x={9} y={49} width={23} height={2} rx={1} />
-              <rect fill="#6B7280" x={9} y={57} width={16} height={2} rx={1} />
+              <rect
+                fillOpacity={0.652}
+                fill="#FFF"
+                x={90}
+                y={25}
+                width={30}
+                height={4}
+                rx={2}
+              />
+              <rect
+                fillOpacity={0.652}
+                fill="#FFF"
+                x={9}
+                y={25}
+                width={20}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.652}
+                fill="#FFF"
+                x={9}
+                y={33}
+                width={24}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.652}
+                fill="#FFF"
+                x={9}
+                y={41}
+                width={19}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.652}
+                fill="#FFF"
+                x={9}
+                y={49}
+                width={23}
+                height={2}
+                rx={1}
+              />
+              <rect
+                fillOpacity={0.652}
+                fill="#FFF"
+                x={9}
+                y={57}
+                width={16}
+                height={2}
+                rx={1}
+              />
             </g>
           </g>
         </g>

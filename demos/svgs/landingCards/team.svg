@@ -1,43 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
     <title>team</title>
     <desc>Created with Sketch.</desc>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="Artboard" transform="translate(-879.000000, -824.000000)">
             <g id="team" transform="translate(879.000000, 824.000000)">
-                <rect id="Rectangle" fill="#F4F5F7" x="0" y="0" width="280" height="140"></rect>
-                <rect id="Rectangle" fill="#F4F5F7" x="0" y="0" width="280" height="140"></rect>
+                <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
+                <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
                 <g id="Group" transform="translate(29.000000, 48.000000)">
-                    <rect id="Rectangle" fill="#FFFFFF" x="1" y="1" width="68" height="59" rx="3"></rect>
-                    <rect id="Rectangle" stroke-opacity="0.04" stroke="#000000" x="0.5" y="0.5" width="69" height="60" rx="3.5"></rect>
+                    <rect id="Rectangle" fill="#323452" x="1" y="1" width="68" height="59" rx="3"></rect>
+                    <rect id="Rectangle" stroke-opacity="0.04" stroke="#FFFFFF" x="0.5" y="0.5" width="69" height="60" rx="3.5"></rect>
                 </g>
                 <g id="Group" transform="translate(105.000000, 48.000000)">
-                    <rect id="Rectangle" fill="#FFFFFF" x="1" y="1" width="68" height="59" rx="3"></rect>
-                    <rect id="Rectangle" stroke-opacity="0.04" stroke="#000000" x="0.5" y="0.5" width="69" height="60" rx="3.5"></rect>
+                    <rect id="Rectangle" fill="#323452" x="1" y="1" width="68" height="59" rx="3"></rect>
+                    <rect id="Rectangle" stroke-opacity="0.04" stroke="#FFFFFF" x="0.5" y="0.5" width="69" height="60" rx="3.5"></rect>
                 </g>
                 <g id="Group" transform="translate(181.000000, 48.000000)">
-                    <rect id="Rectangle" fill="#FFFFFF" x="1" y="1" width="68" height="59" rx="3"></rect>
-                    <rect id="Rectangle" stroke-opacity="0.04" stroke="#000000" x="0.5" y="0.5" width="69" height="60" rx="3.5"></rect>
+                    <rect id="Rectangle" fill="#323452" x="1" y="1" width="68" height="59" rx="3"></rect>
+                    <rect id="Rectangle" stroke-opacity="0.04" stroke="#FFFFFF" x="0.5" y="0.5" width="69" height="60" rx="3.5"></rect>
                 </g>
-                <rect id="Rectangle" fill="#9FA6B2" x="46" y="90" width="36" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#9FA6B2" x="122" y="90" width="36" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#9FA6B2" x="198" y="90" width="36" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="40" y="96" width="48" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="116" y="96" width="48" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="192" y="96" width="48" height="2" rx="1"></rect>
-                <ellipse id="Oval" fill="#E5E7EB" cx="64" cy="71.0001" rx="12" ry="12.0001"></ellipse>
-                <path d="M54.0771,77.7543 C56.722,75.4179 60.1973,74 64.0038,74 C67.8064,74 71.2784,75.4149 73.9223,77.747 C71.7625,80.9179 68.123,83.0001 63.9972,83.0001 C59.8746,83.0001 56.2375,80.9211 54.0771,77.7543 Z" id="Path" fill="#9FA6B2" opacity="0.8"></path>
-                <ellipse id="Oval" fill="#9FA6B2" cx="64.001" cy="67.9922" rx="4" ry="4.00003"></ellipse>
-                <ellipse id="Oval" fill="#E5E7EB" cx="140" cy="71.0001" rx="12" ry="12.0001"></ellipse>
-                <path d="M130.077,77.7543 C132.722,75.4179 136.197,74 140.004,74 C143.806,74 147.278,75.4149 149.922,77.747 C147.763,80.9179 144.123,83.0001 139.997,83.0001 C135.875,83.0001 132.237,80.9211 130.077,77.7543 Z" id="Path" fill="#9FA6B2" opacity="0.8"></path>
-                <ellipse id="Oval" fill="#9FA6B2" cx="140.001" cy="67.9922" rx="4" ry="4.00003"></ellipse>
-                <ellipse id="Oval" fill="#E5E7EB" cx="216" cy="71.0001" rx="12" ry="12.0001"></ellipse>
-                <path d="M206.077,77.7543 C208.722,75.4179 212.197,74 216.004,74 C219.806,74 223.278,75.4149 225.922,77.747 C223.763,80.9179 220.123,83.0001 215.997,83.0001 C211.875,83.0001 208.237,80.9211 206.077,77.7543 Z" id="Path" fill="#9FA6B2" opacity="0.8"></path>
-                <ellipse id="Oval" fill="#9FA6B2" cx="216.001" cy="67.9922" rx="4" ry="4.00003"></ellipse>
-                <rect id="Rectangle" fill="#6B7280" x="102" y="23" width="76" height="3" rx="1.5"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="84" y="30" width="111" height="2" rx="1"></rect>
-                <rect id="Rectangle" fill="#D2D6DC" x="90" y="35" width="100" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="46" y="90" width="36" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="122" y="90" width="36" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="198" y="90" width="36" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="40" y="96" width="48" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="116" y="96" width="48" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="192" y="96" width="48" height="2" rx="1"></rect>
+                <ellipse id="Oval" fill-opacity="0.370875219" fill="#FFFFFF" cx="64" cy="71.0001" rx="12" ry="12.0001"></ellipse>
+                <path d="M54.0771,77.7543 C56.722,75.4179 60.1973,74 64.0038,74 C67.8064,74 71.2784,75.4149 73.9223,77.747 C71.7625,80.9179 68.123,83.0001 63.9972,83.0001 C59.8746,83.0001 56.2375,80.9211 54.0771,77.7543 Z" id="Path" fill-opacity="0.354212194" fill="#FFFFFF" opacity="0.8"></path>
+                <ellipse id="Oval" fill-opacity="0.354212194" fill="#FFFFFF" cx="64.001" cy="67.9922" rx="4" ry="4.00003"></ellipse>
+                <ellipse id="Oval" fill-opacity="0.370875219" fill="#FFFFFF" cx="140" cy="71.0001" rx="12" ry="12.0001"></ellipse>
+                <path d="M130.077,77.7543 C132.722,75.4179 136.197,74 140.004,74 C143.806,74 147.278,75.4149 149.922,77.747 C147.763,80.9179 144.123,83.0001 139.997,83.0001 C135.875,83.0001 132.237,80.9211 130.077,77.7543 Z" id="Path" fill-opacity="0.354212194" fill="#FFFFFF" opacity="0.8"></path>
+                <ellipse id="Oval" fill-opacity="0.354212194" fill="#FFFFFF" cx="140.001" cy="67.9922" rx="4" ry="4.00003"></ellipse>
+                <ellipse id="Oval" fill-opacity="0.370875219" fill="#FFFFFF" cx="216" cy="71.0001" rx="12" ry="12.0001"></ellipse>
+                <path d="M206.077,77.7543 C208.722,75.4179 212.197,74 216.004,74 C219.806,74 223.278,75.4149 225.922,77.747 C223.763,80.9179 220.123,83.0001 215.997,83.0001 C211.875,83.0001 208.237,80.9211 206.077,77.7543 Z" id="Path" fill-opacity="0.354212194" fill="#FFFFFF" opacity="0.8"></path>
+                <ellipse id="Oval" fill-opacity="0.354212194" fill="#FFFFFF" cx="216.001" cy="67.9922" rx="4" ry="4.00003"></ellipse>
+                <rect id="Rectangle" fill-opacity="0.651852054" fill="#FFFFFF" x="102" y="23" width="76" height="3" rx="1.5"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="84" y="30" width="111" height="2" rx="1"></rect>
+                <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="90" y="35" width="100" height="2" rx="1"></rect>
             </g>
         </g>
     </g>
