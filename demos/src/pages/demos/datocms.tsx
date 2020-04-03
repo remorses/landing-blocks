@@ -52,11 +52,11 @@ const Page = () => (
         />
         <TestimonialsLogos
             testimonials={[
-                <img src='datocms/dropbox.svg' />,
-                <img src='datocms/hashicorp.svg' />,
-                <img src='datocms/verizon.svg' />,
-                <img src='datocms/vmware.svg' />,
-                <img src='datocms/linkedin.svg' />,
+                <img src='/datocms/dropbox.svg' />,
+                <img src='/datocms/hashicorp.svg' />,
+                <img src='/datocms/verizon.svg' />,
+                <img src='/datocms/vmware.svg' />,
+                <img src='/datocms/linkedin.svg' />,
             ]}
         />
         <SectionTitle
