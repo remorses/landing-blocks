@@ -50,6 +50,11 @@ export const IndexCardsPaths = [
         title: '<Pricing/>',
         path: BASE_PATH + 'pricing',
     },
+    {
+        icon: landingCards.Tweets,
+        title: '<TestimonialsTweets/>',
+        path: BASE_PATH + 'testimonialsTweets',
+    },
 ]
 
 export const demosPaths = [

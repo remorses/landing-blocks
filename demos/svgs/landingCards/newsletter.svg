@@ -19,7 +19,7 @@
                 <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="168" y="88" width="14" height="2" rx="1"></rect>
                 <g id="Group" transform="translate(89.000000, 82.000000)">
                     <rect id="Rectangle" fill="#323452" x="1" y="1" width="66" height="12" rx="3"></rect>
-                    <rect id="Rectangle" stroke-opacity="0.1" stroke="#FFFFFF" x="0.5" y="0.5" width="67" height="13" rx="3.5"></rect>
+                    <rect id="Rectangle" stroke-opacity="0.437773164" stroke="#FFFFFF" fill-opacity="0.105769231" fill="#FFFFFF" x="0.5" y="0.5" width="67" height="13" rx="3.5"></rect>
                 </g>
                 <path d="M133.084,44.424 L140,47.8819 L146.916,44.4239 C146.668,43.6002 145.904,43 145,43 L135,43 C134.096,43 133.332,43.6002 133.084,44.424 Z M147,46.6179 L140,50.1179 L133,46.618 L133,51 C133,52.1046 133.895,53 135,53 L145,53 C146.105,53 147,52.1046 147,51 L147,46.6179 Z" id="Shape" fill-opacity="0.354212194" fill="#FFFFFF"></path>
             </g>

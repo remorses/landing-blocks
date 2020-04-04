@@ -6,10 +6,10 @@ function SvgTeam(props: React.SVGProps<SVGSVGElement>) {
       <g fill="none" fillRule="evenodd">
         <path fill="#323452" d="M0 0h280v140H0z" />
         <path fill="#323452" d="M0 0h280v140H0z" />
-        <g transform="translate(29 48)">
+        <g transform="translate(22 48)">
           <rect fill="#323452" x={1} y={1} width={68} height={59} rx={3} />
           <rect
-            strokeOpacity={0.04}
+            strokeOpacity={0.394}
             stroke="#FFF"
             x={0.5}
             y={0.5}
@@ -17,11 +17,43 @@ function SvgTeam(props: React.SVGProps<SVGSVGElement>) {
             height={60}
             rx={3.5}
           />
+          <rect
+            fillOpacity={0.354}
+            fill="#FFF"
+            x={17}
+            y={42}
+            width={36}
+            height={2}
+            rx={1}
+          />
+          <rect
+            fillOpacity={0.354}
+            fill="#FFF"
+            x={11}
+            y={48}
+            width={48}
+            height={2}
+            rx={1}
+          />
+          <circle fillOpacity={0.371} fill="#FFF" cx={35} cy={23} r={12} />
+          <path
+            d="M25.077 29.754A14.943 14.943 0 0135.004 26c3.802 0 7.274 1.415 9.918 3.747A11.988 11.988 0 0134.997 35c-4.122 0-7.76-2.079-9.92-5.246z"
+            fillOpacity={0.354}
+            fill="#FFF"
+            opacity={0.8}
+          />
+          <circle
+            fillOpacity={0.354}
+            fill="#FFF"
+            cx={35.001}
+            cy={19.992}
+            r={4}
+          />
         </g>
-        <g transform="translate(105 48)">
+        <g transform="translate(102 48)">
           <rect fill="#323452" x={1} y={1} width={68} height={59} rx={3} />
           <rect
-            strokeOpacity={0.04}
+            strokeOpacity={0.394}
             stroke="#FFF"
             x={0.5}
             y={0.5}
@@ -29,11 +61,43 @@ function SvgTeam(props: React.SVGProps<SVGSVGElement>) {
             height={60}
             rx={3.5}
           />
+          <rect
+            fillOpacity={0.354}
+            fill="#FFF"
+            x={17}
+            y={42}
+            width={36}
+            height={2}
+            rx={1}
+          />
+          <rect
+            fillOpacity={0.354}
+            fill="#FFF"
+            x={11}
+            y={48}
+            width={48}
+            height={2}
+            rx={1}
+          />
+          <circle fillOpacity={0.371} fill="#FFF" cx={35} cy={23} r={12} />
+          <path
+            d="M25.077 29.754A14.943 14.943 0 0135.004 26c3.802 0 7.274 1.415 9.918 3.747A11.988 11.988 0 0134.997 35c-4.122 0-7.76-2.079-9.92-5.246z"
+            fillOpacity={0.354}
+            fill="#FFF"
+            opacity={0.8}
+          />
+          <circle
+            fillOpacity={0.354}
+            fill="#FFF"
+            cx={35.001}
+            cy={19.992}
+            r={4}
+          />
         </g>
-        <g transform="translate(181 48)">
+        <g transform="translate(184 48)">
           <rect fill="#323452" x={1} y={1} width={68} height={59} rx={3} />
           <rect
-            strokeOpacity={0.04}
+            strokeOpacity={0.394}
             stroke="#FFF"
             x={0.5}
             y={0.5}
@@ -41,97 +105,39 @@ function SvgTeam(props: React.SVGProps<SVGSVGElement>) {
             height={60}
             rx={3.5}
           />
+          <rect
+            fillOpacity={0.354}
+            fill="#FFF"
+            x={17}
+            y={42}
+            width={36}
+            height={2}
+            rx={1}
+          />
+          <rect
+            fillOpacity={0.354}
+            fill="#FFF"
+            x={11}
+            y={48}
+            width={48}
+            height={2}
+            rx={1}
+          />
+          <circle fillOpacity={0.371} fill="#FFF" cx={35} cy={23} r={12} />
+          <path
+            d="M25.077 29.754A14.943 14.943 0 0135.004 26c3.802 0 7.274 1.415 9.918 3.747A11.988 11.988 0 0134.997 35c-4.122 0-7.76-2.079-9.92-5.246z"
+            fillOpacity={0.354}
+            fill="#FFF"
+            opacity={0.8}
+          />
+          <circle
+            fillOpacity={0.354}
+            fill="#FFF"
+            cx={35.001}
+            cy={19.992}
+            r={4}
+          />
         </g>
-        <rect
-          fillOpacity={0.354}
-          fill="#FFF"
-          x={46}
-          y={90}
-          width={36}
-          height={2}
-          rx={1}
-        />
-        <rect
-          fillOpacity={0.354}
-          fill="#FFF"
-          x={122}
-          y={90}
-          width={36}
-          height={2}
-          rx={1}
-        />
-        <rect
-          fillOpacity={0.354}
-          fill="#FFF"
-          x={198}
-          y={90}
-          width={36}
-          height={2}
-          rx={1}
-        />
-        <rect
-          fillOpacity={0.354}
-          fill="#FFF"
-          x={40}
-          y={96}
-          width={48}
-          height={2}
-          rx={1}
-        />
-        <rect
-          fillOpacity={0.354}
-          fill="#FFF"
-          x={116}
-          y={96}
-          width={48}
-          height={2}
-          rx={1}
-        />
-        <rect
-          fillOpacity={0.354}
-          fill="#FFF"
-          x={192}
-          y={96}
-          width={48}
-          height={2}
-          rx={1}
-        />
-        <circle fillOpacity={0.371} fill="#FFF" cx={64} cy={71} r={12} />
-        <path
-          d="M54.077 77.754A14.943 14.943 0 0164.004 74c3.802 0 7.274 1.415 9.918 3.747A11.988 11.988 0 0163.997 83c-4.122 0-7.76-2.079-9.92-5.246z"
-          fillOpacity={0.354}
-          fill="#FFF"
-          opacity={0.8}
-        />
-        <circle fillOpacity={0.354} fill="#FFF" cx={64.001} cy={67.992} r={4} />
-        <circle fillOpacity={0.371} fill="#FFF" cx={140} cy={71} r={12} />
-        <path
-          d="M130.077 77.754A14.943 14.943 0 01140.004 74c3.802 0 7.274 1.415 9.918 3.747A11.986 11.986 0 01139.997 83c-4.122 0-7.76-2.079-9.92-5.246z"
-          fillOpacity={0.354}
-          fill="#FFF"
-          opacity={0.8}
-        />
-        <circle
-          fillOpacity={0.354}
-          fill="#FFF"
-          cx={140.001}
-          cy={67.992}
-          r={4}
-        />
-        <circle fillOpacity={0.371} fill="#FFF" cx={216} cy={71} r={12} />
-        <path
-          d="M206.077 77.754A14.943 14.943 0 01216.004 74c3.802 0 7.274 1.415 9.918 3.747A11.986 11.986 0 01215.997 83c-4.122 0-7.76-2.079-9.92-5.246z"
-          fillOpacity={0.354}
-          fill="#FFF"
-          opacity={0.8}
-        />
-        <circle
-          fillOpacity={0.354}
-          fill="#FFF"
-          cx={216.001}
-          cy={67.992}
-          r={4}
-        />
         <rect
           fillOpacity={0.652}
           fill="#FFF"

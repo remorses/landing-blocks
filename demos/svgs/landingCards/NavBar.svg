@@ -19,7 +19,7 @@
                         <g transform="translate(-1.000000, -1.000000)">
                             <rect id="Rectangle" fill="#323452" x="1" y="1" width="280" height="140"></rect>
                             <g id="Group" stroke-width="1" fill="none">
-                                <rect id="Rectangle" fill="#323452" x="1" y="1" width="280" height="16"></rect>
+                                <rect id="Rectangle" fill-opacity="0.231534091" fill="#FFFFFF" x="1" y="1" width="280" height="16"></rect>
                                 <rect id="Rectangle" stroke-opacity="0.04" stroke="#FFFFFF" x="0.5" y="0.5" width="281" height="17"></rect>
                             </g>
                             <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="94" y="8" width="16" height="2" rx="1"></rect>

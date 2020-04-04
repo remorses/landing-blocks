@@ -123,7 +123,6 @@ export function Pricing({
 
 function PriceColumn({ priceSection, belowPrice, features, dark, ...rest }) {
     const realBg = useColor(priceSection.background || (dark ? '#000' : '#fff'))
-    console.log({ realBg })
     const lightness = Color(realBg as any).getLightness()
     const isDark = lightness < 0.7
     const Mode = isDark ? DarkMode : Fragment

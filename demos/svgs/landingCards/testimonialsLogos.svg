@@ -8,13 +8,13 @@
             <g id="testimonialsLogos" transform="translate(462.000000, 824.000000)">
                 <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
                 <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
-                <rect id="Rectangle" fill="#323452" x="30" y="50" width="72" height="41" rx="3"></rect>
+                <rect id="Rectangle" fill-opacity="0.101917614" fill="#FFFFFF" x="30" y="50" width="72" height="41" rx="3"></rect>
                 <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="62" y="66" width="12" height="12"></rect>
                 <rect id="Rectangle" fill-opacity="0.651852054" fill="#FFFFFF" x="58" y="62" width="12" height="12"></rect>
-                <rect id="Rectangle" fill="#323452" x="104" y="50" width="72" height="41" rx="3"></rect>
+                <rect id="Rectangle" fill-opacity="0.11956403" fill="#FFFFFF" x="104" y="50" width="72" height="41" rx="3"></rect>
                 <polygon id="Path" fill-opacity="0.354212194" fill="#FFFFFF" points="151.434 77 144.794 65.5 138.155 77"></polygon>
                 <polygon id="Path" fill-opacity="0.651852054" fill="#FFFFFF" points="136.794 63.5 144.588 77 129 77"></polygon>
-                <rect id="Rectangle" fill="#323452" x="178" y="50" width="72" height="41" rx="3"></rect>
+                <rect id="Rectangle" fill-opacity="0.120083042" fill="#FFFFFF" x="178" y="50" width="72" height="41" rx="3"></rect>
                 <circle id="Oval" fill-opacity="0.354212194" fill="#FFFFFF" cx="216" cy="72" r="7"></circle>
                 <circle id="Oval" stroke-opacity="0.651852054" stroke="#FFFFFF" stroke-width="2" cx="212" cy="68" r="6"></circle>
                 <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="95" y="37" width="90" height="2" rx="1"></rect>

@@ -1,0 +1,37 @@
+export const breadcrumbs = ['Components', 'Hero']
+
+# Testimonials Tweets
+
+Testimonials are a great way to show social proof to the customer, even better if these testimonials are verifyable via a twitter link.
+
+An example of using the `TestimonialsTweets` component is this
+
+```js
+<TestimonialsTweets
+    heading="Don't you trust me?"
+    subhead='Trust them'
+    tweets={[
+        '933354946111705097',
+        '1246480107604078592', // you can use an id or an url
+        'https://twitter.com/naval/status/806034795658522624?s=21',
+    ]}
+/>
+```
+
+## Example
+
+In the view below the tweets are in a single column but on wider screen they wrap in an organic way.
+
+```jsx
+<LandingProvider>
+    <TestimonialsTweets
+        heading="Don't you trust me?"
+        subhead='Trust them'
+        tweets={[
+            '933354946111705097',
+            '1246480107604078592', // you can use an id or an url
+            'https://twitter.com/naval/status/806034795658522624?s=21',
+        ]}
+    />
+</LandingProvider>
+```

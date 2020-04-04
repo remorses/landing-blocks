@@ -51,7 +51,18 @@ export function TestimonialsTweets({
                         as={animated.div}
                         style={animations[i]}
                     >
-                        <TwitterTweetEmbed tweetId={id} />
+                        <TwitterTweetEmbed
+                            placeholder={
+                                <Box
+                                    bg='#fff'
+                                    width='400px'
+                                    border='1px solid #ddd'
+                                    borderRadius='10px'
+                                    height='200px'
+                                />
+                            }
+                            tweetId={id}
+                        />
                     </Col>
                 ))}
             </Col>

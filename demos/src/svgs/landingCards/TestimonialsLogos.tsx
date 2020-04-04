@@ -6,10 +6,26 @@ function SvgTestimonialsLogos(props: React.SVGProps<SVGSVGElement>) {
       <g fill="none" fillRule="evenodd">
         <path fill="#323452" d="M0 0h280v140H0z" />
         <path fill="#323452" d="M0 0h280v140H0z" />
-        <rect fill="#323452" x={30} y={50} width={72} height={41} rx={3} />
+        <rect
+          fillOpacity={0.102}
+          fill="#FFF"
+          x={30}
+          y={50}
+          width={72}
+          height={41}
+          rx={3}
+        />
         <path fillOpacity={0.354} fill="#FFF" d="M62 66h12v12H62z" />
         <path fillOpacity={0.652} fill="#FFF" d="M58 62h12v12H58z" />
-        <rect fill="#323452" x={104} y={50} width={72} height={41} rx={3} />
+        <rect
+          fillOpacity={0.12}
+          fill="#FFF"
+          x={104}
+          y={50}
+          width={72}
+          height={41}
+          rx={3}
+        />
         <path
           fillOpacity={0.354}
           fill="#FFF"
@@ -20,7 +36,15 @@ function SvgTestimonialsLogos(props: React.SVGProps<SVGSVGElement>) {
           fill="#FFF"
           d="M136.794 63.5l7.794 13.5H129z"
         />
-        <rect fill="#323452" x={178} y={50} width={72} height={41} rx={3} />
+        <rect
+          fillOpacity={0.12}
+          fill="#FFF"
+          x={178}
+          y={50}
+          width={72}
+          height={41}
+          rx={3}
+        />
         <circle fillOpacity={0.354} fill="#FFF" cx={216} cy={72} r={7} />
         <circle
           strokeOpacity={0.652}

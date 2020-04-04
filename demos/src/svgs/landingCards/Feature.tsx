@@ -24,7 +24,8 @@ function SvgFeature(props: React.SVGProps<SVGSVGElement>) {
           </g>
           <path
             d="M155 36.2c0-1.767.708-3.2 1.582-3.2h83.836c.874 0 1.582 1.433 1.582 3.2V117h-87V36.2z"
-            fill="#323452"
+            fillOpacity={0.249}
+            fill="#FFF"
           />
           <path
             d="M156.39 34h84.22c.767 0 1.39 1.25 1.39 2.793V117h-87V36.793c0-1.542.623-2.793 1.39-2.793z"

@@ -6,7 +6,7 @@ function SvgPricing(props: React.SVGProps<SVGSVGElement>) {
       <g fill="none" fillRule="evenodd">
         <path fill="#323452" d="M0 0h280v140H0z" />
         <path fill="#323452" d="M0 0h280v140H0z" />
-        <path fillOpacity={0.61} fill="#FFF" d="M0 0h280v90H0z" />
+        <path fillOpacity={0.163} fill="#FFF" d="M0 0h280v90H0z" />
         <rect fill="#323452" x={62} y={6} width={8} height={8} rx={4} />
         <rect
           fillOpacity={0.354}

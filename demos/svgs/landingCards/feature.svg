@@ -26,7 +26,7 @@
                         <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="52" width="92" height="2" rx="1"></rect>
                     </g>
                     <g transform="translate(155.000000, 33.000000)" id="Path">
-                        <path d="M0,3.2 C0,1.43272 0.708219545,0 1.58181818,0 L85.4181818,0 C86.2917409,0 87,1.43272 87,3.2 L87,84 L0,84 L0,3.2 Z" fill="#323452"></path>
+                        <path d="M0,3.2 C0,1.43272 0.708219545,0 1.58181818,0 L85.4181818,0 C86.2917409,0 87,1.43272 87,3.2 L87,84 L0,84 L0,3.2 Z" fill-opacity="0.248880026" fill="#FFFFFF"></path>
                         <path d="M1.39041096,1 L85.609589,1 C86.3774932,1 87,2.25058654 87,3.79326923 L87,84 L0,84 L0,3.79326923 C0,2.25058654 0.622506849,1 1.39041096,1 Z" stroke-opacity="0.354212194" stroke="#FFFFFF"></path>
                     </g>
                     <rect id="Rectangle" fill-opacity="0.354212194" fill="#FFFFFF" x="0" y="15" width="280" height="1"></rect>

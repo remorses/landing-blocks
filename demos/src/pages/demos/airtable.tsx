@@ -49,7 +49,6 @@ const Page = () => (
         <TestimonialsTweets
             heading="Don't you trust me?"
             subhead='Trust them'
-            bg='gray.100'
             tweets={[
                 '933354946111705097',
                 '1246480107604078592',

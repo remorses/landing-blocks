@@ -15,7 +15,7 @@ function SvgNavBar(props: React.SVGProps<SVGSVGElement>) {
           <g mask="url(#NavBar_svg__b)">
             <g transform="translate(-1 -1)">
               <path fill="#323452" d="M1 1h280v140H1z" />
-              <path fill="#323452" d="M1 1h280v16H1z" />
+              <path fillOpacity={0.232} fill="#FFF" d="M1 1h280v16H1z" />
               <path strokeOpacity={0.04} stroke="#FFF" d="M.5.5h281v17H.5z" />
               <rect
                 fillOpacity={0.354}

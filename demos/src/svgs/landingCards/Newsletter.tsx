@@ -66,8 +66,10 @@ function SvgNewsletter(props: React.SVGProps<SVGSVGElement>) {
         <g transform="translate(89 82)">
           <rect fill="#323452" x={1} y={1} width={66} height={12} rx={3} />
           <rect
-            strokeOpacity={0.1}
+            strokeOpacity={0.438}
             stroke="#FFF"
+            fillOpacity={0.106}
+            fill="#FFF"
             x={0.5}
             y={0.5}
             width={67}

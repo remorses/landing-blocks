@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="280px" height="140px" viewBox="0 0 280 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>tweets</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-888.000000, -1275.000000)">
+            <g id="tweets" transform="translate(888.000000, 1275.000000)">
+                <rect id="Rectangle" fill="#323452" x="0" y="0" width="280" height="140"></rect>
+                <g id="Group-6" transform="translate(56.000000, 18.000000)" fill="#FFFFFF">
+                    <g id="Group-10">
+                        <circle id="Oval" fill-opacity="0.370875219" cx="8" cy="8" r="8"></circle>
+                        <path d="M7.50102796,8.4734748 C8.9481599,8.4734748 10.1213091,7.24820008 10.1213091,5.73670582 C10.1213091,4.22527473 8.9481599,3 7.50102796,3 C6.05389603,3 4.88074683,4.22527473 4.88074683,5.73670582 C4.88074683,7.24820008 6.05389603,8.4734748 7.50102796,8.4734748 Z M7.50272108,9.84236453 C5.00918191,9.84236453 2.73254321,10.812429 1,12.4109511 C2.4151441,14.5776178 4.79772359,16 7.49836735,16 C10.201067,16 12.5852187,14.5754074 14,12.4059619 C12.2681219,10.810408 9.99366011,9.84236453 7.50272108,9.84236453 Z" id="Shape" fill-opacity="0.354212194"></path>
+                    </g>
+                    <g id="Group-9" transform="translate(25.000000, 3.000000)">
+                        <rect id="Rectangle" fill-opacity="0.651852054" x="0" y="0" width="47" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="8" width="100" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="13" width="102" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="18" width="82" height="2" rx="1"></rect>
+                    </g>
+                </g>
+                <g id="Group-6-Copy" transform="translate(52.000000, 97.000000)" fill="#FFFFFF">
+                    <g id="Group-10">
+                        <circle id="Oval" fill-opacity="0.370875219" cx="8" cy="8" r="8"></circle>
+                        <path d="M7.50102796,8.4734748 C8.9481599,8.4734748 10.1213091,7.24820008 10.1213091,5.73670582 C10.1213091,4.22527473 8.9481599,3 7.50102796,3 C6.05389603,3 4.88074683,4.22527473 4.88074683,5.73670582 C4.88074683,7.24820008 6.05389603,8.4734748 7.50102796,8.4734748 Z M7.50272108,9.84236453 C5.00918191,9.84236453 2.73254321,10.812429 1,12.4109511 C2.4151441,14.5776178 4.79772359,16 7.49836735,16 C10.201067,16 12.5852187,14.5754074 14,12.4059619 C12.2681219,10.810408 9.99366011,9.84236453 7.50272108,9.84236453 Z" id="Shape" fill-opacity="0.354212194"></path>
+                    </g>
+                    <g id="Group-9" transform="translate(25.000000, 3.000000)">
+                        <rect id="Rectangle" fill-opacity="0.651852054" x="0" y="0" width="47" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="8" width="100" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="13" width="102" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="18" width="82" height="2" rx="1"></rect>
+                    </g>
+                </g>
+                <g id="Group-6-Copy-2" transform="translate(116.000000, 55.000000)" fill="#FFFFFF">
+                    <g id="Group-7" transform="translate(111.000000, 0.000000)">
+                        <circle id="Oval" fill-opacity="0.370875219" cx="8.5" cy="8.5" r="8.5"></circle>
+                        <path d="M8.00110704,9.4734748 C9.55955681,9.4734748 10.8229483,8.24820008 10.8229483,6.73670582 C10.8229483,5.22527473 9.55955681,4 8.00110704,4 C6.44265726,4 5.17926582,5.22527473 5.17926582,6.73670582 C5.17926582,8.24820008 6.44265726,9.4734748 8.00110704,9.4734748 Z M8.0029304,10.8423645 C5.31758052,10.8423645 2.86581577,11.812429 1,13.4109511 C2.52400134,15.5776178 5.08985618,17 7.99824176,17 C10.9088414,17 13.4763894,15.5754074 15,13.4059619 C13.1349006,11.810408 10.6854801,10.8423645 8.0029304,10.8423645 Z" id="Shape" fill-opacity="0.354212194"></path>
+                    </g>
+                    <g id="Group-8" transform="translate(50.500000, 14.000000) scale(-1, 1) translate(-50.500000, -14.000000) translate(0.000000, 4.000000)">
+                        <rect id="Rectangle" fill-opacity="0.651852054" x="0" y="0" width="47" height="3" rx="1.5"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="8" width="99" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="13" width="101" height="2" rx="1"></rect>
+                        <rect id="Rectangle" fill-opacity="0.354212194" x="0" y="18" width="81" height="2" rx="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
