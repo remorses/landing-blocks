@@ -5,8 +5,15 @@ import {
     Box,
     StackProps,
     Divider,
+    DarkMode,
 } from '@chakra-ui/core'
-import React, { FC, ReactElement, ElementType, ReactNode } from 'react'
+import React, {
+    FC,
+    ReactElement,
+    ElementType,
+    ReactNode,
+    Fragment,
+} from 'react'
 import {
     Col,
     Row,
@@ -125,6 +132,7 @@ function PriceColumn({
     console.log({ realBg })
     const lightness = Color(realBg as any).getLightness()
     const isDark = lightness < 0.7
+    const Mode = isDark ? DarkMode : Fragment
     return (
         <Stack align='center' {...rest}>
             <Stack
@@ -137,54 +145,56 @@ function PriceColumn({
                     {priceSection.subhead}
                 </Box>
             </Stack>
-            <Stack
-                w='100%'
-                h='100%'
-                align='center'
-                bg={priceSection.background || 'transparent'}
-                borderRadius='10px'
-                {...(isDark ? darkStyles : {})}
-                p={['20px', null, '0']}
-            >
+            <Mode>
                 <Stack
+                    w='100%'
+                    h='100%'
                     align='center'
-                    spacing='10px'
-                    minH={['none', null, pricingHeaderMinH]}
-                    maxH={['none', null, pricingHeaderMinH]}
-                    py='20px'
+                    bg={priceSection.background || 'transparent'}
+                    borderRadius='10px'
+                    {...(isDark ? darkStyles : {})}
+                    p={['20px', null, '0']}
                 >
-                    <Box fontWeight='semibold' fontSize='38px'>
-                        {priceSection.price}
-                    </Box>
-                    <Box fontSize='14px' opacity={0.7}>
-                        {belowPrice}
-                    </Box>
-                    <Stack fontWeight='medium' align='center' minH='20px'>
-                        {priceSection.cta}
+                    <Stack
+                        align='center'
+                        spacing='10px'
+                        minH={['none', null, pricingHeaderMinH]}
+                        maxH={['none', null, pricingHeaderMinH]}
+                        py='20px'
+                    >
+                        <Box fontWeight='semibold' fontSize='38px'>
+                            {priceSection.price}
+                        </Box>
+                        <Box fontSize='14px' opacity={0.7}>
+                            {belowPrice}
+                        </Box>
+                        <Stack fontWeight='medium' align='center' minH='20px'>
+                            {priceSection.cta}
+                        </Stack>
+                    </Stack>
+
+                    <Stack spacing='20px'>
+                        {features.map((x, i) => {
+                            const feature = priceSection.features[i]
+                            if (!feature) {
+                                return null
+                            }
+                            return (
+                                <Stack minH='30px' px={['10px', null, '0px']}>
+                                    <Box
+                                        display={['block', null, 'none']}
+                                        opacity={0.6}
+                                        fontWeight='normal'
+                                    >
+                                        {x}
+                                    </Box>
+                                    <Box>{feature}</Box>
+                                </Stack>
+                            )
+                        })}
                     </Stack>
                 </Stack>
-
-                <Stack spacing='20px'>
-                    {features.map((x, i) => {
-                        const feature = priceSection.features[i]
-                        if (!feature) {
-                            return null
-                        }
-                        return (
-                            <Stack minH='30px' px={['10px', null, '0px']}>
-                                <Box
-                                    display={['block', null, 'none']}
-                                    opacity={0.6}
-                                    fontWeight='normal'
-                                >
-                                    {x}
-                                </Box>
-                                <Box>{feature}</Box>
-                            </Stack>
-                        )
-                    })}
-                </Stack>
-            </Stack>
+            </Mode>
         </Stack>
     )
 }
