@@ -45,6 +45,11 @@ export const IndexCardsPaths = [
         title: 'Faqs',
         path: BASE_PATH + 'faqs',
     },
+    {
+        icon: landingCards.Pricing,
+        title: '<Pricing/>',
+        path: BASE_PATH + 'pricing',
+    },
 ]
 
 export const demosPaths = [
@@ -56,4 +61,5 @@ export const demosPaths = [
     { urlPath: 'demos/spendesk', imagePath: 'screens/spendesk.jpeg' },
     { urlPath: 'demos/testim', imagePath: 'screens/testim.jpeg' },
     { urlPath: 'demos/kintohub', imagePath: 'screens/kintohub.jpeg' },
+    { urlPath: 'demos/airtable', imagePath: 'screens/airtable.jpeg' },
 ]

@@ -1,0 +1,47 @@
+export const breadcrumbs = ['Components', 'Hero']
+
+# Pricing
+
+## Example on white
+
+The following example recreates the datoCMS landing page
+
+```jsx
+<LandingProvider primary='#2D7FF9'>
+    <Pricing
+        features={[
+            'Records per base',
+            'Attachment space per base',
+            'Revision and snapshot history',
+            'Rich field types including file attachments, checkboxes, dropdowns, and more',
+            'Grid, calendar, form, kanban, and gallery views',
+            'Realtime collaboration and commenting',
+        ]}
+        prices={[
+            {
+                heading: 'FREE',
+                subhead: 'Essential Features',
+                features: ['Unlimited', '1200', '2Gb', '2 Weeks'],
+                price: 'Free',
+                cta: <Link color='blue.600'>Get started</Link>,
+            },
+            {
+                heading: 'PLUS',
+                subhead: 'Essential Features',
+                features: ['Unlimited', '1200', '2Gb', '2 Weeks', 'x'],
+                price: '$10',
+                background: '#D1F0FD',
+                cta: <Link color='blue.600'>Get started</Link>,
+            },
+            {
+                heading: 'PRO',
+                subhead: 'Essential Features',
+                features: ['Unlimited', '1200', '2Gb', '2 Weeks', 'x', 'x'],
+                price: '$20',
+                background: '#FFEAB6',
+                cta: <Link color='blue.600'>Get started</Link>,
+            },
+        ]}
+    />
+</LandingProvider>
+```
