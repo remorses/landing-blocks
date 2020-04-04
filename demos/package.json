@@ -33,6 +33,7 @@
         "react-element-to-jsx-string": "^14.3.1",
         "react-extra-hooks": "^2.3.1",
         "react-final-form": "^6.3.5",
+        "react-icons": "^3.9.0",
         "react-landing": "0.0.2",
         "react-live": "^2.2.2",
         "react-multi-steps": "^1.0.3",

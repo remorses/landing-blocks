@@ -1,6 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import Head from 'next/head'
+import { FiGrid, FiImage, FiLayers, FiGlobe } from 'react-icons/fi'
 import {
     Hero,
     Heading,
@@ -13,6 +14,7 @@ import {
     FeaturesList,
     NavBar,
     Footer,
+    Button as LaningButton,
     TestimonialsLogos,
     SectionTitle,
     PageContainer,
@@ -71,43 +73,87 @@ export const LaindgCardsLinks = ({ ...rest }) => {
 
 const Page = () => (
     <LandingProvider primary='white'>
-        <Stack spacing='60px' bg='#323452' pb='100px'>
+        <Stack spacing='60px' bg='#5E629D'>
             <NavBar
                 dark
-                logo={
-                    <Stack align='center' direction='row' spacing='20px'>
-                        <Image width='30px' src='/quovery/logo.png' />
-                        <Box fontWeight='medium' fontSize='20px'>
-                            Quovery
-                        </Box>
-                    </Stack>
-                }
+                logo={<Image src='/logo.svg' width='200px' />}
+                // logo={
+                //     <Stack align='center' direction='row' spacing='20px'>
+                //         <Image width='30px' src='/quovery/logo.png' />
+                //         <Box fontWeight='medium' fontSize='20px'>
+                //             Quovery
+                //         </Box>
+                //     </Stack>
+                // }
                 navs={[
-                    <a>Home</a>,
-                    <a>Pricing</a>,
-                    <a>Community</a>,
-                    <a>Enterprise</a>,
-                    <a>Blog</a>,
-                    <Button px='10px'>Sign up</Button>,
+                    <a>Components</a>,
+                    <a>Demos</a>,
+                    <a>Newsletter</a>,
+
+                    // <Button px='10px'>Sign up</Button>,
                 ]}
             />
             <Hero
                 dark
                 bullet='SUPERPOWERS FOR DEVELOPER'
-                heading='Deploy complex application, seamlessly'
-                subhead='Just push your code, we handle the rest'
-                image={<img width='600px' src='/quovery/hero.png' />}
-                cta='DEPLOY MY APPLICATION'
-                fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
+                heading='Landing pages building blocks'
+                subhead='Build your landing page in miunutes using composable react components'
+                image={<img width='900px' src='/heroIllustration.svg' />}
+                cta='SEE DEMOS'
+                fingerprint='Completely open source'
             />
             <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
-            <TestimonialsLogos
-                testimonials={[
-                    <img src='quovery/google.png' />,
-                    <img src='quovery/datadog.png' />,
-                    <img src='quovery/itiviti.png' />,
-                    <img src='quovery/redhat.png' />,
-                    <img src='quovery/criteol.png' />,
+            <FeaturesList
+                heading=''
+                dark
+                features={[
+                    {
+                        heading: 'Composable',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiGrid}
+                            />
+                        ),
+                        subhead:
+                            'Multi-level approvals and custom spending limits.',
+                    },
+                    {
+                        heading: 'maintenable',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiLayers}
+                            />
+                        ),
+                        subhead:
+                            'Smart company cards, virtual cards, and invoice tracking.',
+                    },
+                    {
+                        heading: 'Open Source',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiGlobe}
+                            />
+                        ),
+                        subhead:
+                            'Real-time spending overview and receipt capture.',
+                    },
+                    {
+                        heading: 'Extensible',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiImage}
+                            />
+                        ),
+                        subhead: 'Simplified bookkeeping and budget analysis.',
+                    },
                 ]}
             />
         </Stack>

@@ -2,6 +2,24 @@ export const breadcrumbs = ['Components', 'Hero']
 
 # Hero
 
+The hero component is the most important component of every landing page, it is usually composed of an `heading`, `subheading`, an `image` and a `cta`, but sometimes you can also find some text under the cta buttons, this is called `fingerprint`.
+
+Sometimes there is also a small text above the heading, this is what we call a `bullet`, here you can find information about a new product or feature like "new: discount of 50% only today" or something similar.
+
+Sometimes you want to show some floating element in the background, this can be done with the `floatingElement` prop.
+
+here is how you can use the Hero component
+
+```js
+<Hero
+    heading='Some heading'
+    subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+    image={<img />}
+    cta='Try it now for free!'
+    floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
+/>
+```
+
 ## Example on white
 
 The following example recreates the datoCMS landing page

@@ -8,7 +8,7 @@ import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 
 export function FeaturesList({
-    heading,
+    heading = '',
     subhead = '',
     features,
     centerText = false,
@@ -21,12 +21,23 @@ export function FeaturesList({
     })
     return (
         <PageContainer ref={ref} py='40px' {...rest}>
-            <Stack spacing='40px' flex='1' textAlign='center' align='center'>
-                <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
-                    {heading}
-                </Heading>
-                <SubHeading>{subhead}</SubHeading>
-            </Stack>
+            {heading && subhead && (
+                <Stack
+                    spacing='40px'
+                    flex='1'
+                    textAlign='center'
+                    align='center'
+                >
+                    <Heading
+                        lineHeight='50px'
+                        fontWeight='medium'
+                        fontSize='36px'
+                    >
+                        {heading}
+                    </Heading>
+                    <SubHeading>{subhead}</SubHeading>
+                </Stack>
+            )}
             <Stack flexDir='row' spacing='20px' flex='1' flexWrap='wrap'>
                 {features.map((step, i) => (
                     <Feature
@@ -56,6 +67,7 @@ const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
             <Col
                 minW='40px'
                 maxW='140px'
+                fontWeight='medium'
                 alignSelf={centerText ? 'center' : 'flex-start'}
             >
                 {icon}
