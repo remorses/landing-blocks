@@ -15,6 +15,7 @@ import {
     Banner,
     Button,
     Pricing,
+    TestimonialsTweets,
 } from 'react-landing/src'
 import { GradientCurtains } from 'react-landing/src/decorations'
 import { Link, Box } from '@chakra-ui/core'
@@ -44,6 +45,18 @@ const Page = () => (
             subhead='Airtable Blocks give you a creative palette of app-like functionality that you can mix and match to create the perfect workflow for your team.'
             image={<img src='/airtable/feature1.jpg' width='500px' />}
             flip
+        />
+        <TestimonialsTweets
+            heading="Don't you trust me?"
+            subhead='Trust them'
+            bg='gray.100'
+            tweets={[
+                '933354946111705097',
+                '1246480107604078592',
+                'https://twitter.com/naval/status/806034795658522624?s=21',
+                // '933354946111705097',
+                // '933354946111705097',
+            ]}
         />
         <Pricing
             features={[

@@ -8,7 +8,6 @@
   <pre>npm i react-landing</pre>
 </div>
 
-TODO pricing
 TODO team
 TODO banner
 TODO email capture

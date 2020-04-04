@@ -31,6 +31,11 @@ import { removeUndefined, useColor } from './support'
 import Color from 'color-js'
 import { darkStyles } from './layout'
 
+const featureLineMinH = '36px'
+const featuresWidth = '370px'
+const pricingHeaderMinH = '160px'
+const pricingNamesMinH = '60px'
+
 export interface PricingProps {
     heading?: ReactNode
     subhead?: ReactNode
@@ -59,9 +64,6 @@ export function Pricing({
         number: 3,
     })
     const belowPrice = '/ month'
-    const featuresWidth = '370px'
-    const pricingHeaderMinH = '160px'
-    const pricingNamesMinH = '60px'
     const { colorMode } = useMyColorMode(rest)
 
     return (
@@ -78,7 +80,9 @@ export function Pricing({
                     <Stack flexDir='row'>
                         <Stack spacing='20px'>
                             {features.map((x) => (
-                                <Box minH='30px'>{x}</Box>
+                                <Box textAlign='right' minH={featureLineMinH}>
+                                    {x}
+                                </Box>
                             ))}
                         </Stack>
                     </Stack>
@@ -104,8 +108,6 @@ export function Pricing({
                                 priceSection={x}
                                 belowPrice={belowPrice}
                                 features={features}
-                                pricingHeaderMinH={pricingHeaderMinH}
-                                pricingNamesMinH={pricingNamesMinH}
                                 dark={colorMode === 'dark'}
                                 h='100%'
                                 w={['100%', null, '200px']}
@@ -119,15 +121,7 @@ export function Pricing({
     )
 }
 
-function PriceColumn({
-    priceSection,
-    belowPrice,
-    pricingNamesMinH,
-    pricingHeaderMinH,
-    features,
-    dark,
-    ...rest
-}) {
+function PriceColumn({ priceSection, belowPrice, features, dark, ...rest }) {
     const realBg = useColor(priceSection.background || (dark ? '#000' : '#fff'))
     console.log({ realBg })
     const lightness = Color(realBg as any).getLightness()
@@ -168,9 +162,9 @@ function PriceColumn({
                         <Box fontSize='14px' opacity={0.7}>
                             {belowPrice}
                         </Box>
-                        <Stack fontWeight='medium' align='center' minH='20px'>
+                        {/* <Stack fontWeight='medium' align='center' minH='30px'>
                             {priceSection.cta}
-                        </Stack>
+                        </Stack> */}
                     </Stack>
 
                     <Stack spacing='20px'>
@@ -180,7 +174,10 @@ function PriceColumn({
                                 return null
                             }
                             return (
-                                <Stack minH='30px' px={['10px', null, '0px']}>
+                                <Stack
+                                    minH={featureLineMinH}
+                                    px={['10px', null, '0px']}
+                                >
                                     <Box
                                         display={['block', null, 'none']}
                                         opacity={0.6}
@@ -192,6 +189,10 @@ function PriceColumn({
                                 </Stack>
                             )
                         })}
+                    </Stack>
+                    <Box flex='1' />
+                    <Stack p='20px' fontWeight='medium' align='center' minH='30px'>
+                        {priceSection.cta}
                     </Stack>
                 </Stack>
             </Mode>
