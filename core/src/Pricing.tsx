@@ -4,6 +4,7 @@ import {
     Stack,
     Box,
     StackProps,
+    Divider,
 } from '@chakra-ui/core'
 import React, { FC, ReactElement, ElementType, ReactNode } from 'react'
 import {
@@ -52,108 +53,134 @@ export function Pricing({
     })
     const belowPrice = '/ month'
     const featuresWidth = '370px'
-    const pricingColumnWidth = '200px'
-    const priceSectionsProps = {
-        w: pricingColumnWidth,
-        align: 'center',
-        p: '20px',
-        h: '100%',
-    }
+    const pricingHeaderMinH = '200px'
+    const pricingNamesMinH = '60px'
+
     return (
         <PageContainer ref={ref} {...rest}>
-            <Stack spacing='0px'>
-                <Stack flexDir='row'>
-                    <Stack minW={featuresWidth} maxW={featuresWidth}>
+            <Stack flexDir={['column', null, 'row']}>
+                <Stack maxW={featuresWidth} display={['none', null, 'flex']}>
+                    <Stack minH={pricingNamesMinH}>
                         <Box fontWeight='medium' fontSize='24px'>
                             {heading}
                         </Box>
                         <Box opacity={0.7}>{subhead}</Box>
                     </Stack>
-                    <Stack
-                        align='stretch'
-                        w='100%'
-                        flexDir='row'
-                        justify='space-between'
-                    >
-                        {prices.map((priceSection) => (
-                            <Stack spacing='0px' {...priceSectionsProps} p='0'>
-                                <Box fontWeight='medium'>
-                                    {priceSection.heading}
-                                </Box>
-                                <Box fontSize='14px' opacity={0.7}>
-                                    {priceSection.subhead}
-                                </Box>
-                                <Box h='20px' />
-                                <Stack
-                                    {...priceSectionsProps}
-                                    background={
-                                        priceSection.background || 'transparent'
-                                    }
-                                    borderRadius='10px 10px 0 0'
-                                >
-                                    <Stack
-                                        align='center'
-                                        px='40px'
-                                        spacing='20px'
-                                    >
-                                        <Box
-                                            fontWeight='semibold'
-                                            fontSize='38px'
-                                        >
-                                            {priceSection.price}
-                                        </Box>
-                                        <Box fontSize='14px' opacity={0.7}>
-                                            {belowPrice}
-                                        </Box>
-                                        <Stack
-                                            fontWeight='medium'
-                                            align='center'
-                                            minH='20px'
-                                        >
-                                            {priceSection.cta}
-                                        </Stack>
-                                    </Stack>
-                                    <Box h='40px' w='100%' />
-                                </Stack>
-                            </Stack>
-                        ))}
+                    <Box h={pricingHeaderMinH} />
+                    <Stack flexDir='row'>
+                        <Stack
+                            spacing='20px'
+                            minW={featuresWidth}
+                            maxW={featuresWidth}
+                        >
+                            {features.map((x) => (
+                                <Box minH='30px'>{x}</Box>
+                            ))}
+                        </Stack>
                     </Stack>
                 </Stack>
-                <Stack flexDir='row'>
-                    <Stack
-                        spacing='20px'
-                        minW={featuresWidth}
-                        maxW={featuresWidth}
-                    >
-                        {features.map((x) => (
-                            <Box minH='30px'>{x}</Box>
-                        ))}
-                    </Stack>
-                    <Stack
-                        w='100%'
-                        flexDir='row'
-                        justify='space-between'
-                        fontWeight='medium'
-                    >
-                        {prices.map((priceSection) => (
-                            <Stack
-                                {...priceSectionsProps}
-                                pt='0'
-                                background={
-                                    priceSection.background || 'transparent'
-                                }
-                                borderRadius='0 0 10px 10px'
-                            >
-                                <Stack spacing='20px'>
-                                    {priceSection.features.map((x) => (
-                                        <Box minH='30px'>{x}</Box>
-                                    ))}
-                                </Stack>
-                            </Stack>
-                        ))}
-                    </Stack>
+                <Stack align='center' display={['flex', null, 'none']}>
+                    <Box fontWeight='medium' fontSize='24px'>
+                        {heading}
+                    </Box>
+                    <Box opacity={0.7}>{subhead}</Box>
+                    <Box h='100px' />
+                </Stack>
+                <Stack
+                    align={['center', null, 'flex-start']}
+                    w='100%'
+                    flexDir={['column', null, 'row']}
+                    justify='space-between'
+                    spacing={['100px']}
+                >
+                    {prices.map((x) => (
+                        <Box w='100%' h='100%'>
+                            <Divider display={['block', null, 'none']} />
+                            <PriceColumn
+                                priceSection={x}
+                                belowPrice={belowPrice}
+                                features={features}
+                                pricingHeaderMinH={pricingHeaderMinH}
+                                pricingNamesMinH={pricingNamesMinH}
+                                h='100%'
+                                w={['100%', null, '200px']}
+                            />
+                            <Divider display={['block', null, 'none']} />
+                        </Box>
+                    ))}
                 </Stack>
             </Stack>
         </PageContainer>
+    )
+}
+
+function PriceColumn({
+    priceSection,
+    belowPrice,
+    pricingNamesMinH,
+    pricingHeaderMinH,
+    features,
+    ...rest
+}) {
+    return (
+        <Stack align='center' {...rest}>
+            <Stack
+                align='center'
+                minH={['none', null, pricingNamesMinH]}
+                maxH={['none', null, pricingNamesMinH]}
+            >
+                <Box fontWeight='medium'>{priceSection.heading}</Box>
+                <Box fontSize='14px' opacity={0.7}>
+                    {priceSection.subhead}
+                </Box>
+            </Stack>
+            <Stack
+                w='100%'
+                h='100%'
+                align='center'
+                background={priceSection.background || 'transparent'}
+                borderRadius='10px'
+                p={['20px', null, '0']}
+            >
+                <Stack
+                    align='center'
+                    spacing='10px'
+                    minH={['none', null, pricingHeaderMinH]}
+                    maxH={['none', null, pricingHeaderMinH]}
+                    py='20px'
+                >
+                    <Box fontWeight='semibold' fontSize='38px'>
+                        {priceSection.price}
+                    </Box>
+                    <Box fontSize='14px' opacity={0.7}>
+                        {belowPrice}
+                    </Box>
+                    <Stack fontWeight='medium' align='center' minH='20px'>
+                        {priceSection.cta}
+                    </Stack>
+                </Stack>
+
+                <Stack spacing='20px'>
+                    {features.map((x, i) => {
+                        const feature = priceSection.features[i]
+                        if (!feature) {
+                            return null
+                        }
+                        return (
+                            <Stack minH='30px' px={['10px', null, '0px']}>
+                                <Box
+                                    display={['block', null, 'none']}
+                                    opacity={0.6}
+                                    fontWeight='normal'
+                                >
+                                    {x}
+                                </Box>
+                                <Box>{feature}</Box>
+                            </Stack>
+                        )
+                    })}
+                </Stack>
+            </Stack>
+        </Stack>
     )
 }

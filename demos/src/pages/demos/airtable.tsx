@@ -85,7 +85,6 @@ const Page = () => (
                         '2Gb',
                         '2 Weeks',
                         <Box as={FiCheck} />,
-                        ,
                         <Box as={FiCheck} />,
                     ],
                     price: '$20',
