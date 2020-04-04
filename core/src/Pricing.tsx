@@ -18,9 +18,11 @@ import {
     PageContainerProps,
 } from '.'
 import { Text } from '@chakra-ui/core'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useMyColorMode } from './hooks'
 import { animated } from 'react-spring'
-import { removeUndefined } from './support'
+import { removeUndefined, useColor } from './support'
+import Color from 'color-js'
+import { darkStyles } from './layout'
 
 export interface PricingProps {
     heading?: ReactNode
@@ -43,23 +45,22 @@ export function Pricing({
     features = [],
     prices = [],
     animate = true,
-    ...props
+    ...rest
 }: PageContainerProps & PricingProps) {
-    const { bg = 'gray.100', background, backgroundColor, ...rest } = props
-    const bgs = removeUndefined({ bg, background, backgroundColor })
     const { ref, animations } = useFadeUpAnimation({
         enabled: animate,
         number: 3,
     })
     const belowPrice = '/ month'
     const featuresWidth = '370px'
-    const pricingHeaderMinH = '200px'
+    const pricingHeaderMinH = '160px'
     const pricingNamesMinH = '60px'
+    const { colorMode } = useMyColorMode(rest)
 
     return (
         <PageContainer ref={ref} {...rest}>
             <Stack flexDir={['column', null, 'row']}>
-                <Stack maxW={featuresWidth} display={['none', null, 'flex']}>
+                <Stack minW={featuresWidth} display={['none', null, 'flex']}>
                     <Stack minH={pricingNamesMinH}>
                         <Box fontWeight='medium' fontSize='24px'>
                             {heading}
@@ -68,11 +69,7 @@ export function Pricing({
                     </Stack>
                     <Box h={pricingHeaderMinH} />
                     <Stack flexDir='row'>
-                        <Stack
-                            spacing='20px'
-                            minW={featuresWidth}
-                            maxW={featuresWidth}
-                        >
+                        <Stack spacing='20px'>
                             {features.map((x) => (
                                 <Box minH='30px'>{x}</Box>
                             ))}
@@ -102,6 +99,7 @@ export function Pricing({
                                 features={features}
                                 pricingHeaderMinH={pricingHeaderMinH}
                                 pricingNamesMinH={pricingNamesMinH}
+                                dark={colorMode === 'dark'}
                                 h='100%'
                                 w={['100%', null, '200px']}
                             />
@@ -120,8 +118,13 @@ function PriceColumn({
     pricingNamesMinH,
     pricingHeaderMinH,
     features,
+    dark,
     ...rest
 }) {
+    const realBg = useColor(priceSection.background || (dark ? '#000' : '#fff'))
+    console.log({ realBg })
+    const lightness = Color(realBg as any).getLightness()
+    const isDark = lightness < 0.7
     return (
         <Stack align='center' {...rest}>
             <Stack
@@ -138,8 +141,9 @@ function PriceColumn({
                 w='100%'
                 h='100%'
                 align='center'
-                background={priceSection.background || 'transparent'}
+                bg={priceSection.background || 'transparent'}
                 borderRadius='10px'
+                {...(isDark ? darkStyles : {})}
                 p={['20px', null, '0']}
             >
                 <Stack

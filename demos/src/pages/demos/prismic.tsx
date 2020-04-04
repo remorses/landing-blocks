@@ -13,8 +13,11 @@ import {
     NavBar,
     Footer,
     Banner,
+    Pricing,
 } from 'react-landing/src'
 import { GradientCurtains } from 'react-landing/src/decorations'
+import { FiCheck } from 'react-icons/fi'
+import { Box, Link } from '@chakra-ui/core'
 
 const Page = () => (
     <LandingProvider>
@@ -98,11 +101,60 @@ const Page = () => (
             ]}
             bg='gray.100'
         />
+
+        <Pricing
+            features={[
+                'Records per base',
+                'Attachment space per base',
+                'Revision and snapshot history',
+                'Rich field types including file attachments, checkboxes, dropdowns, and more',
+                'Grid, calendar, form, kanban, and gallery views',
+                'Realtime collaboration and commenting',
+            ]}
+            prices={[
+                {
+                    heading: 'FREE',
+                    subhead: 'Essential Features',
+                    features: ['Unlimited', '1200', '2Gb', '2 Weeks'],
+                    price: 'Free',
+                    cta: <Link color='blue.600'>Get started</Link>,
+                },
+                {
+                    heading: 'PLUS',
+                    subhead: 'Essential Features',
+                    features: [
+                        'Unlimited',
+                        '1200',
+                        '2Gb',
+                        '2 Weeks',
+                        <Box as={FiCheck} />,
+                    ],
+                    price: '$10',
+                    background: 'gray.200',
+                    cta: <Link color='blue.600'>Get started</Link>,
+                },
+                {
+                    heading: 'PRO',
+                    subhead: 'Essential Features',
+                    features: [
+                        'Unlimited',
+                        '1200',
+                        '2Gb',
+                        '2 Weeks',
+                        <Box as={FiCheck} />,
+                        <Box as={FiCheck} />,
+                    ],
+                    price: '$20',
+                    background: 'gray.600',
+                    cta: <Link color='blue.600'>Get started</Link>,
+                },
+            ]}
+        />
         <Banner
             // dark
-            heading='Try Prismi Now!'
+            heading='Try Prismic Now!'
             subhead='50% discount just for good fellows like you'
-            image={<GradientCurtains   />}
+            image={<GradientCurtains />}
             cta='try it out'
         />
         <Footer
