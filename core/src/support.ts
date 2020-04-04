@@ -10,3 +10,12 @@ export function useColor(name): string {
 export function getDisplayName(c) {
     return c.type.displayName || c.type.name
 }
+
+export function removeUndefined(c) {
+    Object.keys(c).forEach((k) => {
+        if (c[k] === undefined) {
+            delete c[k]
+        }
+    })
+    return c
+}

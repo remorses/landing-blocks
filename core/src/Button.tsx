@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC, Fragment } from 'react'
 import { Button as B, HeadingProps, ButtonProps } from '@chakra-ui/core'
 import { Children } from 'react'
 import get from 'lodash.get'
@@ -14,6 +14,9 @@ export function Button({ bg = 'primary', ...props }: ButtonProps) {
     const color = isDark ? 'white' : 'black'
     // console.log('bg', bg)
     // console.log('color', color)
+    if (!props.children) {
+        return <Fragment />
+    }
     return (
         <B
             px='40px'

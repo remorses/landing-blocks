@@ -97,7 +97,7 @@ const DemosLinks = ({ ...rest }) => {
                                         <Image
                                             // border='1px solid'
                                             borderColor='gray.200'
-                                            borderRadius='8px'
+                                            borderRadius='2px'
                                             width='300px'
                                             shadow='md'
                                             src={imagePath}

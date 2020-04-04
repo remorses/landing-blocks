@@ -14,11 +14,9 @@ function lighter(c, amount = 0.04) {
 export const GradientCurtains: FC<{
     primary?: string
     secondary?: string
-    distortion?: number
 } & BoxProps> = ({
     primary = 'primary', // #e9fcff
     secondary = 'secondary', // #fdf2ed
-    distortion = 0.3,
     ...rest
 }) => {
     const linesColor = `linear-gradient(217deg,${lighter(
@@ -29,7 +27,7 @@ export const GradientCurtains: FC<{
     return (
         <Box
             w='100%'
-            height='1000px'
+            minHeight='120%'
             backgroundImage={`radial-gradient(circle at 70% 70%,${primary},${secondary})`}
             transform='skewY(-14.5deg)'
             position='relative'

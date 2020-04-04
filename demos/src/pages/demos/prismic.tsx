@@ -12,7 +12,9 @@ import {
     FeaturesList,
     NavBar,
     Footer,
+    Banner,
 } from 'react-landing/src'
+import { GradientCurtains } from 'react-landing/src/decorations'
 
 const Page = () => (
     <LandingProvider>
@@ -95,6 +97,13 @@ const Page = () => (
                 },
             ]}
             bg='gray.100'
+        />
+        <Banner
+            // dark
+            heading='Try Prismi Now!'
+            subhead='50% discount just for good fellows like you'
+            image={<GradientCurtains   />}
+            cta='try it out'
         />
         <Footer
             businessName='Prismic'

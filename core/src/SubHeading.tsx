@@ -1,9 +1,11 @@
-import React, { FC, Props } from 'react'
+import React, { FC, Props, Fragment } from 'react'
 import { Heading as H, HeadingProps } from '@chakra-ui/core'
 import { Children } from 'react'
 
-
 export function SubHeading(props: HeadingProps) {
+    if (!props.children) {
+        return <Fragment />
+    }
     return (
         <H
             as='div'

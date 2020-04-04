@@ -11,6 +11,7 @@ export { TestimonialsLogos } from './TestimonialsLogos'
 export { LandingProvider } from './LandingProvider'
 export { TopBanner } from './TopBanner'
 export { Faqs } from './Faqs'
+export { Banner } from './Banner'
 
 // atoms
 export { Heading } from './Heading'
