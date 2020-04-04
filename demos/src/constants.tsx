@@ -46,3 +46,14 @@ export const IndexCardsPaths = [
         path: BASE_PATH + 'faqs',
     },
 ]
+
+export const demosPaths = [
+    { urlPath: 'demos/datocms', imagePath: 'screens/datocms.jpeg' },
+    { urlPath: 'demos/dovetail', imagePath: 'screens/dovetail.jpeg' },
+    { urlPath: 'demos/prismic', imagePath: 'screens/prismic.jpeg' },
+    { urlPath: 'demos/quovery', imagePath: 'screens/qovery.jpeg' },
+    { urlPath: 'demos/rocketchat', imagePath: 'screens/rocketchat.jpeg' },
+    { urlPath: 'demos/spendesk', imagePath: 'screens/spendesk.jpeg' },
+    { urlPath: 'demos/testim', imagePath: 'screens/testim.jpeg' },
+    { urlPath: 'demos/kintohub', imagePath: 'screens/kintohub.jpeg' },
+]

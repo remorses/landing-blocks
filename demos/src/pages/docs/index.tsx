@@ -22,7 +22,7 @@ import {
 
 import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
 import * as landingCards from '../../svgs/landingCards'
-import { IndexCardsPaths } from '../../constants'
+import { IndexCardsPaths, demosPaths } from '../../constants'
 
 export const LaindgCardsLinks = ({ ...rest }) => {
     return (
@@ -60,6 +60,49 @@ export const LaindgCardsLinks = ({ ...rest }) => {
                                             as={icon}
                                         />
                                         <Text>{title}</Text>
+                                    </Stack>
+                                </Button>
+                            </NextLink>
+                        </Box>
+                    )
+                })}
+            </Stack>
+        </PageContainer>
+    )
+}
+const DemosLinks = ({ ...rest }) => {
+    return (
+        <PageContainer>
+            <Stack
+                width='auto'
+                justify={['center', null, 'flex-start']}
+                alignSelf='center'
+                flexDirection='row'
+                flexWrap='wrap'
+                spacing='40px'
+                {...rest}
+            >
+                {demosPaths.map((k) => {
+                    const { imagePath, urlPath } = k
+                    return (
+                        <Box key={urlPath}>
+                            <NextLink href={urlPath}>
+                                <Button
+                                    borderRadius='8px'
+                                    mx='40px'
+                                    h='auto'
+                                    variant='unstyled'
+                                >
+                                    <Stack spacing='20px'>
+                                        <Image
+                                            // border='1px solid'
+                                            borderColor='gray.200'
+                                            borderRadius='8px'
+                                            width='300px'
+                                            shadow='md'
+                                            src={imagePath}
+                                        />
+                                        {/* <Text>{title}</Text> */}
                                     </Stack>
                                 </Button>
                             </NextLink>
@@ -157,12 +200,20 @@ const Page = () => (
                 ]}
             />
         </Stack>
+
         <SectionTitle
             heading='Deploy your application with ease'
             subhead='Deploying an application with Qovery is as simple as pushing code with git'
             image={null}
         />
         <LaindgCardsLinks alignSelf='center' />
+        <SectionTitle
+            heading='Explore the demos'
+            subhead='Deploying an application with Qovery is as simple as pushing code with git'
+            image={null}
+            cta='Download The Demos Code'
+        />
+        <DemosLinks alignSelf='center' />
         <Footer
             businessName='Quovery'
             bg='#F8F8FF'
