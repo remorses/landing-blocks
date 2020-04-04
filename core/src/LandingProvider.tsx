@@ -72,7 +72,7 @@ export function LandingProvider({
         <ThemeProvider theme={theme}>
             <ColorModeProvider value={dark ? 'dark' : 'light'}>
                 <CSSReset />
-                <Stack overflowX='hidden' fontFamily='Arial, Roboto' spacing='60px' {...rest}>
+                <Stack overflowX='hidden' fontFamily='Roboto, Arial' spacing='60px' {...rest}>
                     {children}
                 </Stack>
             </ColorModeProvider>
