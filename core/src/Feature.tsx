@@ -25,7 +25,7 @@ export function Feature({
                 align='center'
                 spacing='40px'
                 isReversed={flip}
-                flexDir={[dir('column'), null, dir(direction)]}
+                flexDir={['column', null, dir(direction)]}
             >
                 <Stack spacing='20px' flex='1' minW='400px'>
                     <Heading
