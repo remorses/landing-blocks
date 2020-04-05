@@ -36,20 +36,24 @@ const featuresWidth = '370px'
 const pricingHeaderMinH = '160px'
 const pricingNamesMinH = '60px'
 
+
 export interface PricingProps {
     heading?: ReactNode
     subhead?: ReactNode
-    features: string[]
     animate?: boolean
-    prices: {
-        background?: string
-        heading?: ReactNode
-        subhead?: ReactNode
-        cta?: ReactNode
-        features: ReactNode[]
-        price: string
-    }[]
+    features: string[]
+    prices: PriceColumnType[]
 }
+
+export interface PriceColumnType {
+    background?: string
+    heading?: ReactNode
+    subhead?: ReactNode
+    cta?: ReactNode
+    features: ReactNode[]
+    price: string
+}
+
 
 export function Pricing({
     heading = 'Simple Pricing',
@@ -121,7 +125,18 @@ export function Pricing({
     )
 }
 
-function PriceColumn({ priceSection, belowPrice, features, dark, ...rest }) {
+function PriceColumn({
+    priceSection,
+    belowPrice,
+    features,
+    dark,
+    ...rest
+}: {
+    priceSection: PriceColumnType
+    belowPrice: string
+    features: string[]
+    dark?: boolean
+} & StackProps) {
     const realBg = useColor(priceSection.background || (dark ? '#000' : '#fff'))
     const lightness = Color(realBg as any).getLightness()
     const isDark = lightness < 0.7
@@ -190,7 +205,12 @@ function PriceColumn({ priceSection, belowPrice, features, dark, ...rest }) {
                         })}
                     </Stack>
                     <Box flex='1' />
-                    <Stack p='20px' fontWeight='medium' align='center' minH='30px'>
+                    <Stack
+                        p='20px'
+                        fontWeight='medium'
+                        align='center'
+                        minH='30px'
+                    >
                         {priceSection.cta}
                     </Stack>
                 </Stack>

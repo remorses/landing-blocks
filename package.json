@@ -4,7 +4,8 @@
         "core",
         "demos",
         "chakra-ui-forms",
-        "docs"
+        "docs",
+        "props-table"
     ],
     "scripts": {
         "example": "cd demos && yarn dev",
