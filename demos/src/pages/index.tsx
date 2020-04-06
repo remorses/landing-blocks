@@ -21,8 +21,8 @@ import {
 } from 'react-landing/src'
 
 import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
-import * as landingCards from '../../svgs/landingCards'
-import { IndexCardsPaths, demosPaths } from '../../constants'
+import * as landingCards from '../svgs/landingCards'
+import { IndexCardsPaths, demosPaths } from '../constants'
 
 export const LaindgCardsLinks = ({ ...rest }) => {
     return (
