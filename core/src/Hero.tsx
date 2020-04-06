@@ -44,14 +44,16 @@ export function Hero({
                     ]}
                     textAlign={['center', 'center', image ? 'left' : 'center']}
                 >
-                    {bullet && <Bullet>{bullet}</Bullet>}
-                    <Heading
-                        as={animated.h1}
-                        style={animations[0]}
-                        fontSize='46px'
-                    >
-                        {heading}
-                    </Heading>
+                    <Box>
+                        {bullet && <Bullet my='10px'>{bullet}</Bullet>}
+                        <Heading
+                            as={animated.h1}
+                            style={animations[0]}
+                            fontSize='46px'
+                        >
+                            {heading}
+                        </Heading>
+                    </Box>
                     <SubHeading
                         as={animated.h2}
                         style={animations[1]}
