@@ -1,6 +1,7 @@
 import React from 'react'
 import NextLink from 'next/link'
 import Head from 'next/head'
+import { MyNavBar } from '../components/MyNavBar'
 import { FiGrid, FiImage, FiLayers, FiGlobe } from 'react-icons/fi'
 import {
     Hero,
@@ -12,7 +13,6 @@ import {
     Feature,
     HowItWorks,
     FeaturesList,
-    NavBar,
     Footer,
     Button as LaningButton,
     TestimonialsLogos,
@@ -23,6 +23,7 @@ import {
 import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
 import * as landingCards from '../svgs/landingCards'
 import { IndexCardsPaths, demosPaths } from '../constants'
+import { MyFooter } from '../components/MyFooter'
 
 export const LaindgCardsLinks = ({ ...rest }) => {
     return (
@@ -117,36 +118,23 @@ const DemosLinks = ({ ...rest }) => {
 const Page = () => (
     <LandingProvider primary='white'>
         <Stack spacing='60px' bg='#5E629D'>
-            <NavBar
-                dark
-                logo={<Image src='/logo.svg' width='200px' />}
-                // logo={
-                //     <Stack align='center' direction='row' spacing='20px'>
-                //         <Image width='30px' src='/quovery/logo.png' />
-                //         <Box fontWeight='medium' fontSize='20px'>
-                //             Quovery
-                //         </Box>
-                //     </Stack>
-                // }
-                navs={[
-                    <a>Components</a>,
-                    <a>Demos</a>,
-                    <a>Newsletter</a>,
-
-                    // <Button px='10px'>Sign up</Button>,
-                ]}
-            />
+            <MyNavBar />
             <Hero
                 dark
                 bullet='SUPERPOWERS FOR DEVELOPER'
                 heading='Landing pages building blocks'
                 subhead='Build your landing page in miunutes using composable react components'
                 image={<img width='900px' src='/heroIllustration.svg' />}
-                cta='SEE DEMOS'
+                cta={
+                    <NextLink href='#demos'>
+                        <LaningButton>SEE DEMOS</LaningButton>
+                    </NextLink>
+                }
                 fingerprint='Completely open source'
             />
             <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
             <FeaturesList
+                py='0'
                 heading=''
                 dark
                 features={[
@@ -202,39 +190,25 @@ const Page = () => (
         </Stack>
 
         <SectionTitle
+            id='components'
             heading='Deploy your application with ease'
             subhead='Deploying an application with Qovery is as simple as pushing code with git'
             image={null}
         />
         <LaindgCardsLinks alignSelf='center' />
-        <SectionTitle
-            heading='Explore the demos'
-            subhead='Deploying an application with Qovery is as simple as pushing code with git'
-            image={null}
-            cta='Download The Demos Code'
-        />
-        <DemosLinks alignSelf='center' />
-        <Footer
-            businessName='Quovery'
-            bg='#F8F8FF'
-            columns={{
-                Developers: [
-                    <a>Quickstart</a>,
-                    <a>Documentation</a>,
-                    <a>Samples</a>,
-                ],
-                Company: [
-                    <a>Quickstart</a>,
-                    <a>Documentation</a>,
-                    <a>Samples</a>,
-                ],
-                Product: [
-                    <a>Quickstart</a>,
-                    <a>Documentation</a>,
-                    <a>Samples</a>,
-                ],
-            }}
-        />
+        <Stack spacing='60px' bg='#5E629D'>
+            <SectionTitle
+                id='demos'
+                dark
+                py='100px'
+                heading='Explore the demos'
+                subhead='Deploying an application with Qovery is as simple as pushing code with git'
+                image={null}
+                cta='Download The Demos Code'
+            />
+            <DemosLinks alignSelf='center' />
+        </Stack>
+        <MyFooter />
     </LandingProvider>
 )
 

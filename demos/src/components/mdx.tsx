@@ -22,6 +22,8 @@ import {
     PageContainer,
     Footer,
 } from 'react-landing/src'
+import { MyNavBar } from './MyNavBar'
+import { MyFooter } from './MyFooter'
 
 const Pre = (props) => <Box my='2em' rounded='sm' {...props} />
 
@@ -55,7 +57,6 @@ const TData = (props) => (
         {...props}
     />
 )
-
 
 const DocsHeading = (props) => (
     <Heading
@@ -102,38 +103,9 @@ export function Wrapper(props) {
     // TODO show breadcrumbs based on exported breadcrumbs array
     return (
         <LandingProvider primary='#FF593D'>
-            <NavBar
-                logo={<img width='120px' src='/datocms/logo.svg' />}
-                navs={[
-                    <a>Why DatoCMS</a>,
-                    <a>Learn</a>,
-                    <a>Marketplace</a>,
-                    <a>Pricing</a>,
-                    <Button>try for free!</Button>,
-                ]}
-            />
+            <MyNavBar />
             <PageContainer>{props.children}</PageContainer>
-            <Footer
-                businessName='Quovery'
-                bg='#F8F8FF'
-                columns={{
-                    Developers: [
-                        <a>Quickstart</a>,
-                        <a>Documentation</a>,
-                        <a>Samples</a>,
-                    ],
-                    Company: [
-                        <a>Quickstart</a>,
-                        <a>Documentation</a>,
-                        <a>Samples</a>,
-                    ],
-                    Product: [
-                        <a>Quickstart</a>,
-                        <a>Documentation</a>,
-                        <a>Samples</a>,
-                    ],
-                }}
-            />
+            <MyFooter/>
         </LandingProvider>
     )
 }
