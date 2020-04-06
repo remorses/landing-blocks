@@ -24,6 +24,7 @@ import {
 } from 'react-landing/src'
 import { MyNavBar } from './MyNavBar'
 import { MyFooter } from './MyFooter'
+import { MyBreadcrumbs } from './MyBreadcrumbs'
 
 const Pre = (props) => <Box my='2em' rounded='sm' {...props} />
 
@@ -101,11 +102,16 @@ const DocsHeading = (props) => (
 export function Wrapper(props) {
     // console.log({wrapperPorps: props})
     // TODO show breadcrumbs based on exported breadcrumbs array
+    const breadcrumbs = props.breadcrumbs || []
+
     return (
         <LandingProvider primary='#FF593D'>
             <MyNavBar />
-            <PageContainer>{props.children}</PageContainer>
-            <MyFooter/>
+            <PageContainer>
+                <MyBreadcrumbs items={breadcrumbs} />
+                {props.children}
+            </PageContainer>
+            <MyFooter />
         </LandingProvider>
     )
 }

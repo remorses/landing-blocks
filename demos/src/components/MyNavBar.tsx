@@ -22,8 +22,8 @@ export function MyNavBar({ ...rest }) {
             //     </Stack>
             // }
             navs={[
-                <MyLink href='#'>Components</MyLink>,
-                <MyLink href='#'>Demos</MyLink>,
+                <MyLink href='/#components'>Components</MyLink>,
+                <MyLink href='/#demos'>Demos</MyLink>,
                 <MyLink href='#'>Newsletter</MyLink>,
 
                 // <Button px='10px'>Sign up</Button>,

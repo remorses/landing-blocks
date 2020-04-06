@@ -9,7 +9,7 @@ import {
     DrawerCloseButton,
     Button,
 } from '@chakra-ui/core'
-import React from 'react'
+import React, { cloneElement } from 'react'
 import { Row } from '.'
 import { PageContainer, darkStyles } from './layout'
 import { FiMenu as Menu } from 'react-icons/fi'
@@ -33,7 +33,7 @@ export const NavBar = ({ logo, navs, ...rest }) => {
                 >
                     {navs.map((x, i) => (
                         <Box key={i} fontSize='16px' fontWeight='medium'>
-                            {x}
+                            {cloneElement(x)}
                         </Box>
                     ))}
                 </Stack>
