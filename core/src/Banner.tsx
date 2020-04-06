@@ -1,5 +1,5 @@
 import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import { Col, Row, Heading, Spacer, PageContainer, SubHeading, Button } from '.'
 import { Text } from '@chakra-ui/core'
 import { useFadeUpAnimation } from './hooks'
@@ -9,9 +9,10 @@ import { removeUndefined } from './support'
 export function Banner({
     heading = '',
     subhead = '',
-    cta = '',
+    cta = '' as ReactNode,
     image = null as any,
     flip = false,
+    fingerprint = '',
     animate = true,
     ...props
 }) {
@@ -29,49 +30,68 @@ export function Banner({
                 spacing='40px'
                 isReversed={flip}
                 flexDir={['column', null, direction]}
+                w='100%'
                 bg='primary'
                 borderRadius='10px'
                 p='40px'
                 {...bgs}
             >
-                <Stack spacing='20px' minW='400px'>
-                    <Heading
-                        as={animated.h2}
-                        style={animations[0]}
-                        lineHeight='50px'
-                        fontWeight='medium'
-                        fontSize='36px'
-                    >
-                        {heading}
-                    </Heading>
-                    <SubHeading
-                        as={animated.p}
-                        style={animations[1]}
-                        lineHeight='34px'
-                        m={0}
-                        opacity={0.6}
-                        fontWeight='normal'
-                        fontSize='18px'
-                    >
-                        {subhead}
-                    </SubHeading>
-                    <Box>
-                        <Button px='10px' flexGrow={0}>
-                            {cta}
-                        </Button>
-                    </Box>
-                </Stack>
-                <Box flex='1' />
-                <Col
-                    as={animated.div}
-                    style={animations[2]}
-                    align='center'
-                    flex='1'
+                <Stack
+                    spacing='20px'
                     minW='400px'
-                    minH='100%'
+                    w={image ? 'auto' : '100%'}
+                    direction={image ? 'column' : 'row'}
+                    justify='space-between'
                 >
-                    {image}
-                </Col>
+                    <Stack spacing='20px'>
+                        <Heading
+                            as={animated.h2}
+                            style={animations[0]}
+                            lineHeight='50px'
+                            fontWeight='medium'
+                            fontSize='36px'
+                        >
+                            {heading}
+                        </Heading>
+                        <SubHeading
+                            as={animated.p}
+                            style={animations[1]}
+                            lineHeight='34px'
+                            m={0}
+                            opacity={0.6}
+                            fontWeight='normal'
+                            fontSize='18px'
+                        >
+                            {subhead}
+                        </SubHeading>
+                    </Stack>
+                    <Stack w='auto' justify='center'>
+                        <Box>{cta}</Box>
+                        {fingerprint && (
+                            <Box
+                                opacity={0.6}
+                                fontSize='13px'
+                                lineHeight='26px'
+                            >
+                                {fingerprint}
+                            </Box>
+                        )}
+                    </Stack>
+                </Stack>
+                {image && <Box flex='1' />}
+                {image && (
+                    <Col
+                        as={animated.div}
+                        style={animations[2]}
+                        align='center'
+                        // flex='1'
+                        minW='400px'
+                        minH='100%'
+                        // my='-40px'
+                    >
+                        {image}
+                    </Col>
+                )}
             </Stack>
         </PageContainer>
     )

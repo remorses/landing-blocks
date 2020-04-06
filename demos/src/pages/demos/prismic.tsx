@@ -14,8 +14,10 @@ import {
     Footer,
     Banner,
     Pricing,
+    Button,
+    EmailForm,
 } from 'react-landing/src'
-import { GradientCurtains } from 'react-landing/src/decorations'
+import { GradientCurtains, CurlyWire } from 'react-landing/src/decorations'
 import { FiCheck } from 'react-icons/fi'
 import { Box, Link } from '@chakra-ui/core'
 
@@ -154,8 +156,10 @@ const Page = () => (
             // dark
             heading='Try Prismic Now!'
             subhead='50% discount just for good fellows like you'
-            image={<GradientCurtains />}
-            cta='try it out'
+            image={<CurlyWire opacity={.5} stroke='red' />}
+            // cta={<Button>try it out</Button>}
+            cta={<EmailForm/>}
+            fingerprint='No Spam'
         />
         <Footer
             businessName='Prismic'
