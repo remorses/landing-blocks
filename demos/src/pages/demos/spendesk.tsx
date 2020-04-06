@@ -35,7 +35,7 @@ const Page = () => (
             heading='Smart spend management for modern businesses'
             subhead='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
             image={<img width='400px' src='/spendesk/hero.png' />}
-            cta='Book a demo'
+            cta={<Button>Book a demo</Button>}
             floatingElement={<GradientCurtains mt='-600px' />}
         />
         <FeaturesList

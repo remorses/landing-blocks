@@ -1,5 +1,6 @@
 import { useTheme } from '@chakra-ui/core'
 import get from 'lodash.get'
+import { cloneElement } from 'react'
 
 export function useColor(name): string {
     const theme = useTheme()
@@ -18,4 +19,17 @@ export function removeUndefined(c) {
         }
     })
     return c
+}
+
+export function clone(element) {
+    if (!element) {
+        return element
+    }
+    if (typeof element === 'string') {
+        return element
+    }
+    if (typeof element === 'number') {
+        return element
+    }
+    return cloneElement(element)
 }

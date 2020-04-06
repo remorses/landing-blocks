@@ -15,7 +15,7 @@ here is how you can use the Hero component
     heading='Some heading'
     subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
     image={<img />}
-    cta='Try it now for free!'
+    cta={<Button>Try it now for free!</Button>}
     floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
 />
 ```
@@ -48,7 +48,7 @@ The following example recreates the datoCMS landing page
         }
         subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
         image={null}
-        cta='Try it now for free!'
+        cta={<Button>Try it now for free!</Button>}
         floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
     />
 </LandingProvider>
@@ -85,7 +85,7 @@ The following is the Qovery landing page recreated using just a bunch of compone
         heading='Deploy complex application, seamlessly'
         subhead='Just push your code, we handle the rest'
         image={<img width='600px' src='/quovery/hero.png' />}
-        cta='DEPLOY MY APPLICATION'
+        cta={<Button>DEPLOY MY APPLICATION</Button>}
         fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
     />
     <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
@@ -131,7 +131,7 @@ The following example uses a sky background image
         heading='Workstream Collaboration & Omnichannel Customer Engagement'
         subhead='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
         image={<img width='600px' src='/rocketchat/hero.png' />}
-        cta='Start cloud trial'
+        cta={<Button>Start cloud trial</Button>}
     />
     <Divider heading='trusted by' dark />
     <TestimonialsLogos
@@ -205,7 +205,7 @@ The following example uses a cool gradient bg
         dark
         bg='#24114D'
         heading='Check out more landing pages, we have plenty'
-        cta='Learn More'
+        cta={<Button>Learn More</Button>}
         bullet='New'
     />
     <NavBar
@@ -222,7 +222,7 @@ The following example uses a cool gradient bg
         heading={'Make analysis enjoyable'}
         subhead='Discover patterns across a variety of qualitative research methods and unstructured data. Dovetail is analysis software you’ll love to use.'
         image={<img src='/dovetail/hero.png' />}
-        cta='Try free for 7 days'
+        cta={<Button>Try free for 7 days</Button>}
     />
 </LandingProvider>
 ```
@@ -248,7 +248,7 @@ The following example uses a cool gradient bg
         heading='Smart spend management for modern businesses'
         subhead='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
         image={<img width='400px' src='/spendesk/hero.png' />}
-        cta='Book a demo'
+        cta={<Button>Book a demo</Button>}
         floatingElement={<GradientCurtains mt='-600px' />}
     />
 </LandingProvider>

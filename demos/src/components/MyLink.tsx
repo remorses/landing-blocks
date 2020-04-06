@@ -7,7 +7,7 @@ import { useMyColorMode } from 'react-landing/src/hooks'
 export function MyLink({ href, ...rest }) {
     const { colorMode } = useMyColorMode(rest)
     return (
-        <NextLink href={href}>
+        <NextLink href={href} passHref>
             <Link
                 color={{ light: 'blue.400', dark: 'white' }[colorMode]}
                 {...rest}

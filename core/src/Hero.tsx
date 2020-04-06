@@ -7,7 +7,7 @@ import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
-import { useColor } from './support'
+import { useColor, clone } from './support'
 import Color from 'color-js'
 import { Bullet } from './Bullet'
 
@@ -65,7 +65,7 @@ export function Hero({
                         style={animations[2]}
                         align={['center', 'center', 'flex-start']}
                     >
-                        <Box>{cta}</Box>
+                        <Box>{clone(cta)}</Box>
                         {/* <Button
                             px='40px'
                             bg='primary'

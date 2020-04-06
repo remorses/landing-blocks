@@ -38,7 +38,7 @@ const Page = () => (
             subhead='Choose your technology. Use the API to fetch content. Empower
         your content team.'
             image={<img width='500px' src='/prismic/code.png' />}
-            cta='Test it out'
+            cta={<Button>Test it out</Button>}
         />
         <Feature
             heading='Prismic is a Content Management System, a tool for editing online content'

@@ -1,10 +1,11 @@
 import { Box, Stack } from '@chakra-ui/core'
-import React, { ReactNode } from 'react'
+import React, { ReactNode, cloneElement } from 'react'
 import { Row, SubHeading, Heading, Button } from '.'
 import { PageContainer, Col, FloatingElement } from './layout'
 import { useFadeUpAnimation } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
+import { clone } from './support'
 
 export function SectionTitle({
     heading,
@@ -40,7 +41,7 @@ export function SectionTitle({
                 </SubHeading>
                 {cta && (
                     <Col as={animated.div} style={animations[2]} align='center'>
-                        {cta}
+                        {clone(cta)}
                     </Col>
                 )}
             </Stack>

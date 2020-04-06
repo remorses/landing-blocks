@@ -47,7 +47,7 @@ const Page = () => (
                 heading='Deploy complex application, seamlessly'
                 subhead='Just push your code, we handle the rest'
                 image={<img width='600px' src='/quovery/hero.png' />}
-                // cta='DEPLOY MY APPLICATION'
+                // cta={<Button>DEPLOY MY APPLICATION</Button>}
                 cta={<EmailForm />}
                 fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
             />

@@ -46,7 +46,7 @@ const Page = () => (
             }
             subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
             image={null}
-            cta='Try it now for free!'
+            cta={<Button>Try it now for free!</Button>}
             floatingElement={
                 <GradientRect maxW='pageContainer' distortion={0.3} />
             }

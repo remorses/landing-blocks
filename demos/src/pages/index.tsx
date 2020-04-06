@@ -14,7 +14,7 @@ import {
     HowItWorks,
     FeaturesList,
     Footer,
-    Button as LaningButton,
+    Button as LandingButton,
     TestimonialsLogos,
     SectionTitle,
     PageContainer,
@@ -127,7 +127,7 @@ const Page = () => (
                 image={<img width='900px' src='/heroIllustration.svg' />}
                 cta={
                     <NextLink href='#demos'>
-                        <LaningButton>SEE DEMOS</LaningButton>
+                        <LandingButton>SEE DEMOS</LandingButton>
                     </NextLink>
                 }
                 fingerprint='Completely open source'
@@ -204,7 +204,7 @@ const Page = () => (
                 heading='Explore the demos'
                 subhead='Deploying an application with Qovery is as simple as pushing code with git'
                 image={null}
-                cta='Download The Demos Code'
+                cta={<LandingButton>Download The Demos Code</LandingButton>}
             />
             <DemosLinks alignSelf='center' />
         </Stack>

@@ -30,7 +30,7 @@ const Page = () => (
             dark
             bg='#24114D'
             heading='Check out more landing pages, we have plenty'
-            cta='Learn More'
+            cta={<Button>Learn More</Button>}
             bullet='New'
         />
         <NavBar
@@ -47,7 +47,7 @@ const Page = () => (
             heading={'Make analysis enjoyable'}
             subhead='Discover patterns across a variety of qualitative research methods and unstructured data. Dovetail is analysis software you’ll love to use.'
             image={<img src='/dovetail/hero.png' />}
-            cta='Try free for 7 days'
+            cta={<Button>Try free for 7 days</Button>}
         />
         <FeaturesList
             heading=''

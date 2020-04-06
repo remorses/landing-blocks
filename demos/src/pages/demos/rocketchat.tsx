@@ -45,7 +45,7 @@ const Page = () => (
             heading='Workstream Collaboration & Omnichannel Customer Engagement'
             subhead='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
             image={<img width='600px' src='/rocketchat/hero.png' />}
-            cta='Start cloud trial'
+            cta={<Button>Start cloud trial</Button>}
         />
         <Divider heading='trusted by' dark />
         <TestimonialsLogos

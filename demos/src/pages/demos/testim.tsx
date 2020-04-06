@@ -44,7 +44,7 @@ const Page = () => (
                 />
             }
             fingerprint='No credit card required'
-            cta='Start free trial'
+            cta={<Button>Start free trial</Button>}
         />
         <TestimonialsLogos
             heading='Trusted by happy customers worldwide'
@@ -91,7 +91,7 @@ const Page = () => (
             animate={false}
             dark
         />
-        <SectionTitle heading='Start testing with testim' subhead='' cta='Start Free Trial' />
+        <SectionTitle heading='Start testing with testim' subhead='' cta={<Button>Start Free Trial</Button>} />
         <Footer
             businessName='Prismic'
             columns={{
