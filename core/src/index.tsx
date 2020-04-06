@@ -17,6 +17,7 @@ export { TestimonialsTweets } from './TestimonialsTweets'
 
 // atoms
 export { Heading } from './Heading'
+export { EmailForm } from './EmailForm'
 export { SubHeading } from './SubHeading'
 export { Button } from './Button'
 export { Bullet } from './Bullet'

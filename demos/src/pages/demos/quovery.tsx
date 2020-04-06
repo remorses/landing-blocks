@@ -15,6 +15,7 @@ import {
     TestimonialsLogos,
     SectionTitle,
     Button,
+    EmailForm,
 } from 'react-landing/src'
 import { Box, Stack, Image } from '@chakra-ui/core'
 
@@ -46,7 +47,8 @@ const Page = () => (
                 heading='Deploy complex application, seamlessly'
                 subhead='Just push your code, we handle the rest'
                 image={<img width='600px' src='/quovery/hero.png' />}
-                cta='DEPLOY MY APPLICATION'
+                // cta='DEPLOY MY APPLICATION'
+                cta={<EmailForm />}
                 fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
             />
             <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />

@@ -16,6 +16,7 @@ import {
     Button,
     Pricing,
     TestimonialsTweets,
+    EmailForm,
 } from 'react-landing/src'
 import { GradientCurtains } from 'react-landing/src/decorations'
 import { Link, Box } from '@chakra-ui/core'
@@ -37,7 +38,7 @@ const Page = () => (
             heading='Create, your way'
             subhead='Part spreadsheet, part database, and entirely flexible, teams use Airtable to organize their work, their way.'
             image={<img width='500px' src='/airtable/hero.png' />}
-            cta={<Button>Get Started</Button>}
+            cta={<EmailForm />}
             fingerprint='Already using Airtable? Sign in'
         />
         <Feature

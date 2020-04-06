@@ -65,9 +65,13 @@ export function Hero({
                         style={animations[2]}
                         align={['center', 'center', 'flex-start']}
                     >
-                        <Button px='40px' bg='primary' d='block' width='auto'>
-                            {cta}
-                        </Button>
+                        <Box>{cta}</Box>
+                        {/* <Button
+                            px='40px'
+                            bg='primary'
+                            d='block'
+                            width='auto'
+                        ></Button> */}
                         <Box opacity={0.8} fontSize='13px' lineHeight='26px'>
                             {fingerprint}
                         </Box>
