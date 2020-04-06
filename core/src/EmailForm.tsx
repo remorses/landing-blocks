@@ -26,9 +26,20 @@ export function EmailForm({
             ref={ref}
             {...rest}
         >
-            <Input shadow='md' minW='250px' flex='1' placeholder={placeholder} />
+            <Input
+                focusBorderColor='primary'
+                shadow='md'
+                minW='250px'
+                flex='1'
+                placeholder={placeholder}
+            />
             <Box>
-                <Button shadow='md' fontSize='16px' px='10px' textAlign='center'>
+                <Button
+                    shadow='md'
+                    fontSize='16px'
+                    px='10px'
+                    textAlign='center'
+                >
                     {cta}
                 </Button>
             </Box>

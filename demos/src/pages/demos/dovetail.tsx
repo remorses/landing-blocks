@@ -16,10 +16,10 @@ import {
     TestimonialsLogos,
     FeaturesGrid,
     TopBanner,
+    Button,
 } from 'react-landing/src'
-import { Button } from 'react-landing/src/Button'
 import { GradientRect, CurlyWire } from 'react-landing/src/decorations'
-import { Box } from '@chakra-ui/core'
+import { Box, Link } from '@chakra-ui/core'
 
 // background: linear-gradient(45deg,#e9fcff 30%,#fdf2ed 60%);
 // FF593D
@@ -30,7 +30,7 @@ const Page = () => (
             dark
             bg='#24114D'
             heading='Check out more landing pages, we have plenty'
-            cta={<Button>Learn More</Button>}
+            cta={<Link>Learn More</Link>}
             bullet='New'
         />
         <NavBar
