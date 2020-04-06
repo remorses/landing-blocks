@@ -3,7 +3,9 @@ const withTM = require('next-transpile-modules')([
     'react-landing',
     'chakra-ui-forms',
 ]) // pass the modules you would like to see transpiled
-const withMDX = require('@next/mdx')()
+const withMDX = require('@next/mdx')({
+    extension: /\.mdx?$/,
+})
 
 module.exports = withMDX(
     withTM({

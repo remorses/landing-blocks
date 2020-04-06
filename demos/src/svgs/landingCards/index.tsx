@@ -1,4 +1,5 @@
 export { default as NavBar } from './NavBar'
+export { default as Banner } from './Banner'
 export { default as BlogPosts } from './BlogPosts'
 export { default as Faq } from './Faq'
 export { default as Feature } from './Feature'

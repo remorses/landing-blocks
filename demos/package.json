@@ -40,7 +40,6 @@
         "react-landing": "0.0.2",
         "react-live": "^2.2.2",
         "react-multi-steps": "^1.0.3",
-        "props-table/dist/rsg-components": "^3.0.0",
         "tiny-glob": "^0.2.6",
         "tsconfig-paths": "^3.9.0",
         "typescript": "^3.8.3"
