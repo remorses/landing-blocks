@@ -153,10 +153,11 @@ const Page = () => (
             ]}
         />
         <Banner
-            // dark
+            dark
+            bg='gray.800'
             heading='Try Prismic Now!'
             subhead='50% discount just for good fellows like you'
-            image={<CurlyWire opacity={.5} stroke='red' />}
+            // image={<CurlyWire opacity={.5} stroke='red' />}
             // cta={<Button>try it out</Button>}
             cta={<EmailForm/>}
             fingerprint='No Spam'
