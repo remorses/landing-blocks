@@ -20,7 +20,7 @@ export function FeaturesList({
         number: features.length,
     })
     return (
-        <PageContainer ref={ref} py='40px' {...rest}>
+        <PageContainer ref={ref} {...rest}>
             {heading && subhead && (
                 <Stack
                     spacing='40px'

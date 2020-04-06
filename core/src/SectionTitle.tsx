@@ -1,5 +1,5 @@
 import { Box, Stack } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Row, SubHeading, Heading, Button } from '.'
 import { PageContainer, Col, FloatingElement } from './layout'
 import { useFadeUpAnimation } from './hooks'
@@ -9,7 +9,7 @@ import { GradientRect } from './decorations'
 export function SectionTitle({
     heading,
     subhead,
-    cta = '',
+    cta = '' as ReactNode,
     animate = true,
     ...rest
 }) {
@@ -40,7 +40,7 @@ export function SectionTitle({
                 </SubHeading>
                 {cta && (
                     <Col as={animated.div} style={animations[2]} align='center'>
-                        <Button>{cta}</Button>
+                        {cta}
                     </Col>
                 )}
             </Stack>

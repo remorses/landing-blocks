@@ -15,7 +15,7 @@ export function TopBanner({ heading, cta, bullet, ...rest }) {
             >
                 <Bullet>{bullet}</Bullet>
                 <Text>{heading}</Text>
-                <Button variant='link'>{cta}</Button>
+                <Box>{cta}</Box>
             </Stack>
         </PageContainer>
     )
