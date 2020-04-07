@@ -1,6 +1,6 @@
 {
     "name": "react-landing",
-    "_": "[bump]",
+    "_": "[bump if react-landing]",
     "version": "0.0.2",
     "description": "",
     "main": "dist/index.js",
@@ -17,9 +17,8 @@
     ],
     "scripts": {
         "test": "NODE_ENV=test mocha --colors --exit",
+        "build": "tsc",
         "example": "parcel serve --no-autoinstall example/index.html",
-        "compile": "sucrase -q ./src -d ./dist --transforms typescript,imports",
-        "dev": "yarn compile && node dist",
         "svgs": "svgr -d src/svgs --no-dimensions --typescript svgs"
     },
     "keywords": [],
