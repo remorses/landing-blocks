@@ -1,6 +1,5 @@
 require('intersection-observer')
 import { useTrail, config } from 'react-spring'
-// import { useVisible } from 'react-hooks-visible'
 import { useInView } from 'react-intersection-observer'
 import { useRef } from 'react'
 import { useColorMode } from '@chakra-ui/core'
