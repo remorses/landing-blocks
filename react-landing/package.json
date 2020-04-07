@@ -17,7 +17,7 @@
     ],
     "scripts": {
         "test": "NODE_ENV=test mocha --colors --exit",
-        "build": "tsc",
+        "build": "tsc && tsc --module ESNext --outDir esm",
         "example": "parcel serve --no-autoinstall example/index.html",
         "svgs": "svgr -d src/svgs --no-dimensions --typescript svgs"
     },
