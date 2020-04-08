@@ -1,3 +1,4 @@
+import React from 'react'
 require('intersection-observer')
 import { useTrail, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
@@ -30,15 +31,17 @@ export function useFaded({
     triggerOnce = true,
     ...rest
 }): { Faded: ElementType } {
-    const defaultProps = useMemo(() => {
-        const props: FadedProps = {
+    const component = useMemo(() => {
+        const defaultProps: FadedProps = {
             cascade: true,
             threshold: 0.3,
             triggerOnce,
         }
-        return props
+        return (props) => {
+            return <Faded {...defaultProps} {...props} />
+        }
     }, [enabled, triggerOnce])
-    const component = Object.assign(Faded, { defaultProps })
+
     return { Faded: enabled ? component : 'div' }
 }
 
