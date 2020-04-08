@@ -6,6 +6,7 @@
   "main": "dist/index.js",
   "module": "esm/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
   "mocha": {
     "require": "tests/init.js",
     "spec": "tests/**.ts",
@@ -16,6 +17,7 @@
     "/esm/*"
   ],
   "scripts": {
+    "build": "tsc && tsc --module ESNext --outDir esm",
     "test": "NODE_ENV=test mocha --colors --exit",
     "example": "parcel serve --no-autoinstall example/index.html",
     "compile": "sucrase -q ./src -d ./dist --transforms typescript,imports",
