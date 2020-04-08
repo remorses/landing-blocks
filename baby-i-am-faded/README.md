@@ -12,7 +12,7 @@ Animates react components when in view, uses amotion for the animations code, co
 
 ## Demo
 
-You can find a demo website [here](baby-i-am-faded.xmorse.now.sh).
+You can find a demo website [here](https://baby-i-am-faded.xmorse.now.sh).
 
 ## Install
 
