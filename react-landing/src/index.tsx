@@ -22,11 +22,4 @@ export { SubHeading } from './SubHeading'
 export { Button } from './Button'
 export { Bullet } from './Bullet'
 export { Divider } from './Divider'
-export {
-    PageContainer,
-    FloatingElement,
-    Spacer,
-    Col,
-    Row,
-    PageContainerProps,
-} from './layout'
+export * from './layout'

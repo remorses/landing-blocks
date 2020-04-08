@@ -10,6 +10,7 @@ import { GradientRect } from './decorations'
 import { useColor, clone } from './support'
 import Color from 'color-js'
 import { Bullet } from './Bullet'
+import { Reveal } from './react-fade'
 
 export function Hero({
     heading,
@@ -21,10 +22,6 @@ export function Hero({
     fingerprint = '',
     ...rest
 }) {
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: 4,
-    })
     return (
         <PageContainer {...rest}>
             <Row
@@ -32,9 +29,9 @@ export function Hero({
                 w='100%'
                 flexDir={['column', 'column', 'row']}
                 align='center'
-                ref={ref}
             >
                 <Stack
+                    as={Reveal}
                     maxW={['none', 'none', image ? '500px' : 'none']}
                     spacing='40px'
                     align={[
@@ -46,27 +43,12 @@ export function Hero({
                 >
                     <Box>
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
-                        <Heading
-                            as={animated.h1}
-                            style={animations[0]}
-                            fontSize='46px'
-                        >
-                            {heading}
-                        </Heading>
+                        <Heading fontSize='46px'>{heading}</Heading>
                     </Box>
-                    <SubHeading
-                        as={animated.h2}
-                        style={animations[1]}
-                        fontSize='22px'
-                        maxW='700px'
-                    >
+                    <SubHeading fontSize='22px' maxW='700px'>
                         {subhead}
                     </SubHeading>
-                    <Stack
-                        as={animated.div}
-                        style={animations[2]}
-                        align={['center', 'center', 'flex-start']}
-                    >
+                    <Stack align={['center', 'center', 'flex-start']}>
                         <Box>{clone(cta)}</Box>
                         {/* <Button
                             px='40px'
@@ -83,8 +65,6 @@ export function Hero({
                     <Fragment>
                         <Box ml='40px' mt='40px' flex='1' />
                         <Col
-                            as={animated.div}
-                            style={animations[3]}
                             align='center'
                             // h='100%'
                         >

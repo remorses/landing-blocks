@@ -1,11 +1,10 @@
 {
     "private": true,
     "workspaces": [
-        "core",
+        "react-landing",
         "demos",
         "chakra-ui-forms",
-        "docs",
-        "props-table"
+        "baby-i-am-faded"
     ],
     "scripts": {
         "example": "cd demos && yarn dev",
