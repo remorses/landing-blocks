@@ -16,7 +16,8 @@ export function useFaded({
     const component = useMemo(() => {
         const defaultProps: FadedProps = {
             cascade: true,
-            threshold: 0.3,
+            threshold: 0.1,
+            duration: 400,
             triggerOnce,
         }
         return (props) => {

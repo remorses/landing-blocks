@@ -21,8 +21,8 @@ export const Faded = forwardRef(
         {
             cascade = false,
             damping = 0.3,
-            duration = 600,
-            threshold = 0.3,
+            duration = 400,
+            threshold = 0.15,
             triggerOnce = false,
             animation = fadeInUp,
             children,

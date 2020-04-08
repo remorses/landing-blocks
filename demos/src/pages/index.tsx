@@ -30,7 +30,7 @@ export const LaindgCardsLinks = ({ ...rest }) => {
         <PageContainer>
             <Stack
                 width='auto'
-                justify={['center', null, 'flex-start']}
+                justify='center'
                 alignSelf='center'
                 flexDirection='row'
                 flexWrap='wrap'
@@ -76,7 +76,7 @@ const DemosLinks = ({ ...rest }) => {
         <PageContainer>
             <Stack
                 width='auto'
-                justify={['center', null, 'flex-start']}
+                justify='center'
                 alignSelf='center'
                 flexDirection='row'
                 flexWrap='wrap'
@@ -195,7 +195,7 @@ const Page = () => (
             subhead='Deploying an application with Qovery is as simple as pushing code with git'
             image={null}
         />
-        <LaindgCardsLinks alignSelf='center' />
+        <LaindgCardsLinks alignSelf='center' py='40px' />
         <Stack spacing='60px' bg='#5E629D'>
             <SectionTitle
                 id='demos'
@@ -206,7 +206,7 @@ const Page = () => (
                 image={null}
                 cta={<LandingButton>Download The Demos Code</LandingButton>}
             />
-            <DemosLinks alignSelf='center' />
+            <DemosLinks alignSelf='center' py='40px' />
         </Stack>
         <MyFooter />
     </LandingProvider>
