@@ -10,12 +10,12 @@ export function Footer({
     ...rest
 }) {
     return (
-        <PageContainer py='100px' minHeight='200px' {...rest}>
+        <PageContainer py='60px' minHeight='200px' {...rest}>
             <Stack
                 flexDir='row'
                 flexWrap='wrap'
                 justifyContent='space-evenly'
-                spacing='40px'
+                spacing='60px'
             >
                 {Object.keys(columns).map((k, i) => {
                     return (
@@ -40,6 +40,7 @@ export function Footer({
                     )
                 })}
             </Stack>
+            <Box mt='60px' ml='60px' />
             <Text width='auto' opacity={0.6} fontSize='14px' alignSelf='center'>
                 Copyright © {new Date().getFullYear()} {businessName}
             </Text>

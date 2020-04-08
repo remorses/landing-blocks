@@ -45,7 +45,7 @@ export const NavBar = ({ logo, navs, ...rest }) => {
                     <Box
                         stroke={{ light: 'black', dark: 'white' }[colorMode]}
                         as={Menu}
-                        size='40px'
+                        size='36px'
                     />
                 </Button>
             </Row>
@@ -60,7 +60,8 @@ export const NavBar = ({ logo, navs, ...rest }) => {
                     <DrawerOverlay />
                     <DrawerContent>
                         {/* <DrawerCloseButton /> */}
-                        <DrawerHeader>Menu</DrawerHeader>
+                        {/* <DrawerHeader>Menu</DrawerHeader> */}
+                        <Box mt='60px' />
                         <DrawerBody>
                             <Stack
                                 maxW='100%'
