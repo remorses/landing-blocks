@@ -2,16 +2,16 @@
 import * as React from 'react'
 import { isFragment } from 'react-is'
 import { useInView } from 'react-intersection-observer'
-
 import { keyframes, jsx, css } from '@emotion/core'
 import { forwardRef } from 'react'
-import * as animations from './animations'
+import { FadeInUpAnimation } from './animations'
+import { Keyframes } from '@emotion/serialize'
 
 export function getAnimationCss({
     duration = 1000,
     delay = 0,
     timingFunction = 'ease',
-    keyframes = animations.FadeInUpAnimation,
+    keyframes = FadeInUpAnimation,
     iterationCount = 1,
 }) {
     return css`
@@ -24,10 +24,11 @@ export function getAnimationCss({
     `
 }
 
-export type Props = {
+export type FadedProps = {
     cascade?: boolean
     damping?: number
     duration?: number
+    animation?: Keyframes
     threshold?: number
     triggerOnce?: boolean
     children: any
@@ -49,14 +50,14 @@ export const Faded = forwardRef(
             duration = 600,
             threshold = 0.3,
             triggerOnce = true,
+            animation = FadeInUpAnimation,
             children,
             ...rest
-        }: Props,
+        }: FadedProps,
         ref1,
     ) => {
         const [ref, inView] = useInView({ threshold, triggerOnce })
         const combinedRef = useCombinedRefs(ref, ref1)
-
         function makeAnimated(nodes: React.ReactNode): React.ReactNode {
             if (!nodes) {
                 return null
@@ -70,7 +71,7 @@ export const Faded = forwardRef(
                 return jsx(
                     'div',
                     {
-                        css: getAnimationCss({}),
+                        css: getAnimationCss({ keyframes: animation }),
                     },
                     nodes,
                 )
@@ -82,6 +83,7 @@ export const Faded = forwardRef(
                 if (inView) {
                     css.push(
                         getAnimationCss({
+                            keyframes: animation,
                             delay: cascade ? index * duration * damping : 0,
                             duration,
                         }),

@@ -1,6 +1,5 @@
 import { keyframes, jsx, css } from '@emotion/core'
 
-
 export const FadeInUpAnimation = keyframes`
   from {
    opacity: 0;
