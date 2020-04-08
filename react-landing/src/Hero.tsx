@@ -10,7 +10,7 @@ import { GradientRect } from './decorations'
 import { useColor, clone } from './support'
 import Color from 'color-js'
 import { Bullet } from './Bullet'
-import { Reveal } from './react-fade'
+import { Faded } from 'baby-i-am-faded'
 
 export function Hero({
     heading,
@@ -31,7 +31,7 @@ export function Hero({
                 align='center'
             >
                 <Stack
-                    as={Reveal}
+                    as={Faded}
                     maxW={['none', 'none', image ? '500px' : 'none']}
                     spacing='40px'
                     align={[
