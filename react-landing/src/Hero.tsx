@@ -4,13 +4,12 @@ import { SubHeading } from './SubHeading'
 import { Heading } from './Heading'
 import { Button } from './Button'
 import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
 import { useColor, clone } from './support'
 import Color from 'color-js'
 import { Bullet } from './Bullet'
-import { Faded } from 'baby-i-am-faded'
 
 export function Hero({
     heading,
@@ -22,6 +21,7 @@ export function Hero({
     fingerprint = '',
     ...rest
 }) {
+    const { Faded } = useFaded({})
     return (
         <PageContainer {...rest}>
             <Row
@@ -62,7 +62,7 @@ export function Hero({
                     </Stack>
                 </Stack>
                 {image && (
-                    <Fragment>
+                    <Faded>
                         <Box ml='40px' mt='40px' flex='1' />
                         <Col
                             align='center'
@@ -70,7 +70,7 @@ export function Hero({
                         >
                             {image}
                         </Col>
-                    </Fragment>
+                    </Faded>
                 )}
             </Row>
         </PageContainer>

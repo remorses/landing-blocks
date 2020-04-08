@@ -1,8 +1,11 @@
 require('intersection-observer')
 import { useTrail, config } from 'react-spring'
 import { useInView } from 'react-intersection-observer'
-import { useRef } from 'react'
+import { useRef, ElementType } from 'react'
 import { useColorMode } from '@chakra-ui/core'
+import { Faded, FadedProps } from 'baby-i-am-faded'
+import { useMemo } from 'react'
+import { Fragment } from 'react'
 
 export function useFadeUpAnimation({
     enabled = false,
@@ -20,6 +23,23 @@ export function useFadeUpAnimation({
         immediate: !enabled,
     })
     return { ref, animations }
+}
+
+export function useFaded({
+    enabled = true,
+    triggerOnce = true,
+    ...rest
+}): { Faded: ElementType } {
+    const defaultProps = useMemo(() => {
+        const props: FadedProps = {
+            cascade: true,
+            threshold: 0.3,
+            triggerOnce,
+        }
+        return props
+    }, [enabled, triggerOnce])
+    const component = Object.assign(Faded, { defaultProps })
+    return { Faded: enabled ? component : 'div' }
 }
 
 export function useMyColorMode({ dark = false }) {

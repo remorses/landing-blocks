@@ -29,7 +29,7 @@ const Placeholder = ({ ...props }) => {
 }
 
 export const List = () => (
-    <Faded>
+    <Faded cascade>
         <Placeholder />
         <Placeholder />
         <Placeholder />
@@ -38,7 +38,7 @@ export const List = () => (
 )
 
 export const Faster = () => (
-    <Faded duration={200}>
+    <Faded duration={200} cascade>
         <Placeholder />
         <Placeholder />
         <Placeholder />
@@ -47,7 +47,7 @@ export const Faster = () => (
 )
 
 export const Damped = () => (
-    <Faded damping={0.8}>
+    <Faded damping={0.8} cascade>
         <Placeholder />
         <Placeholder />
         <Placeholder />
@@ -57,7 +57,7 @@ export const Damped = () => (
 
 export const usingAs = () => (
     // @ts-ignore
-    <Stack as={Faded} damping={.9}>
+    <Stack as={Faded} damping={.9} cascade>
         <Placeholder />
         <Placeholder />
         <Placeholder />
@@ -67,7 +67,7 @@ export const usingAs = () => (
 
 export const WithWobble = () => (
     // @ts-ignore
-    <Faded animation={wobble} as={Faded}>
+    <Faded animation={wobble} as={Faded} cascade>
         <Placeholder />
         <Placeholder />
         <Placeholder />
@@ -77,7 +77,7 @@ export const WithWobble = () => (
 
 export const WithBounce = () => (
     // @ts-ignore
-    <Faded animation={bounceInRight} as={Faded}>
+    <Faded animation={bounceInRight} as={Faded}  cascade>
         <Placeholder />
         <Placeholder />
         <Placeholder />

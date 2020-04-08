@@ -4,8 +4,7 @@ import { Keyframes } from '@emotion/serialize'
 import React, { forwardRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { isFragment } from 'react-is'
-import { fadeInUp } from './animations/index'
-import { useCombinedRefs, cloneElement } from './support'
+import { useCombinedRefs, cloneElement, fadeInUp } from './support'
 
 export type FadedProps = {
     cascade?: boolean
@@ -14,17 +13,17 @@ export type FadedProps = {
     animation?: Keyframes
     threshold?: number
     triggerOnce?: boolean
-    children: any
+    children?: any
 }
 
 export const Faded = forwardRef(
     (
         {
-            cascade = true,
+            cascade = false,
             damping = 0.3,
             duration = 600,
             threshold = 0.3,
-            triggerOnce = true,
+            triggerOnce = false,
             animation = fadeInUp,
             children,
             ...rest
@@ -32,14 +31,10 @@ export const Faded = forwardRef(
         ref1,
     ) => {
         const [ref, inView] = useInView({ threshold, triggerOnce })
-        const combinedRef = useCombinedRefs(ref, ref1)
+        const combinedRef = useCombinedRefs(ref1, ref)
         function makeAnimated(nodes: React.ReactNode): React.ReactNode {
             if (!nodes) {
                 return null
-            }
-
-            if (typeof nodes === 'string') {
-                return nodes
             }
 
             if (isFragment(nodes)) {

@@ -50,6 +50,6 @@
         "react-intersection-observer": "^8.26.1",
         "react-spring": "^8.0.27",
         "react-twitter-embed": "^3.0.3",
-        "baby-i-am-faded": "latest"
+        "baby-i-am-faded": "0.0.7"
     }
 }
