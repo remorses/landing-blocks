@@ -1,8 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, ReactNode } from 'react'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { PageContainer, Row, Col } from './layout'
-import { Stack, Input, Box, useColorMode } from '@chakra-ui/core'
+import { Stack, Input, Box, useColorMode, StackProps } from '@chakra-ui/core'
 import { Button } from './Button'
+
+export type EmailFormProps = {
+    cta?: ReactNode
+    placeholder?: ReactNode
+    animate?: any
+    fingerprint?: ReactNode
+    value?: string
+    onChange?: any
+    onSubmit?: any
+} & StackProps
 
 export function EmailForm({
     cta = 'Notify me',
@@ -13,7 +23,7 @@ export function EmailForm({
     onChange = console.log,
     onSubmit = console.log,
     ...rest
-}) {
+}: EmailFormProps) {
     return (
         <Stack
             justify='flex-start'
@@ -54,7 +64,10 @@ const MessageBox = (props) => {
     return <Box minH='1em' {...props} />
 }
 
-export const MailchimpForm = ({ url, ...rest }) => {
+export function MailchimpForm({
+    url,
+    ...rest
+}: { url: string } & EmailFormProps) {
     const [email, setEmail] = useState('')
     const { colorMode } = useColorMode()
     return (
@@ -90,7 +103,9 @@ export const MailchimpForm = ({ url, ...rest }) => {
                     {status === 'success' && (
                         <MessageBox
                             color={
-                                { light: 'green.500', dark: 'green.300' }[colorMode]
+                                { light: 'green.500', dark: 'green.300' }[
+                                    colorMode
+                                ]
                             }
                             dangerouslySetInnerHTML={{ __html: message }}
                         />
