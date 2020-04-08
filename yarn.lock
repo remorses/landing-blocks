@@ -3496,6 +3496,16 @@ babel-preset-typescript-vue@^1.0.3:
     "@babel/preset-typescript" "^7.3.3"
     fast-xml-parser "^3.12.17"
 
+baby-i-am-faded@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/baby-i-am-faded/-/baby-i-am-faded-0.0.7.tgz#bdc3db9bd21f664c7f8ae63f339382004a347d56"
+  integrity sha512-SbUjjWR0Hvn15vAh8JZCHlIs/ZOwizHQ1c/qKDo9zDRs2ey3NLRd4epTsbbUwZ9fEsfgT3hOsSUHqT6RiwmY8w==
+  dependencies:
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    react-intersection-observer "^8.26.1"
+    react-is "^16.13.1"
+
 bail@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/bail/-/bail-1.0.5.tgz#b6fa133404a392cbc1f8c4bf63f5953351e7a776"
@@ -8875,10 +8885,10 @@ react-is@^16.12.0, react-is@^16.13.1, react-is@^16.7.0, react-is@^16.8.1, react-
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-landing@0.0.4:
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/react-landing/-/react-landing-0.0.4.tgz#80c6e91289712987755ac4777ffb585414041a90"
-  integrity sha512-gE2H6++KAKxVXNmePyOHJ5hXGOdJyzzcCv1fyIxWI2g+WC15bV1ln9r2wrHW1w1XGVUJyNjUIhKn8L1IeN+ldw==
+react-landing@latest:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/react-landing/-/react-landing-0.0.5.tgz#d5a3bcf6c5a5ecb5e05e86b21dcf2ceacda97bcc"
+  integrity sha512-Aq2Wv5LzxpWLUIXVnSgriIcCqEpdbxcaZUtMSb4ssxf5SZLvS3U7glcx+xMnYnb1rfMy6XkKJsVZvVDzRN+Hrg==
   dependencies:
     "@chakra-ui/core" "^0.6.1"
     "@emotion/core" "^10.0.28"
