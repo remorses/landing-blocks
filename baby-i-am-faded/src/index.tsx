@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
 import { Keyframes } from '@emotion/serialize'
-import React, { cloneElement, forwardRef } from 'react'
+import React, { forwardRef } from 'react'
 import { useInView } from 'react-intersection-observer'
 import { isFragment } from 'react-is'
 import { fadeInUp } from './animations/index'
-import { useCombinedRefs } from './support'
+import { useCombinedRefs, cloneElement } from './support'
 
 export type FadedProps = {
     cascade?: boolean
