@@ -1,4 +1,12 @@
-# `baby-i-am-faded`
+<div align="center">
+<br/>
+<br/>
+<h1>baby-i-am-faded</h1>
+<br/>
+<br/>
+<img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Faded_Zhu.jpg/220px-Faded_Zhu.jpg" />
+<br/>
+</div>
 
 Animates react components when in view, uses amotion for the animations code, completely tree shakable
 
