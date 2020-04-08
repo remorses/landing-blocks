@@ -2,7 +2,7 @@
     <br/>
     <br/>
     <h1><pre>baby-i-am-faded</pre></h1>
-    <p>
+    <p width='400px'>
     Animates react components when in view, uses `emotion` for the animations code, completely tree shakable, super tiny
     </p>
     <br/>
