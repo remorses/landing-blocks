@@ -16,6 +16,7 @@ import {
     TestimonialsLogos,
     Faqs,
 } from 'react-landing/src'
+import {FaDropbox, FaLinkedin, FaGoogle, FaMedium, FaTwitch } from 'react-icons/fa'
 import { Button } from 'react-landing/src/Button'
 import { GradientRect } from 'react-landing/src/decorations'
 import { MailchimpForm } from 'react-landing/src/EmailForm'
