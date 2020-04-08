@@ -1,6 +1,6 @@
 {
     "name": "baby-i-am-faded",
-    "_": "[bump]",
+    "_": "[bump if baby-i-am-faded]",
     "version": "0.0.1",
     "description": "",
     "main": "dist/index.js",

@@ -10,7 +10,6 @@ Animates react components when in view
 
 ```tsx
 import { Faded } from 'baby-i-am-faded'
-import { wobble } from 'baby-i-am-faded/animations' // here are all the animate.css animaitons
 
 export const App = () => (
     <Faded damping={0.8}>
@@ -21,14 +20,20 @@ export const App = () => (
     </Faded>
 )
 
+```
+
+## With custom animation
+
+```tsx
+import { wobble } from 'baby-i-am-faded/animations' // here are all the animate.css animaitons
+
 export const WithWobble = () => (
     // @ts-ignore
-    <Faded animation={wobble} as={Faded}>
+    <Faded animation={wobble}>
         <Placeholder />
         <Placeholder />
         <Placeholder />
         <Placeholder />
     </Faded>
 )
-
 ```
