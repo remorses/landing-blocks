@@ -22,14 +22,14 @@ export function EmailForm({
         >
             <Input
                 focusBorderColor='primary'
-                shadow='md'
+                shadow='sm'
                 minW='250px'
                 minH='40px'
                 placeholder={placeholder}
             />
             <Box ml='20px' />
             <Col  w={['100%', null, 'auto']}>
-                <Button shadow='md' m='0' px='10px' textAlign='center'>
+                <Button shadow='sm' m='0' px='10px' textAlign='center'>
                     {cta}
                 </Button>
             </Col>

@@ -59,7 +59,7 @@ export const NavBar = ({ logo, navs, ...rest }) => {
                 <Box {...(colorMode == 'dark' ? darkStyles : {})}>
                     <DrawerOverlay />
                     <DrawerContent>
-                        {/* <DrawerCloseButton /> */}
+                        <DrawerCloseButton />
                         {/* <DrawerHeader>Menu</DrawerHeader> */}
                         <Box mt='60px' />
                         <DrawerBody>
