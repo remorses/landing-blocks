@@ -28,7 +28,7 @@ export function EmailForm({
                 placeholder={placeholder}
             />
             <Box ml='20px' />
-            <Col align='flex-start' w={['100%', null, 'auto']}>
+            <Col  w={['100%', null, 'auto']}>
                 <Button shadow='md' m='0' px='10px' textAlign='center'>
                     {cta}
                 </Button>
