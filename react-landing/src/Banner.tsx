@@ -24,7 +24,7 @@ export function Banner({
     })
     const direction = flip ? 'row-reverse' : 'row'
     return (
-        <PageContainer ref={ref} {...rest}>
+        <PageContainer {...rest}>
             <Stack
                 align='center'
                 spacing='40px'
@@ -45,8 +45,8 @@ export function Banner({
                 >
                     <Stack spacing='20px'>
                         <Heading
-                            as={animated.h2}
-                            style={animations[0]}
+                            
+                            
                             lineHeight='50px'
                             fontWeight='medium'
                             fontSize='36px'
@@ -54,8 +54,8 @@ export function Banner({
                             {heading}
                         </Heading>
                         <SubHeading
-                            as={animated.p}
-                            style={animations[1]}
+                            
+                            
                             lineHeight='34px'
                             m={0}
                             opacity={0.6}
@@ -81,8 +81,8 @@ export function Banner({
                 {image && <Box flex='1' />}
                 {image && (
                     <Col
-                        as={animated.div}
-                        style={animations[2]}
+                        
+                        
                         align='center'
                         // flex='1'
                         minW='400px'

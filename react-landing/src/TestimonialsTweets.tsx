@@ -5,7 +5,7 @@ import { Row, Heading, SubHeading } from '.'
 import { PageContainer, Col } from './layout'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 
 function convertUrlToTweetId(url: string) {
@@ -24,12 +24,9 @@ export function TestimonialsTweets({
     ...rest
 }) {
     tweets = tweets.map(convertUrlToTweetId)
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: tweets.length,
-    })
+    const { Faded } = useFaded({ animate })
     return (
-        <PageContainer spacing='20px' ref={ref} py='20px' {...rest}>
+        <PageContainer spacing='20px' py='20px' {...rest}>
             {(heading || subhead) && (
                 <Stack align='center' spacing='20px'>
                     <Heading as='h2'>{heading}</Heading>
@@ -37,6 +34,7 @@ export function TestimonialsTweets({
                 </Stack>
             )}
             <Col
+                as={Faded}
                 flexDir={['column', 'column', 'row']}
                 justify='space-evenly'
                 align='center'
@@ -48,8 +46,6 @@ export function TestimonialsTweets({
                         my='20px'
                         key={i}
                         // w={['100%', '100%', '320px']}
-                        as={animated.div}
-                        style={animations[i]}
                     >
                         <TwitterTweetEmbed
                             placeholder={

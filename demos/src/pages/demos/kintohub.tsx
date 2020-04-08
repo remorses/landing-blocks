@@ -64,10 +64,12 @@ const Page = () => (
                 //     </Stack>
                 // }
                 cta={
-                    <Stack direction='row' align='center'>
-                        <Box>Deploy Free</Box>
-                        <img src='/kintohub/arrow.svg' />
-                    </Stack>
+                    <Button>
+                        <Stack direction='row' align='center'>
+                            <Box>Deploy Free</Box>
+                            <img src='/kintohub/arrow.svg' />
+                        </Stack>
+                    </Button>
                 }
                 fingerprint='No credit card required.'
             />

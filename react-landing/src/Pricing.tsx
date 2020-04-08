@@ -36,7 +36,6 @@ const featuresWidth = '370px'
 const pricingHeaderMinH = '160px'
 const pricingNamesMinH = '60px'
 
-
 export interface PricingProps {
     heading?: ReactNode
     subhead?: ReactNode
@@ -54,7 +53,6 @@ export interface PriceColumnType {
     price: string
 }
 
-
 export function Pricing({
     heading = 'Simple Pricing',
     subhead = 'Real value for your work life',
@@ -63,15 +61,11 @@ export function Pricing({
     animate = true,
     ...rest
 }: PageContainerProps & PricingProps) {
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: 3,
-    })
     const belowPrice = '/ month'
     const { colorMode } = useMyColorMode(rest)
 
     return (
-        <PageContainer ref={ref} {...rest}>
+        <PageContainer {...rest}>
             <Stack flexDir={['column', null, 'row']}>
                 <Stack minW={featuresWidth} display={['none', null, 'flex']}>
                     <Stack minH={pricingNamesMinH}>

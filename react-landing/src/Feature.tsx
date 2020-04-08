@@ -2,7 +2,7 @@ import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
 import React, { FC } from 'react'
 import { Col, Row, Heading, Spacer, PageContainer } from '.'
 import { Text } from '@chakra-ui/core'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 
 export function Feature({
@@ -15,22 +15,17 @@ export function Feature({
     ...rest
 }) {
     const dir: any = (direction) => (flip ? `${direction}-reverse` : direction)
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: 3,
-    })
+    const { Faded } = useFaded({ animate })
     return (
-        <PageContainer ref={ref} py='80px' {...rest}>
+        <PageContainer py='80px' {...rest}>
             <Stack
                 align='center'
                 spacing='40px'
                 isReversed={flip}
                 flexDir={['column', null, dir(direction)]}
             >
-                <Stack spacing='20px' flex='1' minW='400px'>
+                <Stack as={Faded} spacing='20px' flex='1' minW='400px'>
                     <Heading
-                        as={animated.h2}
-                        style={animations[0]}
                         lineHeight='50px'
                         fontWeight='medium'
                         fontSize='36px'
@@ -38,8 +33,6 @@ export function Feature({
                         {heading}
                     </Heading>
                     <Text
-                        as={animated.p}
-                        style={animations[1]}
                         lineHeight='34px'
                         m={0}
                         opacity={0.6}
@@ -50,13 +43,7 @@ export function Feature({
                     </Text>
                 </Stack>
 
-                <Col
-                    as={animated.div}
-                    style={animations[2]}
-                    align='center'
-                    flex='1'
-                    minW='400px'
-                >
+                <Col as={Faded} align='center' flex='1' minW='400px'>
                     {image}
                 </Col>
             </Stack>

@@ -4,7 +4,7 @@ import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { PageContainer } from './layout'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 
 export function FeaturesList({
@@ -15,14 +15,12 @@ export function FeaturesList({
     animate = true,
     ...rest
 }) {
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: features.length,
-    })
+    const { Faded } = useFaded({ animate })
     return (
-        <PageContainer ref={ref} {...rest}>
+        <PageContainer {...rest}>
             {heading && subhead && (
                 <Stack
+                    as={Faded}
                     spacing='40px'
                     flex='1'
                     textAlign='center'
@@ -38,15 +36,19 @@ export function FeaturesList({
                     <SubHeading>{subhead}</SubHeading>
                 </Stack>
             )}
-            <Stack flexDir='row' spacing='20px' flex='1' flexWrap='wrap'>
+            <Stack
+                as={Faded}
+                flexDir='row'
+                spacing='20px'
+                flex='1'
+                flexWrap='wrap'
+            >
                 {features.map((step, i) => (
                     <Feature
                         minW={['100%', '100%', '0']}
                         flex='1'
                         key={i}
                         centerText={centerText}
-                        as={animated.div}
-                        style={animations[i]}
                         {...step}
                     />
                 ))}
@@ -56,6 +58,7 @@ export function FeaturesList({
 }
 
 const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
+    
     return (
         <Stack
             textAlign={centerText ? 'center' : 'left'}

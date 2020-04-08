@@ -21,7 +21,7 @@ export function Hero({
     fingerprint = '',
     ...rest
 }) {
-    const { Faded } = useFaded({})
+    const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>
             <Row
@@ -62,7 +62,7 @@ export function Hero({
                     </Stack>
                 </Stack>
                 {image && (
-                    <Faded>
+                    <Row as={Faded} flex='1'>
                         <Box ml='40px' mt='40px' flex='1' />
                         <Col
                             align='center'
@@ -70,7 +70,7 @@ export function Hero({
                         >
                             {image}
                         </Col>
-                    </Faded>
+                    </Row>
                 )}
             </Row>
         </PageContainer>

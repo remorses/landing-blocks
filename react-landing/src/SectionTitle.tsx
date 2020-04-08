@@ -2,7 +2,7 @@ import { Box, Stack } from '@chakra-ui/core'
 import React, { ReactNode, cloneElement } from 'react'
 import { Row, SubHeading, Heading, Button } from '.'
 import { PageContainer, Col, FloatingElement } from './layout'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 import { GradientRect } from './decorations'
 import { clone } from './support'
@@ -14,13 +14,11 @@ export function SectionTitle({
     animate = true,
     ...rest
 }) {
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: 3,
-    })
+    const { Faded } = useFaded({ animate })
     return (
-        <PageContainer ref={ref} {...rest}>
+        <PageContainer {...rest}>
             <Stack
+                as={Faded}
                 alignSelf='center'
                 maxW='700px'
                 spacing='30px'
@@ -28,22 +26,11 @@ export function SectionTitle({
                 textAlign='center'
             >
                 {/* <Bullett>{bullett}</Bullett> */}
-                <Heading as={animated.h2} style={animations[0]} fontSize='32px'>
-                    {heading}
-                </Heading>
-                <SubHeading
-                    as={animated.h4}
-                    style={animations[1]}
-                    fontSize='18px'
-                    maxW='700px'
-                >
+                <Heading fontSize='32px'>{heading}</Heading>
+                <SubHeading fontSize='18px' maxW='700px'>
                     {subhead}
                 </SubHeading>
-                {cta && (
-                    <Col as={animated.div} style={animations[2]} align='center'>
-                        {clone(cta)}
-                    </Col>
-                )}
+                {cta && <Col align='center'>{clone(cta)}</Col>}
             </Stack>
         </PageContainer>
     )

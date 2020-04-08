@@ -4,7 +4,7 @@ import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { PageContainer } from './layout'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 
 export function HowItWorks({
@@ -14,9 +14,16 @@ export function HowItWorks({
     animate = true,
     ...rest
 }) {
+    const { Faded } = useFaded({ animate })
     return (
         <PageContainer py='120px' {...rest}>
-            <Stack spacing={2} flex='1' textAlign='center' align='center'>
+            <Stack
+                as={Faded}
+                spacing={2}
+                flex='1'
+                textAlign='center'
+                align='center'
+            >
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
                 </Heading>
@@ -57,10 +64,7 @@ const Step = ({
     ...rest
 }) => {
     const dir = flip ? 'row-reverse' : 'row'
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: false, // TODO wait for chakra ui Stack ref to be ready
-        number: 4,
-    })
+    const { Faded } = useFaded({ animate })
     return (
         <Stack
             flexDir={dir}
@@ -68,16 +72,10 @@ const Step = ({
             align='center'
             flexWrap='wrap'
             spacing='40px'
-            ref={ref}
             {...rest}
         >
-            <Stack minW='400px' maxW='500px' flex='1' spacing='20px'>
-                <Stack
-                    as={animated.div}
-                    style={animations[0]}
-                    flexDir='row'
-                    align='flex-end'
-                >
+            <Stack as={Faded} minW='400px' maxW='500px' flex='1' spacing='20px'>
+                <Stack flexDir='row' align='flex-end'>
                     <Heading opacity={0.14} lineHeight='70px' fontSize='80px'>
                         {number}
                     </Heading>
@@ -91,10 +89,10 @@ const Step = ({
                         {'  .  ' + heading}
                     </Heading>
                 </Stack>
-                <Box as={animated.h2} style={animations[1]}>
+                <Box>
                     <Heading fontSize='20px'>{heading}</Heading>
                 </Box>
-                <Box as={animated.h2} style={animations[2]}>
+                <Box>
                     <Text
                         fontWeight='normal'
                         m={0}
@@ -106,13 +104,7 @@ const Step = ({
                     </Text>
                 </Box>
             </Stack>
-            <Col
-                as={animated.div}
-                style={animations[3]}
-                minW='400px'
-                maxW='500px'
-                flex='1'
-            >
+            <Col as={Faded} minW='400px' maxW='500px' flex='1'>
                 {image}
             </Col>
         </Stack>

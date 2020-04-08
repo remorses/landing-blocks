@@ -27,7 +27,7 @@ export function useFadeUpAnimation({
 }
 
 export function useFaded({
-    enabled = true,
+    animate = true,
     triggerOnce = true,
     ...rest
 }): { Faded: ElementType } {
@@ -40,9 +40,9 @@ export function useFaded({
         return (props) => {
             return <Faded {...defaultProps} {...props} />
         }
-    }, [enabled, triggerOnce])
+    }, [animate, triggerOnce])
 
-    return { Faded: enabled ? component : 'div' }
+    return { Faded: animate ? component : 'div' }
 }
 
 export function useMyColorMode({ dark = false }) {

@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/core'
 import { Row, SubHeading } from '.'
 import { PageContainer, Col } from './layout'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 
 export function Faqs({
@@ -20,31 +20,20 @@ export function Faqs({
     animate = true,
     ...rest
 }) {
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: 2,
-    })
+    const { Faded } = useFaded({ animate })
     return (
-        <PageContainer ref={ref} {...rest}>
+        <PageContainer {...rest}>
             <Stack
+                as={Faded}
                 alignSelf='center'
                 spacing='30px'
                 align='center'
                 textAlign='center'
                 minWidth='100%'
-                style={animations[0]}
-                as={animated.div}
             >
                 {/* <Bullett>{bullett}</Bullett> */}
-                <Heading as={animated.h2} style={animations[0]} fontSize='32px'>
-                    {heading}
-                </Heading>
-                <SubHeading
-                    as={animated.h4}
-                    style={animations[1]}
-                    fontSize='18px'
-                    maxW='700px'
-                >
+                <Heading fontSize='32px'>{heading}</Heading>
+                <SubHeading fontSize='18px' maxW='700px'>
                     {subhead}
                 </SubHeading>
                 <Accordion allowToggle minWidth='100%'>

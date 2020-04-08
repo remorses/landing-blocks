@@ -10,7 +10,7 @@ import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { PageContainer } from './layout'
-import { useFadeUpAnimation } from './hooks'
+import { useFadeUpAnimation, useFaded } from './hooks'
 import { animated } from 'react-spring'
 
 export function FeaturesGrid({
@@ -21,13 +21,16 @@ export function FeaturesGrid({
     animate = true,
     ...rest
 }) {
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: features.length,
-    })
+    const { Faded } = useFaded({ animate })
     return (
-        <PageContainer spacing='40px' ref={ref} py='40px' {...rest}>
-            <Stack spacing='40px' flex='1' textAlign='center' align='center'>
+        <PageContainer spacing='40px' py='40px' {...rest}>
+            <Stack
+                as={Faded}
+                spacing='40px'
+                flex='1'
+                textAlign='center'
+                align='center'
+            >
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
                 </Heading>
@@ -38,6 +41,7 @@ export function FeaturesGrid({
                 spacing='20px'
                 flex='1'
                 columns={[1, 1, 2, 3, 4]}
+                as={Faded}
             >
                 {features.map((step, i) => (
                     <Feature
@@ -45,8 +49,6 @@ export function FeaturesGrid({
                         flex='1'
                         key={i}
                         centerText={centerText}
-                        as={animated.div}
-                        style={animations[i]}
                         {...step}
                     />
                 ))}
