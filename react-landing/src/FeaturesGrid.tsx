@@ -15,7 +15,7 @@ import {  useFaded } from './hooks'
 
 export function FeaturesGrid({
     heading = '',
-    subhead = '',
+    subheading = '',
     features,
     centerText = false,
     animate = true,
@@ -34,7 +34,7 @@ export function FeaturesGrid({
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
                 </Heading>
-                <SubHeading>{subhead}</SubHeading>
+                <SubHeading>{subheading}</SubHeading>
             </Stack>
             <SimpleGrid
                 // minChildWidth='200px'
@@ -57,7 +57,7 @@ export function FeaturesGrid({
     )
 }
 
-const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
+const Feature = ({ heading, subheading, icon, centerText, ...rest }) => {
     return (
         <Stack
             textAlign={centerText ? 'center' : 'left'}
@@ -73,7 +73,7 @@ const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
                 {heading}
             </Heading>
             <Text m={0} fontSize='16px' opacity={0.8} lineHeight='24px'>
-                {subhead}
+                {subheading}
             </Text>
         </Stack>
     )

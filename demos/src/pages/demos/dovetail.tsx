@@ -45,7 +45,7 @@ const Page = () => (
         />
         <Hero
             heading={'Make analysis enjoyable'}
-            subhead='Discover patterns across a variety of qualitative research methods and unstructured data. Dovetail is analysis software you’ll love to use.'
+            subheading='Discover patterns across a variety of qualitative research methods and unstructured data. Dovetail is analysis software you’ll love to use.'
             image={<img src='/dovetail/hero.png' />}
             cta={<Button>Try free for 7 days</Button>}
         />
@@ -61,19 +61,19 @@ const Page = () => (
             features={[
                 {
                     heading: 'Make sense of data',
-                    subhead:
+                    subheading:
                         'Dovetail is a powerful way to discover patterns across interviews, usability testing, survey responses, and more',
                     icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Build your taxonomy',
-                    subhead:
+                    subheading:
                         'Organize tags into a hierarchy with intuitive controls like drag & drop, and extend your project with global tags.',
                     icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Visualize your research',
-                    subhead:
+                    subheading:
                         'Turn qualitative data into quantitative data with highlights, and visualize your work with a variety of beautiful charts.',
                     icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
@@ -81,7 +81,7 @@ const Page = () => (
         />
         <Feature
             heading='From raw data to insights'
-            subhead='Simply select text and highlight to add tags. Discover patterns across interview transcripts, usability testing notes, survey responses, and more.'
+            subheading='Simply select text and highlight to add tags. Discover patterns across interview transcripts, usability testing notes, survey responses, and more.'
             bg='#FFF0D4'
             direction='column'
             floatingElement={
@@ -105,77 +105,77 @@ const Page = () => (
         />
         <FeaturesGrid
             heading='Analysis features'
-            subhead='Make sense of interview notes, transcripts, survey responses, and more.'
+            subheading='Make sense of interview notes, transcripts, survey responses, and more.'
             features={[
                 {
                     heading: 'Highlights',
-                    subhead:
+                    subheading:
                         'Select text and highlight paragraphs, sentences, or words to tag them.',
                     icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Charts',
-                    subhead:
+                    subheading:
                         'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
                     icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Tag management',
-                    subhead:
+                    subheading:
                         'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
                     icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Search',
-                    subhead:
+                    subheading:
                         'Search the full text of research data and insights across all projects in your workspace.',
                     icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Highlights',
-                    subhead:
+                    subheading:
                         'Select text and highlight paragraphs, sentences, or words to tag them.',
                     icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Charts',
-                    subhead:
+                    subheading:
                         'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
                     icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Filtering',
-                    subhead:
+                    subheading:
                         'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
                     icon: <img width='60px' src='/dovetail/feature2.svg' />,
                 },
                 {
                     heading: 'Search',
-                    subhead:
+                    subheading:
                         'Search the full text of research data and insights across all projects in your workspace.',
                     icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Bulk Edit',
-                    subhead:
+                    subheading:
                         'Select text and highlight paragraphs, sentences, or words to tag them.',
                     icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Project',
-                    subhead:
+                    subheading:
                         'Visualize your tags with multiple charts including a bar chart, pie chart, radar plot, and more.',
                     icon: <img width='60px' src='/dovetail/feature1.svg' />,
                 },
                 {
                     heading: 'Tag management',
-                    subhead:
+                    subheading:
                         'asily modify your tags during analysis with controls like edit, copy, move, and merge.',
                     icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },
                 {
                     heading: 'Search',
-                    subhead:
+                    subheading:
                         'Search the full text of research data and insights across all projects in your workspace.',
                     icon: <img width='60px' src='/dovetail/feature3.svg' />,
                 },

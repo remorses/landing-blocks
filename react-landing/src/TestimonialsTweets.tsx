@@ -18,7 +18,7 @@ function convertUrlToTweetId(url: string) {
 
 export function TestimonialsTweets({
     heading = '',
-    subhead = '',
+    subheading = '',
     tweets = [],
     animate = true,
     ...rest
@@ -27,10 +27,10 @@ export function TestimonialsTweets({
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer spacing='20px' py='20px' {...rest}>
-            {(heading || subhead) && (
+            {(heading || subheading) && (
                 <Stack align='center' spacing='20px'>
                     <Heading as='h2'>{heading}</Heading>
-                    <SubHeading>{subhead}</SubHeading>
+                    <SubHeading>{subheading}</SubHeading>
                 </Stack>
             )}
             <Col

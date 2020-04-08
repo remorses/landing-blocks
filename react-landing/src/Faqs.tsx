@@ -15,7 +15,7 @@ import {  useFaded } from './hooks'
 
 export function Faqs({
     heading = '',
-    subhead = '',
+    subheading = '',
     faqs,
     animate = true,
     ...rest
@@ -34,7 +34,7 @@ export function Faqs({
                 {/* <Bullett>{bullett}</Bullett> */}
                 <Heading fontSize='32px'>{heading}</Heading>
                 <SubHeading fontSize='18px' maxW='700px'>
-                    {subhead}
+                    {subheading}
                 </SubHeading>
                 <Accordion allowToggle minWidth='100%'>
                     {faqs.map((x) => (

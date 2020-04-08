@@ -9,7 +9,7 @@ import { clone } from './support'
 
 export function SectionTitle({
     heading,
-    subhead,
+    subheading,
     cta = '' as ReactNode,
     animate = true,
     ...rest
@@ -28,7 +28,7 @@ export function SectionTitle({
                 {/* <Bullett>{bullett}</Bullett> */}
                 <Heading fontSize='32px'>{heading}</Heading>
                 <SubHeading fontSize='18px' maxW='700px'>
-                    {subhead}
+                    {subheading}
                 </SubHeading>
                 {cta && <Col align='center'>{clone(cta)}</Col>}
             </Stack>

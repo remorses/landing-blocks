@@ -123,7 +123,7 @@ const Page = () => (
                 dark
                 bullet='SUPERPOWERS FOR DEVELOPER'
                 heading='Landing pages building blocks'
-                subhead='Build your landing page in miunutes using composable react components'
+                subheading='Build your landing page in miunutes using composable react components'
                 image={<img width='900px' src='/heroIllustration.svg' />}
                 cta={
                     <NextLink href='#demos'>
@@ -147,7 +147,7 @@ const Page = () => (
                                 as={FiGrid}
                             />
                         ),
-                        subhead:
+                        subheading:
                             'Multi-level approvals and custom spending limits.',
                     },
                     {
@@ -159,7 +159,7 @@ const Page = () => (
                                 as={FiLayers}
                             />
                         ),
-                        subhead:
+                        subheading:
                             'Smart company cards, virtual cards, and invoice tracking.',
                     },
                     {
@@ -171,7 +171,7 @@ const Page = () => (
                                 as={FiGlobe}
                             />
                         ),
-                        subhead:
+                        subheading:
                             'Real-time spending overview and receipt capture.',
                     },
                     {
@@ -183,7 +183,7 @@ const Page = () => (
                                 as={FiImage}
                             />
                         ),
-                        subhead: 'Simplified bookkeeping and budget analysis.',
+                        subheading: 'Simplified bookkeeping and budget analysis.',
                     },
                 ]}
             />
@@ -192,7 +192,7 @@ const Page = () => (
         <SectionTitle
             id='components'
             heading='Deploy your application with ease'
-            subhead='Deploying an application with Qovery is as simple as pushing code with git'
+            subheading='Deploying an application with Qovery is as simple as pushing code with git'
             image={null}
         />
         <LaindgCardsLinks alignSelf='center' py='40px' />
@@ -202,7 +202,7 @@ const Page = () => (
                 dark
                 py='100px'
                 heading='Explore the demos'
-                subhead='Deploying an application with Qovery is as simple as pushing code with git'
+                subheading='Deploying an application with Qovery is as simple as pushing code with git'
                 image={null}
                 cta={<LandingButton>Download The Demos Code</LandingButton>}
             />

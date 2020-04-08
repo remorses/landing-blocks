@@ -9,7 +9,7 @@ import {  useFaded } from './hooks'
 
 export function HowItWorks({
     heading,
-    subhead,
+    subheading,
     steps,
     animate = true,
     ...rest
@@ -35,7 +35,7 @@ export function HowItWorks({
                     fontSize='16px'
                     maxW='500px'
                 >
-                    {subhead}
+                    {subheading}
                 </Text>
             </Stack>
             <Box mt='60px' />
@@ -56,7 +56,7 @@ export function HowItWorks({
 
 const Step = ({
     heading,
-    subhead,
+    subheading,
     number,
     image,
     flip = false,
@@ -100,7 +100,7 @@ const Step = ({
                         opacity={0.7}
                         fontSize='16px'
                     >
-                        {subhead}
+                        {subheading}
                     </Text>
                 </Box>
             </Stack>

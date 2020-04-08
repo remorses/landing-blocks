@@ -33,7 +33,7 @@ const Page = () => (
         />
         <Hero
             heading='Smart spend management for modern businesses'
-            subhead='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
+            subheading='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
             image={<img width='400px' src='/spendesk/hero.png' />}
             cta={<Button>Book a demo</Button>}
             floatingElement={<GradientCurtains mt='-600px' />}
@@ -45,30 +45,30 @@ const Page = () => (
                 {
                     heading: 'Control',
                     icon: <img width='200px' src='/spendesk/step1.svg' />,
-                    subhead:
+                    subheading:
                         'Multi-level approvals and custom spending limits.',
                 },
                 {
                     heading: 'Pay',
                     icon: <img width='200px' src='/spendesk/step2.svg' />,
-                    subhead:
+                    subheading:
                         'Smart company cards, virtual cards, and invoice tracking.',
                 },
                 {
                     heading: 'Track',
                     icon: <img width='200px' src='/spendesk/step3.svg' />,
-                    subhead: 'Real-time spending overview and receipt capture.',
+                    subheading: 'Real-time spending overview and receipt capture.',
                 },
                 {
                     heading: 'Report',
                     icon: <img width='200px' src='/spendesk/step4.svg' />,
-                    subhead: 'Simplified bookkeeping and budget analysis.',
+                    subheading: 'Simplified bookkeeping and budget analysis.',
                 },
             ]}
         />
         {/* <Feature
             heading='Prismic is a Content Management System, a tool for editing online content'
-            subhead="Also known as a headless CMS, an API CMS, a content platform, a disruptive content-as-a-service digital experience...basically we've built a tool that lets you choose your technology, framework, and language and then easily manage your content."
+            subheading="Also known as a headless CMS, an API CMS, a content platform, a disruptive content-as-a-service digital experience...basically we've built a tool that lets you choose your technology, framework, and language and then easily manage your content."
             image={<img src='/spendesk/feature1.png' width='500px' />}
             flip
         /> */}

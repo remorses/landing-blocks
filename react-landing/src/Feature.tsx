@@ -7,7 +7,7 @@ import {  useFaded } from './hooks'
 
 export function Feature({
     heading,
-    subhead,
+    subheading,
     image = null as any,
     flip = false,
     animate = true,
@@ -39,7 +39,7 @@ export function Feature({
                         fontWeight='normal'
                         fontSize='18px'
                     >
-                        {subhead}
+                        {subheading}
                     </Text>
                 </Stack>
 

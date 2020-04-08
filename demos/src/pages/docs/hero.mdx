@@ -2,7 +2,7 @@ export const breadcrumbs = ['Components', 'Hero']
 
 # Hero
 
-The hero component is the most important component of every landing page, it is usually composed of an `heading`, `subheading`, an `image` and a `cta`, but sometimes you can also find some text under the cta buttons, this is called `fingerprint`.
+The hero component is the most important component of every landing page, it is usually composed of an `heading`, `subheadinging`, an `image` and a `cta`, but sometimes you can also find some text under the cta buttons, this is called `fingerprint`.
 
 Sometimes there is also a small text above the heading, this is what we call a `bullet`, here you can find information about a new product or feature like "new: discount of 50% only today" or something similar.
 
@@ -13,7 +13,7 @@ here is how you can use the Hero component
 ```js
 <Hero
     heading='Some heading'
-    subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+    subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
     image={<img />}
     cta={<Button>Try it now for free!</Button>}
     floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
@@ -46,7 +46,7 @@ The following example recreates the datoCMS landing page
                 The best companies are built on unified content
             </Heading>
         }
-        subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+        subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
         image={null}
         cta={<Button>Try it now for free!</Button>}
         floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
@@ -83,7 +83,7 @@ The following is the Qovery landing page recreated using just a bunch of compone
         dark
         bullet='SUPERPOWERS FOR DEVELOPER'
         heading='Deploy complex application, seamlessly'
-        subhead='Just push your code, we handle the rest'
+        subheading='Just push your code, we handle the rest'
         image={<img width='600px' src='/quovery/hero.png' />}
         cta={<Button>DEPLOY MY APPLICATION</Button>}
         fingerprint='Qovery combines the power of Kubernetes, the reliability of AWS and the simplicity of Heroku to augment the developer experience. Give a try now !'
@@ -129,7 +129,7 @@ The following example uses a sky background image
         dark
         bullet='SUPERPOWERS FOR DEVELOPER'
         heading='Workstream Collaboration & Omnichannel Customer Engagement'
-        subhead='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
+        subheading='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
         image={<img width='600px' src='/rocketchat/hero.png' />}
         cta={<Button>Start cloud trial</Button>}
     />
@@ -174,7 +174,7 @@ The following example uses a cool gradient bg
     <Hero
         dark
         heading='Develop. Combine. Promote.'
-        subhead='KintoHub is an all-in-one platform to combine and deploy your backend services, websites, cron jobs, databases and everything your app needs in one place.'
+        subheading='KintoHub is an all-in-one platform to combine and deploy your backend services, websites, cron jobs, databases and everything your app needs in one place.'
         image={
             <Box mb='-100px' mr='-200px'>
                 <Image
@@ -220,7 +220,7 @@ The following example uses a cool gradient bg
     />
     <Hero
         heading={'Make analysis enjoyable'}
-        subhead='Discover patterns across a variety of qualitative research methods and unstructured data. Dovetail is analysis software you’ll love to use.'
+        subheading='Discover patterns across a variety of qualitative research methods and unstructured data. Dovetail is analysis software you’ll love to use.'
         image={<img src='/dovetail/hero.png' />}
         cta={<Button>Try free for 7 days</Button>}
     />
@@ -246,7 +246,7 @@ The following example uses a cool gradient bg
     />
     <Hero
         heading='Smart spend management for modern businesses'
-        subhead='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
+        subheading='Spendesk combines powerful spend management software with corporate cards to help businesses take control of spending.'
         image={<img width='400px' src='/spendesk/hero.png' />}
         cta={<Button>Book a demo</Button>}
         floatingElement={<GradientCurtains mt='-600px' />}

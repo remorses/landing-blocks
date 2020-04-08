@@ -13,7 +13,7 @@ import { Bullet } from './Bullet'
 
 export function Hero({
     heading,
-    subhead,
+    subheading,
     cta,
     image,
     bullet = '',
@@ -46,7 +46,7 @@ export function Hero({
                         <Heading fontSize='46px'>{heading}</Heading>
                     </Col>
                     <SubHeading fontSize='22px' maxW='700px'>
-                        {subhead}
+                        {subheading}
                     </SubHeading>
                     <Stack align={['center', 'center', 'flex-start']}>
                         <Box>{clone(cta)}</Box>

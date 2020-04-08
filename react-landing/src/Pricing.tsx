@@ -38,7 +38,7 @@ const pricingNamesMinH = '60px'
 
 export interface PricingProps {
     heading?: ReactNode
-    subhead?: ReactNode
+    subheading?: ReactNode
     animate?: boolean
     features: string[]
     prices: PriceColumnType[]
@@ -47,7 +47,7 @@ export interface PricingProps {
 export interface PriceColumnType {
     background?: string
     heading?: ReactNode
-    subhead?: ReactNode
+    subheading?: ReactNode
     cta?: ReactNode
     features: ReactNode[]
     price: string
@@ -55,7 +55,7 @@ export interface PriceColumnType {
 
 export function Pricing({
     heading = 'Simple Pricing',
-    subhead = 'Real value for your work life',
+    subheading = 'Real value for your work life',
     features = [],
     prices = [],
     animate = true,
@@ -72,7 +72,7 @@ export function Pricing({
                         <Box fontWeight='medium' fontSize='24px'>
                             {heading}
                         </Box>
-                        <Box opacity={0.7}>{subhead}</Box>
+                        <Box opacity={0.7}>{subheading}</Box>
                     </Stack>
                     <Box h={pricingHeaderMinH} />
                     <Stack flexDir='row'>
@@ -89,7 +89,7 @@ export function Pricing({
                     <Box fontWeight='medium' fontSize='24px'>
                         {heading}
                     </Box>
-                    <Box opacity={0.7}>{subhead}</Box>
+                    <Box opacity={0.7}>{subheading}</Box>
                     <Box h='100px' />
                 </Stack>
                 <Stack
@@ -144,7 +144,7 @@ function PriceColumn({
             >
                 <Box fontWeight='medium'>{priceSection.heading}</Box>
                 <Box fontSize='14px' opacity={0.7}>
-                    {priceSection.subhead}
+                    {priceSection.subheading}
                 </Box>
             </Stack>
             <Mode>

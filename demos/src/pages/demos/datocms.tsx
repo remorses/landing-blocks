@@ -46,7 +46,7 @@ const Page = () => (
                     The best companies are built on unified content
                 </Heading>
             }
-            subhead='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+            subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
             image={null}
             // cta={<Button>Try it now for free!</Button>}
             cta={<MailchimpForm url='https://gmail.us20.list-manage.com/subscribe/post?u=7a2ded8c33767b20e6fe824c0&amp;id=e774d6f31e' />}
@@ -74,7 +74,7 @@ const Page = () => (
                     infrastructure?
                 </Heading>
             }
-            subhead='HERE’S 3 SYMPTOMS TO WATCH OUT'
+            subheading='HERE’S 3 SYMPTOMS TO WATCH OUT'
             image={null}
             floatingElement={
                 <GradientRect
@@ -86,18 +86,18 @@ const Page = () => (
         />
         <Feature
             heading='Is content spread across endless different CMSs?'
-            subhead='How can you deliver a cohesive brand and message strategy if your company functions in silos and information is manually copy-pasted across tens of different platforms?'
+            subheading='How can you deliver a cohesive brand and message strategy if your company functions in silos and information is manually copy-pasted across tens of different platforms?'
             image={<img src='/datocms/illustration1.svg' width='400px' />}
             flip
         />
         <Feature
             heading='Are you slowed down by legacy technology?'
-            subhead='Your customers demand blazing-fast digital products, web standards are evolving at the speed of light, yet you rely on 15-years-old solutions like Wordpress that force you to deliver heavy, low-quality user experiences.'
+            subheading='Your customers demand blazing-fast digital products, web standards are evolving at the speed of light, yet you rely on 15-years-old solutions like Wordpress that force you to deliver heavy, low-quality user experiences.'
             image={<img src='/datocms/illustration2.svg' width='400px' />}
         />
         <Feature
             heading='Is your infrastructure ready for scale?'
-            subhead='New channels, new markets, complex use cases, fast iterations. You can no longer afford to think locally. You need to have a reliable solution that is capable of following your growth, globally, and lets you adapt along the journey.'
+            subheading='New channels, new markets, complex use cases, fast iterations. You can no longer afford to think locally. You need to have a reliable solution that is capable of following your growth, globally, and lets you adapt along the journey.'
             image={<img src='/datocms/illustration3.svg' width='400px' />}
             flip
         />
@@ -111,7 +111,7 @@ const Page = () => (
                             -79%
                         </Heading>
                     ),
-                    subhead: 'In operational cost',
+                    subheading: 'In operational cost',
                 },
                 {
                     heading: (
@@ -119,7 +119,7 @@ const Page = () => (
                             2x
                         </Heading>
                     ),
-                    subhead: 'Faster time to market',
+                    subheading: 'Faster time to market',
                 },
                 {
                     heading: (
@@ -127,7 +127,7 @@ const Page = () => (
                             8x
                         </Heading>
                     ),
-                    subhead: 'Faster loading times',
+                    subheading: 'Faster loading times',
                 },
             ]}
             bg='gray.100'

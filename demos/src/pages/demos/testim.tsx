@@ -32,7 +32,7 @@ const Page = () => (
         />
         <Hero
             heading='Tests that deliver'
-            subhead='Super-fast authoring. Amazingly stable tests.
+            subheading='Super-fast authoring. Amazingly stable tests.
             Your way—coded, codeless, or both!'
             image={
                 <video
@@ -48,7 +48,7 @@ const Page = () => (
         />
         <TestimonialsLogos
             heading='Trusted by happy customers worldwide'
-            // subhead='Trusted by happy customers worldwide'
+            // subheading='Trusted by happy customers worldwide'
             testimonials={[
                 <img src='/datocms/dropbox.svg' />,
                 <img src='/datocms/hashicorp.svg' />,
@@ -65,33 +65,33 @@ const Page = () => (
                 {
                     heading: 'Expand test coverage',
                     icon: <img src='/testim/step1.svg' />,
-                    subhead:
+                    subheading:
                         'Fast authoring increases coverage and quality across your application..',
                 },
                 {
                     heading: 'Reduce maintenance',
                     icon: <img src='/testim/step2.svg' />,
-                    subhead:
+                    subheading:
                         'AI-based stabilizers eliminate flaky tests that consume resources.',
                 },
                 {
                     heading: 'Increase test agility',
                     icon: <img src='/testim/step3.svg' />,
-                    subhead:
+                    subheading:
                         'Code, record and manage tests your way with your tools for greater flexibility.',
                 },
             ]}
         />
         <Feature
             heading='Fit your process'
-            subhead='Testim integrates with the tools you already use so you can stay in your flow.'
+            subheading='Testim integrates with the tools you already use so you can stay in your flow.'
             image={<img src='/testim/feature.png' width='700px' />}
             bg='#1A2230'
             py='0'
             animate={false}
             dark
         />
-        <SectionTitle heading='Start testing with testim' subhead='' cta={<Button>Start Free Trial</Button>} />
+        <SectionTitle heading='Start testing with testim' subheading='' cta={<Button>Start Free Trial</Button>} />
         <Footer
             businessName='Prismic'
             columns={{

@@ -36,20 +36,20 @@ const Page = () => (
         />
         <Hero
             heading='Create, your way'
-            subhead='Part spreadsheet, part database, and entirely flexible, teams use Airtable to organize their work, their way.'
+            subheading='Part spreadsheet, part database, and entirely flexible, teams use Airtable to organize their work, their way.'
             image={<img width='500px' src='/airtable/hero.png' />}
             cta={<EmailForm />}
             fingerprint='Already using Airtable? Sign in'
         />
         <Feature
             heading='Unleash your team’s creative potential with Blocks'
-            subhead='Airtable Blocks give you a creative palette of app-like functionality that you can mix and match to create the perfect workflow for your team.'
+            subheading='Airtable Blocks give you a creative palette of app-like functionality that you can mix and match to create the perfect workflow for your team.'
             image={<img src='/airtable/feature1.jpg' width='500px' />}
             flip
         />
         <TestimonialsTweets
             heading="Don't you trust me?"
-            subhead='Trust them'
+            subheading='Trust them'
             tweets={[
                 '933354946111705097',
                 '1246480107604078592',
@@ -70,14 +70,14 @@ const Page = () => (
             prices={[
                 {
                     heading: 'FREE',
-                    subhead: 'Essential Features',
+                    subheading: 'Essential Features',
                     features: ['Unlimited', '1200', '2Gb', '2 Weeks'],
                     price: 'Free',
                     cta: <Link color='blue.600'>Get started</Link>,
                 },
                 {
                     heading: 'PLUS',
-                    subhead: 'Essential Features',
+                    subheading: 'Essential Features',
                     features: [
                         'Unlimited',
                         '1200',
@@ -91,7 +91,7 @@ const Page = () => (
                 },
                 {
                     heading: 'PRO',
-                    subhead: 'Essential Features',
+                    subheading: 'Essential Features',
                     features: [
                         'Unlimited',
                         '1200',

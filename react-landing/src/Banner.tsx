@@ -7,7 +7,7 @@ import { removeUndefined } from './support'
 
 export function Banner({
     heading = '',
-    subhead = '',
+    subheading = '',
     cta = '' as ReactNode,
     image = null as any,
     flip = false,
@@ -53,7 +53,7 @@ export function Banner({
                             fontWeight='normal'
                             fontSize='18px'
                         >
-                            {subhead}
+                            {subheading}
                         </SubHeading>
                     </Stack>
                     <Stack w='auto' justify='center'>

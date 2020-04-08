@@ -44,7 +44,7 @@ const Page = () => (
             dark
             bullet='SUPERPOWERS FOR DEVELOPER'
             heading='Workstream Collaboration & Omnichannel Customer Engagement'
-            subhead='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
+            subheading='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
             image={<img width='600px' src='/rocketchat/hero.png' />}
             // cta={<Button>Start cloud trial</Button>}
             cta={<MailchimpForm url='https://gmail.us20.list-manage.com/subscribe/post?u=7a2ded8c33767b20e6fe824c0&amp;id=e774d6f31e' />}
@@ -63,7 +63,7 @@ const Page = () => (
         <Feature
             heading='Replace Email'
             flip
-            subhead='Open up the conversation and remove the need for CC/BCC by using Rocket.Chat Channels and Private Groups to speak to your team openly for greater transparency.'
+            subheading='Open up the conversation and remove the need for CC/BCC by using Rocket.Chat Channels and Private Groups to speak to your team openly for greater transparency.'
             floatingElement={
                 <Image
                     minW='500px'
@@ -77,7 +77,7 @@ const Page = () => (
         />
         <Feature
             heading='Team Chat'
-            subhead='Open up the conversation and remove the need for CC/BCC by using Rocket.Chat Channels and Private Groups to speak to your team openly for greater transparency.'
+            subheading='Open up the conversation and remove the need for CC/BCC by using Rocket.Chat Channels and Private Groups to speak to your team openly for greater transparency.'
             floatingElement={
                 <Image
                     minW='700px'

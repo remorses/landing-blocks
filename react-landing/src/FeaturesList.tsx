@@ -9,7 +9,7 @@ import {  useFaded } from './hooks'
 
 export function FeaturesList({
     heading = '',
-    subhead = '',
+    subheading = '',
     features,
     centerText = false,
     animate = true,
@@ -18,7 +18,7 @@ export function FeaturesList({
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>
-            {heading && subhead && (
+            {heading && subheading && (
                 <Stack
                     as={Faded}
                     spacing='40px'
@@ -33,7 +33,7 @@ export function FeaturesList({
                     >
                         {heading}
                     </Heading>
-                    <SubHeading>{subhead}</SubHeading>
+                    <SubHeading>{subheading}</SubHeading>
                 </Stack>
             )}
             <Stack
@@ -57,7 +57,7 @@ export function FeaturesList({
     )
 }
 
-const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
+const Feature = ({ heading, subheading, icon, centerText, ...rest }) => {
     
     return (
         <Stack
@@ -77,7 +77,7 @@ const Feature = ({ heading, subhead, icon, centerText, ...rest }) => {
             </Col>
             <Heading fontSize='20px'>{heading}</Heading>
             <Text m={0} fontSize='18px' opacity={0.6} lineHeight='30px'>
-                {subhead}
+                {subheading}
             </Text>
         </Stack>
     )
