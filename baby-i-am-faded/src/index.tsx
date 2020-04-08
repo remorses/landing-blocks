@@ -4,14 +4,14 @@ import { isFragment } from 'react-is'
 import { useInView } from 'react-intersection-observer'
 import { keyframes, jsx, css } from '@emotion/core'
 import { forwardRef } from 'react'
-import { FadeInUpAnimation } from './animations'
+import { fadeInUp, fadeIn } from './animations/index'
 import { Keyframes } from '@emotion/serialize'
 
 export function getAnimationCss({
     duration = 1000,
     delay = 0,
     timingFunction = 'ease',
-    keyframes = FadeInUpAnimation,
+    keyframes = fadeInUp,
     iterationCount = 1,
 }) {
     return css`
@@ -50,7 +50,7 @@ export const Faded = forwardRef(
             duration = 600,
             threshold = 0.3,
             triggerOnce = true,
-            animation = FadeInUpAnimation,
+            animation = fadeInUp,
             children,
             ...rest
         }: FadedProps,

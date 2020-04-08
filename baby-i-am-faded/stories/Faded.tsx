@@ -7,6 +7,7 @@ import {
     Stack,
 } from '@chakra-ui/core'
 import { Faded } from '../src'
+import { wobble, bounceInRight } from '../src/animations'
 
 export default {
     title: 'CardOptions',
@@ -62,4 +63,24 @@ export const usingAs = () => (
         <Placeholder />
         <Placeholder />
     </Stack>
+)
+
+export const WithWobble = () => (
+    // @ts-ignore
+    <Faded animation={wobble} as={Faded}>
+        <Placeholder />
+        <Placeholder />
+        <Placeholder />
+        <Placeholder />
+    </Faded>
+)
+
+export const WithBounce = () => (
+    // @ts-ignore
+    <Faded animation={bounceInRight} as={Faded}>
+        <Placeholder />
+        <Placeholder />
+        <Placeholder />
+        <Placeholder />
+    </Faded>
 )
