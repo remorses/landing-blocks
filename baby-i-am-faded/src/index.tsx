@@ -21,6 +21,7 @@ export function getAnimationCss({
         animation-name: ${keyframes};
         animation-direction: normal;
         animation-fill-mode: both;
+        animation-iteration-count: ${iterationCount};
     `
 }
 

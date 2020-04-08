@@ -10,7 +10,7 @@ import { Faded } from '../src'
 import { wobble, bounceInRight } from '../src/animations'
 
 export default {
-    title: 'CardOptions',
+    title: 'All',
     component: Faded,
     decorators: [
         (storyFn) => (
@@ -57,7 +57,7 @@ export const Damped = () => (
 
 export const usingAs = () => (
     // @ts-ignore
-    <Stack as={Faded}>
+    <Stack as={Faded} damping={.9}>
         <Placeholder />
         <Placeholder />
         <Placeholder />
