@@ -23,5 +23,6 @@
         "esm",
         "_",
         "tests",
+        "stories"
     ]
 }

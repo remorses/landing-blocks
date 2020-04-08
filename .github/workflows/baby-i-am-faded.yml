@@ -19,7 +19,7 @@ jobs:
           registry-url: https://registry.npmjs.org/
       - run: cd baby-i-am-faded && yarn
       # - run: yarn test
-      - run: cd baby-i-am-faded && yarn build
+      - run: cd baby-i-am-faded && yarn compile
       - name: Bump version
         uses: remorses/bump-version@js
         with:

@@ -17,10 +17,10 @@
         "/esm/*"
     ],
     "scripts": {
-        "build": "tsc && tsc --module ESNext --outDir esm",
+        "compile": "tsc && tsc --module ESNext --outDir esm",
+        "build": "build-storybook -c .storybook -o public",
         "test": "NODE_ENV=test mocha --colors --exit",
         "example": "parcel serve --no-autoinstall example/index.html",
-        "compile": "sucrase -q ./src -d ./dist --transforms typescript,imports",
         "dev": "yarn compile && node dist",
         "storybook": "start-storybook -p 6006",
         "build-storybook": "build-storybook"
@@ -51,6 +51,8 @@
     },
     "dependencies": {
         "@emotion/core": "^10.0.28",
-        "@emotion/styled": "^10.0.27"
+        "@emotion/styled": "^10.0.27",
+        "react-intersection-observer": "^8.26.1",
+        "react-is": "^16.13.1"
     }
 }

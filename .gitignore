@@ -10,6 +10,7 @@ play*
 dist/*
 esm
 dist
+baby-i-am-faded/public
 
 # Runtime data
 pids

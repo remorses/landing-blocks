@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import * as React from 'react'
+import React from 'react'
 import { isFragment } from 'react-is'
 import { useInView } from 'react-intersection-observer'
 import { keyframes, jsx, css } from '@emotion/core'
