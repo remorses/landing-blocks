@@ -42,6 +42,7 @@ export const Divider = ({ heading = '', ...rest }) => {
                         fontWeight='medium'
                         fontSize='14px'
                         letterSpacing='3px'
+                        textAlign='center'
                     >
                         {heading}
                     </Text>

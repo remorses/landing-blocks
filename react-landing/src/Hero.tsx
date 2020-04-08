@@ -4,7 +4,7 @@ import { SubHeading } from './SubHeading'
 import { Heading } from './Heading'
 import { Button } from './Button'
 import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
-import {  useFaded } from './hooks'
+import { useFaded } from './hooks'
 
 import { GradientRect } from './decorations'
 import { useColor, clone } from './support'
@@ -41,10 +41,10 @@ export function Hero({
                     ]}
                     textAlign={['center', 'center', image ? 'left' : 'center']}
                 >
-                    <Box>
+                    <Col align={['center', null, 'flex-start']}>
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                         <Heading fontSize='46px'>{heading}</Heading>
-                    </Box>
+                    </Col>
                     <SubHeading fontSize='22px' maxW='700px'>
                         {subhead}
                     </SubHeading>
@@ -62,7 +62,7 @@ export function Hero({
                     </Stack>
                 </Stack>
                 {image && (
-                    <Row as={Faded} flex='1'>
+                    <Row flexDir={['column', null, 'row']} as={Faded} flex='1'>
                         <Box ml='40px' mt='40px' flex='1' />
                         <Col
                             align='center'
