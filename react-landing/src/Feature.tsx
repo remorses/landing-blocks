@@ -2,8 +2,8 @@ import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
 import React, { FC } from 'react'
 import { Col, Row, Heading, Spacer, PageContainer } from '.'
 import { Text } from '@chakra-ui/core'
-import { useFadeUpAnimation, useFaded } from './hooks'
-import { animated } from 'react-spring'
+import {  useFaded } from './hooks'
+
 
 export function Feature({
     heading,

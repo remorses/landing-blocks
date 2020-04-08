@@ -10,8 +10,8 @@ import {
 } from '@chakra-ui/core'
 import { Row, SubHeading } from '.'
 import { PageContainer, Col } from './layout'
-import { useFadeUpAnimation, useFaded } from './hooks'
-import { animated } from 'react-spring'
+import {  useFaded } from './hooks'
+
 
 export function Faqs({
     heading = '',

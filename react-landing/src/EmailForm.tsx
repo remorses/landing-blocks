@@ -1,5 +1,5 @@
 import React from 'react'
-import { useFadeUpAnimation } from './hooks'
+
 import { PageContainer, Row } from './layout'
 import { Stack, Input, Box } from '@chakra-ui/core'
 import { Button } from './Button'
@@ -11,10 +11,6 @@ export function EmailForm({
     fingerprint = '',
     ...rest
 }) {
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: 4,
-    })
     return (
         <Stack
             justify='flex-start'
@@ -23,7 +19,6 @@ export function EmailForm({
             isInline
             direction='row'
             align='center'
-            ref={ref}
             {...rest}
         >
             <Input

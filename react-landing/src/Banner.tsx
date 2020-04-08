@@ -2,8 +2,8 @@ import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
 import React, { FC, ReactNode } from 'react'
 import { Col, Row, Heading, Spacer, PageContainer, SubHeading, Button } from '.'
 import { Text } from '@chakra-ui/core'
-import { useFadeUpAnimation } from './hooks'
-import { animated } from 'react-spring'
+
+
 import { removeUndefined } from './support'
 
 export function Banner({
@@ -18,10 +18,6 @@ export function Banner({
 }) {
     const { bg = 'gray.100', background, backgroundColor, ...rest } = props
     const bgs = removeUndefined({ bg, background, backgroundColor })
-    const { ref, animations } = useFadeUpAnimation({
-        enabled: animate,
-        number: 3,
-    })
     const direction = flip ? 'row-reverse' : 'row'
     return (
         <PageContainer {...rest}>

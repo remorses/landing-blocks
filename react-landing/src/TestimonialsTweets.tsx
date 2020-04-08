@@ -5,8 +5,8 @@ import { Row, Heading, SubHeading } from '.'
 import { PageContainer, Col } from './layout'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 
-import { useFadeUpAnimation, useFaded } from './hooks'
-import { animated } from 'react-spring'
+import {  useFaded } from './hooks'
+
 
 function convertUrlToTweetId(url: string) {
     if (url.startsWith('http')) {

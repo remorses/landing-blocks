@@ -53,7 +53,7 @@ export const NavBar = ({ logo, navs, ...rest }) => {
                 isOpen={isOpen}
                 placement='left'
                 onClose={onClose}
-
+                size='xs'
                 // finalFocusRef={btnRef}
             >
                 <Box {...(colorMode == 'dark' ? darkStyles : {})}>

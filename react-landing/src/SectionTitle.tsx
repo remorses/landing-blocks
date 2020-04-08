@@ -2,8 +2,8 @@ import { Box, Stack } from '@chakra-ui/core'
 import React, { ReactNode, cloneElement } from 'react'
 import { Row, SubHeading, Heading, Button } from '.'
 import { PageContainer, Col, FloatingElement } from './layout'
-import { useFadeUpAnimation, useFaded } from './hooks'
-import { animated } from 'react-spring'
+import {  useFaded } from './hooks'
+
 import { GradientRect } from './decorations'
 import { clone } from './support'
 

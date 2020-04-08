@@ -3,8 +3,8 @@ import Color from 'color-js'
 import { Box, Text, Stack } from '@chakra-ui/core'
 import { Row, Heading, SubHeading } from '.'
 import { PageContainer, Col } from './layout'
-import { useFadeUpAnimation, useFaded } from './hooks'
-import { animated } from 'react-spring'
+import {  useFaded } from './hooks'
+
 
 export function TestimonialsLogos({
     heading = '',

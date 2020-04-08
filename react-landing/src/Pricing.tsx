@@ -25,8 +25,8 @@ import {
     PageContainerProps,
 } from '.'
 import { Text } from '@chakra-ui/core'
-import { useFadeUpAnimation, useMyColorMode } from './hooks'
-import { animated } from 'react-spring'
+import {  useMyColorMode } from './hooks'
+
 import { removeUndefined, useColor } from './support'
 import Color from 'color-js'
 import { darkStyles } from './layout'

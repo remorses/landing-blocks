@@ -4,8 +4,8 @@ import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
 import { SubHeading } from './SubHeading'
 import { PageContainer } from './layout'
-import { useFadeUpAnimation, useFaded } from './hooks'
-import { animated } from 'react-spring'
+import {  useFaded } from './hooks'
+
 
 export function HowItWorks({
     heading,
