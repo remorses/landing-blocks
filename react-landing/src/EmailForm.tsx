@@ -1,7 +1,7 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { PageContainer, Row, Col } from './layout'
-import { Stack, Input, Box } from '@chakra-ui/core'
+import { Stack, Input, Box, useColorMode } from '@chakra-ui/core'
 import { Button } from './Button'
 
 export function EmailForm({
@@ -9,6 +9,9 @@ export function EmailForm({
     placeholder = 'Enter your email',
     animate = true,
     fingerprint = '',
+    value = '',
+    onChange = console.log,
+    onSubmit = console.log,
     ...rest
 }) {
     return (
@@ -22,6 +25,8 @@ export function EmailForm({
         >
             <Input
                 focusBorderColor='primary'
+                onChange={(e) => onChange(e.target.value)}
+                value={value}
                 shadow='sm'
                 minW='250px'
                 minH='40px'
@@ -31,10 +36,67 @@ export function EmailForm({
             />
             <Box ml='20px' />
             <Col w={['100%', null, 'auto']}>
-                <Button shadow='sm' m='0' px='10px' textAlign='center'>
+                <Button
+                    onClick={onSubmit}
+                    shadow='sm'
+                    m='0'
+                    px='10px'
+                    textAlign='center'
+                >
                     {cta}
                 </Button>
             </Col>
         </Stack>
+    )
+}
+
+const MessageBox = (props) => {
+    return <Box minH='1em' {...props} />
+}
+
+export const MailchimpForm = ({ url, ...rest }) => {
+    const [email, setEmail] = useState('')
+    const { colorMode } = useColorMode()
+    return (
+        <MailchimpSubscribe
+            url={url}
+            render={({ subscribe, status, message }) => (
+                <Stack>
+                    <EmailForm
+                        value={email}
+                        onSubmit={() => subscribe({ EMAIL: email })}
+                        onChange={setEmail}
+                        {...rest}
+                    />
+                    {status === 'sending' && (
+                        <MessageBox
+                            color={
+                                { light: 'blue.600', dark: 'blue.300' }[
+                                    colorMode
+                                ]
+                            }
+                        >
+                            sending...
+                        </MessageBox>
+                    )}
+                    {status === 'error' && (
+                        <MessageBox
+                            color={
+                                { light: 'red.500', dark: 'red.300' }[colorMode]
+                            }
+                            dangerouslySetInnerHTML={{ __html: message }}
+                        />
+                    )}
+                    {status === 'success' && (
+                        <MessageBox
+                            color={
+                                { light: 'green.500', dark: 'green.300' }[colorMode]
+                            }
+                            dangerouslySetInnerHTML={{ __html: message }}
+                        />
+                    )}
+                </Stack>
+            )}
+        />
     )
 }
