@@ -17,6 +17,7 @@ import {
     Button,
 } from 'react-landing/src'
 import { Box, Stack, Image } from '@chakra-ui/core'
+import { MailchimpForm } from 'react-landing/src/EmailForm'
 
 const Page = () => (
     <LandingProvider
@@ -45,7 +46,8 @@ const Page = () => (
             heading='Workstream Collaboration & Omnichannel Customer Engagement'
             subhead='Control your communication, manage your data and have your own collaboration platform to improve team productivity. Rocket.Chat is scalable and open source, replace email and improve your digital workflow.'
             image={<img width='600px' src='/rocketchat/hero.png' />}
-            cta={<Button>Start cloud trial</Button>}
+            // cta={<Button>Start cloud trial</Button>}
+            cta={<MailchimpForm url='https://gmail.us20.list-manage.com/subscribe/post?u=7a2ded8c33767b20e6fe824c0&amp;id=e774d6f31e' />}
         />
         <Divider heading='trusted by' dark />
         <TestimonialsLogos
