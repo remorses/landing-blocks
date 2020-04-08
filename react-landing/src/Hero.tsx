@@ -32,7 +32,7 @@ export function Hero({
             >
                 <Stack
                     as={Faded}
-                    maxW={['none', 'none', image ? '500px' : 'none']}
+                    maxW={['100%', null, image ? '500px' : '100%']}
                     spacing='40px'
                     align={[
                         'center',

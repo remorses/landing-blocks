@@ -25,10 +25,12 @@ export function EmailForm({
                 shadow='sm'
                 minW='250px'
                 minH='40px'
+                type='email'
+                name='email'
                 placeholder={placeholder}
             />
             <Box ml='20px' />
-            <Col  w={['100%', null, 'auto']}>
+            <Col w={['100%', null, 'auto']}>
                 <Button shadow='sm' m='0' px='10px' textAlign='center'>
                     {cta}
                 </Button>
