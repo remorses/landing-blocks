@@ -51,7 +51,6 @@ export const App = () => (
 import { wobble } from 'baby-i-am-faded/animations' // here are all the animate.css animaitons
 
 export const WithWobble = () => (
-    // @ts-ignore
     <Faded animation={wobble}>
         <Placeholder />
         <Placeholder />
