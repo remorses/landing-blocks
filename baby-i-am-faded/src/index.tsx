@@ -1,29 +1,11 @@
 /** @jsx jsx */
-import React from 'react'
-import { isFragment } from 'react-is'
-import { useInView } from 'react-intersection-observer'
-import { keyframes, jsx, css } from '@emotion/core'
-import { forwardRef } from 'react'
-import { fadeInUp, fadeIn } from './animations/index'
+import { css, jsx } from '@emotion/core'
 import { Keyframes } from '@emotion/serialize'
-
-export function getAnimationCss({
-    duration = 1000,
-    delay = 0,
-    timingFunction = 'ease',
-    keyframes = fadeInUp,
-    iterationCount = 1,
-}) {
-    return css`
-        animation-duration: ${duration}ms;
-        animation-timing-function: ${timingFunction};
-        animation-delay: ${delay}ms;
-        animation-name: ${keyframes};
-        animation-direction: normal;
-        animation-fill-mode: both;
-        animation-iteration-count: ${iterationCount};
-    `
-}
+import React, { cloneElement, forwardRef } from 'react'
+import { useInView } from 'react-intersection-observer'
+import { isFragment } from 'react-is'
+import { fadeInUp } from './animations/index'
+import { useCombinedRefs } from './support'
 
 export type FadedProps = {
     cascade?: boolean
@@ -34,14 +16,6 @@ export type FadedProps = {
     triggerOnce?: boolean
     children: any
 }
-
-const cloneElement = (element, props) =>
-    jsx(element.type, {
-        key: element.key,
-        ref: element.ref,
-        ...element.props,
-        ...props,
-    })
 
 export const Faded = forwardRef(
     (
@@ -106,20 +80,20 @@ export const Faded = forwardRef(
     },
 )
 
-function useCombinedRefs(...refs) {
-    const targetRef = React.useRef()
-
-    React.useEffect(() => {
-        refs.forEach((ref) => {
-            if (!ref) return
-
-            if (typeof ref === 'function') {
-                ref(targetRef.current)
-            } else {
-                ref.current = targetRef.current
-            }
-        })
-    }, [refs])
-
-    return targetRef
+export function getAnimationCss({
+    duration = 1000,
+    delay = 0,
+    timingFunction = 'ease',
+    keyframes = fadeInUp,
+    iterationCount = 1,
+}) {
+    return css`
+        animation-duration: ${duration}ms;
+        animation-timing-function: ${timingFunction};
+        animation-delay: ${delay}ms;
+        animation-name: ${keyframes};
+        animation-direction: normal;
+        animation-fill-mode: both;
+        animation-iteration-count: ${iterationCount};
+    `
 }
