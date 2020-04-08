@@ -3496,6 +3496,16 @@ babel-preset-typescript-vue@^1.0.3:
     "@babel/preset-typescript" "^7.3.3"
     fast-xml-parser "^3.12.17"
 
+baby-i-am-faded@0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/baby-i-am-faded/-/baby-i-am-faded-0.0.7.tgz#bdc3db9bd21f664c7f8ae63f339382004a347d56"
+  integrity sha512-SbUjjWR0Hvn15vAh8JZCHlIs/ZOwizHQ1c/qKDo9zDRs2ey3NLRd4epTsbbUwZ9fEsfgT3hOsSUHqT6RiwmY8w==
+  dependencies:
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    react-intersection-observer "^8.26.1"
+    react-is "^16.13.1"
+
 bail@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/bail/-/bail-1.0.5.tgz#b6fa133404a392cbc1f8c4bf63f5953351e7a776"
