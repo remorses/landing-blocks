@@ -21,10 +21,10 @@ export function Feature({
             <Stack
                 align='center'
                 spacing='40px'
-                isReversed={flip}
-                flexDir={['column', null, dir(direction)]}
+                // isReversed={flip}
+                flexDirection={['column', null, dir(direction)]}
             >
-                <Stack as={Faded} spacing='20px' flex='1' minW='400px'>
+                <Stack as={Faded} spacing='20px' flex='1' minW='300px'>
                     <Heading
                         lineHeight='50px'
                         fontWeight='medium'
@@ -43,7 +43,7 @@ export function Feature({
                     </Text>
                 </Stack>
 
-                <Col as={Faded} align='center' flex='1' minW='400px'>
+                <Col as={Faded} align='center' flex='1' minW='300px'>
                     {image}
                 </Col>
             </Stack>

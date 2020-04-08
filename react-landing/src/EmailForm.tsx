@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { PageContainer, Row } from './layout'
+import { PageContainer, Row, Col } from './layout'
 import { Stack, Input, Box } from '@chakra-ui/core'
 import { Button } from './Button'
 
@@ -15,29 +15,24 @@ export function EmailForm({
         <Stack
             justify='flex-start'
             width='auto'
-            spacing='20px'
-            isInline
-            direction='row'
-            align='center'
+            flexDirection={['column', null, 'row']}
+            // align='center'
+            fontSize='16px'
             {...rest}
         >
             <Input
                 focusBorderColor='primary'
                 shadow='md'
                 minW='250px'
-                flex='1'
+                minH='40px'
                 placeholder={placeholder}
             />
-            <Box>
-                <Button
-                    shadow='md'
-                    fontSize='16px'
-                    px='10px'
-                    textAlign='center'
-                >
+            <Box ml='20px' />
+            <Col align='flex-start' w={['100%', null, 'auto']}>
+                <Button shadow='md' m='0' px='10px' textAlign='center'>
                     {cta}
                 </Button>
-            </Box>
+            </Col>
         </Stack>
     )
 }

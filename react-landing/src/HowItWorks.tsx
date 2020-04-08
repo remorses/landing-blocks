@@ -74,7 +74,7 @@ const Step = ({
             spacing='40px'
             {...rest}
         >
-            <Stack as={Faded} minW='400px' maxW='500px' flex='1' spacing='20px'>
+            <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='20px'>
                 <Stack flexDir='row' align='flex-end'>
                     <Heading opacity={0.14} lineHeight='70px' fontSize='80px'>
                         {number}
@@ -104,7 +104,7 @@ const Step = ({
                     </Text>
                 </Box>
             </Stack>
-            <Col as={Faded} minW='400px' maxW='500px' flex='1'>
+            <Col as={Faded} minW='300px' maxW='500px' flex='1'>
                 {image}
             </Col>
         </Stack>

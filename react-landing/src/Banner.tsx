@@ -3,7 +3,6 @@ import React, { FC, ReactNode } from 'react'
 import { Col, Row, Heading, Spacer, PageContainer, SubHeading, Button } from '.'
 import { Text } from '@chakra-ui/core'
 
-
 import { removeUndefined } from './support'
 
 export function Banner({
@@ -24,8 +23,8 @@ export function Banner({
             <Stack
                 align='center'
                 spacing='40px'
-                isReversed={flip}
-                flexDir={['column', null, direction]}
+                // isReversed={flip}
+                flexDirection={['column', null, direction]}
                 w='100%'
                 bg='primary'
                 borderRadius='10px'
@@ -34,15 +33,13 @@ export function Banner({
             >
                 <Stack
                     spacing='20px'
-                    minW='400px'
+                    minW='300px'
                     w={image ? 'auto' : '100%'}
-                    direction={image ? 'column' : 'row'}
                     justify='space-between'
+                    flexDirection={['column', null, image ? 'column' : 'row']}
                 >
                     <Stack spacing='20px'>
                         <Heading
-                            
-                            
                             lineHeight='50px'
                             fontWeight='medium'
                             fontSize='36px'
@@ -50,8 +47,6 @@ export function Banner({
                             {heading}
                         </Heading>
                         <SubHeading
-                            
-                            
                             lineHeight='34px'
                             m={0}
                             opacity={0.6}
@@ -77,11 +72,9 @@ export function Banner({
                 {image && <Box flex='1' />}
                 {image && (
                     <Col
-                        
-                        
                         align='center'
                         // flex='1'
-                        minW='400px'
+                        minW='300px'
                         minH='100%'
                         // my='-40px'
                     >
