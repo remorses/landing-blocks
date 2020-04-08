@@ -48,7 +48,7 @@ export const App = () => (
 ## With custom animation
 
 ```tsx
-import { wobble } from 'baby-i-am-faded/animations' // here are all the animate.css animaitons
+import { wobble } from 'baby-i-am-faded/esm/animations' // here are all the animate.css animaitons
 
 export const WithWobble = () => (
     <Faded animation={wobble}>
