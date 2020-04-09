@@ -8,10 +8,26 @@
   <pre>npm i react-landing</pre>
 </div>
 
+
+
+
+
+
+TODO every pagecontainer shoud forward the partent theme and modify it for his children, so that you can change the buttons primary colors
+TODO animate property is given to the pagecontainer, the useFaded defaults to no animation, you can add animations to certain sections with animate prop
+TODO animate prop can be 'true' to use default animation, 'fadeDown', wobble, fast, slow, ...
+TODO add types to every section component, these are all PageCOntainerProps + { ... }
+TODO add more examples in docs pages, one example for
+- light mode
+- dark mode
+- with decoration element
+- with animation
+- with custom animation elements
+TODO email for element components like Heading, Subheading, Button, EmailForm, PageContainer
+TODO make the landing page copy, add features and benefits, detailed footer
+TODO add gumroad element to the landing page to buy the demos code
+
 TODO team
-TODO banner
-TODO email capture
-TODO testimonials
 TODO secondary buttons
 TODO featuresGrid not using grid or grid polyfill
 

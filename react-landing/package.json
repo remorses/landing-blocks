@@ -51,6 +51,7 @@
         "react-icons": "^3.9.0",
         "react-intersection-observer": "^8.26.1",
         "react-mailchimp-subscribe": "^2.1.0",
+        "react-script-hook": "^1.0.17",
         "react-twitter-embed": "^3.0.3"
     }
 }

@@ -8977,6 +8977,11 @@ react-proptype-conditional-require@^1.0.4:
   resolved "https://registry.yarnpkg.com/react-proptype-conditional-require/-/react-proptype-conditional-require-1.0.4.tgz#69c2d5741e6df5e08f230f36bbc2944ee1222555"
   integrity sha1-acLVdB5t9eCPIw82u8KUTuEiJVU=
 
+react-script-hook@^1.0.17:
+  version "1.0.17"
+  resolved "https://registry.yarnpkg.com/react-script-hook/-/react-script-hook-1.0.17.tgz#9c3c3bd196d677d48838ac09134c912d555c67a9"
+  integrity sha512-maLLOqAfHcbcQPwDo9wuqdCzHSbyL/uDhULtb7Yrvh8IrbNN24LRXluHnti8Y+bk0LNn3s15esl3wDVeCMjbIg==
+
 react-select@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-select/-/react-select-3.1.0.tgz#ab098720b2e9fe275047c993f0d0caf5ded17c27"
