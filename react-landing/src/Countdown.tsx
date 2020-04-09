@@ -60,15 +60,17 @@ export function Countdown({
                             <Stack
                                 direction='row'
                                 spacing='20px'
+                                key={timeName}
                                 // fontSize='18px'
                             >
                                 <Stack spacing='10px' align='center'>
                                     <Box>
-                                        {remaining.split('').map((d) => (
+                                        {remaining.split('').map((d, i) => (
                                             <AnimatedDigit
                                                 fontSize='62px'
                                                 height='62px'
                                                 digit={d}
+                                                key={i}
                                             />
                                         ))}
                                     </Box>
