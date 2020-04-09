@@ -31,7 +31,7 @@ export function useCombinedRefs(...refs) {
 export const fadeInUp = keyframes`
     from {
         opacity: 0;
-        transform: translate3d(0px, -30px, 0px);
+        transform: translate3d(0px, -20px, 0px);
     }
     to {
         opacity: 1;
