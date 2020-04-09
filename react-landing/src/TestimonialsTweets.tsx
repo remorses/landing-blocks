@@ -1,7 +1,9 @@
 import React, { ReactNode, useContext } from 'react'
 import Color from 'color-js'
 import { Box, Text, Stack, Flex } from '@chakra-ui/core'
-import { Row, Heading, Subheading } from '.'
+import { removeUndefined } from './support'
+import { Heading } from './Heading'
+import { Subheading } from './Subheading'
 import { PageContainer, Col } from './layout'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 

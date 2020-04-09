@@ -1,10 +1,10 @@
-import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
-import React, { FC } from 'react'
-import { Col, Row, Heading, Spacer } from '.'
-import { Text } from '@chakra-ui/core'
+import { Stack, Text } from '@chakra-ui/core'
+import React from 'react'
+import { Heading } from './Heading'
+import { useFaded } from './hooks'
+import { Col, PageContainer } from './layout'
 import { Subheading } from './Subheading'
-import { PageContainer } from './layout'
-import {  useFaded } from './hooks'
+
 
 
 export function FeaturesList({
@@ -58,7 +58,6 @@ export function FeaturesList({
 }
 
 const Feature = ({ heading, subheading, icon, centerText, ...rest }) => {
-    
     return (
         <Stack
             textAlign={centerText ? 'center' : 'left'}

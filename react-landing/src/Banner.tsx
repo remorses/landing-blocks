@@ -1,9 +1,11 @@
 import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
 import React, { FC, ReactNode } from 'react'
-import { Col, Row, Heading, Spacer, PageContainer, Subheading, Button } from '.'
 import { Text } from '@chakra-ui/core'
 
 import { removeUndefined } from './support'
+import { PageContainer, Col } from './layout'
+import { Heading } from './Heading'
+import { Subheading } from './Subheading'
 
 export function Banner({
     heading = '',

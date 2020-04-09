@@ -1,9 +1,9 @@
-import React, { ReactNode, useContext } from 'react'
-import Color from 'color-js'
-import { Box, Text, Stack } from '@chakra-ui/core'
-import { Row, Heading, Subheading } from '.'
-import { PageContainer, Col } from './layout'
-import {  useFaded } from './hooks'
+import { Stack } from '@chakra-ui/core'
+import React from 'react'
+import { Heading } from './Heading'
+import { useFaded } from './hooks'
+import { Col, PageContainer } from './layout'
+import { Subheading } from './Subheading'
 
 
 export function TestimonialsLogos({

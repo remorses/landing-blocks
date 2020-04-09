@@ -1,7 +1,7 @@
 import React, { ReactNode, useContext } from 'react'
 import Color from 'color-js'
 import { Box, Text, Stack } from '@chakra-ui/core'
-import { Row } from '.'
+import { Row } from './layout'
 import { PageContainer } from './layout'
 
 export function Footer({

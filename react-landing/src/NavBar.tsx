@@ -10,7 +10,7 @@ import {
     Button,
 } from '@chakra-ui/core'
 import React, { cloneElement } from 'react'
-import { Row } from '.'
+import { Row } from './layout'
 import { PageContainer, darkStyles } from './layout'
 import { FiMenu as Menu } from 'react-icons/fi'
 import { useMyColorMode } from './hooks'

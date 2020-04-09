@@ -6,10 +6,12 @@ import {
     SimpleGrid,
 } from '@chakra-ui/core'
 import React, { FC } from 'react'
-import { Col, Row, Heading, Spacer } from '.'
+
 import { Text } from '@chakra-ui/core'
+import { removeUndefined } from './support'
+import { PageContainer, Col } from './layout'
+import { Heading } from './Heading'
 import { Subheading } from './Subheading'
-import { PageContainer } from './layout'
 import {  useFaded } from './hooks'
 
 

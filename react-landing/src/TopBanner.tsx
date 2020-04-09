@@ -1,7 +1,8 @@
 import { Box, Stack, Text, Button } from '@chakra-ui/core'
 import React from 'react'
-import { Row, Bullet } from '.'
+import { Row } from './layout'
 import { PageContainer } from './layout'
+import { Bullet } from './Bullet'
 
 export function TopBanner({ heading, cta, bullet, ...rest }) {
     return (

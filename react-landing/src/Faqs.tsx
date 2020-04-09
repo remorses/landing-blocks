@@ -1,16 +1,8 @@
-import React, { ReactNode, useContext } from 'react'
-import Color from 'color-js'
-import { Box, Text, Stack, Heading, Button } from '@chakra-ui/core'
-import {
-    Accordion,
-    AccordionItem,
-    AccordionHeader,
-    AccordionPanel,
-    AccordionIcon,
-} from '@chakra-ui/core'
-import { Row, Subheading } from '.'
-import { PageContainer, Col } from './layout'
-import {  useFaded } from './hooks'
+import { Accordion, AccordionHeader, AccordionIcon, AccordionItem, AccordionPanel, Box, Heading, Stack } from '@chakra-ui/core'
+import React from 'react'
+import { useFaded } from './hooks'
+import { PageContainer } from './layout'
+import { Subheading } from './Subheading'
 
 
 export function Faqs({
