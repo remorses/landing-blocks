@@ -9,7 +9,12 @@ export type TopBannerProps = {
     bullet?: ReactNode
 } & PageContainerProps
 
-export function TopBanner({ heading = '', cta = '', bullet = '', ...rest }) {
+export function TopBanner({
+    heading = '',
+    cta = '',
+    bullet = '',
+    ...rest
+}: TopBannerProps) {
     return (
         <PageContainer py='10px' {...rest}>
             <Stack
