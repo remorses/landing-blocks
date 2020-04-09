@@ -63,12 +63,24 @@ export function Countdown({
                                 // fontSize='18px'
                             >
                                 <Stack spacing='10px' align='center'>
-                                    <Box fontSize='62px'>{remaining}</Box>
+                                    <Box>
+                                        {remaining.split('').map((d) => (
+                                            <AnimatedDigit
+                                                fontSize='62px'
+                                                height='62px'
+                                                digit={d}
+                                            />
+                                        ))}
+                                    </Box>
                                     <Box letterSpacing='2px' opacity={0.6}>
                                         {timeName.toUpperCase()}
                                     </Box>
                                 </Stack>
-                                {!isLast && <Box opacity={.8} fontSize='52px'>:</Box>}
+                                {!isLast && (
+                                    <Box opacity={0.8} fontSize='52px'>
+                                        :
+                                    </Box>
+                                )}
                             </Stack>
                         )
                     })}
@@ -109,3 +121,23 @@ function padZeros(number, length) {
     return my_string
 }
 
+const AnimatedDigit = ({ digit, ...rest }) => {
+    const height = 160
+    const [translate, setTranslate] = useState('translate3d(0, 0, 0)')
+    // console.log({ translate })
+    useEffect(() => {
+        const y = -Number(digit) * height
+        setTranslate(`translate3d(0, ${y}px, 0)`)
+    }, [digit])
+    return (
+        <Box mx='2px' display='inline-block' overflow='hidden' {...rest}>
+            <Box transition='0.3s ease all' transform={translate}>
+                {'0123456789'.split('').map((d) => (
+                    <Box key={d} height={height + 'px'}>
+                        {d}
+                    </Box>
+                ))}
+            </Box>
+        </Box>
+    )
+}
