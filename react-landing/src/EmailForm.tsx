@@ -38,6 +38,7 @@ export function EmailForm({
                 onChange={(e) => onChange(e.target.value)}
                 value={value}
                 shadow='sm'
+                bg='rgba(255,255,255, .09)'
                 minW='250px'
                 minH='40px'
                 type='email'
