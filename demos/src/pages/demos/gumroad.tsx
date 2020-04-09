@@ -39,7 +39,9 @@ const Page = () => (
             heading='Create, your way'
             subheading='Part spreadsheet, part database, and entirely flexible, teams use Airtable to organize their work, their way.'
             image={<img width='500px' src='/airtable/hero.png' />}
-            cta={<GumroadButton singlePurchase productId='demo'></GumroadButton>}
+            cta={
+                <GumroadButton singlePurchase productId='demo'></GumroadButton>
+            }
             fingerprint='Already using Airtable? Sign in'
         />
         <Feature

@@ -19,32 +19,42 @@ export type GumroadButtonProps = {
     productId: string
 }
 
+const Placeholder = (props) => {
+    const { colorMode } = useColorMode()
+    return (
+        <Link
+            display='flex'
+            flexDir='column'
+            alignItems='center'
+            justifyContent='center'
+            borderRadius='6px'
+            color='gray.300'
+            width='230px'
+            h='50px'
+            bg={{ light: 'gray.100', dark: 'rgba(255,255,255,.1)' }[colorMode]}
+            {...props}
+        />
+    )
+}
+
 export const GumroadButton = forwardRef(
     (
-        { singlePurchase = false, productId='demo', ...props }: GumroadButtonProps,
+        {
+            singlePurchase = false,
+            productId = 'demo',
+            ...props
+        }: GumroadButtonProps,
         ref,
     ) => {
         const [loading, error] = useScript({
             src: 'https://gumroad.com/js/gumroad.js',
         })
-        const { colorMode } = useColorMode()
-        if (loading) {
-            return (
-                <Box
-                    borderRadius='6px'
-                    width='230px'
-                    h='50px'
-                    bg={
-                        { light: 'gray.100', dark: 'rgba(255,255,255,.1)' }[
-                            colorMode
-                        ]
-                    }
-                />
-            )
+        if (loading || error) {
+            return <Placeholder children={error} />
         }
 
         return (
-            <a
+            <Placeholder
                 ref={ref as any}
                 className='gumroad-button'
                 href={`https://gum.co/${productId}?wanted=true`}
@@ -53,7 +63,7 @@ export const GumroadButton = forwardRef(
                 {...props}
             >
                 Buy Now My Product
-            </a>
+            </Placeholder>
         )
         // return <B {...props} />
     },
