@@ -1,12 +1,17 @@
 import { Box, Stack, Text } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
-import { PageContainer } from './layout'
+import { PageContainer, PageContainerProps } from './layout'
+
+export type FooterProps = {
+    columns: { [k: string]: ReactNode[] }
+    businessName?: string
+} & PageContainerProps
 
 export function Footer({
-    columns = {} as { [k: string]: ReactNode[] },
+    columns = {},
     businessName = 'Monster Inc.',
     ...rest
-}) {
+}: FooterProps) {
     return (
         <PageContainer py='60px' minHeight='200px' {...rest}>
             <Stack
