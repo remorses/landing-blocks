@@ -75,7 +75,6 @@ const Page = () => (
                 </Heading>
             }
             subheading='HERE’S 3 SYMPTOMS TO WATCH OUT'
-            image={null}
             floatingElement={
                 <GradientRect
                     maxW='pageContainer'

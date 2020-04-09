@@ -193,7 +193,6 @@ const Page = () => (
             id='components'
             heading='Deploy your application with ease'
             subheading='Deploying an application with Qovery is as simple as pushing code with git'
-            image={null}
         />
         <LaindgCardsLinks alignSelf='center' py='40px' />
         <Stack spacing='60px' bg='#5E629D'>
@@ -203,7 +202,6 @@ const Page = () => (
                 py='100px'
                 heading='Explore the demos'
                 subheading='Deploying an application with Qovery is as simple as pushing code with git'
-                image={null}
                 cta={<LandingButton>Download The Demos Code</LandingButton>}
             />
             <DemosLinks alignSelf='center' py='40px' />

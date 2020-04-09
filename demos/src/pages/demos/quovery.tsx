@@ -16,8 +16,10 @@ import {
     SectionTitle,
     Button,
     EmailForm,
+    Countdown,
 } from 'react-landing/src'
 import { Box, Stack, Image } from '@chakra-ui/core'
+import { MailchimpForm } from 'react-landing/src/EmailForm'
 
 const Page = () => (
     <LandingProvider primary='white'>
@@ -38,7 +40,7 @@ const Page = () => (
                     <a>Community</a>,
                     <a>Enterprise</a>,
                     <a>Blog</a>,
-                    <Button px='10px'>Sign up</Button>
+                    <Button px='10px'>Sign up</Button>,
                 ]}
             />
             <Hero
@@ -62,11 +64,23 @@ const Page = () => (
                 ]}
             />
         </Stack>
-        <SectionTitle
+        <Countdown
+            // dark
+            // bg='gray.800'
+            py='60px'
+            heading='We will release soon'
+            subheading='Check out in a few days'
+            deadline={
+                new Date(
+                    new Date().getTime() + 1000 * 60 * 60 * 24 * 2 + 60 * 3,
+                )
+            }
+            cta={<MailchimpForm url=''/>}
+        />
+        {/* <SectionTitle
             heading='Deploy your application with ease'
             subheading='Deploying an application with Qovery is as simple as pushing code with git'
-            image={null}
-        />
+        /> */}
         <Feature
             heading='Fully integrated to git'
             subheading='Qovery is fully integrated to Github, Bitbucket and Gitlab. Once you have pushed your code, Qovery launches all the necessaries steps to make your application available online.'

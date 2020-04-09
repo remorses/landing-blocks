@@ -47,18 +47,23 @@ export const IndexCardsPaths = [
     },
     {
         icon: landingCards.Pricing,
-        title: '<Pricing/>',
+        title: 'Pricing',
         path: BASE_PATH + 'pricing',
     },
     {
         icon: landingCards.Tweets,
-        title: '<TestimonialsTweets/>',
+        title: 'TestimonialsTweets',
         path: BASE_PATH + 'testimonialsTweets',
     },
     {
         icon: landingCards.Banner,
         title: 'Banner',
         path: BASE_PATH + 'banner',
+    },
+    {
+        icon: landingCards.Countdown,
+        title: 'Countdown',
+        path: BASE_PATH + 'countdown',
     },
 ]
 

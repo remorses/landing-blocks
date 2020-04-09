@@ -1,6 +1,7 @@
 export { default as NavBar } from './NavBar'
 export { default as Banner } from './Banner'
 export { default as BlogPosts } from './BlogPosts'
+export { default as Countdown } from './Countdown'
 export { default as Faq } from './Faq'
 export { default as Feature } from './Feature'
 export { default as FeatureList } from './FeatureList'
