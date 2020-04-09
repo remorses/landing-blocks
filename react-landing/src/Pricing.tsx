@@ -5,19 +5,18 @@ import { useMyColorMode } from './hooks'
 import { darkStyles, PageContainer, PageContainerProps } from './layout'
 import { useColor } from './support'
 
-
 const featureLineMinH = '36px'
 const featuresWidth = '370px'
 const pricingHeaderMinH = '160px'
 const pricingNamesMinH = '60px'
 
-export interface PricingProps {
+export type PricingProps = {
     heading?: ReactNode
     subheading?: ReactNode
     animate?: boolean
     features: string[]
     prices: PriceColumnType[]
-}
+} & PageContainerProps
 
 export interface PriceColumnType {
     background?: string
@@ -35,7 +34,7 @@ export function Pricing({
     prices = [],
     animate = undefined,
     ...rest
-}: PageContainerProps & PricingProps) {
+}: PricingProps) {
     const belowPrice = '/ month'
     const { colorMode } = useMyColorMode(rest)
 

@@ -8,7 +8,7 @@ import { clone } from './support'
 import { Bullet } from './Bullet'
 
 
-export type SectionTitleProps = {
+export type CountdownProps = {
     heading?: ReactNode
     subheading?: ReactNode
     cta?: ReactNode
@@ -25,7 +25,7 @@ export function Countdown({
     cta = '' as ReactNode,
     animate = undefined,
     ...rest
-}: SectionTitleProps) {
+}: CountdownProps) {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft({ deadline }))
     useEffect(() => {
         setTimeout(() => {

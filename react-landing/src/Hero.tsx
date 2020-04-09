@@ -1,12 +1,21 @@
 import { Box, Stack } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer, Row } from './layout'
+import { Col, PageContainer, Row, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 import { clone } from './support'
 
+export type HeroProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    cta?: ReactNode
+    image?: ReactNode
+    bullet?: ReactNode
+    fingerprint?: ReactNode
+    animate?: any
+} & PageContainerProps
 
 export function Hero({
     heading,
@@ -14,10 +23,10 @@ export function Hero({
     cta,
     image,
     bullet = '',
-    animate = undefined,
     fingerprint = '',
+    animate = undefined,
     ...rest
-}) {
+}: HeroProps) {
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>

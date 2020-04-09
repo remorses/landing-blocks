@@ -1,10 +1,16 @@
 import { Stack } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer } from './layout'
+import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 
+export type TestimonialsLogosProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    testimonials: ReactNode[]
+    animate?: any
+} & PageContainerProps
 
 export function TestimonialsLogos({
     heading = '',
@@ -12,10 +18,10 @@ export function TestimonialsLogos({
     testimonials,
     animate = undefined,
     ...rest
-}) {
+}: TestimonialsLogosProps) {
     const { Faded } = useFaded({ animate })
     return (
-        <PageContainer spacing='20px'  py='20px' {...rest}>
+        <PageContainer spacing='20px' py='20px' {...rest}>
             {(heading || subheading) && (
                 <Stack align='center' spacing='20px'>
                     <Heading as='h2'>{heading}</Heading>

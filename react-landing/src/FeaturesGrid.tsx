@@ -61,7 +61,13 @@ export function FeaturesGrid({
     )
 }
 
-const Feature = ({ heading, subheading, icon, centerText, ...rest }) => {
+const Feature = ({
+    heading = '',
+    subheading = '',
+    icon = '',
+    centerText,
+    ...rest
+}: any) => {
     return (
         <Stack
             textAlign={centerText ? 'center' : 'left'}

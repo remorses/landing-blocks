@@ -1,9 +1,22 @@
 import { Box, Stack, Text } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer } from './layout'
+import { Col, PageContainer, PageContainerProps } from './layout'
 
+export type HowItWorksProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    steps: StepProps[]
+    animate?: any
+} & PageContainerProps
+
+export type StepProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    image?: ReactNode
+    animate?: any
+}
 
 export function HowItWorks({
     heading,
@@ -11,7 +24,7 @@ export function HowItWorks({
     steps,
     animate = undefined,
     ...rest
-}) {
+}: HowItWorksProps) {
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer py='120px' {...rest}>
@@ -41,10 +54,10 @@ export function HowItWorks({
                 {steps.map((step, i) => (
                     <Step
                         key={i}
-                        {...step}
                         animate={animate}
                         number={i + 1}
                         flip={i % 2 !== 0}
+                        {...step}
                     />
                 ))}
             </Stack>
@@ -60,7 +73,7 @@ const Step = ({
     flip = false,
     animate = undefined,
     ...rest
-}) => {
+}: any) => {
     const dir = flip ? 'row-reverse' : 'row'
     const { Faded } = useFaded({ animate })
     return (

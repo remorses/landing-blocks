@@ -1,9 +1,15 @@
 import { Box, Stack, Text } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
-import { PageContainer } from './layout'
+import { PageContainer, PageContainerProps } from './layout'
 
-export function TopBanner({ heading, cta, bullet, ...rest }) {
+export type TopBannerProps = {
+    heading?: ReactNode
+    cta?: ReactNode
+    bullet?: ReactNode
+} & PageContainerProps
+
+export function TopBanner({ heading = '', cta = '', bullet = '', ...rest }) {
     return (
         <PageContainer py='10px' {...rest}>
             <Stack

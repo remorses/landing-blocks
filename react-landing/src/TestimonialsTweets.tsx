@@ -1,24 +1,18 @@
 import { Box, Stack } from '@chakra-ui/core'
 import styled from '@emotion/styled'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer } from './layout'
+import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 
-
-const Unclickable = styled.div`
-    pointer-events: none;
-`
-
-function convertUrlToTweetId(url: string) {
-    if (url.startsWith('http')) {
-        const path = new URL(url).pathname
-        return path.split('/').reverse()[0]
-    }
-    return url
-}
+export type TestimonialsTweetsProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    tweets: string[]
+    animate?: any
+} & PageContainerProps
 
 export function TestimonialsTweets({
     heading = '',
@@ -26,7 +20,7 @@ export function TestimonialsTweets({
     tweets = [],
     animate = undefined,
     ...rest
-}) {
+}: TestimonialsTweetsProps) {
     tweets = tweets.map(convertUrlToTweetId)
     const { Faded } = useFaded({ animate })
     return (
@@ -70,4 +64,16 @@ export function TestimonialsTweets({
             </Col>
         </PageContainer>
     )
+}
+
+const Unclickable = styled.div`
+    pointer-events: none;
+`
+
+function convertUrlToTweetId(url: string) {
+    if (url.startsWith('http')) {
+        const path = new URL(url).pathname
+        return path.split('/').reverse()[0]
+    }
+    return url
 }
