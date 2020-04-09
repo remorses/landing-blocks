@@ -37,13 +37,13 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "sucrase": "^3.12.1",
-        "typescript": "^3.8.3"
+        "typescript": "^3.8.3",
+        "@types/react-mailchimp-subscribe": "^2.0.2"
     },
     "dependencies": {
         "@chakra-ui/core": "^0.6.1",
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
-        "@types/react-mailchimp-subscribe": "^2.0.2",
         "baby-i-am-faded": "0.0.7",
         "color-js": "^1.0.5",
         "emotion-theming": "^10.0.27",
@@ -51,7 +51,6 @@
         "lodash.get": "^4.4.2",
         "lodash.merge": "^4.6.2",
         "react-icons": "^3.9.0",
-        "react-intersection-observer": "^8.26.1",
         "react-mailchimp-subscribe": "^2.1.0",
         "react-script-hook": "^1.0.17",
         "react-twitter-embed": "^3.0.3"

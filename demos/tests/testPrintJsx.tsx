@@ -16,7 +16,6 @@ describe('reactElementToJSXString react-element-to-jsx-string', () => {
         var res = reactElementToJSXString(
             <LandingProvider primary='#FF593D'>
                 <NavBar
-                    xxx={CONST}
                     logo={<img width='120px' src='/datocms/logo.svg' />}
                     navs={[
                         <a>Why DatoCMS</a>,

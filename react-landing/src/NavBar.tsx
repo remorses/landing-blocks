@@ -13,13 +13,14 @@ import React, { cloneElement, ReactNode } from 'react'
 import { FiMenu as Menu } from 'react-icons/fi'
 import { useMyColorMode } from './hooks'
 import { darkStyles, PageContainer, Row, PageContainerProps } from './layout'
+import { clone } from './support'
 
 export type NavBarProps = {
     logo: ReactNode
     navs?: ReactNode[]
 } & PageContainerProps
 
-export const NavBar = ({ logo, navs = [], ...rest }) => {
+export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { colorMode } = useMyColorMode(rest)
     return (
@@ -37,7 +38,7 @@ export const NavBar = ({ logo, navs = [], ...rest }) => {
                 >
                     {navs.map((x, i) => (
                         <Box key={i} fontSize='16px' fontWeight='medium'>
-                            {cloneElement(x)}
+                            {clone(x)}
                         </Box>
                     ))}
                 </Stack>

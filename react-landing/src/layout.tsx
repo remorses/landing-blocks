@@ -1,7 +1,15 @@
-import { Box, DarkMode, Flex, FlexProps, Stack, StackProps, ThemeProvider, useTheme } from '@chakra-ui/core'
+import {
+    Box,
+    DarkMode,
+    Flex,
+    FlexProps,
+    Stack,
+    StackProps,
+    ThemeProvider,
+    useTheme,
+} from '@chakra-ui/core'
 import merge from 'lodash.merge'
 import React, { FC, forwardRef, Fragment, useMemo } from 'react'
-
 
 export const Col: FC<FlexProps> = forwardRef((props, ref) => {
     return <Flex ref={ref} flexDir='column' {...props} />
@@ -13,14 +21,6 @@ export const Row: FC<FlexProps> = forwardRef((props, ref) => {
 
 export const Spacer = ({ x = '0px', y = '0px' }) => {
     return <Box mt={y} ml={x} />
-}
-
-const Dark = ({ children }) => {
-    return (
-        <DarkMode>
-            <Box>{children}</Box>
-        </DarkMode>
-    )
 }
 
 export const darkStyles = {
@@ -138,6 +138,3 @@ export const FloatingElement: FC<{ floatingElement } & FlexProps> = forwardRef(
         )
     },
 )
-
-export { Divider } from '@chakra-ui/core'
-
