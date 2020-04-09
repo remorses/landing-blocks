@@ -11,7 +11,7 @@ export function HowItWorks({
     heading,
     subheading,
     steps,
-    animate = true,
+    animate = undefined,
     ...rest
 }) {
     const { Faded } = useFaded({ animate })
@@ -60,7 +60,7 @@ const Step = ({
     number,
     image,
     flip = false,
-    animate = true,
+    animate = undefined,
     ...rest
 }) => {
     const dir = flip ? 'row-reverse' : 'row'

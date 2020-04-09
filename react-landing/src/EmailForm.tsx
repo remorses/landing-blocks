@@ -17,7 +17,7 @@ export type EmailFormProps = {
 export function EmailForm({
     cta = 'Notify me',
     placeholder = 'Enter your email',
-    animate = true,
+    animate = undefined,
     fingerprint = '',
     value = '',
     onChange = console.log,

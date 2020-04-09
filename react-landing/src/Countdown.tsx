@@ -27,7 +27,7 @@ export function Countdown({
     deadline,
     bullet = '',
     cta = '' as ReactNode,
-    animate = true,
+    animate = undefined,
     ...rest
 }: SectionTitleProps) {
     const [timeLeft, setTimeLeft] = useState(calculateTimeLeft({ deadline }))

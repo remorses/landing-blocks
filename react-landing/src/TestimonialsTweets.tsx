@@ -20,7 +20,7 @@ export function TestimonialsTweets({
     heading = '',
     subheading = '',
     tweets = [],
-    animate = true,
+    animate = undefined,
     ...rest
 }) {
     tweets = tweets.map(convertUrlToTweetId)

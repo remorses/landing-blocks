@@ -17,7 +17,7 @@ export function Faqs({
     heading = '',
     subheading = '',
     faqs,
-    animate = true,
+    animate = undefined,
     ...rest
 }) {
     const { Faded } = useFaded({ animate })

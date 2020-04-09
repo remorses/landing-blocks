@@ -17,7 +17,7 @@ export function Hero({
     cta,
     image,
     bullet = '',
-    animate = true,
+    animate = undefined,
     fingerprint = '',
     ...rest
 }) {

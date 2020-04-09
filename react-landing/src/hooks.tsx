@@ -9,7 +9,7 @@ import { useMemo } from 'react'
 import { Fragment } from 'react'
 
 export function useFaded({
-    animate = true,
+    animate = undefined,
     triggerOnce = true,
     ...rest
 }): { Faded: ElementType } {

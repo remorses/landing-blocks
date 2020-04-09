@@ -10,7 +10,7 @@ export function TestimonialsLogos({
     heading = '',
     subheading = '',
     testimonials,
-    animate = true,
+    animate = undefined,
     ...rest
 }) {
     const { Faded } = useFaded({ animate })

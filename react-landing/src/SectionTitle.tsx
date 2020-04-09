@@ -20,7 +20,7 @@ export function SectionTitle({
     subheading = '',
     bullet = '',
     cta = '' as ReactNode,
-    animate = true,
+    animate = undefined,
     ...rest
 }: SectionTitleProps) {
     const { Faded } = useFaded({ animate })

@@ -18,7 +18,7 @@ export function FeaturesGrid({
     subheading = '',
     features,
     centerText = false,
-    animate = true,
+    animate = undefined,
     ...rest
 }) {
     const { Faded } = useFaded({ animate })

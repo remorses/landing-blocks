@@ -12,7 +12,7 @@ export function FeaturesList({
     subheading = '',
     features,
     centerText = false,
-    animate = true,
+    animate = undefined,
     ...rest
 }) {
     const { Faded } = useFaded({ animate })

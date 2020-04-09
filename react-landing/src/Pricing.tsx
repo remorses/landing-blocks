@@ -58,7 +58,7 @@ export function Pricing({
     subheading = 'Real value for your work life',
     features = [],
     prices = [],
-    animate = true,
+    animate = undefined,
     ...rest
 }: PageContainerProps & PricingProps) {
     const belowPrice = '/ month'

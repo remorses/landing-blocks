@@ -11,7 +11,7 @@ export function Feature({
     subheading,
     image = null as any,
     flip = false,
-    animate = true,
+    animate = undefined,
     direction = 'row',
     ...rest
 }) {

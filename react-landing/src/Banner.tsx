@@ -12,7 +12,7 @@ export function Banner({
     image = null as any,
     flip = false,
     fingerprint = '',
-    animate = true,
+    animate = undefined,
     ...props
 }) {
     const { bg = 'gray.100', background, backgroundColor, ...rest } = props
