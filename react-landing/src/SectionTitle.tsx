@@ -1,6 +1,6 @@
 import { Box, Stack, StackProps } from '@chakra-ui/core'
 import React, { ReactNode, cloneElement } from 'react'
-import { Row, SubHeading, Heading, Button, Bullet } from '.'
+import { Row, Subheading, Heading, Button, Bullet } from '.'
 import { PageContainer, Col, FloatingElement, PageContainerProps } from './layout'
 import { useFaded } from './hooks'
 
@@ -36,9 +36,9 @@ export function SectionTitle({
             >
                 <Bullet>{bullet}</Bullet>
                 <Heading fontSize='32px'>{heading}</Heading>
-                <SubHeading fontSize='18px'>
+                <Subheading fontSize='18px'>
                     {subheading}
-                </SubHeading>
+                </Subheading>
                 {cta && <Col justify='center' align='center'>{clone(cta)}</Col>}
             </Stack>
         </PageContainer>

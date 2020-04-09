@@ -20,7 +20,7 @@ import {
     Heading,
     Spacer,
     PageContainer,
-    SubHeading,
+    Subheading,
     Button,
     PageContainerProps,
 } from '.'

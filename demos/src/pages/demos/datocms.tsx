@@ -4,7 +4,7 @@ import {
     Hero,
     Heading,
     LandingProvider,
-    SubHeading,
+    Subheading,
     Divider,
     Col,
     Feature,

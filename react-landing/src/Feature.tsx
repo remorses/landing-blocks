@@ -3,6 +3,7 @@ import React, { FC } from 'react'
 import { Col, Row, Heading, Spacer, PageContainer } from '.'
 import { Text } from '@chakra-ui/core'
 import {  useFaded } from './hooks'
+import { Subheading } from './Subheading'
 
 
 export function Feature({
@@ -32,7 +33,7 @@ export function Feature({
                     >
                         {heading}
                     </Heading>
-                    <Text
+                    <Subheading
                         lineHeight='34px'
                         m={0}
                         opacity={0.6}
@@ -40,7 +41,7 @@ export function Feature({
                         fontSize='18px'
                     >
                         {subheading}
-                    </Text>
+                    </Subheading>
                 </Stack>
 
                 <Col as={Faded} align='center' flex='1' minW='300px'>

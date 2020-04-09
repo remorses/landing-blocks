@@ -8,7 +8,7 @@ import {
     AccordionPanel,
     AccordionIcon,
 } from '@chakra-ui/core'
-import { Row, SubHeading } from '.'
+import { Row, Subheading } from '.'
 import { PageContainer, Col } from './layout'
 import {  useFaded } from './hooks'
 
@@ -33,9 +33,9 @@ export function Faqs({
             >
                 {/* <Bullett>{bullett}</Bullett> */}
                 <Heading fontSize='32px'>{heading}</Heading>
-                <SubHeading fontSize='18px' maxW='700px'>
+                <Subheading fontSize='18px' maxW='700px'>
                     {subheading}
-                </SubHeading>
+                </Subheading>
                 <Accordion allowToggle minWidth='100%'>
                     {faqs.map((x) => (
                         <AccordionItem key={x.question} minWidth='100%'>

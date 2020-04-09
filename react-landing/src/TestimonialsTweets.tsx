@@ -1,7 +1,7 @@
 import React, { ReactNode, useContext } from 'react'
 import Color from 'color-js'
 import { Box, Text, Stack, Flex } from '@chakra-ui/core'
-import { Row, Heading, SubHeading } from '.'
+import { Row, Heading, Subheading } from '.'
 import { PageContainer, Col } from './layout'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 
@@ -30,7 +30,7 @@ export function TestimonialsTweets({
             {(heading || subheading) && (
                 <Stack align='center' spacing='20px'>
                     <Heading as='h2'>{heading}</Heading>
-                    <SubHeading>{subheading}</SubHeading>
+                    <Subheading>{subheading}</Subheading>
                 </Stack>
             )}
             <Col

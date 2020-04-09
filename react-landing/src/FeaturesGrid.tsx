@@ -8,7 +8,7 @@ import {
 import React, { FC } from 'react'
 import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
-import { SubHeading } from './SubHeading'
+import { Subheading } from './Subheading'
 import { PageContainer } from './layout'
 import {  useFaded } from './hooks'
 
@@ -34,7 +34,7 @@ export function FeaturesGrid({
                 <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
                     {heading}
                 </Heading>
-                <SubHeading>{subheading}</SubHeading>
+                <Subheading>{subheading}</Subheading>
             </Stack>
             <SimpleGrid
                 // minChildWidth='200px'

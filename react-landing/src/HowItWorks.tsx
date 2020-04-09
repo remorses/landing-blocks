@@ -2,7 +2,7 @@ import { Heading as H, HeadingProps, Stack, Box } from '@chakra-ui/core'
 import React, { FC } from 'react'
 import { Col, Row, Heading, Spacer } from '.'
 import { Text } from '@chakra-ui/core'
-import { SubHeading } from './SubHeading'
+import { Subheading } from './Subheading'
 import { PageContainer } from './layout'
 import {  useFaded } from './hooks'
 

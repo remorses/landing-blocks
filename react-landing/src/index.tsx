@@ -19,7 +19,7 @@ export { TestimonialsTweets } from './TestimonialsTweets'
 // atoms
 export { Heading } from './Heading'
 export { EmailForm, MailchimpForm } from './EmailForm'
-export { SubHeading } from './SubHeading'
+export { Subheading } from './Subheading'
 export { Button } from './Button'
 export { Bullet } from './Bullet'
 export { Divider } from './Divider'

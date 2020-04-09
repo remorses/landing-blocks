@@ -1,6 +1,6 @@
 import { Box, Stack, StackProps } from '@chakra-ui/core'
 import React, { ReactNode, cloneElement, useState, useEffect } from 'react'
-import { Row, SubHeading, Heading, Button, Bullet } from '.'
+import { Row, Subheading, Heading, Button, Bullet } from '.'
 import {
     PageContainer,
     Col,
@@ -50,7 +50,7 @@ export function Countdown({
             >
                 <Bullet>{bullet}</Bullet>
                 <Heading fontSize='32px'>{heading}</Heading>
-                <SubHeading fontSize='18px'>{subheading}</SubHeading>
+                <Subheading fontSize='18px'>{subheading}</Subheading>
                 <Stack spacing='20px' direction='row'>
                     {Object.keys(timeLeft).map((timeName, index) => {
                         const remaining: string = timeLeft[timeName]

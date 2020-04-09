@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import { Image, Flex, Box, Stack, Text, useColorMode } from '@chakra-ui/core'
-import { SubHeading } from './SubHeading'
+import { Subheading } from './Subheading'
 import { Heading } from './Heading'
 import { Button } from './Button'
 import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
@@ -45,9 +45,9 @@ export function Hero({
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                         <Heading fontSize='46px'>{heading}</Heading>
                     </Col>
-                    <SubHeading fontSize='22px' maxW='700px'>
+                    <Subheading fontSize='22px' maxW='700px'>
                         {subheading}
-                    </SubHeading>
+                    </Subheading>
                     <Stack align={['center', 'center', 'flex-start']}>
                         <Box>{clone(cta)}</Box>
                         {/* <Button
