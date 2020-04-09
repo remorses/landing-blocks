@@ -1,19 +1,28 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack, StackProps } from '@chakra-ui/core'
 import React, { ReactNode, cloneElement } from 'react'
-import { Row, SubHeading, Heading, Button } from '.'
-import { PageContainer, Col, FloatingElement } from './layout'
-import {  useFaded } from './hooks'
+import { Row, SubHeading, Heading, Button, Bullet } from '.'
+import { PageContainer, Col, FloatingElement, PageContainerProps } from './layout'
+import { useFaded } from './hooks'
 
 import { GradientRect } from './decorations'
 import { clone } from './support'
 
+export type SectionTitleProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    cta?: ReactNode
+    bullet?: ReactNode
+    animate?: any
+} & PageContainerProps
+
 export function SectionTitle({
-    heading,
-    subheading,
+    heading = '',
+    subheading = '',
+    bullet = '',
     cta = '' as ReactNode,
     animate = true,
     ...rest
-}) {
+}: SectionTitleProps) {
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>
@@ -25,12 +34,12 @@ export function SectionTitle({
                 align='center'
                 textAlign='center'
             >
-                {/* <Bullett>{bullett}</Bullett> */}
+                <Bullet>{bullet}</Bullet>
                 <Heading fontSize='32px'>{heading}</Heading>
-                <SubHeading fontSize='18px' maxW='700px'>
+                <SubHeading fontSize='18px'>
                     {subheading}
                 </SubHeading>
-                {cta && <Col align='center'>{clone(cta)}</Col>}
+                {cta && <Col justify='center' align='center'>{clone(cta)}</Col>}
             </Stack>
         </PageContainer>
     )

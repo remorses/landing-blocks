@@ -19,6 +19,7 @@ export function useFaded({
             threshold: 0.1,
             duration: 400,
             triggerOnce,
+            children: []
         }
         return (props) => {
             return <Faded {...defaultProps} {...props} />

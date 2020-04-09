@@ -13,6 +13,7 @@ export { TopBanner } from './TopBanner'
 export { Faqs } from './Faqs'
 export { Banner } from './Banner'
 export { Pricing } from './Pricing'
+export { Countdown } from './Countdown'
 export { TestimonialsTweets } from './TestimonialsTweets'
 
 // atoms
