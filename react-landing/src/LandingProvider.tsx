@@ -1,4 +1,4 @@
-import React, { FC, Fragment } from 'react'
+import React, { FC, Fragment, useMemo } from 'react'
 import {
     ColorModeProvider,
     CSSReset,
@@ -9,6 +9,7 @@ import {
     FlexProps,
 } from '@chakra-ui/core'
 import { useTheme } from 'emotion-theming'
+import { PropagatedThemeProvider } from './layout'
 
 export interface ThemeExtension extends DefaultTheme {
     colors: {
@@ -46,36 +47,28 @@ export function LandingProvider({
     children,
     ...rest
 }: LandingProviderProps) {
-    const existingTheme = useTheme()
-    // if (existingTheme && Object.keys(existingTheme).length) {
-    //     console.log(existingTheme)
-    //     return <Fragment>children</Fragment>
-    // }
-    const theme: ThemeExtension = {
-        ...defaultTheme,
+    const theme = {
         colors: {
-            ...defaultTheme.colors,
             primary,
             secondary,
         },
         sizes: {
-            ...defaultTheme.sizes,
             pageContainer: '1200px',
-        },
-        fonts: {
-            ...defaultTheme.fonts,
-            // body: 'Roboto',
-            // heading: 'Roboto',
         },
     }
     return (
-        <ThemeProvider theme={theme}>
+        <PropagatedThemeProvider theme={theme}>
             <ColorModeProvider value={dark ? 'dark' : 'light'}>
                 <CSSReset />
-                <Stack overflowX='hidden' fontFamily='Roboto, Arial' spacing='60px' {...rest}>
+                <Stack
+                    overflowX='hidden'
+                    fontFamily='Roboto, Arial'
+                    spacing='60px'
+                    {...rest}
+                >
                     {children}
                 </Stack>
             </ColorModeProvider>
-        </ThemeProvider>
+        </PropagatedThemeProvider>
     )
 }

@@ -5,9 +5,12 @@ import {
     DarkMode,
     Stack,
     StackProps,
+    useTheme,
+    ThemeProvider,
 } from '@chakra-ui/core'
 
-import React, { FC, forwardRef, Fragment } from 'react'
+import React, { FC, forwardRef, Fragment, useMemo } from 'react'
+import merge from 'lodash.merge'
 
 export const Col: FC<FlexProps> = forwardRef((props, ref) => {
     return <Flex ref={ref} flexDir='column' {...props} />
@@ -48,9 +51,18 @@ export const darkStyles = {
 //     }
 // }
 
+export function PropagatedThemeProvider({ theme, children }) {
+    const existingTheme = useTheme()
+    const merged = useMemo(() => {
+        return merge(existingTheme, theme)
+    }, [theme, existingTheme])
+    return <ThemeProvider theme={merged}>{children}</ThemeProvider>
+}
+
 export type PageContainerProps = {
     floatingElement?: any
     dark?: boolean
+    primary?: string
 } & StackProps
 
 export const PageContainer: FC<PageContainerProps> = forwardRef(
@@ -60,12 +72,18 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
             spacing = '0px',
             floatingElement = null,
             dark = false,
+            primary = undefined,
             ...props
         },
         ref,
     ) => {
         const Mode = dark ? DarkMode : Fragment
         const styles = dark ? darkStyles : {}
+        const theme = {
+            colors: {
+                primary,
+            },
+        }
         return (
             <Col
                 position='relative'
@@ -77,29 +95,31 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
                 {...props}
             >
                 <Mode>
-                    <Col
-                        position='absolute'
-                        width='100%'
-                        top='0'
-                        left='0'
-                        right='0'
-                        bottom='0'
-                        align='center'
-                        justify='center'
-                        // overflow='hidden'
-                    >
-                        {floatingElement}
-                    </Col>
-                    <Stack
-                        zIndex={1}
-                        px={['0px', '0px', '20px']}
-                        w='100%'
-                        maxW='pageContainer'
-                        spacing={spacing}
-                        flex='0'
-                    >
-                        {children}
-                    </Stack>
+                    <PropagatedThemeProvider theme={theme}>
+                        <Col
+                            position='absolute'
+                            width='100%'
+                            top='0'
+                            left='0'
+                            right='0'
+                            bottom='0'
+                            align='center'
+                            justify='center'
+                            // overflow='hidden'
+                        >
+                            {floatingElement}
+                        </Col>
+                        <Stack
+                            zIndex={1}
+                            px={['0px', '0px', '20px']}
+                            w='100%'
+                            maxW='pageContainer'
+                            spacing={spacing}
+                            flex='0'
+                        >
+                            {children}
+                        </Stack>
+                    </PropagatedThemeProvider>
                 </Mode>
             </Col>
         )
