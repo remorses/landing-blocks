@@ -1,10 +1,19 @@
 import { Box, Stack } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
-import { Col, PageContainer } from './layout'
+import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 import { removeUndefined } from './support'
 
+export type BannerProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    image?: ReactNode
+    cta?: ReactNode
+    flip?: boolean
+    fingerprint?: ReactNode
+    animate?: any
+} & PageContainerProps
 
 export function Banner({
     heading = '',
@@ -15,7 +24,7 @@ export function Banner({
     fingerprint = '',
     animate = undefined,
     ...props
-}) {
+}: BannerProps) {
     const { bg = 'gray.100', background, backgroundColor, ...rest } = props
     const bgs = removeUndefined({ bg, background, backgroundColor })
     const direction = flip ? 'row-reverse' : 'row'

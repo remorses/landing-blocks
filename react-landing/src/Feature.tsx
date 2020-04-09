@@ -1,10 +1,18 @@
 import { Stack } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer } from './layout'
+import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 
+export type FeatureProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    image?: ReactNode
+    cta?: ReactNode
+    flip?: boolean
+    animate?: any
+} & PageContainerProps
 
 export function Feature({
     heading,
@@ -14,7 +22,7 @@ export function Feature({
     animate = undefined,
     direction = 'row',
     ...rest
-}) {
+}: FeatureProps) {
     const dir: any = (direction) => (flip ? `${direction}-reverse` : direction)
     const { Faded } = useFaded({ animate })
     return (

@@ -1,11 +1,24 @@
-import { Stack, Text } from '@chakra-ui/core'
-import React from 'react'
+import { Stack, Text, StackProps } from '@chakra-ui/core'
+import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer } from './layout'
+import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 
+export type FeaturesListProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    centerText?: boolean
+    features: FeatureProps[]
+    animate?: any
+} & PageContainerProps
 
+type FeatureProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    icon?: ReactNode
+    centerText?: boolean
+} & StackProps
 
 export function FeaturesList({
     heading = '',
@@ -14,7 +27,7 @@ export function FeaturesList({
     centerText = false,
     animate = undefined,
     ...rest
-}) {
+}: FeaturesListProps) {
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>
@@ -57,7 +70,13 @@ export function FeaturesList({
     )
 }
 
-const Feature = ({ heading, subheading, icon, centerText, ...rest }) => {
+const Feature = ({
+    heading = '',
+    subheading = '',
+    icon = '',
+    centerText,
+    ...rest
+}: FeatureProps) => {
     return (
         <Stack
             textAlign={centerText ? 'center' : 'left'}

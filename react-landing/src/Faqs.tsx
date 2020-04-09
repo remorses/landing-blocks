@@ -1,9 +1,27 @@
-import { Accordion, AccordionHeader, AccordionIcon, AccordionItem, AccordionPanel, Box, Heading, Stack } from '@chakra-ui/core'
-import React from 'react'
+import {
+    Accordion,
+    AccordionHeader,
+    AccordionIcon,
+    AccordionItem,
+    AccordionPanel,
+    Box,
+    Heading,
+    Stack,
+} from '@chakra-ui/core'
+import React, { ReactNode } from 'react'
 import { useFaded } from './hooks'
-import { PageContainer } from './layout'
+import { PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 
+export type FaqsProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    faqs: {
+        question: ReactNode
+        answer: ReactNode
+    }[]
+    animate?: any
+} & PageContainerProps
 
 export function Faqs({
     heading = '',
@@ -11,7 +29,7 @@ export function Faqs({
     faqs,
     animate = undefined,
     ...rest
-}) {
+}: FaqsProps) {
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>
@@ -30,7 +48,7 @@ export function Faqs({
                 </Subheading>
                 <Accordion allowToggle minWidth='100%'>
                     {faqs.map((x) => (
-                        <AccordionItem key={x.question} minWidth='100%'>
+                        <AccordionItem key={x.question.toString()} minWidth='100%'>
                             <AccordionHeader minH='60px'>
                                 <Box
                                     fontSize='24px'

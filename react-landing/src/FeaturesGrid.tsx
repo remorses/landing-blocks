@@ -1,11 +1,21 @@
 import { SimpleGrid, Stack, Text } from '@chakra-ui/core'
-import React from 'react'
+import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer } from './layout'
+import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 
-
+export type FeaturesGridProps = {
+    heading?: ReactNode
+    subheading?: ReactNode
+    centerText?: boolean
+    features: {
+        heading?: ReactNode
+        subheading?: ReactNode
+        icon?: ReactNode
+    }[]
+    animate?: any
+} & PageContainerProps
 
 export function FeaturesGrid({
     heading = '',
@@ -14,7 +24,7 @@ export function FeaturesGrid({
     centerText = false,
     animate = undefined,
     ...rest
-}) {
+}: FeaturesGridProps) {
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer spacing='40px' py='40px' {...rest}>
