@@ -5,8 +5,12 @@ import { Row, Heading, Subheading } from '.'
 import { PageContainer, Col } from './layout'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 
-import {  useFaded } from './hooks'
+import { useFaded } from './hooks'
+import styled from '@emotion/styled'
 
+const Unclickable = styled.div`
+    pointer-events: none;
+`
 
 function convertUrlToTweetId(url: string) {
     if (url.startsWith('http')) {
@@ -47,18 +51,20 @@ export function TestimonialsTweets({
                         key={i}
                         // w={['100%', '100%', '320px']}
                     >
-                        <TwitterTweetEmbed
-                            placeholder={
-                                <Box
-                                    bg='#fff'
-                                    width='400px'
-                                    border='1px solid #ddd'
-                                    borderRadius='10px'
-                                    height='200px'
-                                />
-                            }
-                            tweetId={id}
-                        />
+                        <Unclickable>
+                            <TwitterTweetEmbed
+                                placeholder={
+                                    <Box
+                                        bg='#fff'
+                                        width='400px'
+                                        border='1px solid #ddd'
+                                        borderRadius='10px'
+                                        height='200px'
+                                    />
+                                }
+                                tweetId={id}
+                            />
+                        </Unclickable>
                     </Col>
                 ))}
             </Col>
