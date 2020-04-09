@@ -13,8 +13,7 @@
 
 
 
-TODO every pagecontainer shoud forward the partent theme and modify it for his children, so that you can change the buttons primary colors
-TODO animate property is given to the pagecontainer, the useFaded defaults to no animation, you can add animations to certain sections with animate prop
+
 TODO animate prop can be 'true' to use default animation, 'fadeDown', wobble, fast, slow, ...
 TODO add types to every section component, these are all PageCOntainerProps + { ... }
 TODO add more examples in docs pages, one example for

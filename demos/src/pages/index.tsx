@@ -134,6 +134,7 @@ const Page = () => (
             />
             <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
             <FeaturesList
+                animate
                 py='0'
                 heading=''
                 dark
