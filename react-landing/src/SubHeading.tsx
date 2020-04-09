@@ -1,6 +1,5 @@
 import React, { FC, Props, Fragment } from 'react'
 import { Heading as H, HeadingProps } from '@chakra-ui/core'
-import { Children } from 'react'
 
 export function Subheading(props: HeadingProps) {
     if (!props.children) {
@@ -17,3 +16,6 @@ export function Subheading(props: HeadingProps) {
         />
     )
 }
+
+
+
