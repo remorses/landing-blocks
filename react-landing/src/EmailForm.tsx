@@ -1,8 +1,8 @@
-import React, { useState, ReactNode } from 'react'
+import { Box, Input, Stack, StackProps, useColorMode } from '@chakra-ui/core'
+import React, { ReactNode, useState } from 'react'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
-import { PageContainer, Row, Col } from './layout'
-import { Stack, Input, Box, useColorMode, StackProps } from '@chakra-ui/core'
 import { Button } from './Button'
+import { Col } from './layout'
 
 export type EmailFormProps = {
     cta?: ReactNode

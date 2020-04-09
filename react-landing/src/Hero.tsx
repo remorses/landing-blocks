@@ -1,15 +1,12 @@
-import React, { Fragment } from 'react'
-import { Image, Flex, Box, Stack, Text, useColorMode } from '@chakra-ui/core'
-import { Subheading } from './Subheading'
-import { Heading } from './Heading'
-import { Button } from './Button'
-import { Col, Row, Spacer, PageContainer, FloatingElement } from './layout'
-import { useFaded } from './hooks'
-
-import { GradientRect } from './decorations'
-import { useColor, clone } from './support'
-import Color from 'color-js'
+import { Box, Stack } from '@chakra-ui/core'
+import React from 'react'
 import { Bullet } from './Bullet'
+import { Heading } from './Heading'
+import { useFaded } from './hooks'
+import { Col, PageContainer, Row } from './layout'
+import { Subheading } from './Subheading'
+import { clone } from './support'
+
 
 export function Hero({
     heading,

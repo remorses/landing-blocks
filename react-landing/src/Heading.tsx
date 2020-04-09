@@ -1,6 +1,5 @@
-import React, { FC, Fragment } from 'react'
-import { Heading as H, HeadingProps, } from '@chakra-ui/core'
-import { Children } from 'react'
+import { Heading as H } from '@chakra-ui/core'
+import React, { Fragment } from 'react'
 
 export function Heading(props) {
     if (!props.children) {

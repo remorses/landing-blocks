@@ -1,18 +1,10 @@
-import {
-    Heading as H,
-    HeadingProps,
-    Stack,
-    Box,
-    SimpleGrid,
-} from '@chakra-ui/core'
-import React, { FC } from 'react'
-
-import { Text } from '@chakra-ui/core'
-import { removeUndefined } from './support'
-import { PageContainer, Col } from './layout'
+import { SimpleGrid, Stack, Text } from '@chakra-ui/core'
+import React from 'react'
 import { Heading } from './Heading'
+import { useFaded } from './hooks'
+import { Col, PageContainer } from './layout'
 import { Subheading } from './Subheading'
-import {  useFaded } from './hooks'
+
 
 
 export function FeaturesGrid({

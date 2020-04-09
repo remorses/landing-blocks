@@ -1,16 +1,7 @@
-import {
-    Flex,
-    FlexProps,
-    Box,
-    DarkMode,
-    Stack,
-    StackProps,
-    useTheme,
-    ThemeProvider,
-} from '@chakra-ui/core'
-
-import React, { FC, forwardRef, Fragment, useMemo } from 'react'
+import { Box, DarkMode, Flex, FlexProps, Stack, StackProps, ThemeProvider, useTheme } from '@chakra-ui/core'
 import merge from 'lodash.merge'
+import React, { FC, forwardRef, Fragment, useMemo } from 'react'
+
 
 export const Col: FC<FlexProps> = forwardRef((props, ref) => {
     return <Flex ref={ref} flexDir='column' {...props} />
@@ -149,3 +140,4 @@ export const FloatingElement: FC<{ floatingElement } & FlexProps> = forwardRef(
 )
 
 export { Divider } from '@chakra-ui/core'
+

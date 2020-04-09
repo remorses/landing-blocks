@@ -1,14 +1,5 @@
-import React, { FC, Fragment, useMemo } from 'react'
-import {
-    ColorModeProvider,
-    CSSReset,
-    DefaultTheme,
-    Stack,
-    theme as defaultTheme,
-    ThemeProvider,
-    FlexProps,
-} from '@chakra-ui/core'
-import { useTheme } from 'emotion-theming'
+import { ColorModeProvider, CSSReset, DefaultTheme, FlexProps, Stack } from '@chakra-ui/core'
+import React from 'react'
 import { PropagatedThemeProvider } from './layout'
 
 export interface ThemeExtension extends DefaultTheme {

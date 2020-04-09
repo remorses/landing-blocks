@@ -1,9 +1,6 @@
-import React, { FC, Fragment, forwardRef } from 'react'
-import { Button as B, HeadingProps, ButtonProps } from '@chakra-ui/core'
-import { Children } from 'react'
-import get from 'lodash.get'
+import { Button as B, ButtonProps } from '@chakra-ui/core'
 import Color from 'color-js'
-import { useTheme } from 'emotion-theming'
+import React, { forwardRef, Fragment } from 'react'
 import { useColor } from './support'
 
 export const Button = forwardRef(

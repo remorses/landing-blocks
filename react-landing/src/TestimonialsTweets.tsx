@@ -1,14 +1,12 @@
-import React, { ReactNode, useContext } from 'react'
-import Color from 'color-js'
-import { Box, Text, Stack, Flex } from '@chakra-ui/core'
-import { removeUndefined } from './support'
-import { Heading } from './Heading'
-import { Subheading } from './Subheading'
-import { PageContainer, Col } from './layout'
-import { TwitterTweetEmbed } from 'react-twitter-embed'
-
-import { useFaded } from './hooks'
+import { Box, Stack } from '@chakra-ui/core'
 import styled from '@emotion/styled'
+import React from 'react'
+import { TwitterTweetEmbed } from 'react-twitter-embed'
+import { Heading } from './Heading'
+import { useFaded } from './hooks'
+import { Col, PageContainer } from './layout'
+import { Subheading } from './Subheading'
+
 
 const Unclickable = styled.div`
     pointer-events: none;

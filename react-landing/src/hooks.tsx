@@ -1,12 +1,8 @@
-import React from 'react'
-require('intersection-observer')
-
-import { useInView } from 'react-intersection-observer'
-import { useRef, ElementType } from 'react'
 import { useColorMode } from '@chakra-ui/core'
 import { Faded, FadedProps } from 'baby-i-am-faded'
-import { useMemo } from 'react'
-import { Fragment } from 'react'
+import React, { ElementType, useMemo } from 'react'
+require('intersection-observer')
+
 
 export function useFaded({
     animate = undefined,

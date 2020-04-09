@@ -2,7 +2,7 @@ import { Box, Stack, Text } from '@chakra-ui/core'
 import React from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { PageContainer, Col } from './layout'
+import { Col, PageContainer } from './layout'
 
 
 export function HowItWorks({

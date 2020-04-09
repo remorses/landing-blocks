@@ -1,19 +1,8 @@
-import { Box, Stack, useDisclosure, useColorMode } from '@chakra-ui/core'
-import {
-    Drawer,
-    DrawerBody,
-    DrawerFooter,
-    DrawerHeader,
-    DrawerOverlay,
-    DrawerContent,
-    DrawerCloseButton,
-    Button,
-} from '@chakra-ui/core'
+import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, Stack, useDisclosure } from '@chakra-ui/core'
 import React, { cloneElement } from 'react'
-import { Row } from './layout'
-import { PageContainer, darkStyles } from './layout'
 import { FiMenu as Menu } from 'react-icons/fi'
 import { useMyColorMode } from './hooks'
+import { darkStyles, PageContainer, Row } from './layout'
 
 export const NavBar = ({ logo, navs, ...rest }) => {
     const { isOpen, onOpen, onClose } = useDisclosure()

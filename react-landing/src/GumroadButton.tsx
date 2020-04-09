@@ -1,17 +1,5 @@
-import React, { FC, Fragment, forwardRef } from 'react'
-import {
-    Button as B,
-    HeadingProps,
-    ButtonProps,
-    Box,
-    useColorMode,
-    Link,
-} from '@chakra-ui/core'
-import { Children } from 'react'
-import get from 'lodash.get'
-import Color from 'color-js'
-import { useTheme } from 'emotion-theming'
-import { useColor } from './support'
+import { Link, useColorMode } from '@chakra-ui/core'
+import React, { forwardRef } from 'react'
 import useScript from 'react-script-hook'
 
 export type GumroadButtonProps = {
