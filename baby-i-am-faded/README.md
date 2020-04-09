@@ -12,8 +12,6 @@
     <br/>
 </div>
 
-
-
 ## Features
 
 -   🏷 **TypeScript support** - It is written in TypeScript to make it easier and faster to use the library
@@ -45,13 +43,38 @@ export const App = () => (
 )
 ```
 
-## With custom animation
+## With other animation
 
 ```tsx
 import { wobble } from 'baby-i-am-faded/esm/animations' // here are all the animate.css animaitons
 
 export const WithWobble = () => (
     <Faded animation={wobble}>
+        <Placeholder />
+        <Placeholder />
+        <Placeholder />
+        <Placeholder />
+    </Faded>
+)
+```
+
+## With custom animation
+
+```tsx
+import { keyframes } from '@emotion/core'
+
+const fadeInUp = keyframes`
+    from {
+        opacity: 0;
+        transform: translate3d(0px, -20px, 0px);
+    }
+    to {
+        opacity: 1;
+        transform: 'none';
+    }
+`
+export const WithWobble = () => (
+    <Faded animation={fadeInUp}>
         <Placeholder />
         <Placeholder />
         <Placeholder />
