@@ -1,4 +1,10 @@
-import { ColorModeProvider, CSSReset, DefaultTheme, FlexProps, Stack } from '@chakra-ui/core'
+import {
+    ColorModeProvider,
+    CSSReset,
+    DefaultTheme,
+    FlexProps,
+    Stack,
+} from '@chakra-ui/core'
 import React from 'react'
 import { PropagatedThemeProvider } from './layout'
 
@@ -16,6 +22,7 @@ export type LandingProviderProps = {
     dark?: boolean
     primary?: string
     secondary?: string
+    pageWidth?: string
     children?: any
 } & FlexProps
 
@@ -35,6 +42,7 @@ export function LandingProvider({
     dark = false,
     primary = 'purple',
     secondary = 'purple',
+    pageWidth = '1200px',
     children,
     ...rest
 }: LandingProviderProps) {
@@ -44,7 +52,7 @@ export function LandingProvider({
             secondary,
         },
         sizes: {
-            pageContainer: '1200px',
+            pageContainer: pageWidth,
         },
     }
     return (

@@ -54,6 +54,7 @@ export type PageContainerProps = {
     floatingElement?: any
     dark?: boolean
     primary?: string
+    pageWidth?: string
 } & StackProps
 
 export const PageContainer: FC<PageContainerProps> = forwardRef(
@@ -64,6 +65,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
             floatingElement = null,
             dark = false,
             primary = undefined,
+            pageWidth = undefined,
             ...props
         },
         ref,
@@ -73,6 +75,9 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         const theme = {
             colors: {
                 primary,
+            },
+            sizes: {
+                pageContainer: pageWidth,
             },
         }
         return (
