@@ -28,6 +28,7 @@ const Page = () => (
     <LandingProvider primary='#5A38AC'>
         <TopBanner
             dark
+            // pageWidth='100%'
             bg='#24114D'
             heading='Check out more landing pages, we have plenty'
             cta={<Link>Learn More</Link>}
@@ -35,6 +36,7 @@ const Page = () => (
         />
         <NavBar
             logo={<img width='140px' src='/dovetail/logo.svg' />}
+            // pageWidth='100%'
             navs={[
                 <a>Why DatoCMS</a>,
                 <a>Learn</a>,

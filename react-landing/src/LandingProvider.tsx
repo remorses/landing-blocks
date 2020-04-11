@@ -4,8 +4,9 @@ import {
     DefaultTheme,
     FlexProps,
     Stack,
+    ThemeProvider,
 } from '@chakra-ui/core'
-import React from 'react'
+import React, { useMemo } from 'react'
 import { PropagatedThemeProvider } from './layout'
 
 export interface ThemeExtension extends DefaultTheme {
@@ -46,15 +47,18 @@ export function LandingProvider({
     children,
     ...rest
 }: LandingProviderProps) {
-    const theme = {
-        colors: {
-            primary,
-            secondary,
-        },
-        sizes: {
-            pageContainer: pageWidth,
-        },
-    }
+    const theme = useMemo(
+        () => ({
+            colors: {
+                primary,
+                secondary,
+            },
+            sizes: {
+                pageContainer: pageWidth,
+            },
+        }),
+        [pageWidth, primary, secondary],
+    )
     return (
         <PropagatedThemeProvider theme={theme}>
             <ColorModeProvider value={dark ? 'dark' : 'light'}>

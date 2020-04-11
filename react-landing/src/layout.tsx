@@ -5,11 +5,12 @@ import {
     FlexProps,
     Stack,
     StackProps,
-    ThemeProvider,
     useTheme,
 } from '@chakra-ui/core'
-import merge from 'lodash.merge'
-import React, { FC, forwardRef, Fragment, useMemo } from 'react'
+import { ThemeProvider } from 'emotion-theming'
+import { ThemeContext } from '@emotion/core'
+import merge from 'lodash/fp/merge'
+import React, { FC, forwardRef, Fragment, useMemo, useContext } from 'react'
 
 export const Col: FC<FlexProps> = forwardRef((props, ref) => {
     return <Flex ref={ref} flexDir='column' {...props} />
@@ -44,6 +45,7 @@ export const darkStyles = {
 
 export function PropagatedThemeProvider({ theme, children }) {
     const existingTheme = useTheme()
+    // console.log({ existingTheme: existingTheme.sizes })
     const merged = useMemo(() => {
         return merge(existingTheme, theme)
     }, [theme, existingTheme])
@@ -72,14 +74,17 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
     ) => {
         const Mode = dark ? DarkMode : Fragment
         const styles = dark ? darkStyles : {}
-        const theme = {
-            colors: {
-                primary,
-            },
-            sizes: {
-                pageContainer: pageWidth,
-            },
-        }
+        const theme = useMemo(
+            () => ({
+                colors: {
+                    primary,
+                },
+                sizes: {
+                    pageContainer: pageWidth,
+                },
+            }),
+            [pageWidth, primary],
+        )
         return (
             <Col
                 position='relative'
@@ -90,8 +95,8 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
                 {...styles}
                 {...props}
             >
-                <Mode>
-                    <PropagatedThemeProvider theme={theme}>
+                <PropagatedThemeProvider theme={theme}>
+                    <Mode>
                         <Col
                             position='absolute'
                             width='100%'
@@ -115,8 +120,8 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
                         >
                             {children}
                         </Stack>
-                    </PropagatedThemeProvider>
-                </Mode>
+                    </Mode>
+                </PropagatedThemeProvider>
             </Col>
         )
     },
