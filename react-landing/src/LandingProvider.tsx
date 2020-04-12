@@ -54,7 +54,7 @@ export function LandingProvider({
     ...rest
 }: LandingProviderProps) {
     const { colorMode } = useColorMode()
-    dark = dark ?? colorMode === 'dark'
+    // dark = dark ?? colorMode === 'dark'
     const Mode = dark ? DarkMode : Fragment
     const theme = useMemo(
         () => ({
