@@ -64,7 +64,7 @@ export function LandingProvider({
             <ColorModeProvider value={dark ? 'dark' : 'light'}>
                 <CSSReset />
                 <Stack
-                    overflowX='hidden'
+                    // overflowX='hidden'
                     fontFamily='Roboto, Arial'
                     spacing='60px'
                     {...rest}

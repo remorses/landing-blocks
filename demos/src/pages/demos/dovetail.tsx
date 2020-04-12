@@ -35,6 +35,11 @@ const Page = () => (
             bullet='New'
         />
         <NavBar
+            position='sticky'
+            top={0}
+            bg='white'
+            zIndex={100}
+            borderBottom='1px solid #ddd'
             logo={<img width='140px' src='/dovetail/logo.svg' />}
             // pageWidth='100%'
             navs={[
