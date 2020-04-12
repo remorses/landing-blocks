@@ -5,8 +5,10 @@ import {
     FlexProps,
     Stack,
     ThemeProvider,
+    useColorMode,
+    DarkMode,
 } from '@chakra-ui/core'
-import React, { useMemo } from 'react'
+import React, { useMemo, Fragment } from 'react'
 import { PropagatedThemeProvider } from './layout'
 
 export interface ThemeExtension extends DefaultTheme {
@@ -42,7 +44,7 @@ should customize
 */
 
 export function LandingProvider({
-    dark = false,
+    dark = undefined,
     primary = 'purple',
     black = '#222',
     white = '#fff',
@@ -51,6 +53,9 @@ export function LandingProvider({
     children,
     ...rest
 }: LandingProviderProps) {
+    const { colorMode } = useColorMode()
+    dark = dark ?? colorMode === 'dark'
+    const Mode = dark ? DarkMode : Fragment
     const theme = useMemo(
         () => ({
             colors: {
@@ -67,7 +72,7 @@ export function LandingProvider({
     )
     return (
         <PropagatedThemeProvider theme={theme}>
-            <ColorModeProvider value={dark ? 'dark' : 'light'}>
+            <Mode>
                 <CSSReset />
                 <Stack
                     // overflowX='hidden'
@@ -78,7 +83,7 @@ export function LandingProvider({
                 >
                     {children}
                 </Stack>
-            </ColorModeProvider>
+            </Mode>
         </PropagatedThemeProvider>
     )
 }
