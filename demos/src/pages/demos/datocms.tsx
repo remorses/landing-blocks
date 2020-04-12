@@ -16,7 +16,13 @@ import {
     TestimonialsLogos,
     Faqs,
 } from 'react-landing/src'
-import {FaDropbox, FaLinkedin, FaGoogle, FaMedium, FaTwitch } from 'react-icons/fa'
+import {
+    FaDropbox,
+    FaLinkedin,
+    FaGoogle,
+    FaMedium,
+    FaTwitch,
+} from 'react-icons/fa'
 import { Button } from 'react-landing/src/Button'
 import { GradientRect } from 'react-landing/src/decorations'
 import { MailchimpForm } from 'react-landing/src/EmailForm'
@@ -25,7 +31,7 @@ import { MailchimpForm } from 'react-landing/src/EmailForm'
 // FF593D
 
 const Page = () => (
-    <LandingProvider primary='#FF593D'>
+    <LandingProvider black='#000' white='#fff' primary='#FF593D'>
         <NavBar
             logo={<img width='120px' src='/datocms/logo.svg' />}
             navs={[
@@ -49,7 +55,9 @@ const Page = () => (
             subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
             image={null}
             // cta={<Button>Try it now for free!</Button>}
-            cta={<MailchimpForm url='https://gmail.us20.list-manage.com/subscribe/post?u=7a2ded8c33767b20e6fe824c0&amp;id=e774d6f31e' />}
+            cta={
+                <MailchimpForm url='https://gmail.us20.list-manage.com/subscribe/post?u=7a2ded8c33767b20e6fe824c0&amp;id=e774d6f31e' />
+            }
             floatingElement={
                 <GradientRect maxW='pageContainer' distortion={0.3} />
             }

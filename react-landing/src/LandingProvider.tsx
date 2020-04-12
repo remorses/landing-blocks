@@ -22,6 +22,8 @@ export interface ThemeExtension extends DefaultTheme {
 export type LandingProviderProps = {
     dark?: boolean
     primary?: string
+    black?: string
+    white?: string
     secondary?: string
     pageWidth?: string
     children?: any
@@ -42,6 +44,8 @@ should customize
 export function LandingProvider({
     dark = false,
     primary = 'purple',
+    black = '#222',
+    white = '#fff',
     secondary = 'purple',
     pageWidth = '1200px',
     children,
@@ -52,6 +56,8 @@ export function LandingProvider({
             colors: {
                 primary,
                 secondary,
+                black,
+                white,
             },
             sizes: {
                 pageContainer: pageWidth,
@@ -67,6 +73,7 @@ export function LandingProvider({
                     // overflowX='hidden'
                     fontFamily='Roboto, Arial'
                     spacing='60px'
+                    color={dark ? 'white' : 'black'}
                     {...rest}
                 >
                     {children}
