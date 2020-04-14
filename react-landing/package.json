@@ -1,7 +1,7 @@
 {
     "name": "react-landing",
     "_": "[bump if react-landing]",
-    "version": "1.0.10",
+    "version": "1.0.11",
     "description": "",
     "main": "dist/index.js",
     "module": "esm/index.js",
