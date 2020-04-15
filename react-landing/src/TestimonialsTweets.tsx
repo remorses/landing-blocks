@@ -37,12 +37,14 @@ export function TestimonialsTweets({
                 justify='space-evenly'
                 align='center'
                 flexWrap='wrap'
+                minW='100%'
             >
                 {tweets.map((id, i) => (
                     <Col
                         mx='40px'
                         my='20px'
                         key={i}
+                        minW='260px'
                         // w={['100%', '100%', '320px']}
                     >
                         <Unclickable>

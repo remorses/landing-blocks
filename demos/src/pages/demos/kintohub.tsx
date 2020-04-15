@@ -23,7 +23,7 @@ const Page = () => (
         <Stack
             spacing='60px'
             background='linear-gradient(-225deg,#9a7ced,#9c78e4 24%,#7777f7 50%,#547eff 75%,#2a91cc)'
-            pb='100px'
+            pb='40px'
         >
             <NavBar
                 dark
@@ -41,13 +41,15 @@ const Page = () => (
             />
             <Hero
                 dark
+                pb='0px'
                 heading='Develop. Combine. Promote.'
                 subheading='KintoHub is an all-in-one platform to combine and deploy your backend services, websites, cron jobs, databases and everything your app needs in one place.'
                 image={
                     <Box mb='-100px' mr='-200px'>
                         <Image
                             alignSelf='flex-end'
-                            width='800px'
+                            minWidth='800px'
+                            maxWidth='800px'
                             src='/kintohub/hero.png'
                         />
                     </Box>

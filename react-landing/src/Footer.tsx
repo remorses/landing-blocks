@@ -44,7 +44,7 @@ export function Footer({
                 })}
             </Stack>
             <Box mt='60px' ml='60px' />
-            <Box width='auto' opacity={0.6} fontSize='subtext' alignSelf='center'>
+            <Box width='auto' opacity={0.7} fontSize='subtext' alignSelf='center'>
                 Copyright © {new Date().getFullYear()} {businessName}
             </Box>
         </PageContainer>
