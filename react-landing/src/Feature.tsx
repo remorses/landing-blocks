@@ -37,7 +37,7 @@ export function Feature({
                     <Heading
                         lineHeight='50px'
                         fontWeight='medium'
-                        fontSize='36px'
+                        fontSize='heading'
                     >
                         {heading}
                     </Heading>
@@ -46,7 +46,7 @@ export function Feature({
                         m={0}
                         opacity={0.6}
                         fontWeight='normal'
-                        fontSize='18px'
+                        fontSize='text'
                     >
                         {subheading}
                     </Subheading>

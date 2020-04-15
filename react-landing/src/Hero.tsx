@@ -51,7 +51,7 @@ export function Hero({
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                         <Heading fontSize='46px'>{heading}</Heading>
                     </Col>
-                    <Subheading fontSize='22px' maxW='700px'>
+                    <Subheading maxW='700px'>
                         {subheading}
                     </Subheading>
                     <Stack align={['center', 'center', 'flex-start']}>
@@ -62,7 +62,7 @@ export function Hero({
                             d='block'
                             width='auto'
                         ></Button> */}
-                        <Box opacity={0.8} fontSize='13px' lineHeight='26px'>
+                        <Box opacity={0.8} fontSize='subtext' lineHeight='26px'>
                             {fingerprint}
                         </Box>
                     </Stack>

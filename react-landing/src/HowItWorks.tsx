@@ -3,6 +3,7 @@ import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
 import { Col, PageContainer, PageContainerProps } from './layout'
+import { Subheading } from './Subheading'
 
 export type HowItWorksProps = {
     heading?: ReactNode
@@ -35,19 +36,23 @@ export function HowItWorks({
                 textAlign='center'
                 align='center'
             >
-                <Heading lineHeight='50px' fontWeight='medium' fontSize='36px'>
+                <Heading
+                    lineHeight='50px'
+                    fontWeight='medium'
+                    fontSize='heading'
+                >
                     {heading}
                 </Heading>
-                <Text
+                <Box
                     lineHeight='34px'
                     m={0}
                     opacity={0.6}
                     fontWeight='normal'
-                    fontSize='16px'
+                    fontSize='text'
                     maxW='500px'
                 >
                     {subheading}
-                </Text>
+                </Box>
             </Stack>
             <Box mt='60px' />
             <Stack spacing={12} flex='1'>
@@ -86,33 +91,33 @@ const Step = ({
             {...rest}
         >
             <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='20px'>
-                <Stack flexDir='row' align='flex-end'>
-                    <Heading opacity={0.14} lineHeight='70px' fontSize='80px'>
+                <Stack isInline flexDirection='row' align='flex-end'>
+                    <Box  lineHeight='60px' opacity={0.14} fontSize='80px'>
                         {number}
-                    </Heading>
+                    </Box>
                     <Heading
-                        opacity={0.2}
+                        opacity={0.3}
                         isTruncated
                         maxW='300px'
                         fontWeight='bold'
-                        fontSize='18px'
+                        fontSize='text'
                     >
-                        {'  .  ' + heading}
+                        {'. ' + heading}
                     </Heading>
                 </Stack>
                 <Box>
-                    <Heading fontSize='20px'>{heading}</Heading>
+                    <Subheading fontWeight='medium'>{heading}</Subheading>
                 </Box>
                 <Box>
-                    <Text
+                    <Box
                         fontWeight='normal'
                         m={0}
                         lineHeight='28px'
                         opacity={0.7}
-                        fontSize='16px'
+                        fontSize='text'
                     >
                         {subheading}
-                    </Text>
+                    </Box>
                 </Box>
             </Stack>
             <Col as={Faded} minW='300px' maxW='500px' flex='1'>

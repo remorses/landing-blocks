@@ -52,7 +52,7 @@ export function Banner({
                         <Heading
                             lineHeight='50px'
                             fontWeight='medium'
-                            fontSize='36px'
+                            fontSize='heading'
                         >
                             {heading}
                         </Heading>
@@ -61,7 +61,7 @@ export function Banner({
                             m={0}
                             opacity={0.6}
                             fontWeight='normal'
-                            fontSize='18px'
+                            fontSize='text'
                         >
                             {subheading}
                         </Subheading>
@@ -71,7 +71,7 @@ export function Banner({
                         {fingerprint && (
                             <Box
                                 opacity={0.6}
-                                fontSize='13px'
+                                fontSize='subtext'
                                 lineHeight='26px'
                             >
                                 {fingerprint}

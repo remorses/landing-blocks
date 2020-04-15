@@ -1,4 +1,4 @@
-import { Stack, Text, StackProps } from '@chakra-ui/core'
+import { Stack, Text, StackProps, Box } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
@@ -42,7 +42,7 @@ export function FeaturesList({
                     <Heading
                         lineHeight='50px'
                         fontWeight='medium'
-                        fontSize='36px'
+                        fontSize='heading'
                     >
                         {heading}
                     </Heading>
@@ -93,10 +93,10 @@ const Feature = ({
             >
                 {icon}
             </Col>
-            <Heading fontSize='20px'>{heading}</Heading>
-            <Text m={0} fontSize='18px' opacity={0.6} lineHeight='30px'>
+            <Heading fontSize='subheading'>{heading}</Heading>
+            <Box m={0} fontSize='text' opacity={0.6} lineHeight='30px'>
                 {subheading}
-            </Text>
+            </Box>
         </Stack>
     )
 }

@@ -37,7 +37,7 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                     display={['none', 'none', 'flex']}
                 >
                     {navs.map((x, i) => (
-                        <Box key={i} fontSize='16px' fontWeight='medium'>
+                        <Box key={i} fontSize='text' fontWeight='medium'>
                             {clone(x)}
                         </Box>
                     ))}
@@ -77,7 +77,7 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                                 {navs.map((x, i) => (
                                     <Box
                                         key={i}
-                                        fontSize='16px'
+                                        fontSize='text'
                                         fontWeight='medium'
                                     >
                                         {x}

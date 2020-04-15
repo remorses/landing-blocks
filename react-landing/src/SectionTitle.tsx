@@ -35,8 +35,8 @@ export function SectionTitle({
                 textAlign='center'
             >
                 <Bullet>{bullet}</Bullet>
-                <Heading fontSize='32px'>{heading}</Heading>
-                <Subheading fontSize='18px'>{subheading}</Subheading>
+                <Heading>{heading}</Heading>
+                <Subheading fontSize='text'>{subheading}</Subheading>
                 {cta && (
                     <Col justify='center' align='center'>
                         {clone(cta)}

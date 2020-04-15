@@ -7,7 +7,6 @@ import { Subheading } from './Subheading'
 import { clone } from './support'
 import { Bullet } from './Bullet'
 
-
 export type CountdownProps = {
     heading?: ReactNode
     subheading?: ReactNode
@@ -45,8 +44,8 @@ export function Countdown({
                 textAlign='center'
             >
                 <Bullet>{bullet}</Bullet>
-                <Heading fontSize='32px'>{heading}</Heading>
-                <Subheading fontSize='18px'>{subheading}</Subheading>
+                <Heading>{heading}</Heading>
+                <Subheading fontSize='text'>{subheading}</Subheading>
                 <Stack spacing='20px' direction='row'>
                     {Object.keys(timeLeft).map((timeName, index) => {
                         const remaining: string = timeLeft[timeName]
@@ -57,7 +56,7 @@ export function Countdown({
                                 direction='row'
                                 spacing='20px'
                                 key={timeName}
-                                // fontSize='18px'
+                                // fontSize='text'
                             >
                                 <Stack spacing='10px' align='center'>
                                     <Box>

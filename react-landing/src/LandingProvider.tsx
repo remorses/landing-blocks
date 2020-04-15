@@ -50,6 +50,7 @@ export function LandingProvider({
     white = '#fff',
     secondary = 'purple',
     pageWidth = '1200px',
+    fontFamily = 'Roboto, system-ui, sans-serif',
     children,
     ...rest
 }: LandingProviderProps) {
@@ -67,6 +68,16 @@ export function LandingProvider({
             sizes: {
                 pageContainer: pageWidth,
             },
+            fonts: {
+                body: fontFamily,
+                heading: fontFamily,
+            },
+            fontSizes: {
+                text: '18px',
+                heading: '36px',
+                subheading: '24px',
+                subtext: '14px',
+            },
         }),
         [pageWidth, primary, secondary],
     )
@@ -76,7 +87,7 @@ export function LandingProvider({
                 <CSSReset />
                 <Stack
                     // overflowX='hidden'
-                    fontFamily='Roboto, Arial'
+                    fontFamily={fontFamily}
                     spacing='60px'
                     color={dark ? 'white' : 'black'}
                     borderColor={dark ? 'rgba(255,255,255,.3)' : 'gray.300'}

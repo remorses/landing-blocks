@@ -30,7 +30,7 @@ export function EmailForm({
             width='auto'
             flexDirection={['column', null, 'row']}
             // align='center'
-            fontSize='16px'
+            fontSize='text'
             {...rest}
         >
             <Input

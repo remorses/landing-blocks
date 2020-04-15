@@ -20,14 +20,14 @@ export const Divider = ({ heading = '', ...rest }: DividerProps) => {
                     direction='row'
                 >
                     <Line />
-                    <Text
+                    <Box
                         fontWeight='medium'
-                        fontSize='14px'
+                        fontSize='subtext'
                         letterSpacing='3px'
                         textAlign='center'
                     >
                         {heading}
-                    </Text>
+                    </Box>
                     <Line />
                 </Stack>
             ) : (

@@ -1,4 +1,4 @@
-import { useColorMode, BoxProps } from '@chakra-ui/core'
+import { useColorMode, BoxProps, Box } from '@chakra-ui/core'
 import React, { Fragment } from 'react'
 import Color from 'color-js'
 import { Text } from '@chakra-ui/core'
@@ -11,7 +11,7 @@ export const Bullet = (props) => {
         return <Fragment />
     }
     return (
-        <Text
+        <Box
             w='fit-content'
             p='4px'
             px='6px'
@@ -22,7 +22,7 @@ export const Bullet = (props) => {
                 }[colorMode]
             }
             fontWeight='medium'
-            fontSize='13px'
+            fontSize='subtext'
             borderRadius='4px'
             {...props}
         />

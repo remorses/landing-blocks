@@ -24,7 +24,7 @@ export const Button = forwardRef(
                 width='auto'
                 color={color}
                 bg={bg}
-                fontSize='18px'
+                fontSize='text'
                 fontWeight='medium'
                 _hover={{ bg: color, color: bg as string }}
                 {...props}

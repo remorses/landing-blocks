@@ -9,9 +9,9 @@ export function Subheading(props: HeadingProps) {
         <H
             as='div'
             m={0}
-            opacity={0.6}
+            opacity={0.7}
             fontWeight='normal'
-            fontSize='18px'
+            fontSize='subheading'
             {...props}
         />
     )

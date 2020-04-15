@@ -27,26 +27,26 @@ export function Footer({
                             spacing='10px'
                             key={i}
                         >
-                            <Text
+                            <Box
                                 d='block'
-                                fontSize='16px'
+                                fontSize='text'
                                 fontWeight='medium'
                                 width='auto'
                                 textAlign='left'
                             >
                                 {k}
-                            </Text>
+                            </Box>
                             {columns[k].map((x, i) => (
-                                <Text key={i}>{x}</Text>
+                                <Box key={i}>{x}</Box>
                             ))}
                         </Stack>
                     )
                 })}
             </Stack>
             <Box mt='60px' ml='60px' />
-            <Text width='auto' opacity={0.6} fontSize='14px' alignSelf='center'>
+            <Box width='auto' opacity={0.6} fontSize='subtext' alignSelf='center'>
                 Copyright © {new Date().getFullYear()} {businessName}
-            </Text>
+            </Box>
         </PageContainer>
     )
 }

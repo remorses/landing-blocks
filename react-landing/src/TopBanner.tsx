@@ -25,7 +25,7 @@ export function TopBanner({
                 justify='center'
             >
                 <Bullet>{bullet}</Bullet>
-                <Text>{heading}</Text>
+                <Box>{heading}</Box>
                 <Box>{cta}</Box>
             </Stack>
         </PageContainer>

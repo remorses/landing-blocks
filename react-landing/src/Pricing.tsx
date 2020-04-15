@@ -4,6 +4,7 @@ import React, { Fragment, ReactNode } from 'react'
 import { useMyColorMode } from './hooks'
 import { darkStyles, PageContainer, PageContainerProps } from './layout'
 import { useColor } from './support'
+import { Heading } from './Heading'
 
 const featureLineMinH = '36px'
 const featuresWidth = '370px'
@@ -43,7 +44,7 @@ export function Pricing({
             <Stack flexDir={['column', null, 'row']}>
                 <Stack minW={featuresWidth} display={['none', null, 'flex']}>
                     <Stack minH={pricingNamesMinH}>
-                        <Box fontWeight='medium' fontSize='24px'>
+                        <Box fontWeight='medium' fontSize='subheading'>
                             {heading}
                         </Box>
                         <Box opacity={0.7}>{subheading}</Box>
@@ -60,7 +61,7 @@ export function Pricing({
                     </Stack>
                 </Stack>
                 <Stack align='center' display={['flex', null, 'none']}>
-                    <Box fontWeight='medium' fontSize='24px'>
+                    <Box fontWeight='medium' fontSize='subheading'>
                         {heading}
                     </Box>
                     <Box opacity={0.7}>{subheading}</Box>
@@ -117,7 +118,7 @@ function PriceColumn({
                 maxH={['none', null, pricingNamesMinH]}
             >
                 <Box fontWeight='medium'>{priceSection.heading}</Box>
-                <Box fontSize='14px' opacity={0.7}>
+                <Box fontSize='subtext' opacity={0.7}>
                     {priceSection.subheading}
                 </Box>
             </Stack>
@@ -138,10 +139,10 @@ function PriceColumn({
                         maxH={['none', null, pricingHeaderMinH]}
                         py='20px'
                     >
-                        <Box fontWeight='semibold' fontSize='38px'>
+                        <Heading textAlign='center' fontWeight='semibold' >
                             {priceSection.price}
-                        </Box>
-                        <Box fontSize='14px' opacity={0.7}>
+                        </Heading>
+                        <Box fontSize='subtext' opacity={0.7}>
                             {belowPrice}
                         </Box>
                         {/* <Stack fontWeight='medium' align='center' minH='30px'>

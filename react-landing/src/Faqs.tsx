@@ -42,8 +42,8 @@ export function Faqs({
                 minWidth='100%'
             >
                 {/* <Bullett>{bullett}</Bullett> */}
-                <Heading fontSize='32px'>{heading}</Heading>
-                <Subheading fontSize='18px' maxW='700px'>
+                <Heading >{heading}</Heading>
+                <Subheading fontSize='text' maxW='700px'>
                     {subheading}
                 </Subheading>
                 <Accordion allowToggle minWidth='100%'>
