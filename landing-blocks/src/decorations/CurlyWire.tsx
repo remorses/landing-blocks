@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import { Box, useColorMode, BoxProps } from '@chakra-ui/core'
-import { WireLong } from '../svgs/'
+import { WireLong } from '../svgs'
 import { useColor } from '../support'
 import Color from 'color-js'
 
