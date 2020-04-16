@@ -15,7 +15,7 @@ import {
     TestimonialsLogos,
     SectionTitle,
     Button,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 import { Box, Stack, Image } from '@chakra-ui/core'
 
 const Page = () => (

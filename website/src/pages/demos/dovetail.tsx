@@ -17,8 +17,8 @@ import {
     FeaturesGrid,
     TopBanner,
     Button,
-} from 'react-landing/src'
-import { GradientRect, CurlyWire } from 'react-landing/src/decorations'
+} from 'landing-blocks/src'
+import { GradientRect, CurlyWire } from 'landing-blocks/src/decorations'
 import { Box, Link } from '@chakra-ui/core'
 
 // background: linear-gradient(45deg,#e9fcff 30%,#fdf2ed 60%);

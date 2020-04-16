@@ -21,7 +21,7 @@ import {
     LandingProvider,
     PageContainer,
     Footer,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 import { MyNavBar } from './MyNavBar'
 import { MyFooter } from './MyFooter'
 import { MyBreadcrumbs } from './MyBreadcrumbs'

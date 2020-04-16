@@ -15,7 +15,7 @@ import {
     Button,
     TestimonialsLogos,
     SectionTitle,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 
 const Page = () => (
     <LandingProvider primary='#0524ED'>

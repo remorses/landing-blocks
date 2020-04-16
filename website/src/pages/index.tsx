@@ -18,7 +18,7 @@ import {
     TestimonialsLogos,
     SectionTitle,
     PageContainer,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 
 import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
 import * as landingCards from '../svgs/landingCards'

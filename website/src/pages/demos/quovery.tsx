@@ -17,9 +17,9 @@ import {
     Button,
     EmailForm,
     Countdown,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 import { Box, Stack, Image } from '@chakra-ui/core'
-import { MailchimpForm } from 'react-landing/src/EmailForm'
+import { MailchimpForm } from 'landing-blocks/src/EmailForm'
 
 const Page = () => (
     <LandingProvider primary='white'>

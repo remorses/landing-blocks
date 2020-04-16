@@ -1,6 +1,6 @@
 const path = require('path')
 const withTM = require('next-transpile-modules')([
-    'react-landing',
+    'landing-blocks',
     'chakra-ui-forms',
 ]) // pass the modules you would like to see transpiled
 const withMDX = require('@next/mdx')({

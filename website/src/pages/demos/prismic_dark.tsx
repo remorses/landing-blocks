@@ -13,7 +13,7 @@ import {
     NavBar,
     Footer,
     Button,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 
 const Page = () => (
     <LandingProvider dark>

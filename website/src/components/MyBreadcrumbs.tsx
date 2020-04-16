@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { Image, Link, Stack, Box } from '@chakra-ui/core'
-import { NavBar, Footer } from 'react-landing/src'
+import { NavBar, Footer } from 'landing-blocks/src'
 import { MyLink } from './MyLink'
 
 export function MyBreadcrumbs({ items, ...rest }) {

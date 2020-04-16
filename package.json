@@ -1,7 +1,7 @@
 {
     "private": true,
     "workspaces": [
-        "react-landing",
+        "landing-blocks",
         "website",
         "chakra-ui-forms",
         "baby-i-am-faded"

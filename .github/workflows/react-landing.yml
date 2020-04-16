@@ -1,11 +1,11 @@
-name: react-landing Npm Package
+name: landing-blocks Npm Package
 
 on:
   push:
     branches:
       - master
     paths:
-      - react-landing/**
+      - landing-blocks/**
 
 jobs:
   build:
@@ -17,16 +17,16 @@ jobs:
         with:
           node-version: 13
           registry-url: https://registry.npmjs.org/
-      - run: cd react-landing && yarn
+      - run: cd landing-blocks && yarn
       # - run: yarn test
-      - run: cd react-landing && yarn build
+      - run: cd landing-blocks && yarn build
       - name: Bump version
         uses: remorses/bump-version@js
         with:
-          version_file: react-landing/VERSION
-          prefix: react-landing
+          version_file: landing-blocks/VERSION
+          prefix: landing-blocks
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: cd react-landing && yarn publish
+      - run: cd landing-blocks && yarn publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.npm_token }}

@@ -7,7 +7,7 @@ import {
     Button,
     Hero,
     Heading,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 
 const CONST = 'dsfdsf'
 
@@ -69,7 +69,7 @@ describe('reactElementToJSXString react-element-to-jsx-string', () => {
             console.log(res)
             return null
         }
-        const {Hero} = require('react-landing')
+        const {Hero} = require('landing-blocks')
         const x = (
             <Comp>
                 <div>

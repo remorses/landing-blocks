@@ -16,8 +16,8 @@ import {
     Pricing,
     Button,
     EmailForm,
-} from 'react-landing/src'
-import { GradientCurtains, CurlyWire } from 'react-landing/src/decorations'
+} from 'landing-blocks/src'
+import { GradientCurtains, CurlyWire } from 'landing-blocks/src/decorations'
 import { FiCheck } from 'react-icons/fi'
 import { Box, Link } from '@chakra-ui/core'
 

@@ -15,7 +15,7 @@ import {
     SectionTitle,
     TestimonialsLogos,
     Faqs,
-} from 'react-landing/src'
+} from 'landing-blocks/src'
 import {
     FaDropbox,
     FaLinkedin,
@@ -23,9 +23,9 @@ import {
     FaMedium,
     FaTwitch,
 } from 'react-icons/fa'
-import { Button } from 'react-landing/src/Button'
-import { GradientRect } from 'react-landing/src/decorations'
-import { MailchimpForm } from 'react-landing/src/EmailForm'
+import { Button } from 'landing-blocks/src/Button'
+import { GradientRect } from 'landing-blocks/src/decorations'
+import { MailchimpForm } from 'landing-blocks/src/EmailForm'
 
 // background: linear-gradient(45deg,#e9fcff 30%,#fdf2ed 60%);
 // FF593D

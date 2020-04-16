@@ -1,6 +1,6 @@
 {
-    "name": "react-landing",
-    "_": "[bump if react-landing]",
+    "name": "landing-blocks",
+    "_": "[bump if landing-blocks]",
     "version": "1.0.12",
     "description": "",
     "main": "dist/index.js",

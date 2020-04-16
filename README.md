@@ -1,11 +1,11 @@
 <div align='center'>
   <br/>
     <br/>
-<h1> react-landing </h1>
+<h1> landing-blocks </h1>
     <br/>
     <br/>
     <br/>
-  <pre>npm i react-landing</pre>
+  <pre>npm i landing-blocks</pre>
 </div>
 
 

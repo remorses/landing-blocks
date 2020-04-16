@@ -1,6 +1,6 @@
 import NextLink from 'next/link'
 import { Image, Link } from '@chakra-ui/core'
-import { NavBar } from 'react-landing/src'
+import { NavBar } from 'landing-blocks/src'
 import { MyLink } from './MyLink'
 
 export function MyNavBar({ ...rest }) {
