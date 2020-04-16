@@ -5,11 +5,14 @@ import {
     FlexProps,
     Stack,
     ThemeProvider,
+    theme as chakraTheme,
     useColorMode,
     DarkMode,
 } from '@chakra-ui/core'
 import React, { useMemo, Fragment } from 'react'
 import { PropagatedThemeProvider } from './layout'
+import merge from 'lodash/fp/merge'
+import { css, Global } from '@emotion/core'
 
 export interface ThemeExtension extends DefaultTheme {
     colors: {
@@ -58,31 +61,33 @@ export function LandingProvider({
     const Mode = dark ? DarkMode : Fragment
     dark = dark ?? colorMode === 'dark'
     const theme = useMemo(
-        () => ({
-            colors: {
-                primary,
-                secondary,
-                black,
-                white,
-            },
-            sizes: {
-                pageContainer: pageWidth,
-            },
-            fonts: {
-                body: fontFamily,
-                heading: fontFamily,
-            },
-            fontSizes: {
-                text: '18px',
-                heading: '36px',
-                subheading: '24px',
-                subtext: '14px',
-            },
-        }),
+        () =>
+            merge(chakraTheme, {
+                colors: {
+                    primary,
+                    secondary,
+                    black,
+                    white,
+                },
+                sizes: {
+                    pageContainer: pageWidth,
+                },
+                fonts: {
+                    body: fontFamily,
+                    heading: fontFamily,
+                },
+                fontSizes: {
+                    text: '18px',
+                    heading: '36px',
+                    subheading: '24px',
+                    subtext: '14px',
+                },
+            }),
         [pageWidth, primary, secondary],
     )
     return (
         <PropagatedThemeProvider theme={theme}>
+            <Global styles={globalStyles} />
             <Mode>
                 <CSSReset />
                 <Stack
@@ -99,3 +104,18 @@ export function LandingProvider({
         </PropagatedThemeProvider>
     )
 }
+
+const globalStyles = css`
+    * {
+        box-sizing: border-box;
+    }
+    html {
+        overflow: hidden;
+        height: 100%;
+        scroll-behavior: smooth;
+    }
+    body {
+        height: 100%;
+        overflow: auto;
+    }
+`

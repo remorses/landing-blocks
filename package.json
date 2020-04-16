@@ -3,7 +3,6 @@
     "workspaces": [
         "landing-blocks",
         "website",
-        "chakra-ui-forms",
         "baby-i-am-faded"
     ],
     "scripts": {}

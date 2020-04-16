@@ -1,7 +1,6 @@
 import React from 'react'
 import NextLink from 'next/link'
 import Head from 'next/head'
-import { MyNavBar } from '../components/MyNavBar'
 import { FiGrid, FiImage, FiLayers, FiGlobe } from 'react-icons/fi'
 import {
     Hero,
@@ -18,12 +17,111 @@ import {
     TestimonialsLogos,
     SectionTitle,
     PageContainer,
+    NavBar,
 } from 'landing-blocks/src'
 
 import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
 import * as landingCards from '../svgs/landingCards'
+
 import { IndexCardsPaths, demosPaths } from '../constants'
-import { MyFooter } from '../components/MyFooter'
+import { MyFooter, HeadingLogoIcon, headingNavLinks } from './_app'
+
+const Page = () => (
+    <LandingProvider primary='white'>
+        <Stack spacing='60px' bg='#5E629D'>
+            <NavBar dark logo={<HeadingLogoIcon />} navs={[headingNavLinks]} />
+            <Hero
+                dark
+                bullet='SUPERPOWERS FOR DEVELOPER'
+                heading='Landing pages building blocks'
+                subheading='Build your landing page in miunutes using composable react components'
+                image={<img width='900px' src='/heroIllustration.svg' />}
+                cta={
+                    <NextLink href='#demos'>
+                        <LandingButton>SEE DEMOS</LandingButton>
+                    </NextLink>
+                }
+                fingerprint='Completely open source'
+            />
+            <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
+            <FeaturesList
+                animate
+                py='0'
+                heading=''
+                dark
+                features={[
+                    {
+                        heading: 'Composable',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiGrid}
+                            />
+                        ),
+                        subheading:
+                            'Multi-level approvals and custom spending limits.',
+                    },
+                    {
+                        heading: 'maintenable',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiLayers}
+                            />
+                        ),
+                        subheading:
+                            'Smart company cards, virtual cards, and invoice tracking.',
+                    },
+                    {
+                        heading: 'Open Source',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiGlobe}
+                            />
+                        ),
+                        subheading:
+                            'Real-time spending overview and receipt capture.',
+                    },
+                    {
+                        heading: 'Extensible',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiImage}
+                            />
+                        ),
+                        subheading:
+                            'Simplified bookkeeping and budget analysis.',
+                    },
+                ]}
+            />
+        </Stack>
+
+        <SectionTitle
+            id='components'
+            heading='Deploy your application with ease'
+            subheading='Deploying an application with Qovery is as simple as pushing code with git'
+        />
+        <LaindgCardsLinks alignSelf='center' py='40px' />
+        <Stack spacing='60px' bg='#5E629D'>
+            <SectionTitle
+                id='demos'
+                dark
+                py='100px'
+                heading='Explore the demos'
+                subheading='Deploying an application with Qovery is as simple as pushing code with git'
+                cta={<LandingButton>Download The Demos Code</LandingButton>}
+            />
+            <DemosLinks alignSelf='center' py='40px' />
+        </Stack>
+        <MyFooter />
+    </LandingProvider>
+)
 
 export const LaindgCardsLinks = ({ ...rest }) => {
     return (
@@ -114,101 +212,5 @@ const DemosLinks = ({ ...rest }) => {
         </PageContainer>
     )
 }
-
-const Page = () => (
-    <LandingProvider primary='white'>
-        <Stack spacing='60px' bg='#5E629D'>
-            <MyNavBar />
-            <Hero
-                dark
-                bullet='SUPERPOWERS FOR DEVELOPER'
-                heading='Landing pages building blocks'
-                subheading='Build your landing page in miunutes using composable react components'
-                image={<img width='900px' src='/heroIllustration.svg' />}
-                cta={
-                    <NextLink href='#demos'>
-                        <LandingButton>SEE DEMOS</LandingButton>
-                    </NextLink>
-                }
-                fingerprint='Completely open source'
-            />
-            <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
-            <FeaturesList
-                animate
-                py='0'
-                heading=''
-                dark
-                features={[
-                    {
-                        heading: 'Composable',
-                        icon: (
-                            <Box
-                                style={{ strokeWidth: '1px' }}
-                                size='60px'
-                                as={FiGrid}
-                            />
-                        ),
-                        subheading:
-                            'Multi-level approvals and custom spending limits.',
-                    },
-                    {
-                        heading: 'maintenable',
-                        icon: (
-                            <Box
-                                style={{ strokeWidth: '1px' }}
-                                size='60px'
-                                as={FiLayers}
-                            />
-                        ),
-                        subheading:
-                            'Smart company cards, virtual cards, and invoice tracking.',
-                    },
-                    {
-                        heading: 'Open Source',
-                        icon: (
-                            <Box
-                                style={{ strokeWidth: '1px' }}
-                                size='60px'
-                                as={FiGlobe}
-                            />
-                        ),
-                        subheading:
-                            'Real-time spending overview and receipt capture.',
-                    },
-                    {
-                        heading: 'Extensible',
-                        icon: (
-                            <Box
-                                style={{ strokeWidth: '1px' }}
-                                size='60px'
-                                as={FiImage}
-                            />
-                        ),
-                        subheading: 'Simplified bookkeeping and budget analysis.',
-                    },
-                ]}
-            />
-        </Stack>
-
-        <SectionTitle
-            id='components'
-            heading='Deploy your application with ease'
-            subheading='Deploying an application with Qovery is as simple as pushing code with git'
-        />
-        <LaindgCardsLinks alignSelf='center' py='40px' />
-        <Stack spacing='60px' bg='#5E629D'>
-            <SectionTitle
-                id='demos'
-                dark
-                py='100px'
-                heading='Explore the demos'
-                subheading='Deploying an application with Qovery is as simple as pushing code with git'
-                cta={<LandingButton>Download The Demos Code</LandingButton>}
-            />
-            <DemosLinks alignSelf='center' py='40px' />
-        </Stack>
-        <MyFooter />
-    </LandingProvider>
-)
 
 export default Page
