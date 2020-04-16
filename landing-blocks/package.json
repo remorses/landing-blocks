@@ -14,7 +14,8 @@
     },
     "files": [
         "/dist/*",
-        "/esm/*"
+        "/esm/*",
+        "/src/*"
     ],
     "scripts": {
         "test": "NODE_ENV=test mocha --colors --exit",
