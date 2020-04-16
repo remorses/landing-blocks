@@ -18,7 +18,7 @@ export default (props) => {
                 <ColorModeSwitch key='1' />,
             ]}
             playgroundScope={{ ...LandingStuff, ...LandingDecorationsStuff }}
-            headerLogo={<HeadingLogoIcon width='36px' opacity={0.6} />}
+            headerLogo={<HeadingLogoIcon width='36px' opacity={0.1} />}
             sidebarOrdering={{
                 // sidebar ordering
                 'index.mdx': null,
