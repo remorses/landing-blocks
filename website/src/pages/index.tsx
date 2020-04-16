@@ -25,6 +25,7 @@ import * as landingCards from '../svgs/landingCards'
 
 import { IndexCardsPaths, demosPaths } from '../constants'
 import { MyFooter, HeadingLogoIcon, headingNavLinks } from './_app'
+import { HeroIllustration } from '../svgs'
 
 const Page = () => (
     <LandingProvider primary='white'>
@@ -35,7 +36,7 @@ const Page = () => (
                 bullet='SUPERPOWERS FOR DEVELOPER'
                 heading='Landing pages building blocks'
                 subheading='Build your landing page in miunutes using composable react components'
-                image={<img width='900px' src='/heroIllustration.svg' />}
+                image={<Box width='700px' as={HeroIllustration} />}
                 cta={
                     <NextLink href='#demos'>
                         <LandingButton>SEE DEMOS</LandingButton>
