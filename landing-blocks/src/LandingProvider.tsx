@@ -92,6 +92,7 @@ export function LandingProvider({
                 <CSSReset />
                 <Stack
                     // overflowX='hidden'
+                    width='100%'
                     fontFamily={fontFamily}
                     spacing='60px'
                     color={dark ? 'white' : 'black'}
