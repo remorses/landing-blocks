@@ -2,12 +2,9 @@
     "private": true,
     "workspaces": [
         "react-landing",
-        "demos",
+        "website",
         "chakra-ui-forms",
         "baby-i-am-faded"
     ],
-    "scripts": {
-        "example": "cd demos && yarn dev",
-        "build": "cd demos && yarn build"
-    }
+    "scripts": {}
 }
