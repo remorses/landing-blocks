@@ -6,6 +6,7 @@ import { Link, Stack, Box, useColorMode } from '@chakra-ui/core'
 import { Footer } from 'landing-blocks/src'
 import { LogoIcon, LogoIconBlack } from '../svgs'
 import * as LandingStuff from 'landing-blocks/src'
+import * as chakra from '@chakra-ui/core'
 import * as LandingDecorationsStuff from 'landing-blocks/src/decorations'
 
 export default (props) => {
@@ -17,7 +18,11 @@ export default (props) => {
                 <GithubLink key='0' url='https://github.com/remorses/dokz' />,
                 <ColorModeSwitch key='1' />,
             ]}
-            playgroundScope={{ ...LandingStuff, ...LandingDecorationsStuff }}
+            playgroundScope={{
+                ...chakra,
+                ...LandingStuff,
+                ...LandingDecorationsStuff,
+            }}
             headerLogo={<HeadingLogoIcon width='36px' opacity={0.1} />}
             sidebarOrdering={{
                 // sidebar ordering

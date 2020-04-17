@@ -44,8 +44,8 @@
         "typescript": "^3.8.3"
     },
     "peerDependencies": {
-        "@emotion/core": "*",
-        "@chakra-ui/core": "0.x"
+        "@chakra-ui/core": "0.x",
+        "@emotion/core": "*"
     },
     "dependencies": {
         "@emotion/styled": "^10.0.27",
