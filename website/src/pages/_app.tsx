@@ -75,6 +75,7 @@ export function MyLink({ href, ...rest }) {
         <NextLink href={href} passHref {...rest}>
             <Link
                 fontWeight='medium'
+                // color='black'
                 // color={{ light: 'blue.400', dark: 'white' }[colorMode]}
                 {...rest}
             />

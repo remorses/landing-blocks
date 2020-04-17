@@ -53,6 +53,7 @@ const Page = () => (
                 animate
                 py='0'
                 heading=''
+                centerText
                 dark
                 features={[
                     {
@@ -112,7 +113,7 @@ const Page = () => (
             heading='Deploy your application with ease'
             subheading='Deploying an application with Qovery is as simple as pushing code with git'
         />
-        <LaindgCardsLinks alignSelf='center' py='40px' />
+        <LandingCardsLinks alignSelf='center' py='40px' />
         <Stack spacing='60px' bg='#5E629D'>
             <SectionTitle
                 id='demos'
@@ -128,7 +129,7 @@ const Page = () => (
     </LandingProvider>
 )
 
-export const LaindgCardsLinks = ({ ...rest }) => {
+export const LandingCardsLinks = ({ ...rest }) => {
     return (
         <PageContainer>
             <Stack
@@ -202,7 +203,7 @@ const DemosLinks = ({ ...rest }) => {
                                         <Image
                                             // border='1px solid'
                                             borderColor='gray.200'
-                                            borderRadius='2px'
+                                            borderRadius='8px'
                                             width='300px'
                                             shadow='md'
                                             src={imagePath}
