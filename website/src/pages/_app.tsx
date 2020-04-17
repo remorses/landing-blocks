@@ -33,7 +33,7 @@ export default (props) => {
                 demos: false,
                 docs: {
                     index: true,
-                    hero: true,
+                    components: { hero: true },
                 },
             }}
         >
