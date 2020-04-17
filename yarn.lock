@@ -4658,10 +4658,10 @@ doctrine@^3.0.0:
   dependencies:
     esutils "^2.0.2"
 
-dokz@^0.1.20:
-  version "0.1.20"
-  resolved "https://registry.yarnpkg.com/dokz/-/dokz-0.1.20.tgz#5d088bb8f655aba0727b2a01a9ef1d33f0e936d0"
-  integrity sha512-WNMrEMTJ8kFJ0tj11+UbqJbm3bKx/FxoTwtI9AFTsiY876zX5u5k/VfFYydNb2qbG9bJFXmI+QnH8T5RmuffZg==
+dokz@^0.2.5:
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/dokz/-/dokz-0.2.5.tgz#242f684434780b4466bc3bb71b9e1198d977348e"
+  integrity sha512-Eit0qHFwkorogV5BuWaNgs+D3z47uT8JAL8s7Aojg/qu1FOvhoRFS99FHDqAUcQjdGrzLvmEDCbYT44H7lkI2Q==
   dependencies:
     "@emotion/styled" "^10.0.27"
     "@mdx-js/loader" "^1.5.8"

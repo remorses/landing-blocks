@@ -4,7 +4,7 @@ import React from 'react'
 import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Link, Stack, Box, useColorMode } from '@chakra-ui/core'
 import { Footer } from 'landing-blocks/src'
-import { LogoIcon, LogoIconBlack } from '../svgs'
+import { LogoIcon, LogoIconBlack, LogoBlack, LogoWhite } from '../svgs'
 import * as LandingStuff from 'landing-blocks/src'
 import * as chakra from '@chakra-ui/core'
 import * as LandingDecorationsStuff from 'landing-blocks/src/decorations'
@@ -16,19 +16,24 @@ export default (props) => {
             headerItems={[
                 headingNavLinks,
                 <GithubLink key='0' url='https://github.com/remorses/dokz' />,
-                <ColorModeSwitch key='1' />,
+                // <ColorModeSwitch key='1' />,
             ]}
             playgroundScope={{
                 ...chakra,
                 ...LandingStuff,
                 ...LandingDecorationsStuff,
             }}
-            headerLogo={<HeadingLogoIcon width='36px' opacity={0.1} />}
+            headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
+            mdxComponents={{
+                img: (p) => <img {...p} />,
+                a: (p) => <p {...p} />,
+            }}
             sidebarOrdering={{
                 // sidebar ordering
-                'index.mdx': null,
+                'index.mdx': true,
+                demos: false,
                 Documents_Group: {
-                    'another.mdx': null,
+                    'another.mdx': true,
                 },
             }}
         >
@@ -69,6 +74,7 @@ export function MyLink({ href, ...rest }) {
     return (
         <NextLink href={href} passHref {...rest}>
             <Link
+                fontWeight='medium'
                 // color={{ light: 'blue.400', dark: 'white' }[colorMode]}
                 {...rest}
             />
@@ -95,13 +101,25 @@ function MyBreadcrumbs({ items, ...rest }) {
     )
 }
 
-export const HeadingLogoIcon = (props) => {
+export const HeadingLogoIcon = ({ long = false, ...props }) => {
     const { colorMode } = useColorMode()
+    const dark = colorMode === 'dark'
     return (
-        <Box
-            as={colorMode === 'dark' ? LogoIcon : LogoIconBlack}
-            width='36px'
-            {...props}
-        />
+        <NextLink href='/'>
+            <Box
+                cursor='pointer'
+                as={
+                    long
+                        ? dark
+                            ? LogoWhite
+                            : LogoBlack
+                        : dark
+                        ? LogoIcon
+                        : LogoIconBlack
+                }
+                width='36px'
+                {...props}
+            />
+        </NextLink>
     )
 }

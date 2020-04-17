@@ -30,7 +30,11 @@ import { HeroIllustration } from '../svgs'
 const Page = () => (
     <LandingProvider primary='white'>
         <Stack spacing='60px' bg='#5E629D'>
-            <NavBar dark logo={<HeadingLogoIcon />} navs={[headingNavLinks]} />
+            <NavBar
+                dark
+                logo={<HeadingLogoIcon width='220px' long />}
+                navs={[headingNavLinks]}
+            />
             <Hero
                 dark
                 bullet='SUPERPOWERS FOR DEVELOPER'
@@ -191,6 +195,7 @@ const DemosLinks = ({ ...rest }) => {
                                     borderRadius='8px'
                                     mx='40px'
                                     h='auto'
+                                    _hover={{ opacity: 0.6, shadow: 'xl' }}
                                     variant='unstyled'
                                 >
                                     <Stack spacing='20px'>

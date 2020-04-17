@@ -24,7 +24,7 @@ here is how you can use the Hero component
 
 The following example recreates the datoCMS landing page
 
-```jsx live=true
+```jsx live=true iframe=true
 <LandingProvider primary='#FF593D'>
     <NavBar
         logo={<img width='120px' src='/datocms/logo.svg' />}
@@ -58,7 +58,7 @@ The following example recreates the datoCMS landing page
 
 The following is the Qovery landing page recreated using just a bunch of components
 
-```jsx live=true
+```jsx live=true iframe=true
 <LandingProvider spacing='60px' primary='white' bg='#323452'>
     <NavBar
         dark
@@ -105,7 +105,7 @@ The following is the Qovery landing page recreated using just a bunch of compone
 
 The following example uses a sky background image
 
-```jsx live=true
+```jsx live=true iframe=true
 <LandingProvider
     backgroundImage='url("/rocketchat/sky.jpg")'
     backgroundRepeat='repeat'
@@ -150,7 +150,7 @@ The following example uses a sky background image
 
 The following example uses a cool gradient bg
 
-```jsx live=true
+```jsx live=true iframe=true
 <LandingProvider
     primary='white'
     spacing='60px'
@@ -186,10 +186,12 @@ The following example uses a cool gradient bg
             </Box>
         }
         cta={
-            <Stack direction='row' align='center'>
-                <Box>Deploy Free</Box>
-                <img src='/kintohub/arrow.svg' />
-            </Stack>
+            <Button>
+                <Stack direction='row' align='center'>
+                    <Box>Deploy Free</Box>
+                    <img src='/kintohub/arrow.svg' />
+                </Stack>
+            </Button>
         }
         fingerprint='No credit card required.'
     />
@@ -200,7 +202,7 @@ The following example uses a cool gradient bg
 
 The following example uses a cool gradient bg
 
-```jsx live=true
+```jsx live=true iframe=true
 <LandingProvider primary='#5A38AC'>
     <TopBanner
         dark
@@ -232,7 +234,7 @@ The following example uses a cool gradient bg
 
 The following example uses a cool gradient bg
 
-```jsx live=true
+```jsx live=true iframe=true
 <LandingProvider primary='#5D21D2'>
     <NavBar
         logo={<img width='200px' src='/spendesk/logo.svg' />}
