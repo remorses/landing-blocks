@@ -1,0 +1,104 @@
+---
+name: Introduction
+---
+
+import { Stack } from '@chakra-ui/core'
+import { HeadingLogoIcon } from '../_app'
+
+<Stack align='center' my='40px'>
+    <HeadingLogoIcon width='300px' long />
+</Stack>
+
+# Introduction
+
+Landing blocks is a react component library that packs together all the fundamental landing page components you need.
+These components are built to be self contained and super reusable in all your projects.
+Every component is built with these principles in mind:
+
+-   no global css needed: all components are styled using emotion
+-   completely customizable: you can create a lot of design variations, just look at the demos
+-   good defaults: the components look nice with little effort
+-   easily extendible: you can easily pass your own components to the blocks props
+-   themeable: every components uses the theme colors
+
+The available components follow the landing pages most common elements, you can explore them in the main page
+
+## How to use Landing Blocks
+
+First install it with its peer dependencies
+
+```sh
+npm install landing-blocks @emotion/core @emotion/styled emotion-theming @chakra-ui/core
+# or
+yarn add landing-blocks @emotion/core @emotion/styled emotion-theming @chakra-ui/core
+```
+
+You have to use the components under a `LandingProvider`, this component passes the customization and base theme to other landing blocks components
+
+```jsx
+import React from 'react'
+import Head from 'next/head'
+import { Hero, NavBar, EmailForm } from 'landing-blocks/src'
+const Page = () => (
+    <LandingProvider primary='#2D7FF9'>
+        <NavBar
+            logo={<img width='120px' src='/logo.svg' />}
+            navs={[
+                <a>Features</a>,
+                <a>Use Cases</a>,
+                <a>Pricing</a>,
+                <a>About Us</a>,
+                <a>Login</a>,
+            ]}
+        />
+        <Hero
+            heading='Create, your way'
+            subheading='Super cool subheading'
+            image={<img width='500px' src='/hero.png' />}
+            cta={<EmailForm />}
+            fingerprint='Already using xxx? Sign in'
+        />
+    </LandingProvider>
+)
+```
+
+## LandingProvider
+
+LandingProvider supports other props that let you customize the global look of your page
+
+Here is an example of customization you can do
+
+```jsx
+<LandingProvider
+    dark // make all text white, enable dark mode in all components
+    background='#000'
+    primary='#2D7FF9' // the primary color used in buttons, decoration elements, ...
+    black='#222' // the body text color
+    white='#ffe' // the body text color when in dark mode
+    fontFamily='Roboto'
+    pageWidth='1000px'
+>
+    <NavBar navs={[]} />
+</LandingProvider>
+```
+
+## the Dark prop
+
+The dark prop changes the color of all the text element form `black` to `white` and sets the chakra-ui ColorMode to `dark`
+
+You can use this prop when your background is dark and you need to invert the text and other components color
+
+Every Landing Block has the same dark prop that does the same thing
+
+```jsx
+<LandingProvider dark>
+    <NavBar
+        bg='black'
+        dark // inverts text color
+    />
+    <Hero
+        bg='blue'
+        dark
+    />
+</LandingProvider>
+```

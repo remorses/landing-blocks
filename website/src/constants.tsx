@@ -1,6 +1,6 @@
 import * as landingCards from './svgs/landingCards'
 
-const BASE_PATH = '/docs/'
+const BASE_PATH = '/docs/components/'
 export const IndexCardsPaths = [
     { icon: landingCards.Hero, title: 'Hero', path: BASE_PATH + 'hero' },
     {

@@ -30,10 +30,10 @@ export default (props) => {
             }}
             sidebarOrdering={{
                 // sidebar ordering
-                'index.mdx': true,
                 demos: false,
-                Documents_Group: {
-                    'another.mdx': true,
+                docs: {
+                    index: true,
+                    hero: true,
                 },
             }}
         >
