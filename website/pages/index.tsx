@@ -45,7 +45,7 @@ const Page = () => (
                 bullet='NOW AVAILABLE ON NPM'
                 heading={<h1>Landing pages building blocks</h1>}
                 subheading='Build your landing page in minutes using composable react components'
-                image={<Box width='700px' as={HeroIllustration} />}
+                image={<Box mr={['0', null, '-100px']} width='800px' as={HeroIllustration} />}
                 cta={
                     <NextLink href='/docs'>
                         <LandingButton>Read The Docs</LandingButton>
