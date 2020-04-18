@@ -2,8 +2,7 @@
     "private": true,
     "workspaces": [
         "landing-blocks",
-        "website",
-        "baby-i-am-faded"
+        "website"
     ],
     "scripts": {}
 }
