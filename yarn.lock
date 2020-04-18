@@ -1514,6 +1514,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.12.35.tgz#1e61b226c14380f4384f70cfe49a65c2c553ad2b"
   integrity sha512-ASYsaKecA7TUsDrqIGPNk3JeEox0z/0XR/WsJJ8BIX/9+SkMSImQXKWfU/yBrSyc7ZSE/NPqLu36Nur0miCFfQ==
 
+"@types/node@^13.13.0":
+  version "13.13.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.0.tgz#30d2d09f623fe32cde9cb582c7a6eda2788ce4a8"
+  integrity sha512-WE4IOAC6r/yBZss1oQGM5zs2D7RuKR6Q+w+X2SouPofnWn+LbCqClRyhO3ZE7Ix8nmFgo/oVuuE01cJT2XB13A==
+
 "@types/parse-json@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -3102,10 +3107,10 @@ directory-tree@^2.2.4:
   resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-2.2.4.tgz#6d5bd7d82e48378e256a1e87b678a43c50076e2e"
   integrity sha512-2N43msQptKbi3WMfIs+U09yi6bfyKL+MWyj5VMj8t1F/Tx04bt1cn/EEIU3o1JBltlJk7NQnzOEuTNa/KQvbWA==
 
-dokz@^0.2.5:
-  version "0.2.5"
-  resolved "https://registry.yarnpkg.com/dokz/-/dokz-0.2.5.tgz#242f684434780b4466bc3bb71b9e1198d977348e"
-  integrity sha512-Eit0qHFwkorogV5BuWaNgs+D3z47uT8JAL8s7Aojg/qu1FOvhoRFS99FHDqAUcQjdGrzLvmEDCbYT44H7lkI2Q==
+dokz@^0.2.9:
+  version "0.2.9"
+  resolved "https://registry.yarnpkg.com/dokz/-/dokz-0.2.9.tgz#855ecef7dafde021114bc36b80483aa95919cd11"
+  integrity sha512-Fl/kLy1klkyocwZSJuW+RnAJDg19Qb13uFvq90CwYsc39KIDB1uN1Qgbo7zGIQoGkYAcvKB34cH08Gz70jFoBw==
   dependencies:
     "@emotion/styled" "^10.0.27"
     "@mdx-js/loader" "^1.5.8"
@@ -6144,7 +6149,7 @@ react-frame-component@^4.1.1:
   resolved "https://registry.yarnpkg.com/react-frame-component/-/react-frame-component-4.1.1.tgz#ea8f7c518ef6b5ad72146dd1f648752369826894"
   integrity sha512-NfJp90AvYA1R6+uSYafQ+n+UM2HjHqi4WGHeprVXa6quU9d8o6ZFRzQ36uemY82dlkZFzf2jigFx6E4UzNFajA==
 
-react-icons@^3.9.0:
+react-icons@^3.9.0, react-icons@latest:
   version "3.9.0"
   resolved "https://registry.yarnpkg.com/react-icons/-/react-icons-3.9.0.tgz#89a00f20a0e02e6bfd899977eaf46eb4624239d5"
   integrity sha512-gKbYKR+4QsD3PmIHLAM9TDDpnaTsr3XZeK1NTAb6WQQ+gxEdJ0xuCgLq0pxXdS7Utg2AIpcVhM1ut/jlDhcyNg==
