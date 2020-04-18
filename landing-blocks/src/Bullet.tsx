@@ -13,7 +13,7 @@ export const Bullet = (props) => {
     return (
         <Box
             w='fit-content'
-            p='4px'
+            py='2px'
             px='6px'
             bg={
                 {

@@ -49,7 +49,7 @@
     },
     "dependencies": {
         "@emotion/styled": "^10.0.27",
-        "baby-i-am-faded": "0.0.7",
+        "baby-i-am-faded": "^0.0.12",
         "color-js": "^1.0.5",
         "emotion-theming": "^10.0.27",
         "intersection-observer": "^0.7.0",
