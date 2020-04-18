@@ -24,6 +24,7 @@ export function EmailForm({
     onSubmit = console.log,
     ...rest
 }: EmailFormProps) {
+    const { colorMode } = useColorMode()
     return (
         <Stack
             justify='flex-start'
@@ -38,7 +39,11 @@ export function EmailForm({
                 onChange={(e) => onChange(e.target.value)}
                 value={value}
                 shadow='sm'
-                bg='rgba(255,255,255, .09)'
+                bg={{
+                    dark: 'rgba(255,255,255, .2)',
+                    // light: 'rgba(0,0,0,.03)',
+                    light: '#fff',
+                }[colorMode]}
                 minW='250px'
                 minH='40px'
                 type='email'

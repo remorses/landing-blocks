@@ -18,8 +18,10 @@ import {
     SectionTitle,
     PageContainer,
     NavBar,
+    Banner,
+    MailchimpForm,
 } from 'landing-blocks/src'
-
+import { Faded } from 'baby-i-am-faded'
 import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
 import * as landingCards from '../svgs/landingCards'
 
@@ -27,9 +29,11 @@ import { IndexCardsPaths, demosPaths } from '../constants'
 import { MyFooter, HeadingLogoIcon, headingNavLinks } from './_app'
 import { HeroIllustration } from '../svgs'
 
+const BG = '#5E629D'
+
 const Page = () => (
     <LandingProvider primary='white'>
-        <Stack spacing='60px' bg='#5E629D'>
+        <Stack spacing='60px' bg={BG}>
             <NavBar
                 dark
                 logo={<HeadingLogoIcon width='220px' long />}
@@ -37,18 +41,21 @@ const Page = () => (
             />
             <Hero
                 dark
-                bullet='SUPERPOWERS FOR DEVELOPER'
-                heading='Landing pages building blocks'
-                subheading='Build your landing page in miunutes using composable react components'
+                bullet='NOW AVAILABLE ON NPM'
+                heading={<h1>Landing pages building blocks</h1>}
+                subheading='Build your landing page in minutes using composable react components'
                 image={<Box width='700px' as={HeroIllustration} />}
                 cta={
-                    <NextLink href='#demos'>
-                        <LandingButton>SEE DEMOS</LandingButton>
+                    <NextLink href='/docs'>
+                        <LandingButton>Read The Docs</LandingButton>
                     </NextLink>
                 }
                 fingerprint='Completely open source'
             />
-            <Divider heading='DEVELOPERS FROM GREAT COMPANIES TRUST US' dark />
+            <Divider
+                heading='THE BEST WAY TO BUILD MODERN LANDING PAGES'
+                dark
+            />
             <FeaturesList
                 animate
                 py='0'
@@ -69,7 +76,7 @@ const Page = () => (
                             'Multi-level approvals and custom spending limits.',
                     },
                     {
-                        heading: 'maintenable',
+                        heading: 'Maintainable',
                         icon: (
                             <Box
                                 style={{ strokeWidth: '1px' }}
@@ -79,18 +86,6 @@ const Page = () => (
                         ),
                         subheading:
                             'Smart company cards, virtual cards, and invoice tracking.',
-                    },
-                    {
-                        heading: 'Open Source',
-                        icon: (
-                            <Box
-                                style={{ strokeWidth: '1px' }}
-                                size='60px'
-                                as={FiGlobe}
-                            />
-                        ),
-                        subheading:
-                            'Real-time spending overview and receipt capture.',
                     },
                     {
                         heading: 'Extensible',
@@ -104,27 +99,64 @@ const Page = () => (
                         subheading:
                             'Simplified bookkeeping and budget analysis.',
                     },
+                    {
+                        heading: 'Open Source',
+                        icon: (
+                            <Box
+                                style={{ strokeWidth: '1px' }}
+                                size='60px'
+                                as={FiGlobe}
+                            />
+                        ),
+                        subheading:
+                            'Real-time spending overview and receipt capture.',
+                    },
                 ]}
             />
         </Stack>
 
         <SectionTitle
+            primary={BG}
             id='components'
-            heading='Deploy your application with ease'
-            subheading='Deploying an application with Qovery is as simple as pushing code with git'
+            heading={
+                <h2>
+                    One block for every section <br /> of your landing page
+                </h2>
+            }
+            subheading='Completely customizable, reusable and pretty by default'
+            cta={
+                <NextLink href='/docs'>
+                    <LandingButton>Read The Docs</LandingButton>
+                </NextLink>
+            }
         />
         <LandingCardsLinks alignSelf='center' py='40px' />
-        <Stack spacing='60px' bg='#5E629D'>
+        <Stack spacing='30px' bg={BG}>
             <SectionTitle
                 id='demos'
                 dark
-                py='100px'
-                heading='Explore the demos'
-                subheading='Deploying an application with Qovery is as simple as pushing code with git'
-                cta={<LandingButton>Download The Demos Code</LandingButton>}
+                py='40px'
+                pt='100px'
+                heading={
+                    <h2>
+                        Look at some websites built <br />
+                        with Landing Blocks
+                    </h2>
+                }
+                subheading='Every block is completely customizable, you can build any landing page import some components'
+                // cta={<LandingButton>Download The Demos Code</LandingButton>}
             />
             <DemosLinks alignSelf='center' py='40px' />
         </Stack>
+        <Banner
+            dark
+            bg='gray.900'
+            heading='Get notified when new components get published'
+            subheading='You will get them first'
+            cta={<MailchimpForm url='' />}
+            fingerprint='No spam, promised'
+            // bg={BG}
+        />
         <MyFooter />
     </LandingProvider>
 )
@@ -177,7 +209,7 @@ export const LandingCardsLinks = ({ ...rest }) => {
 }
 const DemosLinks = ({ ...rest }) => {
     return (
-        <PageContainer>
+        <PageContainer py='0px' {...rest}>
             <Stack
                 width='auto'
                 justify='center'
@@ -185,7 +217,6 @@ const DemosLinks = ({ ...rest }) => {
                 flexDirection='row'
                 flexWrap='wrap'
                 spacing='40px'
-                {...rest}
             >
                 {demosPaths.map((k) => {
                     const { imagePath, urlPath } = k
