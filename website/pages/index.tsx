@@ -30,10 +30,11 @@ import { MyFooter, HeadingLogoIcon, headingNavLinks } from './_app'
 import { HeroIllustration } from '../svgs'
 
 const BG = '#5E629D'
+const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
 
 const Page = () => (
     <LandingProvider primary='white'>
-        <Stack spacing='60px' bg={BG}>
+        <Stack spacing='60px' bg={BG} backgroundImage={BG_IMG}>
             <NavBar
                 dark
                 logo={<HeadingLogoIcon width='220px' long />}
@@ -131,7 +132,7 @@ const Page = () => (
             }
         />
         <LandingCardsLinks alignSelf='center' py='40px' />
-        <Stack spacing='30px' bg={BG}>
+        <Stack spacing='30px' bg={BG} backgroundImage={BG_IMG}>
             <SectionTitle
                 id='demos'
                 dark
