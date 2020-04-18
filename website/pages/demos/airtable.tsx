@@ -23,7 +23,7 @@ import { Link, Box } from '@chakra-ui/core'
 import { FiCheck } from 'react-icons/fi'
 
 const Page = () => (
-    <LandingProvider primary='#2D7FF9'>
+    <LandingProvider primary='#2D7FF9' >
         <NavBar
             logo={<img width='120px' src='/airtable/logo.svg' />}
             navs={[
