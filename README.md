@@ -4,8 +4,8 @@
     <img src='https://landing-blocks.now.sh/logo_black.svg' width='400px' />
     <br/>
     <h3>Landing pages building blocks</h3>
-    <br/>
     <a href='https://landing-blocks.now.sh#demos'>See some landing pages built with <code>landing-blocks</code></a>
+    <br/>
     <br/>
 </div>
 
