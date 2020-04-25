@@ -61,12 +61,7 @@ export function Countdown({
                                 <Stack spacing='10px' align='center'>
                                     <Box>
                                         {remaining.split('').map((d, i) => (
-                                            <AnimatedDigit
-                                                fontSize='62px'
-                                                height='62px'
-                                                digit={d}
-                                                key={i}
-                                            />
+                                            <AnimatedDigit digit={d} key={i} />
                                         ))}
                                     </Box>
                                     <Box letterSpacing='2px' opacity={0.6}>
@@ -120,6 +115,7 @@ function padZeros(number, length) {
 
 const AnimatedDigit = ({ digit, ...rest }) => {
     const height = 160
+    const fontSize = rest.fontSize || '62px'
     const [translate, setTranslate] = useState('translate3d(0, 0, 0)')
     // console.log({ translate })
     useEffect(() => {
@@ -127,7 +123,15 @@ const AnimatedDigit = ({ digit, ...rest }) => {
         setTranslate(`translate3d(0, ${y}px, 0)`)
     }, [digit])
     return (
-        <Box lineHeight='normal' mx='2px' display='inline-block' overflow='hidden' {...rest}>
+        <Box
+            fontSize={fontSize}
+            height={fontSize}
+            lineHeight={fontSize}
+            mx='2px'
+            display='inline-block'
+            overflow='hidden'
+            {...rest}
+        >
             <Box transition='0.3s ease all' transform={translate}>
                 {'0123456789'.split('').map((d) => (
                     <Box key={d} height={height + 'px'}>
