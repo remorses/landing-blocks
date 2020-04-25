@@ -24,6 +24,7 @@ export const Bullet = (props) => {
             fontWeight='medium'
             fontSize='subtext'
             borderRadius='4px'
+            isTruncated
             {...props}
         />
     )

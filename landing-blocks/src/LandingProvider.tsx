@@ -118,5 +118,6 @@ const globalStyles = css`
     body {
         height: 100%;
         overflow: auto;
+        overflow-x: hidden;
     }
 `
