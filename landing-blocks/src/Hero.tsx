@@ -29,7 +29,6 @@ export function Hero({
     animate = undefined,
     ...rest
 }: HeroProps) {
-    console.log({ heading })
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>

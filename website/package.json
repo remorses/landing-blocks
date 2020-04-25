@@ -7,7 +7,7 @@
         "build": "NODE_ENV=production next build",
         "start": "next start",
         "test": "NODE_ENV=test mocha --colors --exit",
-        "svg": "svgr -d src/svgs --no-dimensions --typescript src/svgs",
+        "svg": "svgr -d svgs --no-dimensions --typescript svgs",
         "screens": "ts-node -P scripts/tsconfig.json scripts/screenshotter.ts",
         "docgen": "ts-node -P scripts/tsconfig.json scripts/generatePropsDocs.ts"
     },
@@ -21,7 +21,7 @@
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
         "baby-i-am-faded": "^0.0.13",
-        "dokz": "^0.2.9",
+        "dokz": "^0.2.10",
         "landing-blocks": "*",
         "next": "latest",
         "react": "16.13.1",
