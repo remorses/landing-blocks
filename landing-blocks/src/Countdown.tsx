@@ -127,7 +127,7 @@ const AnimatedDigit = ({ digit, ...rest }) => {
         setTranslate(`translate3d(0, ${y}px, 0)`)
     }, [digit])
     return (
-        <Box mx='2px' display='inline-block' overflow='hidden' {...rest}>
+        <Box lineHeight='normal' mx='2px' display='inline-block' overflow='hidden' {...rest}>
             <Box transition='0.3s ease all' transform={translate}>
                 {'0123456789'.split('').map((d) => (
                     <Box key={d} height={height + 'px'}>
