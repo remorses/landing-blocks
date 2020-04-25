@@ -114,8 +114,8 @@ function padZeros(number, length) {
 }
 
 const AnimatedDigit = ({ digit, ...rest }) => {
-    const height = 160
     const fontSize = rest.fontSize || '62px'
+    const height = Number(fontSize.replace('px', ''))
     const [translate, setTranslate] = useState('translate3d(0, 0, 0)')
     // console.log({ translate })
     useEffect(() => {
@@ -134,7 +134,7 @@ const AnimatedDigit = ({ digit, ...rest }) => {
         >
             <Box transition='0.3s ease all' transform={translate}>
                 {'0123456789'.split('').map((d) => (
-                    <Box key={d} height={height + 'px'}>
+                    <Box key={d} height={height}>
                         {d}
                     </Box>
                 ))}
