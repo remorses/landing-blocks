@@ -21,7 +21,7 @@
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
         "baby-i-am-faded": "^0.0.13",
-        "dokz": "^0.2.7",
+        "dokz": "^0.2.9",
         "landing-blocks": "*",
         "next": "latest",
         "react": "16.13.1",
@@ -33,7 +33,6 @@
         "async-sema": "^3.1.0",
         "capture-website": "^0.8.1",
         "compose-function": "^3.0.3",
-        "dokz": "^0.2.9",
         "next-transpile-modules": "^3.2.0",
         "react-docgen-typescript": "^1.16.3",
         "typescript": "^3.8.3"

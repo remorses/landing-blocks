@@ -1,4 +1,6 @@
+// @jsx jsx
 import { Box, Stack } from '@chakra-ui/core'
+import { jsx } from '@emotion/core'
 import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'
@@ -27,6 +29,7 @@ export function Hero({
     animate = undefined,
     ...rest
 }: HeroProps) {
+    console.log({ heading })
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...rest}>
@@ -51,9 +54,7 @@ export function Hero({
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                         <Heading fontSize='46px'>{heading}</Heading>
                     </Col>
-                    <Subheading maxW='700px'>
-                        {subheading}
-                    </Subheading>
+                    <Subheading maxW='700px'>{subheading}</Subheading>
                     <Stack align={['center', 'center', 'flex-start']}>
                         <Box>{clone(cta)}</Box>
                         {/* <Button
