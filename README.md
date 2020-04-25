@@ -7,6 +7,7 @@
     <a href='https://landing-blocks.now.sh#demos'>See some landing pages built with <code>landing-blocks</code></a>
     <br/>
     <br/>
+    <br/>
 </div>
 
 `landing-blocks` is an npm package that groups together many useful components that can be composed together to create beautiful landing pages.
