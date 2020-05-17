@@ -16,12 +16,14 @@ export type CodeSnippetProps = {
     isTyping?: boolean
     dark?: boolean
     theme?: PrismTheme
+    lineNumbers?: boolean
 } & StackProps
 
 export const CodeSnippet = ({
     code,
     language,
     isTyping,
+    lineNumbers,
     theme,
     dark,
     ...rest
@@ -48,15 +50,17 @@ export const CodeSnippet = ({
                 const { background: _, backgroundColor: __, ...style } = _style
                 const lines = tokens.map((line, i) => (
                     <div key={i} {...getLineProps({ line, key: i })}>
-                        <Box
-                            w={lineNumberW}
-                            mr='1.5em'
-                            color={lineNoColor}
-                            as='span'
-                            opacity={0.4}
-                        >
-                            {String(i + 1)}
-                        </Box>
+                        {lineNumbers ? (
+                            <Box
+                                w={lineNumberW}
+                                mr='1.5em'
+                                color={lineNoColor}
+                                as='span'
+                                opacity={0.4}
+                            >
+                                {String(i + 1)}
+                            </Box>
+                        ) : <Box/>}
                         {line.map((token, key) => (
                             <span
                                 key={key}
