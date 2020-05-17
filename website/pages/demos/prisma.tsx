@@ -86,7 +86,7 @@ const Page = () => (
                         align='center'
                     >
                         <CodeSnippet
-                            isTyping
+                            // isTyping
                             minWidth='400px'
                             minH='300px'
                             code={heroCode}

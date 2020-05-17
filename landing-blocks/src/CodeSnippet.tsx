@@ -7,7 +7,8 @@ import Typist from 'react-typist'
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
 import { PrismTheme } from 'prism-react-renderer'
 // import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
-import darkPrismTheme from 'prism-react-renderer/themes/github'
+import lightPrismTheme from 'prism-react-renderer/themes/duotoneLight'
+import darkPrismTheme from 'prism-react-renderer/themes/duotoneDark'
 
 export type CodeSnippetProps = {
     language: Language
@@ -21,18 +22,30 @@ export const CodeSnippet = ({
     code,
     language,
     isTyping,
-    theme = darkPrismTheme,
+    theme,
     dark,
     ...rest
 }: CodeSnippetProps) => {
+    theme = theme ? theme : dark ? darkPrismTheme : lightPrismTheme
     const lineNoColor = dark ? '#fff' : '#000'
     const bg = dark ? 'black' : 'white'
     const lineNumberW = getLineNoWidth(code)
-    
+
     return (
-        <Highlight theme={theme} {...defaultProps} code={code} language={language}>
-            {({ className, style: _style, tokens, getLineProps, getTokenProps }) => {
-                const {background: _, backgroundColor: __, ...style } = _style
+        <Highlight
+            {...defaultProps}
+            theme={theme}
+            code={code}
+            language={language}
+        >
+            {({
+                className,
+                style: _style,
+                tokens,
+                getLineProps,
+                getTokenProps,
+            }) => {
+                const { background: _, backgroundColor: __, ...style } = _style
                 const lines = tokens.map((line, i) => (
                     <div key={i} {...getLineProps({ line, key: i })}>
                         <Box
