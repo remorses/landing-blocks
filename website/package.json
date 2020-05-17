@@ -23,9 +23,9 @@
         "baby-i-am-faded": "^0.0.13",
         "dokz": "^0.2.10",
         "landing-blocks": "*",
-        "next": "latest",
-        "react": "16.13.1",
-        "react-dom": "16.13.1",
+        "next": "^9.4.1",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
         "react-icons": "latest"
     },
     "devDependencies": {
@@ -33,8 +33,9 @@
         "async-sema": "^3.1.0",
         "capture-website": "^0.8.1",
         "compose-function": "^3.0.3",
-        "next-transpile-modules": "^3.2.0",
+        "next-transpile-modules": "^3.3.0",
         "react-docgen-typescript": "^1.16.3",
+        "react-typist": "^2.0.5",
         "typescript": "^3.8.3"
     }
 }

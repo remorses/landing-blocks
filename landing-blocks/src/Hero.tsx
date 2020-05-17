@@ -33,7 +33,7 @@ export function Hero({
     return (
         <PageContainer {...rest}>
             <Row
-                justify='flex-start'
+                justify={image ? 'flex-start' : 'center'}
                 w='100%'
                 flexDir={['column', 'column', 'row']}
                 align='center'
@@ -49,7 +49,13 @@ export function Hero({
                     ]}
                     textAlign={['center', 'center', image ? 'left' : 'center']}
                 >
-                    <Col align={['center', null, 'flex-start']}>
+                    <Col
+                        align={[
+                            'center',
+                            null,
+                            image ? 'flex-start' : 'center',
+                        ]}
+                    >
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                         <Heading fontSize='46px'>{heading}</Heading>
                     </Col>
