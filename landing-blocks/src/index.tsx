@@ -33,6 +33,8 @@ export type { TestimonialsTweetsProps } from './TestimonialsTweets'
 
 // atoms
 export { Heading } from './Heading'
+export { CodeSnippet } from './CodeSnippet'
+export type { CodeSnippetProps } from './CodeSnippet'
 export { Shape } from './Shape'
 export { EmailForm, MailchimpForm } from './EmailForm'
 export type { EmailFormProps } from './EmailForm'
