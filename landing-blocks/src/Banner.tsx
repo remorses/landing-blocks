@@ -3,11 +3,13 @@ import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
-import { removeUndefined } from './support'
+import { removeUndefined, getPageContainerProps } from './support'
+import { Bullet } from './Bullet'
 
 export type BannerProps = {
     heading?: ReactNode
     subheading?: ReactNode
+    bullet?: ReactNode
     image?: ReactNode
     cta?: ReactNode
     flip?: boolean
@@ -18,6 +20,7 @@ export type BannerProps = {
 export function Banner({
     heading = '',
     subheading = '',
+    bullet = '',
     cta = '' as ReactNode,
     image = null as any,
     flip = false,
@@ -25,22 +28,22 @@ export function Banner({
     animate = undefined,
     ...props
 }: BannerProps) {
-    const { bg = 'gray.100', background, backgroundColor, ...rest } = props
-    const bgs = removeUndefined({ bg, background, backgroundColor })
+    const [spacing, rest] = getPageContainerProps(props)
     const direction = flip ? 'row-reverse' : 'row'
     return (
-        <PageContainer {...rest}>
+        <PageContainer {...spacing}>
             <Stack
                 align='center'
                 spacing='40px'
+                bg='gray.100'
                 // isReversed={flip}
                 flexDirection={['column', null, direction]}
                 w='100%'
-                bg='primary'
                 borderRadius='10px'
-                p='40px'
-                {...bgs}
+                p='30px'
+                {...rest}
             >
+                {image && flip && <Box flex='1' />}
                 <Stack
                     spacing='20px'
                     minW='300px'
@@ -48,7 +51,9 @@ export function Banner({
                     justify='space-between'
                     flexDirection={['column', null, image ? 'column' : 'row']}
                 >
+                    
                     <Stack spacing='20px'>
+                        {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                         <Heading
                             lineHeight='50px'
                             fontWeight='medium'
@@ -79,7 +84,7 @@ export function Banner({
                         )}
                     </Stack>
                 </Stack>
-                {image && <Box flex='1' />}
+                {image && !flip && <Box flex='1' />}
                 {image && (
                     <Col
                         align='center'

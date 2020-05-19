@@ -17,7 +17,7 @@ export const Bullet = (props) => {
             px='6px'
             bg={
                 {
-                    light: Color('black').setAlpha(0.2).toCSS(),
+                    light: Color('black').setAlpha(0.1).toCSS(),
                     dark: Color('white').setAlpha(0.2).toCSS(),
                 }[colorMode]
             }

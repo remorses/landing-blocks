@@ -21,6 +21,55 @@ export function removeUndefined(c) {
     return c
 }
 
+export function getPageContainerProps(props) {
+    const {
+        m,
+        mt,
+        mb,
+        ml,
+        mr,
+        my,
+        mx,
+        p,
+        px,
+        py,
+        pl,
+        pr,
+        pt,
+        pb,
+        spacing,
+        floatingElement,
+        dark,
+        primary,
+        pageWidth,
+        ...rest
+    } = props
+    return [
+        removeUndefined({
+            m,
+            mt,
+            mb,
+            ml,
+            mr,
+            my,
+            mx,
+            p,
+            px,
+            py,
+            pl,
+            pr,
+            pt,
+            pb,
+            spacing,
+            floatingElement,
+            dark,
+            primary,
+            pageWidth,
+        }),
+        rest,
+    ]
+}
+
 export function clone(element) {
     if (!element) {
         return element

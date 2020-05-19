@@ -46,7 +46,12 @@ const Page = () => (
             />
         </Head>
         <LandingProvider primary='#48BB79'>
-            <Stack  spacing='60px' position='relative'  background="url('/prisma/globe.svg') center -300px no-repeat, radial-gradient( 37.86% 77.79% at 50% 100%, rgba(113,128,150,0.25) 0%, rgba(113,128,150,0) 100% ), linear-gradient(180deg,#1a202c 0%,#2d3748 100%), linear-gradient(180deg,#0d0f14 0%,rgba(27,32,43,0) 100%),#2f3747" backgroundSize='cover'>
+            <Stack
+                spacing='60px'
+                position='relative'
+                background="url('/prisma/globe.svg') center -300px no-repeat, radial-gradient( 37.86% 77.79% at 50% 100%, rgba(113,128,150,0.25) 0%, rgba(113,128,150,0) 100% ), linear-gradient(180deg,#1a202c 0%,#2d3748 100%), linear-gradient(180deg,#0d0f14 0%,rgba(27,32,43,0) 100%),#2f3747"
+                backgroundSize='cover'
+            >
                 <NavBar
                     dark
                     logo={
@@ -110,7 +115,18 @@ const Page = () => (
                 image={<img src='/prisma/feature1.jpg' width='500px' />}
                 flip
             />
-
+            <Banner
+                flip
+                shadow='lg'
+                heading='Add Prisma to Your App or Start From Scratch'
+                bullet='READY TO TRY?'
+                primary='#9F7AEA'
+                borderTop='7px solid'
+                borderTopColor='primary'
+                bg='white'
+                image={<Image ml='-60px' width='200px' src='/prisma/bannerImage.svg' />}
+                cta={<Button>Try Prisma in 5 minutes</Button>}
+            />
             <Footer
                 businessName='Prismic'
                 columns={{
