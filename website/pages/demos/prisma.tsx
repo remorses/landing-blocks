@@ -23,7 +23,7 @@ import {
 import Highlight from 'react-highlight'
 
 import { GradientCurtains } from 'landing-blocks/src/decorations'
-import { Image, Stack } from '@chakra-ui/core'
+import { Image, Stack, AspectRatioBox } from '@chakra-ui/core'
 import { Link, Box } from '@chakra-ui/core'
 import { FiCheck } from 'react-icons/fi'
 
@@ -39,12 +39,6 @@ await prisma.users.create({
 
 const Page = () => (
     <Fragment>
-        <Head>
-            <link
-                rel='stylesheet'
-                href='node_modules/highlight.js/styles/atom-one-dark.css'
-            />
-        </Head>
         <LandingProvider primary='#48BB79'>
             <Stack
                 spacing='60px'
@@ -110,10 +104,21 @@ const Page = () => (
                 </Box>
             </Stack>
             <Feature
-                heading='Unleash your team’s creative potential with Blocks'
-                subheading='prisma Blocks give you a creative palette of app-like functionality that you can mix and match to create the perfect workflow for your team.'
-                image={<img src='/prisma/feature1.jpg' width='500px' />}
-                flip
+                heading='Take a Quick Tour'
+                subheading='Prisma is the perfect companion for building web APIs. It saves repetitive CRUD boilerplate and provides a flexible API for common use cases such as pagination and filtering.'
+                image={
+                    <AspectRatioBox minW='400px' w='600px'  ratio={5/3}>
+                        <Box
+                            borderRadius='10px'
+                            shadow='lg'
+                            as='iframe'
+                            title='video'
+                            // @ts-ignore
+                            src="https://www.youtube.com/embed/0RhtQgIs-TE"
+                            allowFullScreen
+                        />
+                    </AspectRatioBox>
+                }
             />
             <Banner
                 flip
@@ -124,7 +129,13 @@ const Page = () => (
                 borderTop='7px solid'
                 borderTopColor='primary'
                 bg='white'
-                image={<Image ml='-60px' width='200px' src='/prisma/bannerImage.svg' />}
+                image={
+                    <Image
+                        ml='-60px'
+                        width='200px'
+                        src='/prisma/bannerImage.svg'
+                    />
+                }
                 cta={<Button>Try Prisma in 5 minutes</Button>}
             />
             <Footer
