@@ -86,17 +86,19 @@ const Page = () => (
                         align='center'
                     >
                         <CodeSnippet
+                            shadow='lg'
                             isTyping
                             lineNumbers
-                            minWidth='400px'
-                            minH='300px'
+                            w='500px'
+                            h='300px'
                             code={heroCode}
                             language='javascript'
                         />
 
                         <Image
+                            shadow='lg'
                             borderRadius='10px'
-                            height='300px'
+                            h='300px'
                             src='/prisma/databaseresult.png'
                         />
                     </Stack>
