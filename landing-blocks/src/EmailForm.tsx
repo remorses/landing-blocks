@@ -56,7 +56,7 @@ export function EmailForm({
                     onClick={onSubmit}
                     shadow='sm'
                     m='0'
-                    px='10px'
+                    px='20px'
                     textAlign='center'
                 >
                     {cta}

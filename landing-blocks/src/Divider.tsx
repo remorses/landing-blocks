@@ -18,12 +18,13 @@ export const Divider = ({ heading = '', ...rest }: DividerProps) => {
                     align='center'
                     spacing='20px'
                     direction='row'
+                    opacity={.7}
                 >
                     <Line />
                     <Box
-                        fontWeight='medium'
-                        fontSize='subtext'
-                        letterSpacing='3px'
+                        // fontWeight='medium'
+                        fontSize='text'
+                        letterSpacing='0.2em'
                         textAlign='center'
                     >
                         {heading}

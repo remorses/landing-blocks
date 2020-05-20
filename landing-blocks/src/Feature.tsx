@@ -1,15 +1,17 @@
-import { Stack } from '@chakra-ui/core'
+import { Stack, Box } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
 import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
+import { Bullet } from './Bullet'
 
 export type FeatureProps = {
     heading?: ReactNode
     subheading?: ReactNode
     image?: ReactNode
     cta?: ReactNode
+    bullet?: ReactNode
     flip?: boolean
     animate?: any
 } & PageContainerProps
@@ -17,6 +19,7 @@ export type FeatureProps = {
 export function Feature({
     heading,
     subheading,
+    bullet='',
     image = null as any,
     flip = false,
     animate = undefined,
@@ -30,10 +33,12 @@ export function Feature({
             <Stack
                 align='center'
                 spacing='40px'
+                justifyItems='space-between'
                 // isReversed={flip}
                 flexDirection={['column', null, dir(direction)]}
             >
                 <Stack as={Faded} spacing='20px' flex='1' minW='300px'>
+                    {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                     <Heading
                         lineHeight='50px'
                         fontWeight='medium'
@@ -51,7 +56,7 @@ export function Feature({
                         {subheading}
                     </Subheading>
                 </Stack>
-
+                <Box minW='40px' />
                 <Col as={Faded} align='center' flex='1' minW='300px'>
                     {image}
                 </Col>
