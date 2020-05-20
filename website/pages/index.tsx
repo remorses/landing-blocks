@@ -20,6 +20,7 @@ import {
     NavBar,
     Banner,
     MailchimpForm,
+    Section,
 } from 'landing-blocks/src'
 import { Faded } from 'baby-i-am-faded'
 import { Box, Stack, Image, Button, Flex, Text, Link } from '@chakra-ui/core'
@@ -34,7 +35,7 @@ const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
 
 const Page = () => (
     <LandingProvider primary='white'>
-        <Stack spacing='60px' bg={BG} backgroundImage={BG_IMG}>
+        <Section py='100px' mt='-100px' spacing='60px' bg={BG} backgroundImage={BG_IMG}>
             <NavBar
                 dark
                 logo={<HeadingLogoIcon width='220px' long />}
@@ -114,7 +115,7 @@ const Page = () => (
                     },
                 ]}
             />
-        </Stack>
+        </Section>
 
         <SectionTitle
             primary={BG}
@@ -132,7 +133,7 @@ const Page = () => (
             }
         />
         <LandingCardsLinks alignSelf='center' py='40px' />
-        <Stack spacing='30px' bg={BG} backgroundImage={BG_IMG}>
+        <Section spacing='30px' bg={BG} backgroundImage={BG_IMG}>
             <SectionTitle
                 id='demos'
                 dark
@@ -148,7 +149,7 @@ const Page = () => (
                 // cta={<LandingButton>Download The Demos Code</LandingButton>}
             />
             <DemosLinks alignSelf='center' py='40px' />
-        </Stack>
+        </Section>
         <Banner
             dark
             bg='gray.900'
