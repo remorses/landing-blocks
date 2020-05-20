@@ -102,10 +102,10 @@ const Step = ({
                 <Subheading fontWeight='medium'>{heading}</Subheading>
                 <Box>
                     <Box
-                        fontWeight='normal'
+                        fontWeight='medium'
                         m={0}
                         lineHeight='1.8em'
-                        opacity={0.7}
+                        opacity={0.5}
                         fontSize='subtext'
                     >
                         {subheading}
