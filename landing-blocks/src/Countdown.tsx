@@ -45,7 +45,7 @@ export function Countdown({
             >
                 <Bullet>{bullet}</Bullet>
                 <Heading>{heading}</Heading>
-                <Subheading fontSize='text'>{subheading}</Subheading>
+                <Subheading>{subheading}</Subheading>
                 <Stack spacing='20px' direction='row'>
                     {Object.keys(timeLeft).map((timeName, index) => {
                         const remaining: string = timeLeft[timeName]

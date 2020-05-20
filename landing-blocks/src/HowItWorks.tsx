@@ -99,17 +99,19 @@ const Step = ({
                         {'. ' + heading}
                     </Heading>
                 </Stack>
-                <Subheading fontWeight='medium'>{heading}</Subheading>
-                <Box>
-                    <Box
-                        fontWeight='medium'
-                        m={0}
-                        lineHeight='1.8em'
-                        opacity={0.5}
-                        fontSize='subtext'
-                    >
-                        {subheading}
-                    </Box>
+                <Subheading opacity={0.8} fontWeight='medium'>
+                    {heading}
+                </Subheading>
+
+                <Box
+                    maxW='400px'
+                    fontWeight='medium'
+                    m={0}
+                    lineHeight='1.8em'
+                    opacity={0.5}
+                    fontSize='subtext'
+                >
+                    {subheading}
                 </Box>
             </Stack>
             <Col as={Faded} minW='300px' maxW='500px' flex='1'>

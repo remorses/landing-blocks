@@ -30,7 +30,7 @@ export function FeaturesList({
 }: FeaturesListProps) {
     const { Faded } = useFaded({ animate })
     return (
-        <PageContainer {...rest}>
+        <PageContainer spacing='40px' {...rest}>
             {heading && subheading && (
                 <Stack
                     as={Faded}
