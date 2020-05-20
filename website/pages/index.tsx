@@ -151,8 +151,8 @@ const Page = () => (
             <DemosLinks alignSelf='center' py='40px' />
         </Section>
         <Banner
-            dark
-            bg='gray.900'
+            // dark
+            bg='transparent'
             heading='Get notified when new components get published'
             subheading='You will get them first'
             cta={<MailchimpForm url='' />}
