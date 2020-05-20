@@ -80,7 +80,7 @@ export function LandingProvider({
                     text: '18px',
                     heading: '42px',
                     subheading: '24px',
-                    subtext: '14px',
+                    subtext: '15px',
                 },
             }),
         [pageWidth, primary, secondary],

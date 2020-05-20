@@ -31,31 +31,21 @@ export function HowItWorks({
         <PageContainer py='120px' {...rest}>
             <Stack
                 as={Faded}
-                spacing={2}
+                spacing='40px'
                 flex='1'
                 textAlign='center'
                 align='center'
             >
                 <Heading
                     lineHeight='50px'
-                    fontWeight='medium'
-                    fontSize='heading'
+                    // fontWeight='medium'
                 >
                     {heading}
                 </Heading>
-                <Box
-                    lineHeight='34px'
-                    m={0}
-                    opacity={0.6}
-                    fontWeight='normal'
-                    fontSize='text'
-                    maxW='500px'
-                >
-                    {subheading}
-                </Box>
+                <Subheading maxW='700px'>{subheading}</Subheading>
             </Stack>
             <Box mt='60px' />
-            <Stack spacing={12} flex='1'>
+            <Stack spacing='60px' flex='1'>
                 {steps.map((step, i) => (
                     <Step
                         key={i}
@@ -87,16 +77,20 @@ const Step = ({
             justify='space-between'
             align='center'
             flexWrap='wrap'
-            spacing='40px'
+            // spacing='40px'
             {...rest}
         >
-            <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='20px'>
-                <Stack isInline flexDirection='row' align='flex-end'>
-                    <Box  lineHeight='60px' opacity={0.14} fontSize='80px'>
+            <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='40px'>
+                <Stack
+                    isInline
+                    flexDirection='row'
+                    align='flex-end'
+                    opacity={0.2}
+                >
+                    <Box lineHeight='60px' fontSize='80px'>
                         {number}
                     </Box>
                     <Heading
-                        opacity={0.3}
                         isTruncated
                         maxW='300px'
                         fontWeight='bold'
@@ -105,16 +99,14 @@ const Step = ({
                         {'. ' + heading}
                     </Heading>
                 </Stack>
-                <Box>
-                    <Subheading fontWeight='medium'>{heading}</Subheading>
-                </Box>
+                <Subheading fontWeight='medium'>{heading}</Subheading>
                 <Box>
                     <Box
                         fontWeight='normal'
                         m={0}
-                        lineHeight='28px'
+                        lineHeight='1.8em'
                         opacity={0.7}
-                        fontSize='text'
+                        fontSize='subtext'
                     >
                         {subheading}
                     </Box>
