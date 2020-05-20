@@ -39,7 +39,7 @@ export function Feature({
                 // isReversed={flip}
                 flexDirection={['column', null, dir(direction)]}
             >
-                <Stack as={Faded} spacing='20px' flex='1' minW='300px'>
+                <Stack as={Faded} spacing='30px' flex='1' minW='300px'>
                     {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                     <Heading
                         lineHeight='50px'

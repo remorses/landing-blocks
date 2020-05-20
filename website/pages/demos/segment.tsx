@@ -14,7 +14,7 @@ import {
     SectionTitle,
     TestimonialsLogos,
     Section,
-    Link
+    Link,
 } from 'landing-blocks/src'
 import React, { Fragment } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
@@ -105,6 +105,12 @@ const Page = () => (
                     heading='Single view of the customer'
                     subheading='Unify your customer’s touch points across all platforms and channels.'
                     bullet='Segment for Marketing Teams'
+                    cta={
+                        <Link>
+                            Explore Segment for Product Teams
+                            <Box mx='10px' display='inline' as={FaArrowRight} />
+                        </Link>
+                    }
                     image={
                         <PatternBackground
                             pattern='dotsMd'
@@ -133,6 +139,12 @@ const Page = () => (
                             src='/segment/feature3.svg'
                         />
                     }
+                    cta={
+                        <Link>
+                            Explore Segment for Teams
+                            <Box mx='10px' display='inline' as={FaArrowRight} />
+                        </Link>
+                    }
                 />
             </Section>
             <Feature
@@ -141,7 +153,7 @@ const Page = () => (
                 subheading='Use one API to collect analytics data, across any platform. We have SDKs for Javascript, iOS, Android, and 20+ server-side languages.'
                 bullet='Segment for Engineering Teams'
                 cta={
-                    <Link >
+                    <Link>
                         Explore Segment for Marketing
                         <Box mx='10px' display='inline' as={FaArrowRight} />
                     </Link>
