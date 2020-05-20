@@ -36,7 +36,7 @@ export function SectionTitle({
             >
                 <Bullet>{bullet}</Bullet>
                 <Heading>{heading}</Heading>
-                <Subheading fontSize='text'>{subheading}</Subheading>
+                <Subheading >{subheading}</Subheading>
                 {cta && (
                     <Col justify='center' align='center'>
                         {clone(cta)}

@@ -33,6 +33,7 @@ export type { TestimonialsTweetsProps } from './TestimonialsTweets'
 
 // atoms
 export { Heading } from './Heading'
+export { PatternBackground } from './PatternBackground'
 export { CodeSnippet } from './CodeSnippet'
 export type { CodeSnippetProps } from './CodeSnippet'
 export { Shape } from './Shape'

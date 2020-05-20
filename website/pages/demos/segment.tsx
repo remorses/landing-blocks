@@ -1,42 +1,20 @@
-import React, { Fragment } from 'react'
-import Head from 'next/head'
+import { Image, Link, Stack } from '@chakra-ui/core'
+import {PatternBackground} from 'landing-blocks/src/PatternBackground'
 import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
     Banner,
     Button,
-    Pricing,
-    TestimonialsTweets,
-    EmailForm,
-    CodeSnippet,
+    Divider,
+    Feature,
+    Footer,
+    Heading,
+    Hero,
+    LandingProvider,
     MailchimpForm,
-    TestimonialsLogos,
+    NavBar,
     SectionTitle,
+    TestimonialsLogos,
 } from 'landing-blocks/src'
-
-import { GradientCurtains } from 'landing-blocks/src/decorations'
-import { Image, Stack, AspectRatioBox } from '@chakra-ui/core'
-import { Link, Box } from '@chakra-ui/core'
-import { FiCheck } from 'react-icons/fi'
-
-const heroCode = `
-// Creating a new record
-await segment.users.create({
-  data: {
-    firstName: "Alice",
-    email: "alice@segment.io",
-    active: true,
-  }
-})`
+import React, { Fragment } from 'react'
 
 const BG =
     'radial-gradient( 37.86% 77.79% at 50% 100%, rgba(113,128,150,0.25) 0%, rgba(113,128,150,0) 100% ), linear-gradient(180deg,#1a202c 0%,#2d3748 100%), linear-gradient(180deg,#0d0f14 0%,rgba(27,32,43,0) 100%),#2f3747'
@@ -107,12 +85,14 @@ const Page = () => (
                     subheading='Unify your customer’s touch points across all platforms and channels.'
                     bullet='Segment for Marketing Teams'
                     image={
-                        <Image
-                            shadow='lg'
-                            borderRadius='10px'
-                            h='460px'
-                            src='/segment/feature1.svg'
-                        />
+                        <PatternBackground pattern='dotsMd' color='gray.300' scatter={30}>
+                            <Image
+                                shadow='lg'
+                                borderRadius='10px'
+                                w='460px'
+                                src='/segment/feature1.svg'
+                            />
+                        </PatternBackground>
                     }
                 />
                 <Feature

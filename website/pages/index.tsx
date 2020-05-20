@@ -22,7 +22,7 @@ import {
     MailchimpForm,
 } from 'landing-blocks/src'
 import { Faded } from 'baby-i-am-faded'
-import { Box, Stack, Image, Button, Flex, Text } from '@chakra-ui/core'
+import { Box, Stack, Image, Button, Flex, Text, Link } from '@chakra-ui/core'
 import * as landingCards from '../svgs/landingCards'
 
 import { IndexCardsPaths, demosPaths } from '../constants'
@@ -223,7 +223,7 @@ const DemosLinks = ({ ...rest }) => {
                     const { imagePath, urlPath } = k
                     return (
                         <Box key={urlPath}>
-                            <NextLink href={urlPath}>
+                            <Link href={urlPath}>
                                 <Button
                                     borderRadius='8px'
                                     mx='40px'
@@ -243,7 +243,7 @@ const DemosLinks = ({ ...rest }) => {
                                         {/* <Text>{title}</Text> */}
                                     </Stack>
                                 </Button>
-                            </NextLink>
+                            </Link>
                         </Box>
                     )
                 })}

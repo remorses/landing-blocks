@@ -78,7 +78,7 @@ export function LandingProvider({
                 },
                 fontSizes: {
                     text: '18px',
-                    heading: '36px',
+                    heading: '42px',
                     subheading: '24px',
                     subtext: '14px',
                 },
