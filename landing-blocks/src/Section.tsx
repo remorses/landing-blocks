@@ -27,13 +27,13 @@ export const Section = ({ children, degree=2, ...props }: SectionProps) => {
             <Box
                 {...baseProps}
                 transform={`skewY(${degree + 2}deg)`}
-                transformOrigin='40%'
+                transformOrigin='60%'
                 opacity={0.2}
             />
             <Box
                 {...baseProps}
                 transform={`skewY(${degree + 3}deg)`}
-                transformOrigin='20%'
+                transformOrigin='70%'
                 opacity={0.1}
             />
             {children}

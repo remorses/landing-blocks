@@ -1,4 +1,4 @@
-import { Image, Link } from '@chakra-ui/core'
+import { Image, Link, Box } from '@chakra-ui/core'
 import { PatternBackground } from 'landing-blocks/src/PatternBackground'
 import {
     Banner,
@@ -44,7 +44,25 @@ const Page = () => (
                 bullet='INTRODUCING segment 2.0'
                 dark
                 image={
-                    <Image src='/segment/hero.svg' w='600px' height='500px' />
+                    <Box minW='600px' position='relative'>
+                        <Image
+                            src='/segment/hero.svg'
+                            w='600px'
+                            height='500px'
+                        />
+                        <Image
+                            position='absolute'
+                            src='/segment/hero-background.svg'
+                            w='600px'
+                            ml='340px'
+                            mb='140px'
+                            top={0}
+                            left={0}
+                            right={0}
+                            bottom={0}
+                            height='500px'
+                        />
+                    </Box>
                 }
                 heading={
                     <Heading maxW='600px' fontSize='50px'>
