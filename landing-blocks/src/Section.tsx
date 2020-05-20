@@ -7,7 +7,7 @@ import { getPageContainerProps } from './support'
 
 export type SectionProps = { degree?: number } & StackProps
 
-export const Section = ({ children, degree=2, ...props }: SectionProps) => {
+export const Section = ({ children, degree = 2, ...props }: SectionProps) => {
     const [spacing, rest] = getPageContainerProps(props)
     // const { bg } = rest
     const baseProps: BoxProps = {
@@ -19,10 +19,10 @@ export const Section = ({ children, degree=2, ...props }: SectionProps) => {
         position: 'absolute',
         transform: `skewY(${degree}deg)`,
         transformOrigin: 'center',
-        ...rest
+        ...rest,
     }
     return (
-        <Stack  position='relative' as='section' {...spacing} >
+        <Stack position='relative' as='section' {...spacing}>
             <Box {...baseProps} />
             <Box
                 {...baseProps}

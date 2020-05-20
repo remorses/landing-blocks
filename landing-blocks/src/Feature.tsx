@@ -5,6 +5,7 @@ import { useFaded } from './hooks'
 import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 import { Bullet } from './Bullet'
+import { clone } from './support'
 
 export type FeatureProps = {
     heading?: ReactNode
@@ -19,9 +20,10 @@ export type FeatureProps = {
 export function Feature({
     heading,
     subheading,
-    bullet='',
+    bullet = '',
     image = null as any,
     flip = false,
+    cta = '',
     animate = undefined,
     direction = 'row',
     ...rest
@@ -55,6 +57,7 @@ export function Feature({
                     >
                         {subheading}
                     </Subheading>
+                    {cta && <Box>{clone(cta)}</Box>}
                 </Stack>
                 <Box minW='40px' />
                 <Col as={Faded} align='center' flex='1' minW='300px'>

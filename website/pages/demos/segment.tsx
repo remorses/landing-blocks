@@ -1,4 +1,4 @@
-import { Image, Link, Box } from '@chakra-ui/core'
+import { Image, Box } from '@chakra-ui/core'
 import { PatternBackground } from 'landing-blocks/src/PatternBackground'
 import {
     Banner,
@@ -14,8 +14,10 @@ import {
     SectionTitle,
     TestimonialsLogos,
     Section,
+    Link
 } from 'landing-blocks/src'
 import React, { Fragment } from 'react'
+import { FaArrowRight } from 'react-icons/fa'
 
 const BG =
     'radial-gradient( 37.86% 77.79% at 50% 100%, rgba(113,128,150,0.25) 0%, rgba(113,128,150,0) 100% ), linear-gradient(180deg,#1a202c 0%,#2d3748 100%), linear-gradient(180deg,#0d0f14 0%,rgba(27,32,43,0) 100%),#2f3747'
@@ -138,6 +140,12 @@ const Page = () => (
                 heading='One API. Cleaner code.'
                 subheading='Use one API to collect analytics data, across any platform. We have SDKs for Javascript, iOS, Android, and 20+ server-side languages.'
                 bullet='Segment for Engineering Teams'
+                cta={
+                    <Link >
+                        Explore Segment for Marketing
+                        <Box mx='10px' display='inline' as={FaArrowRight} />
+                    </Link>
+                }
                 image={
                     <Image
                         shadow='lg'

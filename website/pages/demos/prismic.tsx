@@ -16,6 +16,7 @@ import {
     Pricing,
     Button,
     EmailForm,
+    PatternBackground,
 } from 'landing-blocks/src'
 import { GradientCurtains, CurlyWire } from 'landing-blocks/src/decorations'
 import { FiCheck } from 'react-icons/fi'
@@ -37,7 +38,11 @@ const Page = () => (
             heading='Make your website editable for the whole team'
             subheading='Choose your technology. Use the API to fetch content. Empower
         your content team.'
-            image={<img width='500px' src='/prismic/code.png' />}
+            image={
+                <PatternBackground color='gray.400' pattern='diagonalLinesSm' scatter={30}>
+                    <img width='500px' src='/prismic/code.png' />
+                </PatternBackground>
+            }
             cta={<Button>Test it out</Button>}
         />
         <Feature
@@ -159,7 +164,7 @@ const Page = () => (
             subheading='50% discount just for good fellows like you'
             // image={<CurlyWire opacity={.5} stroke='red' />}
             // cta={<Button>try it out</Button>}
-            cta={<EmailForm/>}
+            cta={<EmailForm />}
             fingerprint='No Spam'
         />
         <Footer
