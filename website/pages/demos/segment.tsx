@@ -1,5 +1,5 @@
-import { Image, Link, Stack } from '@chakra-ui/core'
-import {PatternBackground} from 'landing-blocks/src/PatternBackground'
+import { Image, Link } from '@chakra-ui/core'
+import { PatternBackground } from 'landing-blocks/src/PatternBackground'
 import {
     Banner,
     Button,
@@ -13,6 +13,7 @@ import {
     NavBar,
     SectionTitle,
     TestimonialsLogos,
+    Section,
 } from 'landing-blocks/src'
 import React, { Fragment } from 'react'
 
@@ -79,13 +80,17 @@ const Page = () => (
                 subheading='Segment collects user events from your web & mobile apps and provides a complete data toolkit to every team in your company.'
             />
             <Image maxH='500px' src='/segment/section-image2.svg' />
-            <Stack bg='white'>
+            <Section degree={4} bg='white'>
                 <Feature
                     heading='Single view of the customer'
                     subheading='Unify your customer’s touch points across all platforms and channels.'
                     bullet='Segment for Marketing Teams'
                     image={
-                        <PatternBackground pattern='dotsMd' color='gray.300' scatter={30}>
+                        <PatternBackground
+                            pattern='dotsMd'
+                            color='gray.300'
+                            scatter={30}
+                        >
                             <Image
                                 shadow='lg'
                                 borderRadius='10px'
@@ -109,7 +114,7 @@ const Page = () => (
                         />
                     }
                 />
-            </Stack>
+            </Section>
             <Feature
                 dark
                 heading='One API. Cleaner code.'
@@ -124,7 +129,7 @@ const Page = () => (
                     />
                 }
             />
-            <Stack bg='white'>
+            <Section bg='white'>
                 <Banner
                     heading='Getting started is easy'
                     subheading='Start connecting your data with Segment.'
@@ -138,13 +143,13 @@ const Page = () => (
                         />
                     }
                     cta={
-                        <Stack direction='row'>
+                        <Section direction='row'>
                             <Button>Get a demo</Button>
                             <Button bg='white'>Create free account</Button>
-                        </Stack>
+                        </Section>
                     }
                 />
-            </Stack>
+            </Section>
             <Footer
                 dark
                 businessName='Prismic'
