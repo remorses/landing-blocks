@@ -24,7 +24,7 @@ export function Footer({
                     return (
                         <Stack
                             minW={['100%', '100%', '0']}
-                            spacing='10px'
+                            spacing='20px'
                             key={i}
                         >
                             <Box
@@ -37,7 +37,7 @@ export function Footer({
                                 {k}
                             </Box>
                             {columns[k].map((x, i) => (
-                                <Box key={i}>{x}</Box>
+                                <Box opacity={.6} key={i}>{x}</Box>
                             ))}
                         </Stack>
                     )
