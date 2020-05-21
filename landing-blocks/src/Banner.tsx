@@ -51,7 +51,6 @@ export function Banner({
                     justify='space-between'
                     flexDirection={['column', null, image ? 'column' : 'row']}
                 >
-                    
                     <Stack spacing='20px'>
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
                         <Heading

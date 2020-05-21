@@ -1,4 +1,4 @@
-import { Image, Box } from '@chakra-ui/core'
+import { Image, Box, Stack } from '@chakra-ui/core'
 import { PatternBackground } from 'landing-blocks/src/PatternBackground'
 import {
     Banner,
@@ -181,10 +181,10 @@ const Page = () => (
                         />
                     }
                     cta={
-                        <Section direction='row'>
-                            <Button>Get a demo</Button>
+                        <Stack direction='row'>
+                            <Button animate>Get a demo</Button>
                             <Button bg='white'>Create free account</Button>
-                        </Section>
+                        </Stack>
                     }
                 />
             </Section>
