@@ -2,7 +2,7 @@
 import { css, jsx } from '@emotion/core'
 import { Button as B, ButtonProps as ButtonProps_ } from '@chakra-ui/core'
 import Color from 'color-js'
-import React, { forwardRef, Fragment, useMemo } from 'react'
+import React, { forwardRef, Fragment, useMemo, FC } from 'react'
 import { useColor } from './support'
 import wobble from './animations/wobble'
 import shake from './animations/shake'
@@ -21,7 +21,7 @@ const animations = {
     shake,
 }
 
-export const Button = forwardRef(
+export const Button: FC<ButtonProps> = forwardRef(
     ({ bg = 'primary', animate, ...props }: ButtonProps, ref) => {
         const realBg = useColor(bg)
         const lightness = Color(realBg as any).getLightness()
