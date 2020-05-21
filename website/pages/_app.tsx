@@ -3,13 +3,13 @@ import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz/dist'
 import React from 'react'
 import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Link, Stack, Box, useColorMode } from '@chakra-ui/core'
-import { Footer } from 'landing-blocks/src'
+import { Footer } from 'landing-blocks/src/Footer'
 import { LogoIcon, LogoIconBlack, LogoBlack, LogoWhite } from '../svgs'
-import * as LandingStuff from 'landing-blocks/src'
+import * as LandingStuff from 'landing-blocks/src/Banner'
 import * as chakra from '@chakra-ui/core'
 import * as LandingDecorationsStuff from 'landing-blocks/src/decorations'
 
-export default (props) => {
+export default function App(props) {
     const { Component, pageProps } = props
     return (
         <DokzProvider

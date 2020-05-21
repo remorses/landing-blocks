@@ -43,7 +43,7 @@ const Page = () => (
                 ]}
             />
             <Hero
-                bullet='INTRODUCING segment 2.0'
+                bullet='Introducing segment 2.0'
                 dark
                 image={
                     <Box minW='600px' position='relative'>
