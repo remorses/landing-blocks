@@ -49,7 +49,7 @@ const Page = () => (
                 image={<Box mr={['0', null, '-100px']} width='800px' as={HeroIllustration} />}
                 cta={
                     <NextLink href='/docs'>
-                        <LandingButton>Read The Docs</LandingButton>
+                        <LandingButton animate>Read The Docs</LandingButton>
                     </NextLink>
                 }
                 fingerprint='Completely open source'

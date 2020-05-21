@@ -1,10 +1,28 @@
-import { Button as B, ButtonProps } from '@chakra-ui/core'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
+import { Button as B, ButtonProps as ButtonProps_ } from '@chakra-ui/core'
 import Color from 'color-js'
-import React, { forwardRef, Fragment } from 'react'
+import React, { forwardRef, Fragment, useMemo } from 'react'
 import { useColor } from './support'
+import wobble from './animations/wobble'
+import shake from './animations/shake'
+import bounceIn from './animations/bouncein'
+import headShake from './animations/headshake'
+
+export type ButtonProps = ButtonProps_ & {
+    href?: string
+    animate?: boolean | keyof typeof animations
+}
+
+const animations = {
+    wobble,
+    bounceIn,
+    headShake,
+    shake,
+}
 
 export const Button = forwardRef(
-    ({ bg = 'primary', ...props }: ButtonProps & { href?: string }, ref) => {
+    ({ bg = 'primary', animate, ...props }: ButtonProps, ref) => {
         const realBg = useColor(bg)
         const lightness = Color(realBg as any).getLightness()
         // console.log({ lightness })
@@ -15,8 +33,18 @@ export const Button = forwardRef(
         if (!props.children) {
             return <Fragment />
         }
+        const animationCss = useMemo(() => {
+            if (animate === true) {
+                return makeAnimationCss(headShake)
+            }
+            if (animate in animations) {
+                return makeAnimationCss(animations[animate as string])
+            }
+            return css``
+        }, [animate])
         return (
             <B
+                css={animationCss}
                 ref={ref}
                 as={props.href ? 'a' : 'button'}
                 px='20px'
@@ -32,3 +60,14 @@ export const Button = forwardRef(
         )
     },
 )
+
+function makeAnimationCss(keyframes) {
+    return css`
+        animation-duration: 4s;
+        animation-delay: 3s;
+        animation-timing-function: ease-in-out;
+        animation-name: ${keyframes};
+        animation-direction: normal;
+        animation-iteration-count: infinite;
+    `
+}
