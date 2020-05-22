@@ -50,8 +50,8 @@ export function PatternBackground({
     children,
     ...props
 }: PatternBackgroundProps) {
-    const { colorMode } = useColorMode()
-    const dark = colorMode === 'dark'
+    // const { colorMode } = useColorMode()
+    // const dark = colorMode === 'dark'
 
     return (
         <Box

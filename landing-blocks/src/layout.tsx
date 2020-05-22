@@ -59,7 +59,7 @@ export type PageContainerProps = {
     pageWidth?: string
 } & StackProps
 
-export const PageContainer: FC<PageContainerProps> = forwardRef(
+export const PageContainer: FC<PageContainerProps> = forwardRef( // TODO rename to SectionContainer
     (
         {
             children,
