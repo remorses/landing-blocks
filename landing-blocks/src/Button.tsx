@@ -63,8 +63,8 @@ export const Button: FC<ButtonProps> = forwardRef(
 
 function makeAnimationCss(keyframes) {
     return css`
-        animation-duration: 4s;
-        animation-delay: 3s;
+        animation-duration: 5s;
+        animation-delay: 1s;
         animation-timing-function: ease-in-out;
         animation-name: ${keyframes};
         animation-direction: normal;

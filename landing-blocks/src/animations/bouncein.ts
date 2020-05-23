@@ -6,7 +6,7 @@ const timing: Keyframe = {
     animationTimingFunction: cubicBezier(0.215, 0.61, 0.355, 1.0),
 }
 
-const TOTAL = 4
+const TOTAL = 5
 
 const bounceIn: Animation = {
     from: timing,
