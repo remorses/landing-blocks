@@ -35,7 +35,7 @@ export const Button: FC<ButtonProps> = forwardRef(
         }
         const animationCss = useMemo(() => {
             if (animate === true) {
-                return makeAnimationCss(headShake)
+                return makeAnimationCss(bounceIn)
             }
             if (animate in animations) {
                 return makeAnimationCss(animations[animate as string])
