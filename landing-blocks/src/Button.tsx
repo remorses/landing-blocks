@@ -42,11 +42,13 @@ export const Button: FC<ButtonProps> = forwardRef(
             }
             return css``
         }, [animate])
+
         return (
             <B
                 css={animationCss}
                 ref={ref}
                 as={props.href ? 'a' : 'button'}
+                transition='all 0.1s ease-in-out'
                 px='20px'
                 d='block'
                 width='auto'
@@ -54,7 +56,7 @@ export const Button: FC<ButtonProps> = forwardRef(
                 bg={bg}
                 fontSize='text'
                 fontWeight='medium'
-                _hover={{ bg: color, color: bg as string }}
+                _hover={{ shadow: 'xl', transform: 'scale(1.1)' }}
                 {...props}
             />
         )
@@ -63,11 +65,11 @@ export const Button: FC<ButtonProps> = forwardRef(
 
 function makeAnimationCss(keyframes) {
     return css`
-        animation-duration: 5s;
-        animation-delay: 1s;
+        animation-duration: 0.6s;
+        /* animation-delay: 1s; */
         animation-timing-function: ease-in-out;
         animation-name: ${keyframes};
         animation-direction: normal;
-        animation-iteration-count: infinite;
+        /* animation-iteration-count: infinite; */
     `
 }

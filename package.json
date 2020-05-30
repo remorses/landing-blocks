@@ -4,5 +4,7 @@
         "landing-blocks",
         "website"
     ],
-    "scripts": {}
+    "scripts": {
+        "dev": "yarn --cwd website dev"
+    }
 }

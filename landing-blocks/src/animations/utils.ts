@@ -20,7 +20,7 @@ export const compose = (...funcs: Array<Function>) => {
     }
 }
 
-export function getNextPercentage(i, total, limit = 10) {
+export function getNextPercentage(i, total, limit = 100) {
     if (i == 0) {
         return '0%'
     }

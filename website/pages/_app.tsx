@@ -13,6 +13,7 @@ export default function App(props) {
     const { Component, pageProps } = props
     return (
         <DokzProvider
+            docsRootPath='pages/docs'
             headerItems={[
                 headingNavLinks,
                 <GithubLink key='0' url='https://github.com/remorses/dokz' />,
