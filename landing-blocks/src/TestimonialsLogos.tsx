@@ -21,7 +21,7 @@ export function TestimonialsLogos({
 }: TestimonialsLogosProps) {
     const { Faded } = useFaded({ animate })
     return (
-        <PageContainer spacing='20px' py='20px' {...rest}>
+        <PageContainer spacing='40px' py='20px' {...rest}>
             {(heading || subheading) && (
                 <Stack align='center' spacing='20px'>
                     <Heading as='h2'>{heading}</Heading>
