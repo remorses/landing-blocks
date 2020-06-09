@@ -14,6 +14,7 @@ export type HowItWorksProps = {
 
 export type StepProps = {
     heading?: ReactNode
+    decorativeHeading?: ReactNode
     subheading?: ReactNode
     image?: ReactNode
     animate?: any
@@ -65,10 +66,11 @@ const Step = ({
     subheading,
     number,
     image,
+    decorativeHeading,
     flip = false,
     animate = undefined,
     ...rest
-}: any) => {
+}: StepProps & { number; flip }) => {
     const dir = flip ? 'row-reverse' : 'row'
     const { Faded } = useFaded({ animate })
     return (
@@ -85,7 +87,7 @@ const Step = ({
                     isInline
                     flexDirection='row'
                     align='flex-end'
-                    opacity={0.2}
+                    opacity={0.3}
                 >
                     <Box lineHeight='60px' fontSize='80px'>
                         {number}
@@ -96,7 +98,7 @@ const Step = ({
                         fontWeight='bold'
                         fontSize='text'
                     >
-                        {'. ' + heading}
+                        {'. ' + (decorativeHeading || heading)}
                     </Heading>
                 </Stack>
                 <Subheading opacity={0.8} fontWeight='medium'>
