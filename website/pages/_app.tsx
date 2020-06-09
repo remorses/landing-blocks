@@ -17,11 +17,8 @@ export default function App(props) {
                 docsRootPath='pages/docs'
                 headerItems={[
                     ...headingNavLinks,
-                    <GithubLink
-                        key='0'
-                        url='https://github.com/remorses/dokz'
-                    />,
                     // <ColorModeSwitch key='1' />,
+                    ,
                 ]}
                 headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
                 mdxComponents={{
@@ -48,6 +45,7 @@ export const headingNavLinks = [
     <MyLink href='/#components'>Components</MyLink>,
     <MyLink href='/#demos'>Demos</MyLink>,
     <MyLink href='#'>Newsletter</MyLink>,
+    <GithubLink key='0' url='https://github.com/remorses/landing-blocks' />,
 ]
 
 export function MyFooter({ ...rest }) {
