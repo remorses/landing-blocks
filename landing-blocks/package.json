@@ -1,7 +1,7 @@
 {
     "name": "landing-blocks",
     "_": "[bump if landing-blocks]",
-    "version": "1.0.32",
+    "version": "1.0.33",
     "description": "",
     "main": "dist/index.js",
     "module": "esm/index.js",
