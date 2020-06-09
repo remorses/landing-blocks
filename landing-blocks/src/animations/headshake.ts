@@ -1,6 +1,6 @@
-import { compose, translateX, rotateY, getNextPercentage } from './utils'
-import { Keyframe, Animation } from './types'
 import { keyframes } from '@emotion/core'
+import { Animation, Keyframe } from './types'
+import { compose, getNextPercentage, rotateY, translateX } from './utils'
 
 const translateAndRotate = compose(translateX, rotateY)
 

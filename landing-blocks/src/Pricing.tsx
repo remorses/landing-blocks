@@ -1,10 +1,10 @@
 import { Box, DarkMode, Divider, Stack, StackProps } from '@chakra-ui/core'
 import Color from 'color-js'
 import React, { Fragment, ReactNode } from 'react'
+import { Heading } from './Heading'
 import { useMyColorMode } from './hooks'
 import { darkStyles, PageContainer, PageContainerProps } from './layout'
 import { useColor } from './support'
-import { Heading } from './Heading'
 
 const featureLineMinH = '36px'
 const featuresWidth = '370px'

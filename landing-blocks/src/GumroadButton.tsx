@@ -1,5 +1,5 @@
 import { Link, useColorMode } from '@chakra-ui/core'
-import React, { forwardRef, FC } from 'react'
+import React, { FC, forwardRef } from 'react'
 import useScript from 'react-script-hook'
 
 export type GumroadButtonProps = {

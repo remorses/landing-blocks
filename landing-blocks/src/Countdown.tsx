@@ -1,11 +1,11 @@
 import { Box, Stack } from '@chakra-ui/core'
 import React, { ReactNode, useEffect, useState } from 'react'
+import { Bullet } from './Bullet'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
 import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 import { clone } from './support'
-import { Bullet } from './Bullet'
 
 export type CountdownProps = {
     heading?: ReactNode

@@ -1,7 +1,6 @@
-import { useColorMode, Box, Stack } from '@chakra-ui/core'
-import React, { ReactNode } from 'react'
+import { Box, Stack, useColorMode } from '@chakra-ui/core'
 import Color from 'color-js'
-import { Text } from '@chakra-ui/core'
+import React, { ReactNode } from 'react'
 import { PageContainer, PageContainerProps } from './layout'
 
 export type DividerProps = {

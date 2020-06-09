@@ -1,10 +1,10 @@
 import { Box, Stack } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
+import { Bullet } from './Bullet'
 import { Heading } from './Heading'
 import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
-import { removeUndefined, getPageContainerProps } from './support'
-import { Bullet } from './Bullet'
+import { getPageContainerProps } from './support'
 
 export type BannerProps = {
     heading?: ReactNode

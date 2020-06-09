@@ -1,7 +1,7 @@
 
+import { keyframes } from '@emotion/core';
+import { Animation, Keyframe } from './types';
 import { skewXY } from './utils';
-import  { Keyframe, Animation } from './types';
-import  { keyframes } from '@emotion/core';
 
 const noSkew: Keyframe = {
   transform: 'none'

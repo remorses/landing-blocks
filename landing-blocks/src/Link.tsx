@@ -1,13 +1,5 @@
-import {
-    useColorMode,
-    BoxProps,
-    Box,
-    Link as Link_,
-    LinkProps as LinkProps_,
-} from '@chakra-ui/core'
-import React, { Fragment, Children } from 'react'
-import Color from 'color-js'
-import { Text } from '@chakra-ui/core'
+import { Link as Link_, LinkProps as LinkProps_, useColorMode } from '@chakra-ui/core'
+import React from 'react'
 
 export type LinkProps = LinkProps_
 

@@ -1,4 +1,4 @@
-import { Box, Stack, Text } from '@chakra-ui/core'
+import { Box, Stack } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { PageContainer, PageContainerProps } from './layout'
 

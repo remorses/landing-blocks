@@ -1,14 +1,10 @@
-import { useColorMode, Box, Stack, BoxProps, StackProps } from '@chakra-ui/core'
-import React, { ReactNode, Fragment } from 'react'
-import Color from 'color-js'
-import { Text } from '@chakra-ui/core'
-import { PageContainer, PageContainerProps } from './layout'
-import Typist from 'react-typist'
-import Highlight, { defaultProps, Language } from 'prism-react-renderer'
-import { PrismTheme } from 'prism-react-renderer'
+import { Box, StackProps } from '@chakra-ui/core'
+import Highlight, { defaultProps, Language, PrismTheme } from 'prism-react-renderer'
+import darkPrismTheme from 'prism-react-renderer/themes/duotoneDark'
 // import lightTheme from 'prism-react-renderer/themes/nightOwlLight'
 import lightPrismTheme from 'prism-react-renderer/themes/duotoneLight'
-import darkPrismTheme from 'prism-react-renderer/themes/duotoneDark'
+import React from 'react'
+import Typist from 'react-typist'
 
 export type CodeSnippetProps = {
     language: Language

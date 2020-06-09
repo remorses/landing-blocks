@@ -1,8 +1,8 @@
-import React, { FC } from 'react'
-import { Box, useColorMode, BoxProps } from '@chakra-ui/core'
-import { WireLong } from '../svgs'
-import { useColor } from '../support'
+import { Box, BoxProps } from '@chakra-ui/core'
 import Color from 'color-js'
+import React, { FC } from 'react'
+import { useColor } from '../support'
+import { WireLong } from '../svgs'
 
 function lighter(c) {
     // const { colorMode } = useColorMode()

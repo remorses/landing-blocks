@@ -1,6 +1,6 @@
-import { cubicBezier, scale3d, getNextPercentage } from './utils'
-import { Keyframe, Animation } from './types'
 import { keyframes } from '@emotion/core'
+import { Animation, Keyframe } from './types'
+import { cubicBezier, getNextPercentage, scale3d } from './utils'
 
 const timing: Keyframe = {
     animationTimingFunction: cubicBezier(0.215, 0.61, 0.355, 1.0),

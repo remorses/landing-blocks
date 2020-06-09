@@ -1,7 +1,7 @@
 
+import { keyframes } from '@emotion/core';
+import { Animation, Keyframe } from './types';
 import { translate3d } from './utils';
-import  { Keyframe, Animation } from './types';
-import  { keyframes } from '@emotion/core';
 
 const noShake: Keyframe = {
   transform: translate3d(0, 0, 0)

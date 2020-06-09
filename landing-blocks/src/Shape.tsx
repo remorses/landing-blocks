@@ -1,5 +1,5 @@
-import { Heading as H, HeadingProps, BoxProps, Box, useColorMode } from '@chakra-ui/core'
-import React, { Fragment, Children } from 'react'
+import { Box, BoxProps, useColorMode } from '@chakra-ui/core'
+import React, { Fragment } from 'react'
 import { useColor } from './support'
 
 export type ShapeProps = BoxProps & {

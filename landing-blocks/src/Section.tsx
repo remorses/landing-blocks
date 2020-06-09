@@ -1,8 +1,5 @@
-import { useColorMode, Box, Stack, StackProps, BoxProps } from '@chakra-ui/core'
-import React, { ReactNode, Children } from 'react'
-import Color from 'color-js'
-import { Text } from '@chakra-ui/core'
-import { PageContainer, PageContainerProps } from './layout'
+import { Box, BoxProps, Stack, StackProps } from '@chakra-ui/core'
+import React from 'react'
 import { getPageContainerProps } from './support'
 
 export type SectionProps = { degree?: number } & StackProps

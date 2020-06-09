@@ -1,18 +1,8 @@
-import {
-    ColorModeProvider,
-    CSSReset,
-    DefaultTheme,
-    FlexProps,
-    Stack,
-    ThemeProvider,
-    theme as chakraTheme,
-    useColorMode,
-    DarkMode,
-} from '@chakra-ui/core'
-import React, { useMemo, Fragment } from 'react'
-import { PropagatedThemeProvider } from './layout'
-import merge from 'lodash/fp/merge'
+import { CSSReset, DarkMode, DefaultTheme, FlexProps, Stack, theme as chakraTheme, useColorMode } from '@chakra-ui/core'
 import { css, Global } from '@emotion/core'
+import merge from 'lodash/fp/merge'
+import React, { Fragment, useMemo } from 'react'
+import { PropagatedThemeProvider } from './layout'
 
 export interface ThemeExtension extends DefaultTheme {
     colors: {

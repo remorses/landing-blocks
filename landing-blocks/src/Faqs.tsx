@@ -1,13 +1,4 @@
-import {
-    Accordion,
-    AccordionHeader,
-    AccordionIcon,
-    AccordionItem,
-    AccordionPanel,
-    Box,
-    Heading,
-    Stack,
-} from '@chakra-ui/core'
+import { Accordion, AccordionHeader, AccordionIcon, AccordionItem, AccordionPanel, Box, Heading, Stack } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { useFaded } from './hooks'
 import { PageContainer, PageContainerProps } from './layout'

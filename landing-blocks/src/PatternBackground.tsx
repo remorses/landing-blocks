@@ -1,14 +1,5 @@
-import {
-    Heading as H,
-    HeadingProps,
-    BoxProps,
-    Box,
-    useColorMode,
-} from '@chakra-ui/core'
-import React, { Fragment, Children } from 'react'
-import { useColor } from './support'
-import styled from '@emotion/styled'
-import { Row } from './layout'
+import { Box, BoxProps } from '@chakra-ui/core'
+import React from 'react'
 
 export type PatternBackgroundProps = BoxProps & {
     pattern?: keyof (typeof patterns)

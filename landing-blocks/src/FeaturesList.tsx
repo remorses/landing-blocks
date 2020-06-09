@@ -1,4 +1,4 @@
-import { Stack, Text, StackProps, Box } from '@chakra-ui/core'
+import { Box, Stack, StackProps } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'

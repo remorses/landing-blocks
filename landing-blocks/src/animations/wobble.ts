@@ -1,7 +1,7 @@
 
-import { compose, translate3d, rotate3d } from './utils';
-import  { Keyframe, Animation } from './types';
-import  { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/core';
+import { Animation, Keyframe } from './types';
+import { compose, rotate3d, translate3d } from './utils';
 
 const translateAndRotate = compose(translate3d, rotate3d);
 

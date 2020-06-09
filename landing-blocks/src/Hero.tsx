@@ -1,11 +1,12 @@
 // @jsx jsx
-import { Box, Stack } from '@chakra-ui/core'
-import { jsx } from '@emotion/core'
+import {jsx} from '@emotion/core'
+jsx
+import { Box, Stack,  } from '@chakra-ui/core'
 import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
-import { Col, PageContainer, Row, PageContainerProps } from './layout'
+import { Col, PageContainer, PageContainerProps, Row } from './layout'
 import { Subheading } from './Subheading'
 import { clone } from './support'
 

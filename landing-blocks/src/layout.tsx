@@ -1,9 +1,8 @@
 import { DarkMode, useTheme } from '@chakra-ui/core'
-import { Box, Flex, Stack, FlexProps, StackProps } from 'layout-kit-react'
 import { ThemeProvider } from 'emotion-theming'
-import { ThemeContext } from '@emotion/core'
+import { Box, Flex, FlexProps, Stack, StackProps } from 'layout-kit-react'
 import merge from 'lodash/fp/merge'
-import React, { FC, forwardRef, Fragment, useMemo, useContext } from 'react'
+import React, { FC, forwardRef, Fragment, useMemo } from 'react'
 
 export const Col: FC<FlexProps> = forwardRef((props, ref) => {
     return <Flex align='stretch'  ref={ref} direction='column' {...props} />

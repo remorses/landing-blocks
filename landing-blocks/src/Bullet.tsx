@@ -1,7 +1,6 @@
-import { useColorMode, BoxProps, Box } from '@chakra-ui/core'
-import React, { Fragment } from 'react'
+import { Box, BoxProps, useColorMode } from '@chakra-ui/core'
 import Color from 'color-js'
-import { Text } from '@chakra-ui/core'
+import React, { Fragment } from 'react'
 
 export type BulletProps = BoxProps
 
