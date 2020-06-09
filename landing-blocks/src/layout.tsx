@@ -5,8 +5,11 @@ import merge from 'lodash/fp/merge'
 import React, { FC, forwardRef, Fragment, useMemo } from 'react'
 
 export const Col: FC<FlexProps> = forwardRef((props, ref) => {
-    return <Flex align='stretch'  ref={ref} direction='column' {...props} />
+    return <Flex align='stretch' ref={ref} direction='column' {...props} />
 })
+
+export { Stack, Box } from 'layout-kit-react'
+export { Image } from '@chakra-ui/core'
 
 export const Row: FC<FlexProps> = forwardRef((props, ref) => {
     return <Flex align='stretch' ref={ref} direction='row' {...props} />
@@ -51,7 +54,8 @@ export type PageContainerProps = {
     pageWidth?: string
 } & StackProps
 
-export const PageContainer: FC<PageContainerProps> = forwardRef( // TODO rename to SectionContainer
+export const PageContainer: FC<PageContainerProps> = forwardRef(
+    // TODO rename to SectionContainer
     (
         {
             children,

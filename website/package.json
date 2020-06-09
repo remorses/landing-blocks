@@ -22,7 +22,7 @@
         "@emotion/styled": "^10.0.27",
         "@next/bundle-analyzer": "^9.4.4",
         "baby-i-am-faded": "^0.0.13",
-        "dokz": "^1.0.28",
+        "dokz": "^1.0.29",
         "landing-blocks": "*",
         "next": "^9.4.1",
         "react": "^16.13.1",
