@@ -1,7 +1,15 @@
-import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, useDisclosure } from '@chakra-ui/core'
+import {
+    Button,
+    Drawer,
+    DrawerBody,
+    DrawerCloseButton,
+    DrawerContent,
+    DrawerOverlay,
+    useDisclosure,
+} from '@chakra-ui/core'
 import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
-import { FiMenu as Menu } from 'react-icons/fi'
+
 import { useMyColorMode } from './hooks'
 import { darkStyles, PageContainer, PageContainerProps, Row } from './layout'
 
@@ -97,5 +105,26 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                 </Box>
             </Drawer>
         </PageContainer>
+    )
+}
+
+const Menu = (props) => {
+    return (
+        <svg
+            xmlns='http://www.w3.org/2000/svg'
+            width='24'
+            height='24'
+            viewBox='0 0 24 24'
+            fill='none'
+            stroke='currentColor'
+            stroke-width='2'
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            {...props}
+        >
+            <line x1='3' y1='12' x2='21' y2='12'></line>
+            <line x1='3' y1='6' x2='21' y2='6'></line>
+            <line x1='3' y1='18' x2='21' y2='18'></line>
+        </svg>
     )
 }

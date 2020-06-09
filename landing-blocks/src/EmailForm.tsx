@@ -56,6 +56,7 @@ export function EmailForm({
             <Box ml='20px' />
             <Col w={['100%', null, 'auto']}>
                 <Button
+                    animate={false}
                     onClick={onSubmit}
                     shadow='sm'
                     px='20px'

@@ -20,6 +20,7 @@
         "@chakra-ui/core": "0.x",
         "@emotion/core": "^10.0.28",
         "@emotion/styled": "^10.0.27",
+        "@next/bundle-analyzer": "^9.4.4",
         "baby-i-am-faded": "^0.0.13",
         "dokz": "^1.0.28",
         "landing-blocks": "*",
@@ -27,7 +28,7 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-highlight": "^0.12.0",
-        "react-icons": "latest"
+        "react-icons": "^3.9.0"
     },
     "devDependencies": {
         "@types/node": "^13.13.0",
