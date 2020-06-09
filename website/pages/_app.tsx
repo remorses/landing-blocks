@@ -1,5 +1,5 @@
 import { Link, useColorMode } from '@chakra-ui/core'
-import { DokzProvider, GithubLink } from 'dokz/dist'
+import { DokzProvider, GithubLink } from 'dokz'
 import { Footer } from 'landing-blocks/src/Footer'
 import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Box, Stack } from 'layout-kit-react'
@@ -13,7 +13,7 @@ export default function App(props) {
         <DokzProvider
             docsRootPath='pages/docs'
             headerItems={[
-                headingNavLinks,
+                ...headingNavLinks,
                 <GithubLink key='0' url='https://github.com/remorses/dokz' />,
                 // <ColorModeSwitch key='1' />,
             ]}
