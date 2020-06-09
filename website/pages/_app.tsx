@@ -6,34 +6,42 @@ import { Box, Stack } from 'layout-kit-react'
 import NextLink from 'next/link'
 import React from 'react'
 import { LogoBlack, LogoIcon, LogoIconBlack, LogoWhite } from '../svgs'
+import { useRouter } from 'next/router'
 
 export default function App(props) {
     const { Component, pageProps } = props
-    return (
-        <DokzProvider
-            docsRootPath='pages/docs'
-            headerItems={[
-                ...headingNavLinks,
-                <GithubLink key='0' url='https://github.com/remorses/dokz' />,
-                // <ColorModeSwitch key='1' />,
-            ]}
-            headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
-            mdxComponents={{
-                img: (p) => <img {...p} />,
-                a: (p) => <p {...p} />,
-            }}
-            sidebarOrdering={{
-                // sidebar ordering
-                demos: false,
-                docs: {
-                    index: true,
-                    components: { hero: true },
-                },
-            }}
-        >
-            <Component {...pageProps} />
-        </DokzProvider>
-    )
+    const { pathname } = useRouter()
+    if (pathname.startsWith('/docs')) {
+        return (
+            <DokzProvider
+                docsRootPath='pages/docs'
+                headerItems={[
+                    ...headingNavLinks,
+                    <GithubLink
+                        key='0'
+                        url='https://github.com/remorses/dokz'
+                    />,
+                    // <ColorModeSwitch key='1' />,
+                ]}
+                headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
+                mdxComponents={{
+                    img: (p) => <img {...p} />,
+                    a: (p) => <p {...p} />,
+                }}
+                sidebarOrdering={{
+                    // sidebar ordering
+                    demos: false,
+                    docs: {
+                        index: true,
+                        components: { hero: true },
+                    },
+                }}
+            >
+                <Component {...pageProps} />
+            </DokzProvider>
+        )
+    }
+    return <Component {...pageProps} />
 }
 
 export const headingNavLinks = [
