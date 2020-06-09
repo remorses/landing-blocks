@@ -1,23 +1,16 @@
-import {
-    Box,
-    DarkMode,
-    Flex,
-    FlexProps,
-    Stack,
-    StackProps,
-    useTheme,
-} from '@chakra-ui/core'
+import { DarkMode, useTheme } from '@chakra-ui/core'
+import { Box, Flex, Stack, FlexProps, StackProps } from 'layout-kit-react'
 import { ThemeProvider } from 'emotion-theming'
 import { ThemeContext } from '@emotion/core'
 import merge from 'lodash/fp/merge'
 import React, { FC, forwardRef, Fragment, useMemo, useContext } from 'react'
 
 export const Col: FC<FlexProps> = forwardRef((props, ref) => {
-    return <Flex ref={ref} flexDir='column' {...props} />
+    return <Flex align='stretch'  ref={ref} direction='column' {...props} />
 })
 
 export const Row: FC<FlexProps> = forwardRef((props, ref) => {
-    return <Flex ref={ref} flexDir='row' {...props} />
+    return <Flex align='stretch' ref={ref} direction='row' {...props} />
 })
 
 export const Spacer = ({ x = '0px', y = '0px' }) => {
@@ -112,6 +105,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef( // TODO rename 
                         </Col>
                         <Stack
                             zIndex={1}
+                            align='stretch'
                             px={['0px', '0px', '20px']}
                             w='100%'
                             maxW='pageContainer'

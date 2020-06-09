@@ -5,9 +5,6 @@ import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Link, Stack, Box, useColorMode } from '@chakra-ui/core'
 import { Footer } from 'landing-blocks/src/Footer'
 import { LogoIcon, LogoIconBlack, LogoBlack, LogoWhite } from '../svgs'
-import * as LandingStuff from 'landing-blocks/src'
-import * as chakra from '@chakra-ui/core'
-import * as LandingDecorationsStuff from 'landing-blocks/src/decorations'
 
 export default function App(props) {
     const { Component, pageProps } = props
@@ -19,11 +16,6 @@ export default function App(props) {
                 <GithubLink key='0' url='https://github.com/remorses/dokz' />,
                 // <ColorModeSwitch key='1' />,
             ]}
-            playgroundScope={{
-                ...chakra,
-                ...LandingStuff, // TODO this should be a promise so the scope can be loaded later and playground can wait for this promise
-                ...LandingDecorationsStuff,
-            }}
             headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
             mdxComponents={{
                 img: (p) => <img {...p} />,
