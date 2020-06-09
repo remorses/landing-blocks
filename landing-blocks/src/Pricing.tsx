@@ -1,5 +1,6 @@
-import { Box, DarkMode, Divider, Stack, StackProps } from '@chakra-ui/core'
+import { DarkMode, Divider } from '@chakra-ui/core'
 import Color from 'color-js'
+import { Box, Stack, StackProps } from 'layout-kit-react'
 import React, { Fragment, ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useMyColorMode } from './hooks'
@@ -41,7 +42,7 @@ export function Pricing({
 
     return (
         <PageContainer {...rest}>
-            <Stack flexDir={['column', null, 'row']}>
+            <Stack direction={['column', null, 'row']}>
                 <Stack minW={featuresWidth} display={['none', null, 'flex']}>
                     <Stack minH={pricingNamesMinH}>
                         <Box fontWeight='medium' fontSize='subheading'>
@@ -50,7 +51,7 @@ export function Pricing({
                         <Box opacity={0.7}>{subheading}</Box>
                     </Stack>
                     <Box h={pricingHeaderMinH} />
-                    <Stack flexDir='row'>
+                    <Stack direction='row'>
                         <Stack spacing='20px'>
                             {features.map((x) => (
                                 <Box textAlign='right' minH={featureLineMinH}>
@@ -70,7 +71,7 @@ export function Pricing({
                 <Stack
                     align={['center', null, 'flex-start']}
                     w='100%'
-                    flexDir={['column', null, 'row']}
+                    direction={['column', null, 'row']}
                     justify='space-between'
                     spacing={['100px']}
                 >
@@ -139,7 +140,7 @@ function PriceColumn({
                         maxH={['none', null, pricingHeaderMinH]}
                         py='20px'
                     >
-                        <Heading textAlign='center' fontWeight='semibold' >
+                        <Heading textAlign='center' fontWeight='semibold'>
                             {priceSection.price}
                         </Heading>
                         <Box fontSize='subtext' opacity={0.7}>

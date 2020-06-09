@@ -1,4 +1,4 @@
-import { Box, StackProps } from '@chakra-ui/core'
+import { Box, StackProps } from 'layout-kit-react'
 import Highlight, { defaultProps, Language, PrismTheme } from 'prism-react-renderer'
 import darkPrismTheme from 'prism-react-renderer/themes/duotoneDark'
 // import lightTheme from 'prism-react-renderer/themes/nightOwlLight'

@@ -1,5 +1,6 @@
-import { CSSReset, DarkMode, DefaultTheme, FlexProps, Stack, theme as chakraTheme, useColorMode } from '@chakra-ui/core'
+import { CSSReset, DarkMode, DefaultTheme, theme as chakraTheme, useColorMode } from '@chakra-ui/core'
 import { css, Global } from '@emotion/core'
+import { FlexProps, Stack } from 'layout-kit-react'
 import merge from 'lodash/fp/merge'
 import React, { Fragment, useMemo } from 'react'
 import { PropagatedThemeProvider } from './layout'

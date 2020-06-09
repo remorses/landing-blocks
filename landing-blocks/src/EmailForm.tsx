@@ -1,4 +1,5 @@
-import { Box, Input, Stack, StackProps, useColorMode } from '@chakra-ui/core'
+import { Input, useColorMode } from '@chakra-ui/core'
+import { Box, Stack, StackProps } from 'layout-kit-react'
 import React, { ReactNode, useState } from 'react'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { Button } from './Button'
@@ -29,7 +30,7 @@ export function EmailForm({
         <Stack
             justify='flex-start'
             width='auto'
-            flexDirection={['column', null, 'row']}
+            direction={['column', null, 'row']}
             // align='center'
             fontSize='text'
             {...rest}
@@ -39,11 +40,13 @@ export function EmailForm({
                 onChange={(e) => onChange(e.target.value)}
                 value={value}
                 shadow='sm'
-                bg={{
-                    dark: 'rgba(255,255,255, .2)',
-                    // light: 'rgba(0,0,0,.03)',
-                    light: '#fff',
-                }[colorMode]}
+                bg={
+                    {
+                        dark: 'rgba(255,255,255, .2)',
+                        // light: 'rgba(0,0,0,.03)',
+                        light: '#fff',
+                    }[colorMode]
+                }
                 minW='250px'
                 minH='40px'
                 type='email'
@@ -55,7 +58,6 @@ export function EmailForm({
                 <Button
                     onClick={onSubmit}
                     shadow='sm'
-                    m='0'
                     px='20px'
                     textAlign='center'
                 >

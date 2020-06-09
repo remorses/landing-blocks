@@ -1,4 +1,5 @@
-import { Accordion, AccordionHeader, AccordionIcon, AccordionItem, AccordionPanel, Box, Heading, Stack } from '@chakra-ui/core'
+import { Accordion, AccordionHeader, AccordionIcon, AccordionItem, AccordionPanel, Heading } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { useFaded } from './hooks'
 import { PageContainer, PageContainerProps } from './layout'
@@ -33,13 +34,16 @@ export function Faqs({
                 minWidth='100%'
             >
                 {/* <Bullett>{bullett}</Bullett> */}
-                <Heading >{heading}</Heading>
+                <Heading>{heading}</Heading>
                 <Subheading fontSize='text' maxW='700px'>
                     {subheading}
                 </Subheading>
                 <Accordion allowToggle minWidth='100%'>
                     {faqs.map((x) => (
-                        <AccordionItem key={x.question.toString()} minWidth='100%'>
+                        <AccordionItem
+                            key={x.question.toString()}
+                            minWidth='100%'
+                        >
                             <AccordionHeader minH='60px'>
                                 <Box
                                     fontSize='24px'

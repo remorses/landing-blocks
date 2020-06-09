@@ -44,7 +44,7 @@ const Placeholder = (props) => {
     return (
         <Link
             display='flex'
-            flexDir='column'
+            direction='column'
             alignItems='center'
             justifyContent='center'
             borderRadius='6px'

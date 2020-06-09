@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'
@@ -37,7 +37,7 @@ export function Banner({
                 spacing='40px'
                 bg='gray.100'
                 // isReversed={flip}
-                flexDirection={['column', null, direction]}
+                direction={['column', null, direction]}
                 w='100%'
                 borderRadius='10px'
                 p='30px'
@@ -49,7 +49,7 @@ export function Banner({
                     minW='300px'
                     w={image ? 'auto' : '100%'}
                     justify='space-between'
-                    flexDirection={['column', null, image ? 'column' : 'row']}
+                    direction={['column', null, image ? 'column' : 'row']}
                 >
                     <Stack spacing='20px'>
                         {bullet && <Bullet my='10px'>{bullet}</Bullet>}
@@ -62,7 +62,6 @@ export function Banner({
                         </Heading>
                         <Subheading
                             lineHeight='34px'
-                            m={0}
                             opacity={0.6}
                             fontWeight='normal'
                             fontSize='text'

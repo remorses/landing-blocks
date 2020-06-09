@@ -9,7 +9,7 @@ export function Subheading(props: HeadingProps) {
     return (
         <H
             as={as}
-            m={0}
+            //
             opacity={0.64}
             fontWeight='medium'
             lineHeight='1.4em'

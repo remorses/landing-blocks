@@ -23,8 +23,15 @@ import {
 import Highlight from 'react-highlight'
 
 import { GradientCurtains } from 'landing-blocks/src/decorations'
-import { Image, Stack, AspectRatioBox } from '@chakra-ui/core'
-import { Link, Box } from '@chakra-ui/core'
+import { Image, AspectRatioBox } from '@chakra-ui/core'
+import {
+    Box,
+    BoxProps,
+    Flex,
+    Stack,
+    FlexProps,
+    StackProps,
+} from 'layout-kit-react'
 import { FiCheck } from 'react-icons/fi'
 
 const heroCode = `
@@ -107,14 +114,14 @@ const Page = () => (
                 heading='Take a Quick Tour'
                 subheading='Prisma is the perfect companion for building web APIs. It saves repetitive CRUD boilerplate and provides a flexible API for common use cases such as pagination and filtering.'
                 image={
-                    <AspectRatioBox minW='400px' w='600px'  ratio={5/3}>
+                    <AspectRatioBox minW='400px' w='600px' ratio={5 / 3}>
                         <Box
                             borderRadius='10px'
                             shadow='lg'
                             as='iframe'
                             title='video'
                             // @ts-ignore
-                            src="https://www.youtube.com/embed/0RhtQgIs-TE"
+                            src='https://www.youtube.com/embed/0RhtQgIs-TE'
                             allowFullScreen
                         />
                     </AspectRatioBox>

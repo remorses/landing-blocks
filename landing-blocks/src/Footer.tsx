@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { PageContainer, PageContainerProps } from './layout'
 
@@ -15,8 +15,7 @@ export function Footer({
     return (
         <PageContainer py='60px' minHeight='200px' {...rest}>
             <Stack
-                flexDir='row'
-                flexWrap='wrap'
+                direction={['column', null, 'row']}
                 justifyContent='space-evenly'
                 spacing='60px'
             >

@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode, useEffect, useState } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'

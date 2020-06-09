@@ -16,7 +16,15 @@ import {
     SectionTitle,
     Button,
 } from 'landing-blocks/src'
-import { Box, Stack, Image } from '@chakra-ui/core'
+import {  Image } from '@chakra-ui/core'
+import {
+    Box,
+    BoxProps,
+    Flex,
+    Stack,
+    FlexProps,
+    StackProps,
+} from 'layout-kit-react'
 
 const Page = () => (
     <LandingProvider primary='white'>

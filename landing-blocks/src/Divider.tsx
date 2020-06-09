@@ -1,5 +1,6 @@
-import { Box, Stack, useColorMode } from '@chakra-ui/core'
+import { useColorMode } from '@chakra-ui/core'
 import Color from 'color-js'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { PageContainer, PageContainerProps } from './layout'
 
@@ -17,7 +18,7 @@ export const Divider = ({ heading = '', ...rest }: DividerProps) => {
                     align='center'
                     spacing='20px'
                     direction='row'
-                    opacity={.6}
+                    opacity={0.6}
                 >
                     <Line />
                     <Box

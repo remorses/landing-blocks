@@ -1,4 +1,12 @@
-import { Image, Box, Stack } from '@chakra-ui/core'
+import { Image,  } from '@chakra-ui/core'
+import {
+    Box,
+    BoxProps,
+    Flex,
+    Stack,
+    FlexProps,
+    StackProps,
+} from 'layout-kit-react'
 import { PatternBackground } from 'landing-blocks/src/PatternBackground'
 import {
     Banner,

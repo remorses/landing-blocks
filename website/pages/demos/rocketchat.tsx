@@ -16,7 +16,8 @@ import {
     SectionTitle,
     Button,
 } from 'landing-blocks/src'
-import { Box, Stack, Image } from '@chakra-ui/core'
+import { Image } from '@chakra-ui/core'
+
 import { MailchimpForm } from 'landing-blocks/src/EmailForm'
 
 const Page = () => (

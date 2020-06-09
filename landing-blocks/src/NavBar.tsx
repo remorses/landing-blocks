@@ -1,13 +1,13 @@
-import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, Stack, useDisclosure } from '@chakra-ui/core'
+import { Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerOverlay, useDisclosure } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { FiMenu as Menu } from 'react-icons/fi'
 import { useMyColorMode } from './hooks'
 import { darkStyles, PageContainer, PageContainerProps, Row } from './layout'
-import { clone } from './support'
 
 export type NavBarProps = {
     logo: ReactNode
-    navs?: ReactNode[]
+    navs?: ReactNode | ReactNode[]
 } & PageContainerProps
 
 export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
@@ -26,11 +26,23 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                     align='center'
                     display={['none', 'none', 'flex']}
                 >
-                    {navs.map((x, i) => (
-                        <Box key={i} fontSize='text' fontWeight='medium'>
-                            {clone(x)}
-                        </Box>
-                    ))}
+                    {Array.isArray(navs) ? (
+                        <Stack direction='row' spacing='20px'>
+                            {navs.map((x, i) => (
+                                <Stack
+                                    key={i}
+                                    fontSize='text'
+                                    alignItems='center'
+                                    justify='center'
+                                    fontWeight='medium'
+                                >
+                                    {x}
+                                </Stack>
+                            ))}
+                        </Stack>
+                    ) : (
+                        navs
+                    )}
                 </Stack>
                 <Button
                     display={['block', 'block', 'none']}
@@ -64,15 +76,21 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                                 spacing='20px'
                                 align='center'
                             >
-                                {navs.map((x, i) => (
-                                    <Box
-                                        key={i}
-                                        fontSize='text'
-                                        fontWeight='medium'
-                                    >
-                                        {x}
-                                    </Box>
-                                ))}
+                                {Array.isArray(navs) ? (
+                                    <Stack spacing='40px'>
+                                        {navs.map((x, i) => (
+                                            <Box
+                                                key={i}
+                                                fontSize='text'
+                                                fontWeight='medium'
+                                            >
+                                                {x}
+                                            </Box>
+                                        ))}
+                                    </Stack>
+                                ) : (
+                                    navs
+                                )}
                             </Stack>
                         </DrawerBody>
                     </DrawerContent>

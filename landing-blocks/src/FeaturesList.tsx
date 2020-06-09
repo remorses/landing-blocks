@@ -1,4 +1,4 @@
-import { Box, Stack, StackProps } from '@chakra-ui/core'
+import { Box, Stack, StackProps } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
@@ -51,10 +51,9 @@ export function FeaturesList({
             )}
             <Stack
                 as={Faded}
-                flexDir='row'
+                direction={['column', null, 'row']}
                 spacing='20px'
                 flex='1'
-                flexWrap='wrap'
             >
                 {features.map((step, i) => (
                     <Feature
@@ -94,7 +93,7 @@ const Feature = ({
                 {icon}
             </Col>
             <Heading fontSize='subheading'>{heading}</Heading>
-            <Box m={0} fontSize='text' opacity={0.6} lineHeight='30px'>
+            <Box fontSize='text' opacity={0.6} lineHeight='30px'>
                 {subheading}
             </Box>
         </Stack>

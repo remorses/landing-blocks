@@ -23,7 +23,15 @@ import {
     Section,
 } from 'landing-blocks/src'
 import { Faded } from 'baby-i-am-faded'
-import { Box, Stack, Image, Button, Flex, Text, Link } from '@chakra-ui/core'
+import { Image, Button, Text, Link } from '@chakra-ui/core'
+import {
+    Box,
+    BoxProps,
+    Flex,
+    Stack,
+    FlexProps,
+    StackProps,
+} from 'layout-kit-react'
 import * as landingCards from '../svgs/landingCards'
 
 import { IndexCardsPaths, demosPaths } from '../constants'
@@ -35,18 +43,30 @@ const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
 
 const Page = () => (
     <LandingProvider primary='white'>
-        <Section py='100px' mt='-100px' spacing='60px' bg={BG} backgroundImage={BG_IMG}>
+        <Section
+            py='100px'
+            mt='-100px'
+            spacing='60px'
+            bg={BG}
+            backgroundImage={BG_IMG}
+        >
             <NavBar
                 dark
                 logo={<HeadingLogoIcon width='220px' long />}
-                navs={[headingNavLinks]}
+                navs={headingNavLinks}
             />
             <Hero
                 dark
                 bullet='NOW AVAILABLE ON NPM'
                 heading={<h1>Landing pages building blocks</h1>}
                 subheading='Build your landing page in minutes using composable react components'
-                image={<Box mr={['0', null, '-100px']} width='800px' as={HeroIllustration} />}
+                image={
+                    <Box
+                        mr={['0', null, '-100px']}
+                        width='800px'
+                        as={HeroIllustration}
+                    />
+                }
                 cta={
                     <NextLink href='/docs'>
                         <LandingButton animate>Read The Docs</LandingButton>
@@ -170,9 +190,8 @@ export const LandingCardsLinks = ({ ...rest }) => {
                 width='auto'
                 justify='center'
                 alignSelf='center'
-                flexDirection='row'
+                direction='row'
                 flexWrap='wrap'
-                spacing='40px'
                 flexGrow={0}
                 flex='0 0 auto'
                 {...rest}
@@ -216,14 +235,14 @@ const DemosLinks = ({ ...rest }) => {
                 width='auto'
                 justify='center'
                 alignSelf='center'
-                flexDirection='row'
+                direction='row'
                 flexWrap='wrap'
-                spacing='40px'
+                // spacing='40px'
             >
-                {demosPaths.map((k) => {
+                {demosPaths.map((k, i) => {
                     const { imagePath, urlPath } = k
                     return (
-                        <Box key={urlPath}>
+                        <Box mb='40px'  key={urlPath}>
                             <Link href={urlPath}>
                                 <Button
                                     borderRadius='8px'

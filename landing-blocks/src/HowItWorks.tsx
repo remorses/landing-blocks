@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
@@ -71,21 +71,19 @@ const Step = ({
     animate = undefined,
     ...rest
 }: StepProps & { number; flip }) => {
-    const dir = flip ? 'row-reverse' : 'row'
     const { Faded } = useFaded({ animate })
     return (
         <Stack
-            flexDir={dir}
+            
             justify='space-between'
             align='center'
-            flexWrap='wrap'
+            direction={['column', null, flip ? 'row-reverse' : 'row']}
             // spacing='40px'
             {...rest}
         >
             <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='40px'>
                 <Stack
-                    isInline
-                    flexDirection='row'
+                    direction='row'
                     align='flex-end'
                     opacity={0.3}
                 >
@@ -108,7 +106,7 @@ const Step = ({
                 <Box
                     maxW='400px'
                     fontWeight='medium'
-                    m={0}
+                   
                     lineHeight='1.8em'
                     opacity={0.5}
                     fontSize='subtext'

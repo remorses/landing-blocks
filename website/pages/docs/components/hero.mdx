@@ -1,16 +1,23 @@
-export const breadcrumbs = ['Components', 'Hero']
+import { Playground } from 'dokz'
+import {
+    Hero,
+    Button,
+    NavBar,
+    Heading,
+    LandingProvider,
+} from 'landing-blocks/src'
+import { GradientRect } from 'landing-blocks/src/decorations'
 
 # Hero
 
 The hero component is the most important component of every landing page, it is usually composed of an `heading`, `subheadinging`, an `image` and a `cta`, but sometimes you can also find some text under the cta buttons, this is called `fingerprint`.
-
 Sometimes there is also a small text above the heading, this is what we call a `bullet`, here you can find information about a new product or feature like "new: discount of 50% only today" or something similar.
 
 Sometimes you want to show some floating element in the background, this can be done with the `floatingElement` prop.
 
 here is how you can use the Hero component
 
-```js
+```jsx
 <Hero
     heading='Some heading'
     subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
@@ -24,35 +31,37 @@ here is how you can use the Hero component
 
 The following example recreates the datoCMS landing page
 
-```jsx live=true iframe=true
-<LandingProvider primary='#FF593D'>
-    <NavBar
-        logo={<img width='120px' src='/datocms/logo.svg' />}
-        navs={[
-            <a>Why DatoCMS</a>,
-            <a>Learn</a>,
-            <a>Marketplace</a>,
-            <a>Pricing</a>,
-            <Button>try for free!</Button>,
-        ]}
-    />
-    <Hero
-        heading={
-            <Heading
-                fontFamily='tiempos-headline, Georgia'
-                fontSize='74px'
-                fontWeight='bold'
-            >
-                The best companies are built on unified content
-            </Heading>
-        }
-        subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
-        image={null}
-        cta={<Button>Try it now for free!</Button>}
-        floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
-    />
-</LandingProvider>
-```
+<Playground>
+    <LandingProvider primary='#FF593D'>
+        <NavBar
+            logo={<img width='120px' src='/datocms/logo.svg' />}
+            navs={[
+                <a>Why DatoCMS</a>,
+                <a>Learn</a>,
+                <a>Marketplace</a>,
+                <a>Pricing</a>,
+                <Button>try for free!</Button>,
+            ]}
+        />
+        <Hero
+            heading={
+                <Heading
+                    fontFamily='tiempos-headline, Georgia'
+                    fontSize='74px'
+                    fontWeight='bold'
+                >
+                    The best companies are built on unified content
+                </Heading>
+            }
+            subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+            image={null}
+            cta={<Button>Try it now for free!</Button>}
+            floatingElement={
+                <GradientRect maxW='pageContainer' distortion={0.3} />
+            }
+        />
+    </LandingProvider>
+</Playground>
 
 ## Example on dark background
 

@@ -2,7 +2,15 @@ import NextLink from 'next/link'
 import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz/dist'
 import React from 'react'
 import { useMyColorMode } from 'landing-blocks/src/hooks'
-import { Link, Stack, Box, useColorMode } from '@chakra-ui/core'
+import { Link, useColorMode } from '@chakra-ui/core'
+import {
+    Box,
+    BoxProps,
+    Flex,
+    Stack,
+    FlexProps,
+    StackProps,
+} from 'layout-kit-react'
 import { Footer } from 'landing-blocks/src/Footer'
 import { LogoIcon, LogoIconBlack, LogoBlack, LogoWhite } from '../svgs'
 
@@ -35,14 +43,11 @@ export default function App(props) {
     )
 }
 
-export const headingNavLinks = (
-    <Stack isInline spacing='20px'>
-        <MyLink href='/#components'>Components</MyLink>
-        <MyLink href='/#demos'>Demos</MyLink>
-        <MyLink href='#'>Newsletter</MyLink>,
-        <Box />
-    </Stack>
-)
+export const headingNavLinks = [
+    <MyLink href='/#components'>Components</MyLink>,
+    <MyLink href='/#demos'>Demos</MyLink>,
+    <MyLink href='#'>Newsletter</MyLink>,
+]
 
 export function MyFooter({ ...rest }) {
     return (

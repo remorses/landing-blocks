@@ -1,4 +1,4 @@
-import { Box, Stack } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'
@@ -37,7 +37,7 @@ export function Feature({
                 spacing='40px'
                 justifyItems='space-between'
                 // isReversed={flip}
-                flexDirection={['column', null, dir(direction)]}
+                direction={['column', null, dir(direction)]}
             >
                 <Stack as={Faded} spacing='30px' flex='1' minW='300px'>
                     {bullet && <Bullet my='10px'>{bullet}</Bullet>}
@@ -50,7 +50,6 @@ export function Feature({
                     </Heading>
                     <Subheading
                         lineHeight='34px'
-                        m={0}
                         opacity={0.6}
                         fontWeight='normal'
                         fontSize='text'

@@ -1,4 +1,4 @@
-import { Stack } from '@chakra-ui/core'
+import { Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
@@ -30,9 +30,8 @@ export function TestimonialsLogos({
             )}
             <Stack
                 as={Faded}
-                flexDir={['column', 'column', 'row']}
+                direction={['column', 'column', 'row']}
                 justify='space-evenly'
-                isInline // TODO Stack should get isInline from flexDir if it is an array
                 spacing='40px'
                 align='center'
             >

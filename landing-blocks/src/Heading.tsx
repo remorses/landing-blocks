@@ -7,5 +7,5 @@ export function Heading(props: HeadingProps) {
         return <Fragment />
     }
     const as = typeof props.children === 'string' ? 'h2' : 'span'
-    return <H minW='100px' as={as} m={0} fontSize='heading' fontWeight='medium' {...props} />
+    return <H minW='100px' as={as} fontSize='heading' fontWeight='medium' {...props} />
 }

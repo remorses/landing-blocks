@@ -1,4 +1,5 @@
-import { Box, SimpleGrid, Stack } from '@chakra-ui/core'
+import { SimpleGrid } from '@chakra-ui/core'
+import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'
@@ -35,7 +36,11 @@ export function FeaturesGrid({
                 textAlign='center'
                 align='center'
             >
-                <Heading lineHeight='50px' fontWeight='medium' fontSize='heading'>
+                <Heading
+                    lineHeight='50px'
+                    fontWeight='medium'
+                    fontSize='heading'
+                >
                     {heading}
                 </Heading>
                 <Subheading>{subheading}</Subheading>
@@ -82,7 +87,7 @@ const Feature = ({
             <Heading fontSize='text' fontWeight='semibold'>
                 {heading}
             </Heading>
-            <Box m={0} fontSize='text' opacity={0.8} lineHeight='24px'>
+            <Box fontSize='text' opacity={0.8} lineHeight='24px'>
                 {subheading}
             </Box>
         </Stack>

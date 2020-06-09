@@ -18,7 +18,15 @@ import {
     EmailForm,
     Countdown,
 } from 'landing-blocks/src'
-import { Box, Stack, Image } from '@chakra-ui/core'
+import { Image } from '@chakra-ui/core'
+import {
+    Box,
+    BoxProps,
+    Flex,
+    Stack,
+    FlexProps,
+    StackProps,
+} from 'layout-kit-react'
 import { MailchimpForm } from 'landing-blocks/src/EmailForm'
 
 const Page = () => (
