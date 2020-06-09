@@ -4,9 +4,10 @@ import { Box, Stack } from 'layout-kit-react'
 import NextLink from 'next/link'
 import React from 'react'
 import { FiGlobe, FiGrid, FiImage, FiLayers } from 'react-icons/fi'
-import { demosPaths, IndexCardsPaths } from '../constants'
+import { demosPaths, IndexCardsPaths, headingNavLinks } from '../constants'
 import { HeroIllustration } from '../svgs'
-import { HeadingLogoIcon, headingNavLinks, MyFooter } from './_app'
+import { HeadingLogoIcon, MyFooter } from './_app'
+
 
 
 const BG = '#5E629D'

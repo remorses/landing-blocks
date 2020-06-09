@@ -7,6 +7,7 @@ import NextLink from 'next/link'
 import React from 'react'
 import { LogoBlack, LogoIcon, LogoIconBlack, LogoWhite } from '../svgs'
 import { useRouter } from 'next/router'
+import { headingNavLinks } from '../constants'
 
 export default function App(props) {
     const { Component, pageProps } = props
@@ -41,12 +42,6 @@ export default function App(props) {
     return <Component {...pageProps} />
 }
 
-export const headingNavLinks = [
-    <MyLink href='/#components'>Components</MyLink>,
-    <MyLink href='/#demos'>Demos</MyLink>,
-    <MyLink href='#'>Newsletter</MyLink>,
-    <GithubLink key='0' url='https://github.com/remorses/landing-blocks' />,
-]
 
 export function MyFooter({ ...rest }) {
     return (
