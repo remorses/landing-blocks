@@ -19,21 +19,25 @@ export const Section = ({ children, degree = 2, ...props }: SectionProps) => {
         ...rest,
     }
     return (
-        <Stack position='relative' as='section' {...spacing}>
-            <Box {...baseProps} />
+        <Stack spacing='0px' position='relative' as='section' {...spacing}>
+            <Box m={0} {...baseProps} />
             <Box
                 {...baseProps}
+                m={0}
                 transform={`skewY(${degree + 2}deg)`}
                 transformOrigin='60%'
                 opacity={0.2}
             />
             <Box
                 {...baseProps}
+                m={0}
                 transform={`skewY(${degree + 3}deg)`}
                 transformOrigin='70%'
                 opacity={0.1}
             />
-            {children}
+            <Stack width='100%' m={0} spacing={spacing.spacing}>
+                {children}
+            </Stack>
         </Stack>
     )
 }
