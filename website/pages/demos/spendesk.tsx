@@ -1,22 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    Button,
-    Faqs,
-} from 'landing-blocks/src'
-import { GradientCurtains } from 'landing-blocks/src/decorations'
 import { Box } from '@chakra-ui/core'
+import { Button, Faqs, FeaturesList, Footer, Hero, LandingProvider, NavBar } from 'landing-blocks/src'
+import { GradientCurtains } from 'landing-blocks/src/decorations'
+import React from 'react'
 
 const Page = () => (
     <LandingProvider primary='#5D21D2'>

@@ -1,18 +1,11 @@
-import NextLink from 'next/link'
-import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz/dist'
-import React from 'react'
-import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Link, useColorMode } from '@chakra-ui/core'
-import {
-    Box,
-    BoxProps,
-    Flex,
-    Stack,
-    FlexProps,
-    StackProps,
-} from 'layout-kit-react'
+import { DokzProvider, GithubLink } from 'dokz/dist'
 import { Footer } from 'landing-blocks/src/Footer'
-import { LogoIcon, LogoIconBlack, LogoBlack, LogoWhite } from '../svgs'
+import { useMyColorMode } from 'landing-blocks/src/hooks'
+import { Box, Stack } from 'layout-kit-react'
+import NextLink from 'next/link'
+import React from 'react'
+import { LogoBlack, LogoIcon, LogoIconBlack, LogoWhite } from '../svgs'
 
 export default function App(props) {
     const { Component, pageProps } = props

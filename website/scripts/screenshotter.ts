@@ -1,6 +1,6 @@
+import { Sema } from 'async-sema'
 import capture from 'capture-website'
 import { demosPaths } from '../constants'
-import { Sema } from 'async-sema'
 // capture-website --type jpeg http://localhost:3000/docs  --output screen.jpg --overwrite --scale-factor 0.5 --width 1200 --height 1400
 
 const semaphore = new Sema(10)

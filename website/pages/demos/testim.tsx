@@ -1,21 +1,5 @@
+import { Button, Feature, FeaturesList, Footer, Hero, LandingProvider, NavBar, SectionTitle, TestimonialsLogos } from 'landing-blocks/src'
 import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    Button,
-    TestimonialsLogos,
-    SectionTitle,
-} from 'landing-blocks/src'
 
 const Page = () => (
     <LandingProvider primary='#0524ED'>

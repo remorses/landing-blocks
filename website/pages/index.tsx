@@ -1,42 +1,13 @@
-import React from 'react'
+import { Button, Image, Link, Text } from '@chakra-ui/core'
+import { Banner, Button as LandingButton, Divider, FeaturesList, Hero, LandingProvider, MailchimpForm, NavBar, PageContainer, Section, SectionTitle } from 'landing-blocks/src'
+import { Box, Stack } from 'layout-kit-react'
 import NextLink from 'next/link'
-import Head from 'next/head'
-import { FiGrid, FiImage, FiLayers, FiGlobe } from 'react-icons/fi'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    Footer,
-    Button as LandingButton,
-    TestimonialsLogos,
-    SectionTitle,
-    PageContainer,
-    NavBar,
-    Banner,
-    MailchimpForm,
-    Section,
-} from 'landing-blocks/src'
-import { Faded } from 'baby-i-am-faded'
-import { Image, Button, Text, Link } from '@chakra-ui/core'
-import {
-    Box,
-    BoxProps,
-    Flex,
-    Stack,
-    FlexProps,
-    StackProps,
-} from 'layout-kit-react'
-import * as landingCards from '../svgs/landingCards'
-
-import { IndexCardsPaths, demosPaths } from '../constants'
-import { MyFooter, HeadingLogoIcon, headingNavLinks } from './_app'
+import React from 'react'
+import { FiGlobe, FiGrid, FiImage, FiLayers } from 'react-icons/fi'
+import { demosPaths, IndexCardsPaths } from '../constants'
 import { HeroIllustration } from '../svgs'
+import { HeadingLogoIcon, headingNavLinks, MyFooter } from './_app'
+
 
 const BG = '#5E629D'
 const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'

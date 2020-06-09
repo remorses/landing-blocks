@@ -1,19 +1,5 @@
+import { Button, Feature, FeaturesList, Footer, Hero, HowItWorks, LandingProvider, NavBar } from 'landing-blocks/src'
 import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    Button,
-} from 'landing-blocks/src'
 
 const Page = () => (
     <LandingProvider dark>

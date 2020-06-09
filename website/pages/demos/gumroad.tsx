@@ -1,26 +1,6 @@
+import { Box, Link } from '@chakra-ui/core'
+import { Feature, Footer, GumroadButton, Hero, LandingProvider, NavBar, Pricing, TestimonialsTweets } from 'landing-blocks/src'
 import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    Banner,
-    Button,
-    Pricing,
-    TestimonialsTweets,
-    EmailForm,
-    GumroadButton,
-} from 'landing-blocks/src'
-import { GradientCurtains } from 'landing-blocks/src/decorations'
-import { Link, Box } from '@chakra-ui/core'
 import { FiCheck } from 'react-icons/fi'
 
 const Page = () => (

@@ -1,31 +1,8 @@
-import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    SectionTitle,
-    TestimonialsLogos,
-    Faqs,
-} from 'landing-blocks/src'
-import {
-    FaDropbox,
-    FaLinkedin,
-    FaGoogle,
-    FaMedium,
-    FaTwitch,
-} from 'react-icons/fa'
+import { Feature, FeaturesList, Footer, Heading, Hero, LandingProvider, NavBar, SectionTitle, TestimonialsLogos } from 'landing-blocks/src'
 import { Button } from 'landing-blocks/src/Button'
 import { GradientRect } from 'landing-blocks/src/decorations'
 import { MailchimpForm } from 'landing-blocks/src/EmailForm'
+import React from 'react'
 
 // background: linear-gradient(45deg,#e9fcff 30%,#fdf2ed 60%);
 // FF593D

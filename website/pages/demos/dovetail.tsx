@@ -1,25 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    SectionTitle,
-    TestimonialsLogos,
-    FeaturesGrid,
-    TopBanner,
-    Button,
-} from 'landing-blocks/src'
-import { GradientRect, CurlyWire } from 'landing-blocks/src/decorations'
 import { Box, Link } from '@chakra-ui/core'
+import { Button, Divider, Feature, FeaturesGrid, FeaturesList, Footer, Hero, LandingProvider, NavBar, TopBanner } from 'landing-blocks/src'
+import { CurlyWire } from 'landing-blocks/src/decorations'
+import React from 'react'
 
 // background: linear-gradient(45deg,#e9fcff 30%,#fdf2ed 60%);
 // FF593D

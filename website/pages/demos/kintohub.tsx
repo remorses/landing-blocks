@@ -1,30 +1,7 @@
+import { Image } from '@chakra-ui/core'
+import { Button, Feature, Footer, Hero, HowItWorks, LandingProvider, NavBar } from 'landing-blocks/src'
+import { Box, Stack } from 'layout-kit-react'
 import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    TestimonialsLogos,
-    SectionTitle,
-    Button,
-} from 'landing-blocks/src'
-import {  Image } from '@chakra-ui/core'
-import {
-    Box,
-    BoxProps,
-    Flex,
-    Stack,
-    FlexProps,
-    StackProps,
-} from 'layout-kit-react'
 
 const Page = () => (
     <LandingProvider primary='white'>

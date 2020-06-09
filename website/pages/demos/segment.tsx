@@ -1,29 +1,7 @@
-import { Image,  } from '@chakra-ui/core'
-import {
-    Box,
-    BoxProps,
-    Flex,
-    Stack,
-    FlexProps,
-    StackProps,
-} from 'layout-kit-react'
+import { Image } from '@chakra-ui/core'
+import { Banner, Button, Divider, Feature, Footer, Heading, Hero, LandingProvider, Link, MailchimpForm, NavBar, Section, SectionTitle, TestimonialsLogos } from 'landing-blocks/src'
 import { PatternBackground } from 'landing-blocks/src/PatternBackground'
-import {
-    Banner,
-    Button,
-    Divider,
-    Feature,
-    Footer,
-    Heading,
-    Hero,
-    LandingProvider,
-    MailchimpForm,
-    NavBar,
-    SectionTitle,
-    TestimonialsLogos,
-    Section,
-    Link,
-} from 'landing-blocks/src'
+import { Box, Stack } from 'layout-kit-react'
 import React, { Fragment } from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 

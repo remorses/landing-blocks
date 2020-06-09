@@ -1,38 +1,9 @@
+import { AspectRatioBox, Image } from '@chakra-ui/core'
+import { Banner, Button, CodeSnippet, Feature, Footer, Heading, Hero, LandingProvider, NavBar } from 'landing-blocks/src'
+import { Box, Stack } from 'layout-kit-react'
 import React, { Fragment } from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    Banner,
-    Button,
-    Pricing,
-    TestimonialsTweets,
-    EmailForm,
-    CodeSnippet,
-} from 'landing-blocks/src'
 
-import Highlight from 'react-highlight'
 
-import { GradientCurtains } from 'landing-blocks/src/decorations'
-import { Image, AspectRatioBox } from '@chakra-ui/core'
-import {
-    Box,
-    BoxProps,
-    Flex,
-    Stack,
-    FlexProps,
-    StackProps,
-} from 'layout-kit-react'
-import { FiCheck } from 'react-icons/fi'
 
 const heroCode = `
 // Creating a new record

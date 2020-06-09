@@ -1,24 +1,8 @@
-import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    TestimonialsLogos,
-    SectionTitle,
-    Button,
-} from 'landing-blocks/src'
 import { Image } from '@chakra-ui/core'
-
+import { Button, Divider, Feature, Footer, Hero, LandingProvider, NavBar, TestimonialsLogos } from 'landing-blocks/src'
 import { MailchimpForm } from 'landing-blocks/src/EmailForm'
+import React from 'react'
+
 
 const Page = () => (
     <LandingProvider

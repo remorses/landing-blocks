@@ -1,26 +1,7 @@
-import React from 'react'
-import Head from 'next/head'
-import {
-    Hero,
-    Heading,
-    LandingProvider,
-    Subheading,
-    Divider,
-    Col,
-    Feature,
-    HowItWorks,
-    FeaturesList,
-    NavBar,
-    Footer,
-    Banner,
-    Pricing,
-    Button,
-    EmailForm,
-    PatternBackground,
-} from 'landing-blocks/src'
-import { GradientCurtains, CurlyWire } from 'landing-blocks/src/decorations'
-import { FiCheck } from 'react-icons/fi'
 import { Box, Link } from '@chakra-ui/core'
+import { Banner, Button, EmailForm, Feature, FeaturesList, Footer, Hero, HowItWorks, LandingProvider, NavBar, PatternBackground, Pricing } from 'landing-blocks/src'
+import React from 'react'
+import { FiCheck } from 'react-icons/fi'
 
 const Page = () => (
     <LandingProvider>
