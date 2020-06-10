@@ -22,6 +22,7 @@ export type LandingProviderProps = {
     white?: string
     secondary?: string
     pageWidth?: string
+    theme?: typeof chakraTheme
     children?: any
 } & FlexProps
 
@@ -45,8 +46,8 @@ export function LandingProvider({
     secondary = 'purple',
     pageWidth = '1200px',
     fontFamily = 'Roboto, system-ui, sans-serif',
+    theme: themeProp = {},
     children,
-    theme: themeProp,
     ...rest
 }: LandingProviderProps) {
     const { colorMode } = useColorMode()
@@ -77,7 +78,7 @@ export function LandingProvider({
                         subtext: '15px',
                     },
                 }, 
-                themeProp || {}
+                themeProp
             )
         ),
         [pageWidth, primary, secondary, themeProp],
