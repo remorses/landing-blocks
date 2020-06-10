@@ -46,7 +46,7 @@ const Page = () => (
             />
             <Hero
                 dark
-                bullet='NOW AVAILABLE ON NPM'
+                bullet='now available on npm'
                 heading={<h1>Landing pages building blocks</h1>}
                 subheading='Build your landing page in minutes using composable react components'
                 image={
@@ -84,10 +84,10 @@ const Page = () => (
                             />
                         ),
                         subheading:
-                            'Multi-level approvals and custom spending limits.',
+                            'Every component is reusable in an infinite number of ways',
                     },
                     {
-                        heading: 'Maintainable',
+                        heading: 'Customizable',
                         icon: (
                             <Box
                                 style={{ strokeWidth: '1px' }}
@@ -96,10 +96,10 @@ const Page = () => (
                             />
                         ),
                         subheading:
-                            'Smart company cards, virtual cards, and invoice tracking.',
+                            'Every component can be integrated with your own design system',
                     },
                     {
-                        heading: 'Extensible',
+                        heading: 'Pretty by default',
                         icon: (
                             <Box
                                 style={{ strokeWidth: '1px' }}
@@ -108,7 +108,7 @@ const Page = () => (
                             />
                         ),
                         subheading:
-                            'Simplified bookkeeping and budget analysis.',
+                            'You get nice looking designs in minutes instead of hours',
                     },
                     {
                         heading: 'Open Source',
@@ -120,7 +120,7 @@ const Page = () => (
                             />
                         ),
                         subheading:
-                            'Real-time spending overview and receipt capture.',
+                            'The components are on github, free and open source',
                     },
                 ]}
             />
