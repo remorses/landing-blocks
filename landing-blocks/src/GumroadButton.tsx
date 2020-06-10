@@ -20,6 +20,7 @@ export const GumroadButton: FC<GumroadButtonProps> = forwardRef(
     ) => {
         const [loading, error] = useScript({
             src: 'https://gumroad.com/js/gumroad.js',
+            // checkForExisting: true
         })
         if (loading || error) {
             return <Placeholder children={error?.message} />
@@ -28,12 +29,13 @@ export const GumroadButton: FC<GumroadButtonProps> = forwardRef(
         return (
             <Placeholder
                 ref={ref as any}
-                className='gumroad-button'
+                
                 href={`https://gum.co/${productId}?wanted=true`}
                 target='_blank'
                 data-gumroad-single-product={singlePurchase ? 'true' : 'false'}
                 lineHeight='1em'
                 {...props}
+                className='gumroad-button'
             >
                 {children || 'Buy Now My Product'}
             </Placeholder>
@@ -52,7 +54,7 @@ const Placeholder = (props) => {
             justifyContent='center'
             borderRadius='6px'
             fontWeight='semibold'
-            color='gray.300'
+            color='gray.500'
             minWidth='230px'
             h='50px'
             bg={{ light: 'gray.100', dark: 'rgba(255,255,255,.1)' }[colorMode]}

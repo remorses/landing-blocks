@@ -1,17 +1,9 @@
-import {
-    LandingProvider,
-    Section,
-    NavBar,
-    PageContainer,
-    Box,
-    Stack,
-} from 'landing-blocks/src'
-
-import { HeadingLogoIcon } from '../_app'
-import { headingNavLinks } from '../../constants'
-import { BuyDemosButton } from '..'
-import Iframe from 'react-iframe'
+import { LandingProvider, NavBar, Stack } from 'landing-blocks/src'
 import { useRouter } from 'next/router'
+import Iframe from 'react-iframe'
+import { BuyDemosButton } from '..'
+import { DEMOS_WEBSITE, headingNavLinks } from '../../constants'
+import { Spinner } from '@chakra-ui/core'
 
 export default function Page({}) {
     const { query } = useRouter()
@@ -43,13 +35,19 @@ export default function Page({}) {
                 h='100%'
                 align='flex-start'
             >
-                <Iframe
-                    url={`/demos/${name}`}
-                    width='100%'
-                    height='100%'
-                    // display='initial'
-                    position='relative'
-                />
+                {!name ? (
+                    <Stack align='center' justify='center'>
+                        <Spinner />
+                    </Stack>
+                ) : (
+                    <Iframe
+                        url={`${DEMOS_WEBSITE}/demos/${name}`}
+                        width='100%'
+                        height='100%'
+                        // display='initial'
+                        position='relative'
+                    />
+                )}
             </Stack>
         </LandingProvider>
     )

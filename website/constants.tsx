@@ -5,12 +5,14 @@ import { GithubLink } from 'dokz'
 
 export const GUMROAD_PRODUCT_ID = 'XJbw'
 
+export const DEMOS_WEBSITE = 'https://landing-blocks-demos.now.sh'
+
 export const headingNavLinks = [
     <MyLink href='/#components'>Components</MyLink>,
     <MyLink href='/docs'>Docs</MyLink>,
     <MyLink href='/#demos'>Demos</MyLink>,
     <MyLink href='/#newsletter'>Newsletter</MyLink>,
-    <GithubLink  url='https://github.com/remorses/landing-blocks' />,
+    <GithubLink url='https://github.com/remorses/landing-blocks' />,
 ]
 
 const BASE_PATH = '/docs/components/'
@@ -95,7 +97,7 @@ export const demosPaths = [
     'airtable',
 ].map((name) => {
     return {
-        urlPath: '/demos/' + name, // TODO add different
+        url: DEMOS_WEBSITE + '/demos/' + name, // TODO add different
         demoPath: '/demo_roll/' + name, // TODO add different
 
         imagePath: `screens/${name}.jpeg`,
