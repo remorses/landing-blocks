@@ -1,16 +1,14 @@
 import * as landingCards from './svgs/landingCards'
+import React from 'react'
 import { MyLink } from './pages/_app'
 import { GithubLink } from 'dokz'
-
 
 export const headingNavLinks = [
     <MyLink href='/#components'>Components</MyLink>,
     <MyLink href='/#demos'>Demos</MyLink>,
-    <MyLink href='#'>Newsletter</MyLink>,
+    <MyLink href='/#newsletter'>Newsletter</MyLink>,
     <GithubLink key='0' url='https://github.com/remorses/landing-blocks' />,
 ]
-
-
 
 const BASE_PATH = '/docs/components/'
 
@@ -81,13 +79,25 @@ export const IndexCardsPaths = [
 ]
 
 export const demosPaths = [
-    { urlPath: 'demos/datocms', imagePath: 'screens/datocms.jpeg' },
-    { urlPath: 'demos/dovetail', imagePath: 'screens/dovetail.jpeg' },
-    { urlPath: 'demos/prismic', imagePath: 'screens/prismic.jpeg' },
-    { urlPath: 'demos/quovery', imagePath: 'screens/qovery.jpeg' },
-    { urlPath: 'demos/rocketchat', imagePath: 'screens/rocketchat.jpeg' },
-    { urlPath: 'demos/spendesk', imagePath: 'screens/spendesk.jpeg' },
-    { urlPath: 'demos/testim', imagePath: 'screens/testim.jpeg' },
-    { urlPath: 'demos/kintohub', imagePath: 'screens/kintohub.jpeg' },
-    { urlPath: 'demos/airtable', imagePath: 'screens/airtable.jpeg' },
-]
+    'segment',
+    'datocms',
+    'dovetail',
+    'prismic',
+    'prisma',
+    'qovery',
+    'rocketchat',
+    'spendesk',
+    'testim',
+    'kintohub',
+    'airtable',
+].map((name) => {
+    return {
+        urlPath: '/demos/' + name, // TODO add different
+        demoPath: '/demo_roll/' + name, // TODO add different
+
+        imagePath: `screens/${name}.jpeg`,
+    }
+})
+
+export const MAILCHIMP_URL =
+    'https://gmail.us20.list-manage.com/subscribe/post?u=7a2ded8c33767b20e6fe824c0&amp;id=e774d6f31e'

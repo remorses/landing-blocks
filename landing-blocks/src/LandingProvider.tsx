@@ -37,6 +37,7 @@ export type LandingProviderProps = {
     white?: string
     secondary?: string
     pageWidth?: string
+    spacing?: any
     theme?: DeepPartial<ThemeExtension>
     children?: any
 } & FlexProps
@@ -60,6 +61,7 @@ export function LandingProvider({
     white = '#fff',
     secondary = 'purple',
     pageWidth = '1200px',
+    spacing = '60px',
     fontFamily = 'Roboto, system-ui, sans-serif',
     theme: themeProp = {},
     children,
@@ -108,7 +110,7 @@ export function LandingProvider({
                     // overflowX='hidden'
                     width='100%'
                     fontFamily={fontFamily}
-                    spacing='60px'
+                    spacing={spacing}
                     color={dark ? 'white' : 'black'}
                     borderColor={dark ? 'rgba(255,255,255,.3)' : 'gray.300'}
                     {...rest}

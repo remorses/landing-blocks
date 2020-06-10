@@ -13,7 +13,7 @@ const Page = () => (
                     <Stack align='center' direction='row' spacing='20px'>
                         <Image width='30px' src='/quovery/logo.png' />
                         <Box fontWeight='medium' fontSize='20px'>
-                            Quovery
+                            Qovery
                         </Box>
                     </Stack>
                 }
@@ -115,7 +115,7 @@ const Page = () => (
             ]}
         />
         <Footer
-            businessName='Quovery'
+            businessName='Qovery'
             bg='#F8F8FF'
             columns={{
                 Developers: [

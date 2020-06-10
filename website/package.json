@@ -8,7 +8,7 @@
         "start": "next start",
         "test": "NODE_ENV=test mocha --colors --exit",
         "svg": "svgr -d svgs --no-dimensions --typescript svgs",
-        "screens": "ts-node -P scripts/tsconfig.json scripts/screenshotter.ts",
+        "screens": "node -r sucrase/register scripts/screenshotter.ts",
         "docgen": "ts-node -P scripts/tsconfig.json scripts/generatePropsDocs.ts"
     },
     "mocha": {
@@ -28,7 +28,8 @@
         "react": "^16.13.1",
         "react-dom": "^16.13.1",
         "react-highlight": "^0.12.0",
-        "react-icons": "^3.9.0"
+        "react-icons": "^3.9.0",
+        "react-iframe": "^1.8.0"
     },
     "devDependencies": {
         "@types/node": "^13.13.0",
@@ -37,6 +38,7 @@
         "compose-function": "^3.0.3",
         "next-transpile-modules": "^3.3.0",
         "react-docgen-typescript": "^1.16.3",
+        "sucrase": "^3.15.0",
         "typescript": "^3.8.3"
     }
 }

@@ -1,14 +1,30 @@
 import { Button, Image, Link, Text } from '@chakra-ui/core'
-import { Banner, Button as LandingButton, Divider, FeaturesList, Hero, LandingProvider, MailchimpForm, NavBar, PageContainer, Section, SectionTitle } from 'landing-blocks/src'
+import {
+    Banner,
+    Button as LandingButton,
+    Divider,
+    FeaturesList,
+    Hero,
+    LandingProvider,
+    MailchimpForm,
+    NavBar,
+    PageContainer,
+    Section,
+    SectionTitle,
+    GumroadButton,
+} from 'landing-blocks/src'
 import { Box, Stack } from 'layout-kit-react'
 import NextLink from 'next/link'
 import React from 'react'
 import { FiGlobe, FiGrid, FiImage, FiLayers } from 'react-icons/fi'
-import { demosPaths, IndexCardsPaths, headingNavLinks } from '../constants'
+import {
+    demosPaths,
+    IndexCardsPaths,
+    headingNavLinks,
+    MAILCHIMP_URL,
+} from '../constants'
 import { HeroIllustration } from '../svgs'
 import { HeadingLogoIcon, MyFooter } from './_app'
-
-
 
 const BG = '#5E629D'
 const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
@@ -40,8 +56,8 @@ const Page = () => (
                     />
                 }
                 cta={
-                    <NextLink href='/docs'>
-                        <LandingButton animate>Read The Docs</LandingButton>
+                    <NextLink href='#demos'>
+                        <LandingButton animate>See the demos</LandingButton>
                     </NextLink>
                 }
                 fingerprint='Completely open source'
@@ -118,11 +134,7 @@ const Page = () => (
                 </h2>
             }
             subheading='Completely customizable, reusable and pretty by default'
-            cta={
-                <NextLink href='/docs'>
-                    <LandingButton>Read The Docs</LandingButton>
-                </NextLink>
-            }
+            cta={<BuyDemosButton />}
         />
         <LandingCardsLinks alignSelf='center' py='40px' />
         <Section spacing='30px' bg={BG} backgroundImage={BG_IMG}>
@@ -137,23 +149,36 @@ const Page = () => (
                         with Landing Blocks
                     </h2>
                 }
-                subheading='Every block is completely customizable, you can build any landing page import some components'
-                // cta={<LandingButton>Download The Demos Code</LandingButton>}
+                subheading='Awesome landing pages recreated with Landing Blocks to show its great customizability and extensibility'
+                cta={<BuyDemosButton />}
             />
             <DemosLinks alignSelf='center' py='40px' />
         </Section>
         <Banner
             // dark
+            id='newsletter'
             bg='transparent'
+            primary={BG}
             heading='Get notified when new components get published'
-            subheading='You will get them first'
-            cta={<MailchimpForm url='' />}
+            subheading="Every month I add new awesome components to the npm package, you will get notified as soon as they are published!"
+            cta={<MailchimpForm url={MAILCHIMP_URL} />}
             fingerprint='No spam, promised'
             // bg={BG}
         />
         <MyFooter />
     </LandingProvider>
 )
+
+export const BuyDemosButton = ({ ...rest }) => {
+    // TODO add the right productId
+    return (
+        <Box w='auto' shadow='lg' {...rest}>
+            <GumroadButton productId='demo'>
+                Download the demos code
+            </GumroadButton>
+        </Box>
+    )
+}
 
 export const LandingCardsLinks = ({ ...rest }) => {
     return (
@@ -212,9 +237,9 @@ const DemosLinks = ({ ...rest }) => {
                 // spacing='40px'
             >
                 {demosPaths.map((k, i) => {
-                    const { imagePath, urlPath } = k
+                    const { imagePath, demoPath: urlPath } = k
                     return (
-                        <Box mb='40px'  key={urlPath}>
+                        <Box mb='40px' key={urlPath}>
                             <Link href={urlPath}>
                                 <Button
                                     borderRadius='8px'

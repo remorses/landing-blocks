@@ -28,6 +28,7 @@ export function EmailForm({
     const { colorMode } = useColorMode()
     return (
         <Stack
+            as='form'
             justify='flex-start'
             width='auto'
             direction={['column', null, 'row']}
@@ -57,7 +58,10 @@ export function EmailForm({
             <Col w={['100%', null, 'auto']}>
                 <Button
                     animate={false}
-                    onClick={onSubmit}
+                    onClick={(e) => {
+                        e.preventDefault()
+                        onSubmit()
+                    }}
                     shadow='sm'
                     px='20px'
                     textAlign='center'
@@ -70,13 +74,17 @@ export function EmailForm({
 }
 
 const MessageBox = (props) => {
-    return <Box minH='1em' {...props} />
+    return <Box mt='10px' minH='1em' {...props} />
 }
 
-export function MailchimpForm({
-    url,
-    ...rest
-}: { url: string } & EmailFormProps) {
+export interface MailchimpFormProps extends EmailFormProps {
+    /*
+    Get the url from the "Audience > Signup Forms > Embedded forms", it looks something like `https://<YOUR-USER>.us16.list-manage.com/subscribe/post?u=XXXXXXXXXXXXX&amp;id=XXXXXX`
+    */
+    url: string
+}
+
+export function MailchimpForm({ url, ...rest }: MailchimpFormProps) {
     const [email, setEmail] = useState('')
     const { colorMode } = useColorMode()
     return (

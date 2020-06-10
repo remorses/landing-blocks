@@ -63,6 +63,7 @@ export function Banner({
                         <Subheading
                             lineHeight='34px'
                             opacity={0.6}
+                            maxW='600px'
                             fontWeight='normal'
                             fontSize='text'
                         >
@@ -73,7 +74,8 @@ export function Banner({
                         <Box>{cta}</Box>
                         {fingerprint && (
                             <Box
-                                opacity={0.6}
+                                opacity={0.4}
+                                my='10px'
                                 fontSize='subtext'
                                 lineHeight='26px'
                             >
