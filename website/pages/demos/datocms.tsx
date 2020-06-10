@@ -1,4 +1,14 @@
-import { Feature, FeaturesList, Footer, Heading, Hero, LandingProvider, NavBar, SectionTitle, TestimonialsLogos } from 'landing-blocks/src'
+import {
+    Feature,
+    FeaturesList,
+    Footer,
+    Heading,
+    Hero,
+    LandingProvider,
+    NavBar,
+    SectionTitle,
+    TestimonialsLogos,
+} from 'landing-blocks/src'
 import { Button } from 'landing-blocks/src/Button'
 import { GradientRect } from 'landing-blocks/src/decorations'
 import { MailchimpForm } from 'landing-blocks/src/EmailForm'

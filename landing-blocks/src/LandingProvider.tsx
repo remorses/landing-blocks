@@ -1,18 +1,33 @@
-import { CSSReset, DarkMode, DefaultTheme, theme as chakraTheme, useColorMode } from '@chakra-ui/core'
+import {
+    CSSReset,
+    DarkMode,
+    ITheme,
+    theme as chakraTheme,
+    useColorMode,
+} from '@chakra-ui/core'
 import { css, Global } from '@emotion/core'
 import { FlexProps, Stack } from 'layout-kit-react'
 import merge from 'lodash/fp/merge'
 import React, { Fragment, useMemo } from 'react'
 import { PropagatedThemeProvider } from './layout'
+import { DeepPartial } from 'utility-types'
 
-export interface ThemeExtension extends DefaultTheme {
+export interface ThemeExtension extends ITheme {
     colors: {
         primary: string
         secondary: string
-    } & DefaultTheme['colors']
+        black: string
+        white: string
+    } & ITheme['colors']
     sizes: {
         pageContainer: any
-    } & DefaultTheme['sizes']
+    } & ITheme['sizes']
+    fontSizes: {
+        text: any
+        heading: any
+        subheading: any
+        subtext: any
+    } & ITheme['fontSizes']
 }
 
 export type LandingProviderProps = {
@@ -22,7 +37,7 @@ export type LandingProviderProps = {
     white?: string
     secondary?: string
     pageWidth?: string
-    theme?: typeof chakraTheme
+    theme?: DeepPartial<ThemeExtension>
     children?: any
 } & FlexProps
 
@@ -53,35 +68,36 @@ export function LandingProvider({
     const { colorMode } = useColorMode()
     const Mode = dark ? DarkMode : Fragment
     dark = dark ?? colorMode === 'dark'
-    const theme = useMemo(() => 
-        merge(
-            chakraTheme, 
+    const theme = useMemo(
+        () =>
             merge(
-                {
-                    colors: {
-                        primary,
-                        secondary,
-                        black,
-                        white,
+                chakraTheme,
+                merge(
+                    {
+                        colors: {
+                            primary,
+                            secondary,
+                            black,
+                            white,
+                        },
+                        sizes: {
+                            pageContainer: pageWidth,
+                        },
+                        fonts: {
+                            body: fontFamily,
+                            heading: fontFamily,
+                        },
+                        fontSizes: {
+                            text: '18px',
+                            heading: '42px',
+                            subheading: '24px',
+                            subtext: '15px',
+                        },
                     },
-                    sizes: {
-                        pageContainer: pageWidth,
-                    },
-                    fonts: {
-                        body: fontFamily,
-                        heading: fontFamily,
-                    },
-                    fontSizes: {
-                        text: '18px',
-                        heading: '42px',
-                        subheading: '24px',
-                        subtext: '15px',
-                    },
-                }, 
-                themeProp
-            )
-        ),
-        [pageWidth, primary, secondary, themeProp],
+                    themeProp,
+                ),
+            ),
+        [pageWidth, primary, secondary, black, white, fontFamily, themeProp],
     )
     return (
         <PropagatedThemeProvider theme={theme}>
