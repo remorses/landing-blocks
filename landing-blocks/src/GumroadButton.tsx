@@ -22,7 +22,7 @@ export const GumroadButton: FC<GumroadButtonProps> = forwardRef(
             src: 'https://gumroad.com/js/gumroad.js',
         })
         if (loading || error) {
-            return <Placeholder children={error} />
+            return <Placeholder children={error?.message} />
         }
 
         return (

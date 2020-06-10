@@ -70,7 +70,7 @@ export function Hero({
                             d='block'
                             width='auto'
                         ></Button> */}
-                        <Box opacity={0.8} fontSize='subtext' lineHeight='26px'>
+                        <Box opacity={0.6} fontSize='subtext' lineHeight='26px'>
                             {fingerprint}
                         </Box>
                     </Stack>
