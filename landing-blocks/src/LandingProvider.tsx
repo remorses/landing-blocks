@@ -22,6 +22,7 @@ export type LandingProviderProps = {
     white?: string
     secondary?: string
     pageWidth?: string
+    theme?: typeof chakraTheme
     children?: any
 } & FlexProps
 
@@ -45,36 +46,42 @@ export function LandingProvider({
     secondary = 'purple',
     pageWidth = '1200px',
     fontFamily = 'Roboto, system-ui, sans-serif',
+    theme: themeProp = {},
     children,
     ...rest
 }: LandingProviderProps) {
     const { colorMode } = useColorMode()
     const Mode = dark ? DarkMode : Fragment
     dark = dark ?? colorMode === 'dark'
-    const theme = useMemo(
-        () =>
-            merge(chakraTheme, {
-                colors: {
-                    primary,
-                    secondary,
-                    black,
-                    white,
-                },
-                sizes: {
-                    pageContainer: pageWidth,
-                },
-                fonts: {
-                    body: fontFamily,
-                    heading: fontFamily,
-                },
-                fontSizes: {
-                    text: '18px',
-                    heading: '42px',
-                    subheading: '24px',
-                    subtext: '15px',
-                },
-            }),
-        [pageWidth, primary, secondary],
+    const theme = useMemo(() => 
+        merge(
+            chakraTheme, 
+            merge(
+                {
+                    colors: {
+                        primary,
+                        secondary,
+                        black,
+                        white,
+                    },
+                    sizes: {
+                        pageContainer: pageWidth,
+                    },
+                    fonts: {
+                        body: fontFamily,
+                        heading: fontFamily,
+                    },
+                    fontSizes: {
+                        text: '18px',
+                        heading: '42px',
+                        subheading: '24px',
+                        subtext: '15px',
+                    },
+                }, 
+                themeProp
+            )
+        ),
+        [pageWidth, primary, secondary, themeProp],
     )
     return (
         <PropagatedThemeProvider theme={theme}>
