@@ -46,13 +46,15 @@ export function LandingProvider({
     pageWidth = '1200px',
     fontFamily = 'Roboto, system-ui, sans-serif',
     children,
+    theme: themeProp,
     ...rest
 }: LandingProviderProps) {
     const { colorMode } = useColorMode()
     const Mode = dark ? DarkMode : Fragment
     dark = dark ?? colorMode === 'dark'
     const theme = useMemo(
-        () =>
+        () => 
+            themeProp===undefined || themeProp===null ? 
             merge(chakraTheme, {
                 colors: {
                     primary,
@@ -73,8 +75,8 @@ export function LandingProvider({
                     subheading: '24px',
                     subtext: '15px',
                 },
-            }),
-        [pageWidth, primary, secondary],
+            }) : themeProp,
+        [pageWidth, primary, secondary, themeProp],
     )
     return (
         <PropagatedThemeProvider theme={theme}>
