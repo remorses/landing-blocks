@@ -1,5 +1,5 @@
 import { Link, useColorMode } from '@chakra-ui/core'
-import { DokzProvider, GithubLink } from 'dokz'
+import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz'
 import { Footer } from 'landing-blocks/src/Footer'
 import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Box, Stack } from 'layout-kit-react'
@@ -18,8 +18,8 @@ export default function App(props) {
                 docsRootPath='pages/docs'
                 headerItems={[
                     ...headingNavLinks,
+                    <ColorModeSwitch />,
                     // <ColorModeSwitch key='1' />,
-                    ,
                 ]}
                 headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
                 mdxComponents={{
@@ -42,7 +42,6 @@ export default function App(props) {
     return <Component {...pageProps} />
 }
 
-
 export function MyLink({ href, ...rest }) {
     const { colorMode } = useMyColorMode(rest)
     return (
@@ -54,25 +53,6 @@ export function MyLink({ href, ...rest }) {
                 {...rest}
             />
         </NextLink>
-    )
-}
-
-function MyBreadcrumbs({ items, ...rest }) {
-    return (
-        <Stack direction='row' spacing='10px' align='center' {...rest}>
-            {items.map((x, i) => (
-                <Stack
-                    opacity={0.6}
-                    fontWeight='medium'
-                    direction='row'
-                    align='center'
-                    spacing='10px'
-                >
-                    <Box>{x}</Box>
-                    {i !== items.length - 1 && <Box>></Box>}
-                </Stack>
-            ))}
-        </Stack>
     )
 }
 

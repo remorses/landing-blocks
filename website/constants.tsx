@@ -3,11 +3,14 @@ import React from 'react'
 import { MyLink } from './pages/_app'
 import { GithubLink } from 'dokz'
 
+export const GUMROAD_PRODUCT_ID = 'XJbw'
+
 export const headingNavLinks = [
     <MyLink href='/#components'>Components</MyLink>,
+    <MyLink href='/docs'>Docs</MyLink>,
     <MyLink href='/#demos'>Demos</MyLink>,
     <MyLink href='/#newsletter'>Newsletter</MyLink>,
-    <GithubLink key='0' url='https://github.com/remorses/landing-blocks' />,
+    <GithubLink  url='https://github.com/remorses/landing-blocks' />,
 ]
 
 const BASE_PATH = '/docs/components/'

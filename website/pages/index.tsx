@@ -23,6 +23,7 @@ import {
     IndexCardsPaths,
     headingNavLinks,
     MAILCHIMP_URL,
+    GUMROAD_PRODUCT_ID,
 } from '../constants'
 import { HeroIllustration } from '../svgs'
 import { HeadingLogoIcon } from './_app'
@@ -196,7 +197,7 @@ export const BuyDemosButton = ({ ...rest }) => {
     // TODO add the right productId
     return (
         <Box w='auto' shadow='lg' {...rest}>
-            <GumroadButton productId='demo'>
+            <GumroadButton productId={GUMROAD_PRODUCT_ID}>
                 Download the demos code
             </GumroadButton>
         </Box>
