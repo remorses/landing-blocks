@@ -52,30 +52,34 @@ export function LandingProvider({
     const { colorMode } = useColorMode()
     const Mode = dark ? DarkMode : Fragment
     dark = dark ?? colorMode === 'dark'
-    const theme = useMemo(
-        () => 
-            themeProp===undefined || themeProp===null ? 
-            merge(chakraTheme, {
-                colors: {
-                    primary,
-                    secondary,
-                    black,
-                    white,
-                },
-                sizes: {
-                    pageContainer: pageWidth,
-                },
-                fonts: {
-                    body: fontFamily,
-                    heading: fontFamily,
-                },
-                fontSizes: {
-                    text: '18px',
-                    heading: '42px',
-                    subheading: '24px',
-                    subtext: '15px',
-                },
-            }) : themeProp,
+    const theme = useMemo(() => 
+        merge(
+            chakraTheme, 
+            merge(
+                {
+                    colors: {
+                        primary,
+                        secondary,
+                        black,
+                        white,
+                    },
+                    sizes: {
+                        pageContainer: pageWidth,
+                    },
+                    fonts: {
+                        body: fontFamily,
+                        heading: fontFamily,
+                    },
+                    fontSizes: {
+                        text: '18px',
+                        heading: '42px',
+                        subheading: '24px',
+                        subtext: '15px',
+                    },
+                }, 
+                themeProp || {}
+            )
+        ),
         [pageWidth, primary, secondary, themeProp],
     )
     return (
