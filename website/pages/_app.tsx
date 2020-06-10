@@ -43,24 +43,6 @@ export default function App(props) {
 }
 
 
-export function MyFooter({ ...rest }) {
-    return (
-        <Footer
-            businessName='Landing Blocks'
-            columns={{
-                Developers: [
-                    <MyLink href='#'>Components</MyLink>,
-                    <MyLink href='#'>Components</MyLink>,
-                    <MyLink href='#'>Components</MyLink>,
-                ],
-                Company: [<MyLink href='#'>Components</MyLink>],
-                Product: [<MyLink href='#'>Components</MyLink>],
-            }}
-            {...rest}
-        />
-    )
-}
-
 export function MyLink({ href, ...rest }) {
     const { colorMode } = useMyColorMode(rest)
     return (

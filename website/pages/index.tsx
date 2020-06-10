@@ -12,6 +12,7 @@ import {
     Section,
     SectionTitle,
     GumroadButton,
+    Footer,
 } from 'landing-blocks/src'
 import { Box, Stack } from 'layout-kit-react'
 import NextLink from 'next/link'
@@ -24,7 +25,7 @@ import {
     MAILCHIMP_URL,
 } from '../constants'
 import { HeroIllustration } from '../svgs'
-import { HeadingLogoIcon, MyFooter } from './_app'
+import { HeadingLogoIcon } from './_app'
 
 const BG = '#5E629D'
 const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
@@ -159,13 +160,35 @@ const Page = () => (
             id='newsletter'
             bg='transparent'
             primary={BG}
-            heading='Get notified when new components get published'
-            subheading="Every month I add new awesome components to the npm package, you will get notified as soon as they are published!"
+            heading='Get notified when new components get published!'
+            subheading='Every month I add new awesome components to the npm package, you will get notified as soon as they are published!'
             cta={<MailchimpForm url={MAILCHIMP_URL} />}
             fingerprint='No spam, promised'
             // bg={BG}
         />
-        <MyFooter />
+
+        <Footer
+            mt='200px'
+            businessName='Landing Blocks'
+            // dark
+            // backgroundImage={BG_IMG}
+            columns={{
+                'Landing Blocks': [
+                    <a href='https://github.com/remorses/landing-blocks'>
+                        Github
+                    </a>,
+                    <a href='/docs'>Docs</a>,
+                ],
+                'Where you can find me': [
+                    <a href='https://twitter.com/__morse' target='_blank'>
+                        Twitter
+                    </a>,
+                    <a href='https://github.com/remorses/' target='_blank'>
+                        Github
+                    </a>,
+                ],
+            }}
+        />
     </LandingProvider>
 )
 
