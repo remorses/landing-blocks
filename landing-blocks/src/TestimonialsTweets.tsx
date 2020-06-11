@@ -31,23 +31,29 @@ export function TestimonialsTweets({
                     <Subheading>{subheading}</Subheading>
                 </Stack>
             )}
-            <Col
+            <Stack
                 as={Faded}
-                direction={['column', 'column', 'row']}
+                // direction={['column', 'column', 'row']}
+                direction='row'
+                flexWrap='wrap'
                 justify='space-evenly'
                 align='center'
                 minW='100%'
             >
                 {tweets.map((id, i) => (
                     <Col
-                        mx='40px'
-                        my='20px'
+                        m='10px'
                         key={i}
                         minW='260px'
+                        shadow='md'
+                        borderRadius='lg'
+                        overflow='hidden'
+                        
                         // w={['100%', '100%', '320px']}
                     >
-                        <Unclickable>
+                        <Unclickable height='calc(fit-content - 20px)'>
                             <TwitterTweetEmbed
+                                // style={{paddingBottom: 0, marginBottom: 0}}
                                 placeholder={
                                     <Box
                                         bg='#fff'
@@ -62,13 +68,16 @@ export function TestimonialsTweets({
                         </Unclickable>
                     </Col>
                 ))}
-            </Col>
+            </Stack>
         </PageContainer>
     )
 }
 
-const Unclickable = styled.div`
+const Unclickable = styled(Box)`
     pointer-events: none;
+    .twitter-tweet {
+        margin-bottom: 0px !important;
+    }
 `
 
 function convertUrlToTweetId(url: string) {
