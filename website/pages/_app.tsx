@@ -1,9 +1,10 @@
-import { Link, useColorMode } from '@chakra-ui/core'
+import { useColorMode } from '@chakra-ui/core'
 import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz'
 import { Footer } from 'landing-blocks/src/Footer'
 import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Box, Stack } from 'layout-kit-react'
 import NextLink from 'next/link'
+import { Link } from 'landing-blocks/src'
 import React from 'react'
 import { LogoBlack, LogoIcon, LogoIconBlack, LogoWhite } from '../svgs'
 import { useRouter } from 'next/router'
@@ -18,7 +19,7 @@ export default function App(props) {
                 docsRootPath='pages/docs'
                 headerItems={[
                     ...headingNavLinks,
-                    <ColorModeSwitch />,
+                    // <ColorModeSwitch />,
                     // <ColorModeSwitch key='1' />,
                 ]}
                 headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
