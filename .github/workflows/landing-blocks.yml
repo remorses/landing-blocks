@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - landing-blocks/**
+    # paths:
+    #   - landing-blocks/**
 
 jobs:
   build:
