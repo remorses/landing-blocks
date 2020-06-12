@@ -11,14 +11,14 @@ export const Link = ({ children, ...props }: LinkProps) => {
             position='relative'
             lineHeight='1.4em'
             textDecoration='none'
-            color='primary'
+            // color='primary'
             fontWeight='medium'
             fontSize='text'
             borderBottom='2px solid'
             borderColor='transparent'
             py='0.2em'
             isTruncated
-            transition='all 0.3s ease-in-out 0s'
+            transition='all 0.2s ease-in-out 0s'
             _hover={{
                 borderColor: 'currentColor',
             }}
