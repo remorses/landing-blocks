@@ -110,6 +110,7 @@ export function LandingProvider({
                 <Stack
                     // overflowX='hidden'
                     width='100%'
+                    height='100%'
                     fontFamily={fontFamily}
                     spacing={spacing}
                     color={dark ? 'white' : 'black'}
