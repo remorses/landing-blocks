@@ -104,7 +104,8 @@ export function LandingProvider({
     return (
         <PropagatedThemeProvider theme={theme}>
             <Global styles={globalStyles} />
-            <Mode>
+            <Mode> 
+                {/* TODO propagate the color mode context from above, setting it to dark if dark=true */}
                 <CSSReset />
                 <Stack
                     // overflowX='hidden'
