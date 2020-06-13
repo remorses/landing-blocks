@@ -117,6 +117,7 @@ export function LandingProvider({
                 >
                     {children}
                 </Stack>
+
             </Mode>
         </PropagatedThemeProvider>
     )
@@ -130,6 +131,10 @@ const globalStyles = css`
         overflow: hidden;
         height: 100%;
         scroll-behavior: smooth;
+    }
+    #__next {
+        min-height: 100%;
+        height: 100%;
     }
     body {
         height: 100%;
