@@ -34,6 +34,7 @@ const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
 const Page = () => (
     <LandingProvider primary='white'>
         <Section
+        
             py='100px'
             mt='-100px'
             spacing='60px'

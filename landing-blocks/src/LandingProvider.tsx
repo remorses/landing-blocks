@@ -113,6 +113,7 @@ export function LandingProvider({
                     height='100%'
                     fontFamily={fontFamily}
                     spacing={spacing}
+                    align='stretch'
                     color={dark ? 'white' : 'black'}
                     borderColor={dark ? 'rgba(255,255,255,.3)' : 'gray.300'}
                     {...rest}
