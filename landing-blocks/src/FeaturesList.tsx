@@ -81,19 +81,23 @@ const Feature = ({
             textAlign={centerText ? 'center' : 'left'}
             w='auto'
             spacing='20px'
+            // align='stretch'
             p='40px'
             {...rest}
         >
             <Col
                 minW='40px'
                 maxW='140px'
+                align='center'
                 fontWeight='medium'
                 alignSelf={centerText ? 'center' : 'flex-start'}
             >
                 {icon}
             </Col>
-            <Heading fontSize='subheading'>{heading}</Heading>
-            <Box fontSize='text' opacity={0.6} lineHeight='30px'>
+            <Heading width='100%' fontSize='subheading'>
+                {heading}
+            </Heading>
+            <Box width='100%' fontSize='text' opacity={0.6} lineHeight='30px'>
                 {subheading}
             </Box>
         </Stack>
