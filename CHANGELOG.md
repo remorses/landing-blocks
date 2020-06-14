@@ -21,5 +21,5 @@ TODO illustrations components themeable with emotion
 
 
 <!-- [bump if landing-blocks] -->
-1.0.41
+1.0.42
 
