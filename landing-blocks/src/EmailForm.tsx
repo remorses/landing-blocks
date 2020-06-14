@@ -33,6 +33,7 @@ export function EmailForm({
             width='auto'
             direction={['column', null, 'row']}
             // align='center'
+            spacing='20px'
             fontSize='text'
             {...rest}
         >
@@ -54,7 +55,6 @@ export function EmailForm({
                 name='email'
                 placeholder={placeholder}
             />
-            <Box ml='20px' />
             <Col w={['100%', null, 'auto']}>
                 <Button
                     animate={false}
@@ -74,7 +74,7 @@ export function EmailForm({
 }
 
 const MessageBox = (props) => {
-    return <Box mt='10px' minH='1em' {...props} />
+    return <Box minH='1em' {...props} />
 }
 
 export interface MailchimpFormProps extends EmailFormProps {
@@ -91,7 +91,7 @@ export function MailchimpForm({ url, ...rest }: MailchimpFormProps) {
         <MailchimpSubscribe
             url={url}
             render={({ subscribe, status, message }) => (
-                <Stack>
+                <Stack spacing='10px'>
                     <EmailForm
                         value={email}
                         onSubmit={() => subscribe({ EMAIL: email })}
