@@ -70,12 +70,11 @@ export function Banner({
                             {subheading}
                         </Subheading>
                     </Stack>
-                    <Stack w='auto' justify='center'>
+                    <Stack spacing='10px' w='auto' justify='center'>
                         <Box>{cta}</Box>
                         {fingerprint && (
                             <Box
                                 opacity={0.4}
-                                my='10px'
                                 fontSize='subtext'
                                 lineHeight='26px'
                             >
