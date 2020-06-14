@@ -34,7 +34,7 @@ export function Feature({
         <PageContainer py='80px' {...rest}>
             <Stack
                 align='center'
-                spacing='40px'
+                // spacing='40px'
                 justifyItems='space-between'
                 // isReversed={flip}
                 direction={['column', null, dir(direction)]}

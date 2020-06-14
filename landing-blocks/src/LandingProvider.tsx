@@ -136,7 +136,7 @@ const globalStyles = css`
     }
     #__next {
         min-height: 100%;
-        height: 100%;
+        /* height: 100%; */
     }
     body {
         height: 100%;
