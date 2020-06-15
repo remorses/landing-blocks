@@ -35,7 +35,7 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                     display={['none', 'none', 'flex']}
                 >
                     {Array.isArray(navs) ? (
-                        <Stack direction='row' spacing='20px'>
+                        <Stack align='center' direction='row' spacing='20px'>
                             {navs.map((x, i) => (
                                 <Stack
                                     key={i}
