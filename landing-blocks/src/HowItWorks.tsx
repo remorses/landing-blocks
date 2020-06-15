@@ -46,7 +46,7 @@ export function HowItWorks({
                 <Subheading maxW='700px'>{subheading}</Subheading>
             </Stack>
             <Box mt='60px' />
-            <Stack spacing='60px' flex='1'>
+            <Stack align='stretch' spacing='60px' flex='1'>
                 {steps.map((step, i) => (
                     <Step
                         key={i}
@@ -87,7 +87,7 @@ const Step = ({
                     align='flex-end'
                     opacity={0.3}
                 >
-                    <Box lineHeight='60px' fontSize='80px'>
+                    <Box opacity={0.5} lineHeight='60px' fontSize='80px'>
                         {number}
                     </Box>
                     <Heading
