@@ -58,7 +58,7 @@ export function Feature({
                     </Subheading>
                     {cta && <Box>{clone(cta)}</Box>}
                 </Stack>
-                <Box minW='40px' />
+                <Box minW='40px' minH='40px' />
                 <Col as={Faded} align='center' flex='1' minW='300px'>
                     {image}
                 </Col>
