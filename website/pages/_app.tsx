@@ -37,6 +37,8 @@ export default function App(props) {
                             feature: true,
                             featuresList: true,
                             howItWorks: true,
+                            footer: true,
+                            banner: true,
                         },
                     },
                 }}

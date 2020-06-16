@@ -1,23 +1,48 @@
-export const breadcrumbs = ['Components', 'Countdown']
+import { Playground } from 'dokz'
+import {
+    Hero,
+    Button,
+    NavBar,
+    Heading,
+    LandingProvider,
+    TopBanner,
+    Stack,
+    Divider,
+    Box,
+    TestimonialsLogos,
+    Image,
+    Countdown,
+    MailchimpForm,
+} from 'landing-blocks/src'
 
 # Countdown
+
+The countdown is useful for landing pages that still have not launched the product, usually it contains a Email Form to gather some emails.
+
+The essential properties are
+
+-   heading
+-   subheading
+-   deadline
+-   cta
 
 ## Example on white
 
 The following example recreates the datoCMS landing page
 
-```jsx
-<LandingProvider>
-    <Countdown
-        // dark
-        // bg='gray.800'
-        py='60px'
-        heading='We will release soon'
-        subheading='Check out in a few days'
-        deadline={
-            new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 2 + 60 * 3)
-        }
-        cta={<MailchimpForm url='' />}
-    />
-</LandingProvider>
-```
+<Playground iframe>
+    <LandingProvider bg='gray.800' primary='#547eff'>
+        <Countdown
+            dark
+            py='60px'
+            heading='We will release soon'
+            subheading='Check out in a few days'
+            deadline={
+                new Date(
+                    new Date().getTime() + 1000 * 60 * 60 * 24 * 2 + 60 * 3,
+                )
+            }
+            cta={<MailchimpForm dark url='' />}
+        />
+    </LandingProvider>
+</Playground>

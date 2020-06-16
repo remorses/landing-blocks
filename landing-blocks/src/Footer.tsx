@@ -13,7 +13,13 @@ export function Footer({
     ...rest
 }: FooterProps) {
     return (
-        <PageContainer py='60px' minHeight='200px' {...rest}>
+        <PageContainer
+            fontWeight='medium'
+            py='60px'
+            minHeight='200px'
+            spacing='60px'
+            {...rest}
+        >
             <Stack
                 direction={['column', null, 'row']}
                 justifyContent='space-evenly'
@@ -36,14 +42,20 @@ export function Footer({
                                 {k}
                             </Box>
                             {columns[k].map((x, i) => (
-                                <Box opacity={.6} key={i}>{x}</Box>
+                                <Box opacity={0.6} key={i}>
+                                    {x}
+                                </Box>
                             ))}
                         </Stack>
                     )
                 })}
             </Stack>
-            <Box mt='60px' ml='60px' />
-            <Box width='auto' opacity={0.7} fontSize='subtext' alignSelf='center'>
+            <Box
+                width='auto'
+                opacity={0.6}
+                fontSize='subtext'
+                alignSelf='center'
+            >
                 Copyright © {new Date().getFullYear()} {businessName}
             </Box>
         </PageContainer>
