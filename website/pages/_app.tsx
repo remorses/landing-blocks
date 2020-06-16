@@ -39,6 +39,7 @@ export default function App(props) {
                             howItWorks: true,
                             footer: true,
                             banner: true,
+                            testimonialsLogos: true,
                         },
                     },
                 }}
