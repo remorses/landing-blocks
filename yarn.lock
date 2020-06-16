@@ -3530,10 +3530,10 @@ directory-tree@^2.2.4:
   resolved "https://registry.yarnpkg.com/directory-tree/-/directory-tree-2.2.4.tgz#6d5bd7d82e48378e256a1e87b678a43c50076e2e"
   integrity sha512-2N43msQptKbi3WMfIs+U09yi6bfyKL+MWyj5VMj8t1F/Tx04bt1cn/EEIU3o1JBltlJk7NQnzOEuTNa/KQvbWA==
 
-dokz@^1.0.29:
-  version "1.0.29"
-  resolved "https://registry.yarnpkg.com/dokz/-/dokz-1.0.29.tgz#5fc9f7198bd569e4405e58f05a3f0ee8ddae08e7"
-  integrity sha512-u3fDbE3KLy+vJDgq1z2G8NqJo3bLqKo7cvifP0c0Ggtzl9K0/UqgB2dxVqRxK0ApOVGahjmFkHxltX1W9dYpMw==
+dokz@^1.0.34:
+  version "1.0.34"
+  resolved "https://registry.yarnpkg.com/dokz/-/dokz-1.0.34.tgz#604c79c221ca13252d7801e82418cfe54ac45d0c"
+  integrity sha512-5iTGnYxaFGZaGXAHtNlnh/xPHAKWJdzov220J94PSYKcMqKs94VTqt9ibn66pJ8XZypZjrp11NMRO92nwsK5jg==
   dependencies:
     "@babel/generator" "^7.10.2"
     "@babel/parser" "^7.10.2"

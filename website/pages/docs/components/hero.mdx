@@ -10,32 +10,39 @@ import {
     Divider,
     Box,
     TestimonialsLogos,
-    Image
+    Image,
 } from 'landing-blocks/src'
 import { GradientRect, GradientCurtains } from 'landing-blocks/src/decorations'
 
 # Hero
 
 The hero component is the most important component of every landing page, it is usually composed of an `heading`, `subheadinging`, an `image` and a `cta`, but sometimes you can also find some text under the cta buttons, this is called `fingerprint`.
+
 Sometimes there is also a small text above the heading, this is what we call a `bullet`, here you can find information about a new product or feature like "new: discount of 50% only today" or something similar.
 
 Sometimes you want to show some floating element in the background, this can be done with the `floatingElement` prop.
 
-Here are some examples
+With `landing-blocks` you need to input these essential elements and you instantly get an awesome landing page hero with a good layout on mobile and desktop
 
 ```jsx
 <Hero
     heading='Some heading'
     subheading='More than 4.000 businesses use DatoCMS to create their online content at scale from a central hub, and distribute it easily via API to websites and any other digital experience.'
+    bullet='Introducing Landing Blocks 1.0'
     image={<img />}
     cta={<Button>Try it now for free!</Button>}
-    floatingElement={<GradientRect maxW='pageContainer' distortion={0.3} />}
 />
 ```
 
+# Customizability
+
+Landing blocks can create a variety of landing pages just changing the components props and using your own elements to the props that accept a `ReactNode` type, like `heading` and `subheading`
+
+Below there are some live examples of some hero designs
+
 ## Example on white
 
-The following example recreates the datoCMS landing page
+The following example recreates the awesome DatoCMS landing page
 
 <Playground iframe>
     <LandingProvider primary='#FF593D'>
@@ -72,6 +79,8 @@ The following example recreates the datoCMS landing page
 ## Example on dark background
 
 The following is the Qovery landing page recreated using just a bunch of components
+
+To invert the colors of the text to make it visible on dark background you have to pass the `dark` prop
 
 <Playground iframe>
     <LandingProvider spacing='60px' primary='white' bg='#323452'>
