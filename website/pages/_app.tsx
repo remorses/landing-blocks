@@ -32,7 +32,11 @@ export default function App(props) {
                     demos: false,
                     docs: {
                         index: true,
-                        components: { hero: true },
+                        components: {
+                            hero: true,
+                            feature: true,
+                            featuresList: true,
+                        },
                     },
                 }}
             >

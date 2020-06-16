@@ -1,19 +1,42 @@
-export const breadcrumbs = ['Components', 'Hero']
+import { Playground } from 'dokz'
+import {
+    Hero,
+    Button,
+    NavBar,
+    Heading,
+    LandingProvider,
+    TopBanner,
+    Stack,
+    Divider,
+    Box,
+    TestimonialsLogos,
+    Image,
+    Banner,
+} from 'landing-blocks/src'
 
 # Banner
+
+The banner is an element that catch the user attention, usually has a call to action that points to the next action the user should make
 
 ## Example on white
 
 The following example recreates the datoCMS landing page
 
-```jsx
-<LandingProvider primary='#FF593D'>
-    <Banner
-        // dark
-        heading='Try Prismic Now!'
-        subheading='50% discount just for good fellows like you'
-        image={<GradientCurtains />}
-        cta={<Button>try it out</Button>}
-    />
-</LandingProvider>
-```
+<Playground iframe>
+    <LandingProvider bg='black' p='60px' primary='#FF593D'>
+        <Banner
+            flip
+            shadow='lg'
+            heading='Add Prisma to Your App or Start From Scratch'
+            bullet='READY TO TRY?'
+            primary='#9F7AEA'
+            borderTop='7px solid'
+            borderTopColor='primary'
+            bg='white'
+            image={
+                <Image ml='-60px' width='200px' src='/prisma/bannerImage.svg' />
+            }
+            cta={<Button>Try Prisma in 5 minutes</Button>}
+        />
+    </LandingProvider>
+</Playground>
