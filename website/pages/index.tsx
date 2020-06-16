@@ -33,10 +33,10 @@ const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
 
 const Page = () => (
     <LandingProvider primary='white'>
-        <Section
+        <Stack
 
-            py='100px'
-            mt='-100px'
+            pb='100px'
+            // mt='-100px'
             spacing='60px'
             bg={BG}
             backgroundImage={BG_IMG}
@@ -126,7 +126,7 @@ const Page = () => (
                     },
                 ]}
             />
-        </Section>
+        </Stack>
 
         <SectionTitle
             primary={BG}
