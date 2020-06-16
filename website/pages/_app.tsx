@@ -40,6 +40,7 @@ export default function App(props) {
                             footer: true,
                             banner: true,
                             testimonialsLogos: true,
+                            testimonialsTweets: true,
                         },
                     },
                 }}

@@ -1,12 +1,26 @@
-export const breadcrumbs = ['Components', 'Hero']
+import { Playground } from 'dokz'
+import {
+    Hero,
+    Button,
+    NavBar,
+    Heading,
+    LandingProvider,
+    TopBanner,
+    Stack,
+    Divider,
+    Box,
+    TestimonialsLogos,
+    Image,
+    TestimonialsTweets,
+} from 'landing-blocks/src'
 
-# Testimonials Tweets
+# TestimonialsTweets
 
-Testimonials are a great way to show social proof to the customer, even better if these testimonials are verifyable via a twitter link.
+Testimonials are a great way to show social proof to the customer, even better if these testimonials are verifiable via a twitter link.
 
 An example of using the `TestimonialsTweets` component is this
 
-```js
+```jsx
 <TestimonialsTweets
     heading="Don't you trust me?"
     subheading='Trust them'
@@ -22,16 +36,16 @@ An example of using the `TestimonialsTweets` component is this
 
 In the view below the tweets are in a single column but on wider screen they wrap in an organic way.
 
-```jsx
-<LandingProvider>
-    <TestimonialsTweets
-        heading="Don't you trust me?"
-        subheading='Trust them'
-        tweets={[
-            '933354946111705097',
-            '1246480107604078592', // you can use an id or an url
-            'https://twitter.com/naval/status/806034795658522624?s=21',
-        ]}
-    />
-</LandingProvider>
-```
+<Playground iframe>
+    <LandingProvider>
+        <TestimonialsTweets
+            heading="Don't you trust me?"
+            subheading='Trust them'
+            tweets={[
+                '933354946111705097',
+                '1246480107604078592', // you can use an id or an url
+                'https://twitter.com/naval/status/806034795658522624?s=21',
+            ]}
+        />
+    </LandingProvider>
+</Playground>
