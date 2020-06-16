@@ -22,11 +22,11 @@ Landing blocks is a react component library that packs together all the fundamen
 These components are built to be self contained and super reusable in all your projects.
 Every component is built with these principles in mind:
 
--   no global css needed: all components are styled using emotion
--   completely customizable: you can create a lot of design variations, just look at the demos
--   good defaults: the components look nice with little effort
--   easily extendible: you can easily pass your own components to the blocks props
--   themeable: every components uses the theme colors
+-   **Pretty by default**: the components look nice with little effort
+-   **no global css needed**: all components are styled using emotion
+-   **completely customizable**: you can create a lot of design variations, just look at the demos
+-   **easily extendible**: you can easily pass your own components to the blocks props
+-   **themeable**: every components uses the theme colors
 
 The available components follow the landing pages most common elements, you can explore them in the main page
 
@@ -103,8 +103,20 @@ Every Landing Block has the same dark prop that does the same thing
         bg='black'
         dark // inverts text color
     />
+    <Hero bg='blue' dark />
+</LandingProvider>
+```
+
+## Other properties
+
+Every component follows the `styled-system` specification which means you can pass margin, passing, background styling via props, here is an example
+
+```jsx
+<LandingProvider>
     <Hero
-        bg='blue'
+        m='20px' // m is margin
+        p='20px' // p is padding
+        bg='black' // bg is background color
         dark
     />
 </LandingProvider>
