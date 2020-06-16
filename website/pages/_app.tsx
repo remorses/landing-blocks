@@ -36,6 +36,7 @@ export default function App(props) {
                             hero: true,
                             feature: true,
                             featuresList: true,
+                            howItWorks: true,
                         },
                     },
                 }}

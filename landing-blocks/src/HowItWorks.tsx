@@ -29,7 +29,7 @@ export function HowItWorks({
 }: HowItWorksProps) {
     const { Faded } = useFaded({ animate })
     return (
-        <PageContainer py='120px' {...rest}>
+        <PageContainer spacing='40px' py='120px' {...rest}>
             <Stack
                 as={Faded}
                 spacing='40px'
@@ -45,7 +45,7 @@ export function HowItWorks({
                 </Heading>
                 <Subheading maxW='700px'>{subheading}</Subheading>
             </Stack>
-            <Box mt='60px' />
+            {/* <Box mt='60px' /> */}
             <Stack align='stretch' spacing='60px' flex='1'>
                 {steps.map((step, i) => (
                     <Step
@@ -74,11 +74,10 @@ const Step = ({
     const { Faded } = useFaded({ animate })
     return (
         <Stack
-            
             justify='space-between'
             align='center'
             direction={['column', null, flip ? 'row-reverse' : 'row']}
-            // spacing='40px'
+            spacing='40px'
             {...rest}
         >
             <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='40px'>

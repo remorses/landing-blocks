@@ -1,38 +1,62 @@
-export const breadcrumbs = ['Components', 'Hero']
+import { Playground } from 'dokz'
+import {
+    Hero,
+    Button,
+    NavBar,
+    Heading,
+    LandingProvider,
+    TopBanner,
+    Stack,
+    Divider,
+    Box,
+    TestimonialsLogos,
+    Image,
+    Banner,
+    HowItWorks,
+} from 'landing-blocks/src'
 
-# Footer
+# HowItWorks
+
+This section is useful on website that have a clearly defined workflow, like a shipping business: make a package, call us, send the packet.
+
+Every step has the following properties
+
+-   heading
+-   subheading
+-   decorativeHeading
+-   image
 
 ## Example on white
 
-The following example recreates the datoCMS landing page
+The following example recreates the Prismic How it works section
 
-```jsx
-<LandingProvider primary='#FF593D'>
-    <HowItWorks
-        heading='How Prismic works'
-        subheading='A tool built to allow your content, design, and development teams to produce a finished product that they can all be proud of.'
-        steps={[
-            {
-                heading: 'Model your editor',
-                image: <img width='500px' src='/prismic/step1.jpg' />,
-                subheading:
-                    "Model custom types to match your desired design. Create reusable fields and custom components (we call them Slices...you'll hear us talk about them a lot) to enable dynamic layouts and build the editor experience that you want",
-            },
-            {
-                heading:
-                    'Hand over to your content team to start creating content',
-                image: <img width='500px' src='/prismic/step2.jpg' />,
-                subheading:
-                    "Once you've managed the initial setup, you can hand the management over to your content team so that editors can start filling content while you're choosing the framework. With Prismic, creating beautiful content becomes simple enough that even non-technical employees can handle it. ",
-            },
-            {
-                heading:
-                    'Deploy on Zeit Now, Netlify, Heroku or your favorite hosting platform',
-                image: <img width='500px' src='/prismic/step3.png' />,
-                subheading:
-                    'We take care of hosting and scaling the publishing tools. All you have to do is host the website, but you can choose whichever hosting platform you prefer.',
-            },
-        ]}
-    />
-</LandingProvider>
-```
+<Playground iframe>
+    <LandingProvider primary='#FF593D'>
+        <HowItWorks
+            heading='How Prismic works'
+            subheading='A tool built to allow your content, design, and development teams to produce a finished product that they can all be proud of.'
+            steps={[
+                {
+                    heading: 'Model your editor',
+                    image: <img width='500px' src='/prismic/step1.jpg' />,
+                    subheading:
+                        "Model custom types to match your desired design. Create reusable fields and custom components (we call them Slices...you'll hear us talk about them a lot) to enable dynamic layouts and build the editor experience that you want",
+                },
+                {
+                    heading:
+                        'Hand over to your content team to start creating content',
+                    image: <img width='500px' src='/prismic/step2.jpg' />,
+                    subheading:
+                        "Once you've managed the initial setup, you can hand the management over to your content team so that editors can start filling content while you're choosing the framework. With Prismic, creating beautiful content becomes simple enough that even non-technical employees can handle it. ",
+                },
+                {
+                    heading:
+                        'Deploy on Zeit Now, Netlify, Heroku or your favorite hosting platform',
+                    image: <img width='500px' src='/prismic/step3.png' />,
+                    subheading:
+                        'We take care of hosting and scaling the publishing tools. All you have to do is host the website, but you can choose whichever hosting platform you prefer.',
+                },
+            ]}
+        />
+    </LandingProvider>
+</Playground>
