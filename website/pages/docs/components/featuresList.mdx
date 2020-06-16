@@ -1,150 +1,52 @@
-export const breadcrumbs = ['Components', 'Hero']
+import { Playground } from 'dokz'
+import {
+    Hero,
+    Button,
+    NavBar,
+    Heading,
+    LandingProvider,
+    TopBanner,
+    Stack,
+    Divider,
+    Box,
+    TestimonialsLogos,
+    Image,
+    FeaturesList,
+    Banner,
+} from 'landing-blocks/src'
 
-# features list
+# Features list
+
+Features list is a small list of features your product has, it can have from 3 to 4 features composed of an image, heading and subheading.
 
 ## Example on white
 
 The following example recreates the datoCMS landing page
 
-```jsx
-<LandingProvider primary='#FF593D'>
-    <FeaturesList
-        heading=''
-        centerText
-        features={[
-            {
-                heading: (
-                    <Heading fontWeight='semibold' fontSize='82px'>
-                        -79%
-                    </Heading>
-                ),
-                subheading: 'In operational cost',
-            },
-            {
-                heading: (
-                    <Heading fontWeight='semibold' fontSize='82px'>
-                        2x
-                    </Heading>
-                ),
-                subheading: 'Faster time to market',
-            },
-            {
-                heading: (
-                    <Heading fontWeight='semibold' fontSize='82px'>
-                        8x
-                    </Heading>
-                ),
-                subheading: 'Faster loading times',
-            },
-        ]}
-        bg='gray.100'
-    />
-</LandingProvider>
-```
-
-## Example on dark background
-
-The following is the Qovery landing page recreated using just a bunch of components
-
-```jsx
-<LandingProvider spacing='60px' primary='white' bg='#323452'>
-    <FeaturesList
-        heading='Why we think Prismic is good for developers '
-        features={[
-            {
-                heading: 'API to fetch content',
-                icon: (
-                    <img src='https://images.prismic.io/prismic-website%2F4e288d2e-66cd-4209-9ada-fbfb6f1c19c1_api.svg?auto=compress,format' />
-                ),
-                subheading:
-                    'Unlike a traditional CMS, an API-based approach is much simpler and more secure. This includes options for REST, GraphQL, and SDKs that help our users to make the most of Prismic.',
-            },
-            {
-                heading: 'No maintenance or server setup',
-                icon: (
-                    <img src='https://images.prismic.io/prismic-website%2F4080f213-f9e0-47f1-ae57-1d26874f1a08_setup.svg?auto=compress,format' />
-                ),
-                subheading:
-                    "We offer a high-level SLAs, scalability, and a global CDN. We'll make sure that everything is running smoothly in the background so that you can focus on your projects.",
-            },
-            {
-                heading: 'A growing ecosystem',
-                icon: (
-                    <img src='https://images.prismic.io/prismic-website%2F4268d459-cec4-4e46-856b-d2eaba8d71f8_ecosystem.svg?auto=compress,format' />
-                ),
-                subheading:
-                    'Built by developers for developers - we actively engage with the community. Enjoy content that is created specifically for our community and join our Slack to discuss your Prismic projects.',
-            },
-        ]}
-        bg='gray.100'
-    />
-</LandingProvider>
-```
-
-## With background image
-
-The following example uses a sky background image
-
-```jsx
-<LandingProvider>
-    <FeaturesList
-        heading=''
-        floatingElement={
-            <CurlyWire opacity={0.1} stroke='#5A38AC' maxW='pageContainer' />
-        }
-        features={[
-            {
-                heading: 'Make sense of data',
-                subheading:
-                    'Dovetail is a powerful way to discover patterns across interviews, usability testing, survey responses, and more',
-                icon: <img width='60px' src='/dovetail/feature1.svg' />,
-            },
-            {
-                heading: 'Build your taxonomy',
-                subheading:
-                    'Organize tags into a hierarchy with intuitive controls like drag & drop, and extend your project with global tags.',
-                icon: <img width='60px' src='/dovetail/feature2.svg' />,
-            },
-            {
-                heading: 'Visualize your research',
-                subheading:
-                    'Turn qualitative data into quantitative data with highlights, and visualize your work with a variety of beautiful charts.',
-                icon: <img width='60px' src='/dovetail/feature3.svg' />,
-            },
-        ]}
-    />
-</LandingProvider>
-```
-
-## With background image
-
-The following example uses a sky background image
-
-```jsx
-<LandingProvider>
-    <FeaturesList
-        heading='Why we think Prismic is good for developers '
-        centerText
-        features={[
-            {
-                heading: 'Expand test coverage',
-                icon: <img src='/testim/step1.svg' />,
-                subheading:
-                    'Fast authoring increases coverage and quality across your application..',
-            },
-            {
-                heading: 'Reduce maintenance',
-                icon: <img src='/testim/step2.svg' />,
-                subheading:
-                    'AI-based stabilizers eliminate flaky tests that consume resources.',
-            },
-            {
-                heading: 'Increase test agility',
-                icon: <img src='/testim/step3.svg' />,
-                subheading:
-                    'Code, record and manage tests your way with your tools for greater flexibility.',
-            },
-        ]}
-    />
-</LandingProvider>
-```
+<Playground iframe>
+    <LandingProvider>
+        <FeaturesList
+            centerText
+            features={[
+                {
+                    heading: 'Expand test coverage',
+                    icon: <img src='/testim/step1.svg' />,
+                    subheading:
+                        'Fast authoring increases coverage and quality across your application..',
+                },
+                {
+                    heading: 'Reduce maintenance',
+                    icon: <img src='/testim/step2.svg' />,
+                    subheading:
+                        'AI-based stabilizers eliminate flaky tests that consume resources.',
+                },
+                {
+                    heading: 'Increase test agility',
+                    icon: <img src='/testim/step3.svg' />,
+                    subheading:
+                        'Code, record and manage tests your way with your tools for greater flexibility.',
+                },
+            ]}
+        />
+    </LandingProvider>
+</Playground>
