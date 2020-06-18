@@ -28,7 +28,6 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                 <Box flex='1' />
                 <Stack
                     maxW='100%'
-                    isTruncated
                     direction='row'
                     spacing='20px'
                     align='center'
