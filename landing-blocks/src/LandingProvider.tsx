@@ -1,10 +1,5 @@
-import {
-    CSSReset,
-    DarkMode,
-    ITheme,
-    theme as chakraTheme,
-    useColorMode,
-} from '@chakra-ui/core'
+import { CSSReset, DarkMode, useColorMode } from '@chakra-ui/core'
+import chakraTheme, { Theme as ITheme } from '@chakra-ui/theme'
 import { css, Global } from '@emotion/core'
 import { FlexProps, Stack } from 'layout-kit-react'
 import merge from 'lodash/fp/merge'
@@ -104,7 +99,7 @@ export function LandingProvider({
     return (
         <PropagatedThemeProvider theme={theme}>
             <Global styles={globalStyles} />
-            <Mode> 
+            <Mode>
                 {/* TODO propagate the color mode context from above, setting it to dark if dark=true */}
                 <CSSReset />
                 <Stack
@@ -120,7 +115,6 @@ export function LandingProvider({
                 >
                     {children}
                 </Stack>
-
             </Mode>
         </PropagatedThemeProvider>
     )
