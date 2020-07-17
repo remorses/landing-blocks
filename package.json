@@ -5,6 +5,7 @@
         "website"
     ],
     "scripts": {
+        "build": "yarn --cwd landing-blocks tsc",
         "dev": "yarn --cwd website dev"
     }
 }
