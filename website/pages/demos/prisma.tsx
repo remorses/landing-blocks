@@ -1,4 +1,4 @@
-import { AspectRatioBox, Image } from '@chakra-ui/core'
+import { AspectRatio, Image } from '@chakra-ui/core'
 import { Banner, Button, CodeSnippet, Feature, Footer, Heading, Hero, LandingProvider, NavBar } from 'landing-blocks/src'
 import { Box, Stack } from 'layout-kit-react'
 import React, { Fragment } from 'react'
@@ -85,7 +85,7 @@ const Page = () => (
                 heading='Take a Quick Tour'
                 subheading='Prisma is the perfect companion for building web APIs. It saves repetitive CRUD boilerplate and provides a flexible API for common use cases such as pagination and filtering.'
                 image={
-                    <AspectRatioBox minW='400px' w='600px' ratio={5 / 3}>
+                    <AspectRatio minW='400px' w='600px' ratio={5 / 3}>
                         <Box
                             borderRadius='10px'
                             shadow='lg'
@@ -95,7 +95,7 @@ const Page = () => (
                             src='https://www.youtube.com/embed/0RhtQgIs-TE'
                             allowFullScreen
                         />
-                    </AspectRatioBox>
+                    </AspectRatio>
                 }
             />
             <Banner

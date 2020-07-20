@@ -1,9 +1,9 @@
 import { Box, Stack } from 'layout-kit-react'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
-import { useFaded } from './hooks'
-import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
+import { useFaded } from './hooks'
+import { PageContainer, PageContainerProps } from './layout'
 
 export type HowItWorksProps = {
     heading?: ReactNode
@@ -81,11 +81,7 @@ const Step = ({
             {...rest}
         >
             <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='40px'>
-                <Stack
-                    direction='row'
-                    align='flex-end'
-                    opacity={0.3}
-                >
+                <Stack direction='row' align='flex-end' opacity={0.3}>
                     <Box opacity={0.5} lineHeight='60px' fontSize='80px'>
                         {number}
                     </Box>
@@ -105,7 +101,6 @@ const Step = ({
                 <Box
                     maxW='400px'
                     fontWeight='medium'
-                   
                     lineHeight='1.8em'
                     opacity={0.5}
                     fontSize='subtext'
@@ -113,9 +108,9 @@ const Step = ({
                     {subheading}
                 </Box>
             </Stack>
-            <Col as={Faded} minW='300px' maxW='500px' flex='1'>
+            <Box as={Faded} minW='300px' maxW='500px' flex='1'>
                 {image}
-            </Col>
+            </Box>
         </Stack>
     )
 }

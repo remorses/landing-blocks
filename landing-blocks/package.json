@@ -51,7 +51,6 @@
     },
     "dependencies": {
         "@emotion/styled": "^10.0.27",
-        "@types/theme-ui": "^0.3.4",
         "baby-i-am-faded": "^0.0.12",
         "color-js": "^1.0.5",
         "emotion-theming": "^10.0.27",

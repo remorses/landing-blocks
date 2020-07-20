@@ -12,7 +12,7 @@ export const headingNavLinks = [
     <MyLink href='/docs'>Docs</MyLink>,
     <MyLink href='/#demos'>Demos</MyLink>,
     <MyLink href='/#newsletter'>Newsletter</MyLink>,
-    <GithubLink url='https://github.com/remorses/landing-blocks' />,
+    // <GithubLink url='https://github.com/remorses/landing-blocks' />,
 ]
 
 const BASE_PATH = '/docs/components/'
