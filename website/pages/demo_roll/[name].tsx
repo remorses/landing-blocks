@@ -37,12 +37,13 @@ export default function Page({}) {
                 h='100%'
                 align='flex-start'
             >
-                {!name || !loaded ? (
+                {!name ? (
                     <Stack align='center' justify='center'>
                         <Spinner />
                     </Stack>
                 ) : (
                     <Iframe
+                        display={loaded ? 'block' : 'none'}
                         url={`${DEMOS_WEBSITE}/demos/${name}`}
                         width='100%'
                         height='100%'
