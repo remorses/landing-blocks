@@ -4,9 +4,11 @@ import Iframe from 'react-iframe'
 import { BuyDemosButton } from '..'
 import { DEMOS_WEBSITE, headingNavLinks } from '../../constants'
 import { Spinner } from '@chakra-ui/core'
+import { useState } from 'react'
 
 export default function Page({}) {
     const { query } = useRouter()
+    const [loaded, setLoaded] = useState(false)
     const name = query.name
     return (
         <LandingProvider
@@ -35,7 +37,7 @@ export default function Page({}) {
                 h='100%'
                 align='flex-start'
             >
-                {!name ? (
+                {!name || !loaded ? (
                     <Stack align='center' justify='center'>
                         <Spinner />
                     </Stack>
@@ -44,6 +46,7 @@ export default function Page({}) {
                         url={`${DEMOS_WEBSITE}/demos/${name}`}
                         width='100%'
                         height='100%'
+                        onLoad={() => setLoaded(true)}
                         // display='initial'
                         position='relative'
                     />
