@@ -49,6 +49,7 @@ export function Banner({
                     minW='300px'
                     w={image ? 'auto' : '100%'}
                     justify='space-between'
+                    align='stretch'
                     direction={['column', null, image ? 'column' : 'row']}
                 >
                     <Stack spacing='20px'>
