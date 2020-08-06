@@ -86,7 +86,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
                 position='relative'
                 ref={ref}
                 width='100%'
-                px='10px'
+                px='pagePadding'
                 align='center'
                 {...styles}
                 {...props}

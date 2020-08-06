@@ -85,6 +85,9 @@ export function LandingProvider({
                         sizes: {
                             pageContainer: pageWidth,
                         },
+                        space: {
+                            pagePadding: '20px',
+                        },
                         fonts: {
                             body: fontFamily,
                             heading: fontFamily,
@@ -104,7 +107,7 @@ export function LandingProvider({
     return (
         <PropagatedThemeProvider theme={theme}>
             <Global styles={globalStyles} />
-            <Mode> 
+            <Mode>
                 {/* TODO propagate the color mode context from above, setting it to dark if dark=true */}
                 <CSSReset />
                 <Stack
@@ -120,7 +123,6 @@ export function LandingProvider({
                 >
                     {children}
                 </Stack>
-
             </Mode>
         </PropagatedThemeProvider>
     )
