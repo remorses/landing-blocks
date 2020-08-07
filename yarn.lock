@@ -5156,10 +5156,10 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
 
-layout-kit-react@^0.1.8:
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/layout-kit-react/-/layout-kit-react-0.1.8.tgz#04853f3629a3d53f437edaec8a065fca197dad3b"
-  integrity sha512-EobfXeaWyrichpmC/JFL2kn3fc8yZWpUDgchfxoKUxxsUBVmaBcgA2XBYcpozcK5nhDQ1smMPggjSXKc/p/lfg==
+layout-kit-react@^0.1.10:
+  version "0.1.10"
+  resolved "https://registry.yarnpkg.com/layout-kit-react/-/layout-kit-react-0.1.10.tgz#6c6983f027c44fbb624a2298d0abf1d8fb369e21"
+  integrity sha512-ttFCfsCm89Sa4RmUOpa2vLgeYml6G1Rdjx45NUp6zSwbVfENdHMkJC0NnBrhj6SOGz9ux1+d93f2rTkUGdYGnw==
   dependencies:
     "@emotion/styled" "^10.0.27"
     "@styled-system/css" "^5.1.5"

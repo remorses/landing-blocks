@@ -53,7 +53,7 @@
         "color-js": "^1.0.5",
         "emotion-theming": "^10.0.27",
         "intersection-observer": "^0.7.0",
-        "layout-kit-react": "^0.1.8",
+        "layout-kit-react": "^0.1.10",
         "lodash.get": "^4.4.2",
         "lodash.merge": "^4.6.2",
         "prism-react-renderer": "^1.1.0",
