@@ -13,6 +13,7 @@ import { PropagatedThemeProvider } from './layout'
 import { DeepPartial } from 'utility-types'
 
 export interface ThemeExtension extends ITheme {
+    pagePadding: any
     colors: {
         primary: string
         secondary: string
