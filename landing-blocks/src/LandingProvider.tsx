@@ -13,7 +13,9 @@ import { PropagatedThemeProvider } from './layout'
 import { DeepPartial } from 'utility-types'
 
 export interface ThemeExtension extends ITheme {
-    pagePadding: any
+    space: {
+        pagePadding?: any
+    } & ITheme['space']
     colors: {
         primary: string
         secondary: string
@@ -37,7 +39,11 @@ export type LandingProviderProps = {
     black?: string
     white?: string
     secondary?: string
-    pageWidth?: string
+    pageWidth?: any
+    /*
+    The page padding, defaults to 20px
+    */
+    pagePadding?: any
     spacing?: any
     theme?: DeepPartial<ThemeExtension>
     children?: any
@@ -62,6 +68,7 @@ export function LandingProvider({
     white = '#fff',
     secondary = 'purple',
     pageWidth = '1200px',
+    pagePadding = '20px',
     spacing = '60px',
     fontFamily = 'Roboto, system-ui, sans-serif',
     theme: themeProp = {},
@@ -87,7 +94,7 @@ export function LandingProvider({
                             pageContainer: pageWidth,
                         },
                         space: {
-                            pagePadding: '20px',
+                            pagePadding,
                         },
                         fonts: {
                             body: fontFamily,
