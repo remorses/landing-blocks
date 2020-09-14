@@ -122,6 +122,7 @@ export function LandingProvider({
                     // overflowX='hidden'
                     width='100%'
                     height='100%'
+                    overflowX='hidden'
                     fontFamily={fontFamily}
                     spacing={spacing}
                     align='stretch'
@@ -141,8 +142,8 @@ const globalStyles = css`
         box-sizing: border-box;
     }
     html {
-        /* overflow: hidden; */
         height: 100%;
+        width: 100%;
         scroll-behavior: smooth;
     }
     #__next {
@@ -151,6 +152,7 @@ const globalStyles = css`
     }
     body {
         height: 100%;
+        width: 100%;
         overflow: auto;
         overflow-x: hidden;
     }
