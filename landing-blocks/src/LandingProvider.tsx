@@ -141,7 +141,7 @@ const globalStyles = css`
         box-sizing: border-box;
     }
     html {
-        overflow: hidden;
+        /* overflow: hidden; */
         height: 100%;
         scroll-behavior: smooth;
     }
