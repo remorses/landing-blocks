@@ -1,7 +1,9 @@
 import { useColorMode } from '@chakra-ui/core'
 import { Faded, FadedProps } from 'baby-i-am-faded'
 import React, { ElementType, useMemo } from 'react'
-require('intersection-observer')
+
+// TODO intersection-observer polyfill
+// require('intersection-observer')
 
 
 export function useFaded({
