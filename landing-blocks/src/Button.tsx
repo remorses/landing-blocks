@@ -37,7 +37,7 @@ export const Button: FC<ButtonProps> = forwardRef(
             if (animate === true) {
                 return makeAnimationCss(bounceIn)
             }
-            if (animate in animations) {
+            if (animate && animate in animations) {
                 return makeAnimationCss(animations[animate as string])
             }
             return css``
