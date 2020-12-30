@@ -1,25 +1,21 @@
+2.0.0
 
-Next release
+-   Updated to `@chakra-ui/react` 1 and `@emotion/react` 11 peer dependencies
 
-TODO animate prop can be 'fadeDown', wobble, fast, slow, ...
-TODO add more examples in docs pages, one example for
-- light mode
-- dark mode
-- with decoration element
-- with animation
-- with custom animation elements
-TODO email for element components like Heading, Subheading, Button, EmailForm, PageContainer
-TODO make the landing page copy, add features and benefits, detailed footer
-TODO add gumroad element to the landing page to buy the demos code
+-   Now you will need to wrap `LandingProvider` with `ChakraProvider` to pass correct theme:
 
-TODO team
-TODO mockups svg components
-TODO timeline and goals like funding rounds, where we are going
-TODO secondary buttons examples
-TODO featuresGrid not using grid or grid polyfill
-TODO illustrations components themeable with emotion
+```tsx
+// _app.jsx
+import { LandingProvider, Hero } from 'landing-blocks'
+import { ChakraProvider } from '@chakra-ui/react'
+import React from 'react'
 
-
-<!-- [bump if landing-blocks] -->
-1.0.61
-
+export default function App(props) {
+    const { Component, pageProps } = props
+    return (
+        <ChakraProvider>
+            <LandingProvider>...</LandingProvider>
+        </ChakraProvider>
+    )
+}
+```

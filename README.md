@@ -24,6 +24,7 @@ Every component represents a section of your landing page, compose them together
 
 ```jsx
 import React from 'react'
+import { ChakraProvider } from '@chakra-ui/react'
 import {
     LandingProvider,
     Hero,
@@ -34,57 +35,59 @@ import {
 } from 'landing-blocks'
 
 export default () => (
-    <LandingProvider>
-        <NavBar
-            logo={<img width='120px' src='/logo.svg' />}
-            navs={[
-                <a>Features</a>,
-                <a>Use Cases</a>,
-                <a>Pricing</a>,
-                <a>About Us</a>,
-                <a>Login</a>,
-            ]}
-        />
-        <Hero
-            heading='Make your website editable for the whole team'
-            subheading='Choose your technology. Use the API to fetch content. Empower
+    <ChakraProvider>
+        <LandingProvider>
+            <NavBar
+                logo={<img width='120px' src='/logo.svg' />}
+                navs={[
+                    <a>Features</a>,
+                    <a>Use Cases</a>,
+                    <a>Pricing</a>,
+                    <a>About Us</a>,
+                    <a>Login</a>,
+                ]}
+            />
+            <Hero
+                heading='Make your website editable for the whole team'
+                subheading='Choose your technology. Use the API to fetch content. Empower
         your content team.'
-            image={<img width='500px' src='/code.png' />}
-            cta={<Button>Test it out</Button>}
-        />
-        <Feature
-            heading='YourName is an awesome product'
-            subheading='Awesome subheading'
-            image={<img src='/feature1.jpg' width='500px' />}
-            bg='gray.100'
-        />
-        <Feature
-            heading='YourName is an awesome product'
-            subheading='Awesome subheading'
-            image={<img src='/feature1.jpg' width='500px' />}
-            flip
-        />
-        <Footer
-            businessName='YourName'
-            columns={{
-                Developers: [
-                    <a>Quickstart</a>,
-                    <a>Documentation</a>,
-                    <a>Samples</a>,
-                ],
-                Company: [
-                    <a>Quickstart</a>,
-                    <a>Documentation</a>,
-                    <a>Samples</a>,
-                ],
-                Product: [
-                    <a>Quickstart</a>,
-                    <a>Documentation</a>,
-                    <a>Samples</a>,
-                ],
-            }}
-        />
-    </LandingProvider>
+                image={<img width='500px' src='/code.png' />}
+                cta={<Button>Test it out</Button>}
+            />
+            <Feature
+                heading='YourName is an awesome product'
+                subheading='Awesome subheading'
+                image={<img src='/feature1.jpg' width='500px' />}
+                bg='gray.100'
+            />
+            <Feature
+                heading='YourName is an awesome product'
+                subheading='Awesome subheading'
+                image={<img src='/feature1.jpg' width='500px' />}
+                flip
+            />
+            <Footer
+                businessName='YourName'
+                columns={{
+                    Developers: [
+                        <a>Quickstart</a>,
+                        <a>Documentation</a>,
+                        <a>Samples</a>,
+                    ],
+                    Company: [
+                        <a>Quickstart</a>,
+                        <a>Documentation</a>,
+                        <a>Samples</a>,
+                    ],
+                    Product: [
+                        <a>Quickstart</a>,
+                        <a>Documentation</a>,
+                        <a>Samples</a>,
+                    ],
+                }}
+            />
+        </LandingProvider>
+    </ChakraProvider>
 )
 
 export default Page
