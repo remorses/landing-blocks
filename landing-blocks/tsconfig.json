@@ -3,25 +3,15 @@
         "target": "es5",
         "module": "commonjs",
         "moduleResolution": "Node",
-        "lib": [
-            "es2017",
-            "es7",
-            "es6",
-            "dom"
-        ],
+        "lib": ["es2017", "es7", "es6", "dom"],
         "declaration": true,
+        "declarationMap": true,
         "outDir": "dist",
         "strict": false,
         "esModuleInterop": true,
         "noImplicitAny": false,
         "skipLibCheck": true,
-        "jsx": "react",
+        "jsx": "react"
     },
-    "exclude": [
-        "node_modules",
-        "dist",
-        "esm",
-        "_",
-        "tests",
-    ]
+    "exclude": ["node_modules", "dist", "esm", "_", "tests"]
 }
