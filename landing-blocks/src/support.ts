@@ -1,4 +1,4 @@
-import { useTheme } from '@chakra-ui/core'
+import { useTheme } from '@chakra-ui/react'
 import get from 'lodash.get'
 import { cloneElement } from 'react'
 

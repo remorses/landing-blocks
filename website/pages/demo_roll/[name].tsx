@@ -3,7 +3,7 @@ import { useRouter } from 'next/router'
 import Iframe from 'react-iframe'
 import { BuyDemosButton } from '..'
 import { DEMOS_WEBSITE, headingNavLinks } from '../../constants'
-import { Spinner } from '@chakra-ui/core'
+import { Spinner } from '@chakra-ui/react'
 import { useState } from 'react'
 
 export default function Page({}) {

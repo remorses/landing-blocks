@@ -20,13 +20,3 @@ jobs:
       - run: cd landing-blocks && yarn
       # - run: yarn test
       - run: cd landing-blocks && yarn build
-      - name: Bump version
-        uses: remorses/bump-version@js
-        with:
-          version_file: landing-blocks/VERSION
-          prefix: landing-blocks
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: cd landing-blocks && yarn publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.npm_token }}

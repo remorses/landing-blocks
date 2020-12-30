@@ -7,9 +7,8 @@ import {
     BoxProps,
     Flex,
     Stack,
-    FlexProps,
     StackProps,
-} from 'layout-kit-react'
+} from '@chakra-ui/react'
 import { HeadingLogoIcon } from '../_app'
 
 <Stack align='center' my='40px'>
@@ -35,9 +34,9 @@ The available components follow the landing pages most common elements, you can 
 First install it with its peer dependencies
 
 ```bash
-npm install landing-blocks @emotion/core @emotion/styled emotion-theming @chakra-ui/core
+npm install landing-blocks @emotion/react @emotion/styled @chakra-ui/react
 # or
-yarn add landing-blocks @emotion/core @emotion/styled emotion-theming @chakra-ui/core
+yarn add landing-blocks @emotion/react @emotion/styled @chakra-ui/react
 ```
 
 You have to use the components under a `LandingProvider`, this component passes the customization and base theme to other landing blocks components

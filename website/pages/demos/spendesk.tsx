@@ -1,4 +1,4 @@
-import { Box } from '@chakra-ui/core'
+import { Box } from '@chakra-ui/react'
 import { Button, Faqs, FeaturesList, Footer, Hero, LandingProvider, NavBar } from 'landing-blocks/src'
 import { GradientCurtains } from 'landing-blocks/src/decorations'
 import React from 'react'

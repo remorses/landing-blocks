@@ -1,4 +1,4 @@
-import { Box, Link } from '@chakra-ui/core'
+import { Box, Link } from '@chakra-ui/react'
 import { Button, Divider, Feature, FeaturesGrid, FeaturesList, Footer, Hero, LandingProvider, NavBar, TopBanner } from 'landing-blocks/src'
 import { CurlyWire } from 'landing-blocks/src/decorations'
 import React from 'react'

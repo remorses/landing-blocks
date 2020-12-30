@@ -1,27 +1,26 @@
-import { useColorMode } from '@chakra-ui/core'
-import { Faded, FadedProps } from 'baby-i-am-faded'
-import React, { ElementType, useMemo } from 'react'
-
-// TODO intersection-observer polyfill
-// require('intersection-observer')
-
+import { useColorMode } from '@chakra-ui/react'
+// import { Faded } from 'baby-i-am-faded'
+// import { Faded, FadedProps } from 'baby-i-am-faded'
+import React, { ComponentType, ElementType, useMemo } from 'react'
+import 'intersection-observer'
 
 export function useFaded({
     animate = undefined,
     triggerOnce = true,
     ...rest
 }): { Faded: ElementType } {
-    const component = useMemo(() => {
-        const defaultProps: FadedProps = {
+    const component: ComponentType = useMemo(() => {
+        const defaultProps = {
             cascade: true,
             threshold: 0.1,
             duration: 400,
             triggerOnce,
-            children: []
+            children: [],
         }
-        return (props) => {
-            return <Faded {...defaultProps} {...props} />
-        }
+        return 'div' as any
+        // return (props) => {
+        //     return <Faded {...defaultProps} {...props} />
+        // }
     }, [animate, triggerOnce])
 
     return { Faded: animate ? component : 'div' }

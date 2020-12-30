@@ -1,5 +1,5 @@
 const compose = require('compose-function')
-const withTM = require('next-transpile-modules')(['landing-blocks'])
+const withTM = require('next-transpile-modules')(['landing-blocks', 'dokz'])
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: !!process.env.ANAL,
 })

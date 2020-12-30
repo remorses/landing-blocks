@@ -1,4 +1,4 @@
-import { Heading as H, HeadingProps } from '@chakra-ui/core'
+import { Heading as H, HeadingProps } from '@chakra-ui/react'
 import React, { Fragment } from 'react'
 
 export function Subheading(props: HeadingProps) {

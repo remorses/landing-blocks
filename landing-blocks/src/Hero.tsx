@@ -1,6 +1,6 @@
 // @jsx jsx
-import { jsx } from '@emotion/core'
-import { Box, Stack } from 'layout-kit-react'
+import { jsx } from '@emotion/react'
+import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'

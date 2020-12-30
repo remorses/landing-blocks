@@ -6,8 +6,8 @@ import {
     DrawerContent,
     DrawerOverlay,
     useDisclosure,
-} from '@chakra-ui/core'
-import { Box, Stack } from 'layout-kit-react'
+} from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 
 import { useMyColorMode } from './hooks'

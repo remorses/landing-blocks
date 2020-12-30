@@ -1,4 +1,4 @@
-import { Box, BoxProps, useColorMode } from '@chakra-ui/core'
+import { Box, BoxProps, useColorMode } from '@chakra-ui/react'
 import React, { Fragment } from 'react'
 import { useColor } from './support'
 

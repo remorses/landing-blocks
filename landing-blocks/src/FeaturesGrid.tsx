@@ -1,5 +1,5 @@
-import { SimpleGrid } from '@chakra-ui/core'
-import { Box, Stack } from 'layout-kit-react'
+import { SimpleGrid } from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'

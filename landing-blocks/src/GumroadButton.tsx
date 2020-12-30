@@ -1,4 +1,4 @@
-import { Link, useColorMode } from '@chakra-ui/core'
+import { Link, useColorMode } from '@chakra-ui/react'
 import React, { FC, forwardRef, ReactNode } from 'react'
 import useScript from 'react-script-hook'
 

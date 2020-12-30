@@ -1,7 +1,7 @@
-import { Image } from '@chakra-ui/core'
+import { Image } from '@chakra-ui/react'
 import { Button, Countdown, Divider, EmailForm, Feature, FeaturesList, Footer, Hero, LandingProvider, NavBar, TestimonialsLogos } from 'landing-blocks/src'
 import { MailchimpForm } from 'landing-blocks/src/EmailForm'
-import { Box, Stack } from 'layout-kit-react'
+import { Box, Stack } from '@chakra-ui/react'
 import React from 'react'
 
 const Page = () => (

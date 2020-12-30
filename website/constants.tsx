@@ -1,7 +1,7 @@
 import * as landingCards from './svgs/landingCards'
 import React from 'react'
 import { MyLink } from './pages/_app'
-import { GithubLink } from 'dokz'
+import { GithubLink } from 'dokz/src'
 
 export const GUMROAD_PRODUCT_ID = 'XJbw'
 

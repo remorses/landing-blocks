@@ -1,4 +1,4 @@
-import { Button, Image, Link, Text } from '@chakra-ui/core'
+import { Button, Image, Link, Text } from '@chakra-ui/react'
 import {
     Banner,
     Button as LandingButton,
@@ -14,7 +14,7 @@ import {
     GumroadButton,
     Footer,
 } from 'landing-blocks/src'
-import { Box, Stack } from 'layout-kit-react'
+import { Box, Stack } from '@chakra-ui/react'
 import NextLink from 'next/link'
 import React from 'react'
 import { FiGlobe, FiGrid, FiImage, FiLayers } from 'react-icons/fi'

@@ -1,5 +1,5 @@
 import styled from '@emotion/styled'
-import { Box, Stack } from 'layout-kit-react'
+import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { TwitterTweetEmbed } from 'react-twitter-embed'
 import { Heading } from './Heading'

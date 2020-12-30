@@ -1,4 +1,4 @@
-import { Box, BoxProps, Stack, StackProps } from 'layout-kit-react'
+import { Box, BoxProps, Stack, StackProps } from '@chakra-ui/react'
 import React from 'react'
 import { getPageContainerProps } from './support'
 

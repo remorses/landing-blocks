@@ -1,5 +1,5 @@
-import { Accordion, AccordionHeader, AccordionIcon, AccordionItem, AccordionPanel, Heading } from '@chakra-ui/core'
-import { Box, Stack } from 'layout-kit-react'
+import { Accordion, AccordionButton, AccordionIcon, AccordionItem, AccordionPanel, Heading } from '@chakra-ui/react'
+import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { useFaded } from './hooks'
 import { PageContainer, PageContainerProps } from './layout'
@@ -44,7 +44,7 @@ export function Faqs({
                             key={x.question.toString()}
                             minWidth='100%'
                         >
-                            <AccordionHeader minH='60px'>
+                            <AccordionButton minH='60px'>
                                 <Box
                                     fontSize='24px'
                                     fontWeight='medium'
@@ -53,8 +53,8 @@ export function Faqs({
                                 >
                                     {x.question}
                                 </Box>
-                                <AccordionIcon size='40px' />
-                            </AccordionHeader>
+                                <AccordionIcon boxSize='40px' />
+                            </AccordionButton>
                             <AccordionPanel
                                 py='20px'
                                 minH='100px'

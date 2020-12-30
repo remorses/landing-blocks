@@ -1,6 +1,6 @@
-import { useColorMode } from '@chakra-ui/core'
+import { useColorMode } from '@chakra-ui/react'
 import Color from 'color-js'
-import { Box, Stack } from 'layout-kit-react'
+import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { PageContainer, PageContainerProps } from './layout'
 

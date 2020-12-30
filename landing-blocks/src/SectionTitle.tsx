@@ -1,4 +1,4 @@
-import { Stack } from 'layout-kit-react'
+import { Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'

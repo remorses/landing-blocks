@@ -1,12 +1,12 @@
 import {
     CSSReset,
     DarkMode,
-    ITheme,
+    Theme as ITheme,
     theme as chakraTheme,
     useColorMode,
-} from '@chakra-ui/core'
-import { css, Global } from '@emotion/core'
-import { FlexProps, Stack } from 'layout-kit-react'
+} from '@chakra-ui/react'
+import { css, Global } from '@emotion/react'
+import { StackProps, Stack } from '@chakra-ui/react'
 import merge from 'lodash/fp/merge'
 import React, { Fragment, useMemo } from 'react'
 import { PropagatedThemeProvider } from './layout'
@@ -47,7 +47,7 @@ export type LandingProviderProps = {
     spacing?: any
     theme?: DeepPartial<ThemeExtension>
     children?: any
-} & FlexProps
+} & StackProps
 
 /*
 should customize 
@@ -81,35 +81,33 @@ export function LandingProvider({
     const theme = useMemo(
         () =>
             merge(
-                chakraTheme,
-                merge(
-                    {
-                        colors: {
-                            primary,
-                            secondary,
-                            black,
-                            white,
-                        },
-                        sizes: {
-                            pageContainer: pageWidth,
-                        },
-                        space: {
-                            pagePadding,
-                        },
-                        fonts: {
-                            body: fontFamily,
-                            heading: fontFamily,
-                        },
-                        fontSizes: {
-                            text: '18px',
-                            heading: '42px',
-                            subheading: '24px',
-                            subtext: '15px',
-                        },
+                {
+                    colors: {
+                        primary,
+                        secondary,
+                        black,
+                        white,
                     },
-                    themeProp,
-                ),
+                    sizes: {
+                        pageContainer: pageWidth,
+                    },
+                    space: {
+                        pagePadding,
+                    },
+                    fonts: {
+                        body: fontFamily,
+                        heading: fontFamily,
+                    },
+                    fontSizes: {
+                        text: '18px',
+                        heading: '42px',
+                        subheading: '24px',
+                        subtext: '15px',
+                    },
+                },
+                themeProp || {},
             ),
+
         [pageWidth, primary, secondary, black, white, fontFamily, themeProp],
     )
     return (
@@ -117,7 +115,7 @@ export function LandingProvider({
             <Global styles={globalStyles} />
             <Mode>
                 {/* TODO propagate the color mode context from above, setting it to dark if dark=true */}
-                <CSSReset />
+                {/* <CSSReset /> */}
                 <Stack
                     // overflowX='hidden'
                     width='100%'

@@ -1,6 +1,6 @@
-import { DarkMode, Divider } from '@chakra-ui/core'
+import { DarkMode, Divider } from '@chakra-ui/react'
 import Color from 'color-js'
-import { Box, Stack, StackProps } from 'layout-kit-react'
+import { Box, Stack, StackProps } from '@chakra-ui/react'
 import React, { Fragment, ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useMyColorMode } from './hooks'

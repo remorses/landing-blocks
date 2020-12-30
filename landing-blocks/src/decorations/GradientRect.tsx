@@ -1,4 +1,4 @@
-import { Box, BoxProps } from '@chakra-ui/core'
+import { Box, BoxProps } from '@chakra-ui/react'
 import Color from 'color-js'
 import React, { FC } from 'react'
 import { useColor } from '../support'

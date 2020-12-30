@@ -1,5 +1,5 @@
-import { Input, useColorMode } from '@chakra-ui/core'
-import { Box, Stack, StackProps } from 'layout-kit-react'
+import { Input, useColorMode } from '@chakra-ui/react'
+import { Box, Stack, StackProps } from '@chakra-ui/react'
 import React, { ReactNode, useState } from 'react'
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { Button } from './Button'

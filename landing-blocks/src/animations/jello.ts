@@ -1,5 +1,5 @@
 
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 import { Animation, Keyframe } from './types';
 import { skewXY } from './utils';
 

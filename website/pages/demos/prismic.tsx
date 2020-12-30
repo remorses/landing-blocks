@@ -1,4 +1,4 @@
-import { Box, Link } from '@chakra-ui/core'
+import { Box, Link } from '@chakra-ui/react'
 import { Banner, Button, EmailForm, Feature, FeaturesList, Footer, Hero, HowItWorks, LandingProvider, NavBar, PatternBackground, Pricing } from 'landing-blocks/src'
 import React from 'react'
 import { FiCheck } from 'react-icons/fi'

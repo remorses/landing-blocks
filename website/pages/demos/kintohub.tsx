@@ -1,6 +1,6 @@
-import { Image } from '@chakra-ui/core'
+import { Image } from '@chakra-ui/react'
 import { Button, Feature, Footer, Hero, HowItWorks, LandingProvider, NavBar } from 'landing-blocks/src'
-import { Box, Stack } from 'layout-kit-react'
+import { Box, Stack } from '@chakra-ui/react'
 import React from 'react'
 
 const Page = () => (

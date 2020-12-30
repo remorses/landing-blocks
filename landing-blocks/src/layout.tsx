@@ -1,18 +1,20 @@
-import { DarkMode, useTheme } from '@chakra-ui/core'
-import { ThemeProvider } from 'emotion-theming'
-import { Box, Flex, FlexProps, Stack, StackProps } from 'layout-kit-react'
+import { DarkMode } from '@chakra-ui/react'
+import { ThemeProvider, useTheme } from '@emotion/react'
+import { Box, Flex, StackProps, Stack } from '@chakra-ui/react'
 import merge from 'lodash/fp/merge'
 import React, { FC, forwardRef, Fragment, useMemo } from 'react'
 
-export const Col: FC<FlexProps> = forwardRef((props, ref) => {
-    return <Flex align='stretch' ref={ref} direction='column' {...props} />
+export const Col: any = forwardRef((props, ref) => {
+    return (
+        <Flex align='stretch' ref={ref as any} direction='column' {...props} />
+    )
 })
 
-export { Stack, Box } from 'layout-kit-react'
-export { Image } from '@chakra-ui/core'
+export { Stack, Box } from '@chakra-ui/react'
+export { Image } from '@chakra-ui/react'
 
-export const Row: FC<FlexProps> = forwardRef((props, ref) => {
-    return <Flex align='stretch' ref={ref} direction='row' {...props} />
+export const Row: any = forwardRef((props, ref) => {
+    return <Flex align='stretch' ref={ref as any} direction='row' {...props} />
 })
 
 export const Spacer = ({ x = '0px', y = '0px' }) => {
@@ -39,7 +41,11 @@ export const darkStyles = {
 // }
 
 export function PropagatedThemeProvider({ theme, children }) {
-    const existingTheme = useTheme()
+    let existingTheme = {}
+    try {
+        existingTheme = useTheme()
+    } catch {}
+
     // console.log({ existingTheme: existingTheme.sizes })
     const merged = useMemo(() => {
         return merge(existingTheme || {}, theme)
@@ -84,7 +90,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
         return (
             <Col
                 position='relative'
-                ref={ref}
+                ref={ref as any}
                 width='100%'
                 px='pagePadding'
                 align='center'
@@ -124,10 +130,10 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
     },
 )
 
-export const FloatingElement: FC<{ floatingElement } & FlexProps> = forwardRef(
+export const FloatingElement: FC<{ floatingElement } & StackProps> = forwardRef(
     ({ children, floatingElement, ...rest }, ref) => {
         return (
-            <Col position='relative' {...rest} ref={ref}>
+            <Col position='relative' {...rest} ref={ref as any}>
                 <Col
                     position='absolute'
                     width='100%'

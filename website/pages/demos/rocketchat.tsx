@@ -1,4 +1,4 @@
-import { Image } from '@chakra-ui/core'
+import { Image } from '@chakra-ui/react'
 import { Button, Divider, Feature, Footer, Hero, LandingProvider, NavBar, TestimonialsLogos } from 'landing-blocks/src'
 import { MailchimpForm } from 'landing-blocks/src/EmailForm'
 import React from 'react'

@@ -1,4 +1,4 @@
-import { Box, Stack, StackProps } from 'layout-kit-react'
+import { Box, Stack, StackProps } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { Heading } from './Heading'
 import { useFaded } from './hooks'

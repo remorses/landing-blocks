@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { Button as B, ButtonProps as ButtonProps_ } from '@chakra-ui/core'
-import { css, jsx } from '@emotion/core'
+import { Button as B, ButtonProps as ButtonProps_ } from '@chakra-ui/react'
+import { css, jsx } from '@emotion/react'
 import Color from 'color-js'
 import { FC, forwardRef, Fragment, useMemo } from 'react'
 import bounceIn from './animations/bouncein'
@@ -11,10 +11,10 @@ import { useColor } from './support'
 
 export type ButtonProps = ButtonProps_ & {
     href?: string
-    animate?: boolean | keyof typeof animations
+    animate?: boolean | keyof typeof myAnimations
 }
 
-const animations = {
+const myAnimations: any = {
     wobble,
     bounceIn,
     headShake,
@@ -37,8 +37,8 @@ export const Button: FC<ButtonProps> = forwardRef(
             if (animate === true) {
                 return makeAnimationCss(bounceIn)
             }
-            if (animate && animate in animations) {
-                return makeAnimationCss(animations[animate as string])
+            if (animate && animate in myAnimations) {
+                return makeAnimationCss(myAnimations[animate as string])
             }
             return css``
         }, [animate])
@@ -46,7 +46,7 @@ export const Button: FC<ButtonProps> = forwardRef(
         return (
             <B
                 css={animationCss}
-                ref={ref}
+                ref={ref as any}
                 as={props.href ? 'a' : 'button'}
                 transition='all 0.1s ease-in-out'
                 px='20px'
