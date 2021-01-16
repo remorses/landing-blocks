@@ -1,5 +1,5 @@
 import { useColorMode } from '@chakra-ui/react'
-// import { Faded } from 'baby-i-am-faded'
+import { Faded } from 'baby-i-am-faded'
 // import { Faded, FadedProps } from 'baby-i-am-faded'
 import React, { ComponentType, ElementType, useMemo } from 'react'
 import 'intersection-observer'
@@ -17,10 +17,9 @@ export function useFaded({
             triggerOnce,
             children: [],
         }
-        return 'div' as any
-        // return (props) => {
-        //     return <Faded {...defaultProps} {...props} />
-        // }
+        return (props) => {
+            return <Faded {...defaultProps} {...props} />
+        }
     }, [animate, triggerOnce])
 
     return { Faded: animate ? component : 'div' }
