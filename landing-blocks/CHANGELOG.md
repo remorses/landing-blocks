@@ -1,5 +1,11 @@
 # landing-blocks
 
+## 2.1.0
+
+### Minor Changes
+
+- 730b3f2: Re enabled animations, fix ts error
+
 ## 2.0.2
 
 ### Patch Changes
