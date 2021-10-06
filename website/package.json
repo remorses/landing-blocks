@@ -17,17 +17,17 @@
         "timeout": 9999999999
     },
     "dependencies": {
-        "@chakra-ui/react": "*",
+        "@chakra-ui/react": "^1.6.9",
         "@emotion/react": "11",
         "@emotion/styled": "11",
         "@next/bundle-analyzer": "^9.4.4",
         "baby-i-am-faded": "^2.0.1",
-        "dokz": "^1.0.34",
+        "dokz": "^2.0.9",
         "landing-blocks": "*",
-        "next": "^10.0.4",
-        "next-transpile-modules": "^6.0.0",
-        "react": "^16.13.1",
-        "react-dom": "^16.13.1",
+        "next": "^11.1.2",
+        "next-transpile-modules": "^8.0.0",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
         "react-highlight": "^0.12.0",
         "react-icons": "^3.9.0",
         "react-iframe": "^1.8.0"
