@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 /** @jsx jsx */
 import { Button as B, ButtonProps as ButtonProps_ } from '@chakra-ui/react'
 import { css, jsx } from '@emotion/react'

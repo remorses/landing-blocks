@@ -1,3 +1,4 @@
+/** @jsxRuntime classic */
 // @jsx jsx
 import { jsx } from '@emotion/react'
 import { Box, Stack } from '@chakra-ui/react'
