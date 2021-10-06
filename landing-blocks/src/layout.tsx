@@ -1,5 +1,5 @@
 import { DarkMode } from '@chakra-ui/react'
-import { ThemeProvider, useTheme } from '@emotion/react'
+import { ThemeProvider, useTheme } from '@chakra-ui/react'
 import { Box, Flex, StackProps, Stack } from '@chakra-ui/react'
 import merge from 'lodash/fp/merge'
 import React, { FC, forwardRef, Fragment, useMemo } from 'react'
