@@ -43,6 +43,8 @@
         "typescript": "^3.8.3"
     },
     "peerDependencies": {
+        "react": "*",
+        "react-dom": "*",
         "@chakra-ui/react": "*",
         "framer-motion": "*",
         "@emotion/react": "*",
