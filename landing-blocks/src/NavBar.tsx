@@ -16,9 +16,15 @@ import { darkStyles, PageContainer, PageContainerProps, Row } from './layout'
 export type NavBarProps = {
     logo: ReactNode
     navs?: ReactNode | ReactNode[]
+    navSpacing?: any
 } & PageContainerProps
 
-export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
+export const NavBar = ({
+    logo,
+    navSpacing = '26px',
+    navs = [],
+    ...rest
+}: NavBarProps) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const { colorMode } = useMyColorMode(rest)
     return (
@@ -34,7 +40,11 @@ export const NavBar = ({ logo, navs = [], ...rest }: NavBarProps) => {
                     display={['none', 'none', 'flex']}
                 >
                     {Array.isArray(navs) ? (
-                        <Stack align='center' direction='row' spacing='20px'>
+                        <Stack
+                            align='center'
+                            direction='row'
+                            spacing={navSpacing}
+                        >
                             {navs.map((x, i) => (
                                 <Stack
                                     key={i}
