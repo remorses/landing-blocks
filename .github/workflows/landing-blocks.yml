@@ -17,6 +17,7 @@ jobs:
         with:
           node-version: 13
           registry-url: https://registry.npmjs.org/
+      - run: pnm i pnpm
       - run: cd landing-blocks && pnpm i
       # - run: yarn test
       - run: cd landing-blocks && yarn build
