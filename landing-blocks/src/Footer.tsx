@@ -52,7 +52,7 @@ export function Footer({
             <Box
                 width='auto'
                 opacity={0.6}
-                fontSize='12px'
+                fontSize='sm'
                 alignSelf='center'
             >
                 Copyright © {new Date().getFullYear()} {businessName}
