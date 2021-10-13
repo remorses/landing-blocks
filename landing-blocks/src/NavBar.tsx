@@ -62,8 +62,10 @@ export const NavBar = ({
                     )}
                 </Stack>
                 <Button
-                    display={['block', 'block', 'none']}
+                    display={['flex', 'flex', 'none']}
                     variant='link'
+                    justifyContent='center'
+                    alignItems='center'
                     onClick={onOpen}
                 >
                     <Box
