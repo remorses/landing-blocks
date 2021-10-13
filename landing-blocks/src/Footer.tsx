@@ -34,7 +34,6 @@ export function Footer({
                         >
                             <Box
                                 d='block'
-                                fontSize='text'
                                 fontWeight='medium'
                                 width='auto'
                                 textAlign='left'
