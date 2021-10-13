@@ -71,7 +71,7 @@ export const NavBar = ({
                     <Box
                         stroke={{ light: 'black', dark: 'white' }[colorMode]}
                         as={Menu}
-                        size='36px'
+                        boxSize='36px'
                     />
                 </Button>
             </Row>
