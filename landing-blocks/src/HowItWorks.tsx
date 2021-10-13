@@ -29,7 +29,7 @@ export function HowItWorks({
 }: HowItWorksProps) {
     const { Faded } = useFaded({ animate })
     return (
-        <PageContainer spacing='40px' py='120px' {...rest}>
+        <PageContainer spacing='40px' py='60px' {...rest}>
             <Stack
                 as={Faded}
                 spacing='40px'
