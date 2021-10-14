@@ -3,6 +3,7 @@ import Color from 'color-js'
 import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { PageContainer, PageContainerProps } from './layout'
+import { useFaded } from './hooks'
 
 export type DividerProps = {
     heading?: ReactNode
@@ -10,8 +11,9 @@ export type DividerProps = {
 } & PageContainerProps
 
 export const Divider = ({ heading = '', ...rest }: DividerProps) => {
+    const { Faded } = useFaded({ animate })
     return (
-        <PageContainer {...rest}>
+        <PageContainer as={Faded} {...rest}>
             {heading ? (
                 <Stack
                     justify='center'
