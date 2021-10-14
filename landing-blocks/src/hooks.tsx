@@ -23,6 +23,7 @@ export function useFaded({
             whenInView: true,
             triggerOnce,
             children: [],
+            ...(typeof animate === 'object' ? animate : {}),
         }
         return (props) => {
             return <Faded {...defaultProps} {...props} />
