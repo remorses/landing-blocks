@@ -28,7 +28,7 @@ export function useFaded({
         return (props) => {
             return <Faded {...defaultProps} {...props} />
         }
-    }, [animate, triggerOnce])
+    }, [])
 
     return { Faded: animate ? component : 'div' }
 }
