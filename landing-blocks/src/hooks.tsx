@@ -18,7 +18,7 @@ export function useFaded({
             cascade: true,
             animationName:
                 typeof animate === 'string' ? animate : 'landingBlocksFadeDown',
-            threshold: 0.1,
+            threshold: 0.2,
             duration: 400,
             whenInView: true,
             triggerOnce,
