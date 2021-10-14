@@ -22,7 +22,7 @@ importers:
       '@types/node': ^12.0.7
       '@types/react': ^16.9.31
       '@types/react-mailchimp-subscribe': ^2.0.2
-      baby-i-am-faded: ^2.0.1
+      baby-i-am-faded: ^3.0.3
       color-js: ^1.0.5
       dotenv: ^8.2.0
       intersection-observer: ^0.7.0
@@ -42,7 +42,7 @@ importers:
       utility-types: ^3.10.0
     dependencies:
       '@emotion/styled': 11.3.0_46bfc1ba0451bdd80e82acd8d1841d8b
-      baby-i-am-faded: 2.0.1_46bfc1ba0451bdd80e82acd8d1841d8b
+      baby-i-am-faded: 3.0.3_react@17.0.2
       color-js: 1.0.5
       intersection-observer: 0.7.0
       lodash.get: 4.4.2
@@ -79,7 +79,7 @@ importers:
       '@next/bundle-analyzer': ^9.4.4
       '@types/node': ^13.13.0
       async-sema: ^3.1.0
-      baby-i-am-faded: ^2.0.1
+      baby-i-am-faded: ^3.0.3
       capture-website: ^0.8.1
       compose-function: ^3.0.3
       dokz: ^2.0.9
@@ -100,7 +100,7 @@ importers:
       '@emotion/react': 11.4.1_react@17.0.2
       '@emotion/styled': 11.3.0_a004d704e6197b43c0d970f424150c43
       '@next/bundle-analyzer': 9.5.5
-      baby-i-am-faded: 2.0.1_a004d704e6197b43c0d970f424150c43
+      baby-i-am-faded: 3.0.3_react@17.0.2
       dokz: 2.0.9_f310c2984af2535086906403ad3454bd
       landing-blocks: link:../landing-blocks
       next: 11.1.2_a3e970960e8a13b8e22ad7b14787bf42
@@ -2384,22 +2384,6 @@ packages:
       resolve: 1.20.0
     dev: false
 
-  /baby-i-am-faded/2.0.1_46bfc1ba0451bdd80e82acd8d1841d8b:
-    resolution: {integrity: sha512-uytbjqUKImMDt/ketY89UlR17HuRBWZvx0rAAOHR5MWVifALRoVS53J0NBEbCx/qO+GPnlMpmAMBpdhB7fz25A==}
-    peerDependencies:
-      '@emotion/react': '*'
-    dependencies:
-      '@emotion/react': 11.4.1_5cb31bf2e03a37cf52d82a30fbce8bb6
-      '@emotion/serialize': 1.0.2
-      '@emotion/styled': 11.3.0_46bfc1ba0451bdd80e82acd8d1841d8b
-      react-intersection-observer: 8.32.1_react@17.0.2
-      react-is: 16.13.1
-    transitivePeerDependencies:
-      - '@babel/core'
-      - '@types/react'
-      - react
-    dev: false
-
   /baby-i-am-faded/2.0.1_a004d704e6197b43c0d970f424150c43:
     resolution: {integrity: sha512-uytbjqUKImMDt/ketY89UlR17HuRBWZvx0rAAOHR5MWVifALRoVS53J0NBEbCx/qO+GPnlMpmAMBpdhB7fz25A==}
     peerDependencies:
@@ -2413,6 +2397,15 @@ packages:
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
+      - react
+    dev: false
+
+  /baby-i-am-faded/3.0.3_react@17.0.2:
+    resolution: {integrity: sha512-QRJ6WvEnTW5V6IYj89Z/wlk+bF6fQKO2XGYT+JI4TT7zAYPgI9vagLpuxUevMPoAy+qGDRGwoab/GY+L+e7ixw==}
+    dependencies:
+      react-intersection-observer: 8.32.1_react@17.0.2
+      react-is: 16.13.1
+    transitivePeerDependencies:
       - react
     dev: false
 

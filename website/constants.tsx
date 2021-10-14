@@ -1,7 +1,6 @@
 import * as landingCards from './svgs/landingCards'
 import React from 'react'
 import { MyLink } from './pages/_app'
-import { GithubLink } from 'dokz/src'
 
 export const GUMROAD_PRODUCT_ID = 'XJbw'
 
@@ -12,7 +11,6 @@ export const headingNavLinks = [
     <MyLink href='/docs'>Docs</MyLink>,
     <MyLink href='/#demos'>Demos</MyLink>,
     <MyLink href='/#newsletter'>Newsletter</MyLink>,
-    <GithubLink url='https://github.com/remorses/landing-blocks' />,
 ]
 
 const BASE_PATH = '/docs/components/'

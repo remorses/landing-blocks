@@ -1,5 +1,4 @@
 import { ChakraProvider, useColorMode } from '@chakra-ui/react'
-import { DokzProvider, GithubLink, ColorModeSwitch } from 'dokz/src'
 import { Footer } from 'landing-blocks/src/Footer'
 import { useMyColorMode } from 'landing-blocks/src/hooks'
 import { Box, Stack } from '@chakra-ui/react'
@@ -13,44 +12,7 @@ import { headingNavLinks } from '../constants'
 export default function App(props) {
     const { Component, pageProps } = props
     const { pathname } = useRouter()
-    if (pathname.startsWith('/docs')) {
-        return (
-            <ChakraProvider resetCSS>
-                <DokzProvider
-                    docsRootPath='pages/docs'
-                    headerItems={[
-                        ...headingNavLinks,
-                        // <ColorModeSwitch />,
-                        // <ColorModeSwitch key='1' />,
-                    ]}
-                    headerLogo={<HeadingLogoIcon width='36px' opacity={0.8} />}
-                    mdxComponents={{
-                        img: (p) => <img {...p} />,
-                        a: (p) => <p {...p} />,
-                    }}
-                    sidebarOrdering={{
-                        // sidebar ordering
-                        demos: false,
-                        docs: {
-                            index: true,
-                            components: {
-                                hero: true,
-                                feature: true,
-                                featuresList: true,
-                                howItWorks: true,
-                                footer: true,
-                                banner: true,
-                                testimonialsLogos: true,
-                                testimonialsTweets: true,
-                            },
-                        },
-                    }}
-                >
-                    <Component {...pageProps} />
-                </DokzProvider>
-            </ChakraProvider>
-        )
-    }
+    
     return (
         <ChakraProvider resetCSS>
             <Component {...pageProps} />

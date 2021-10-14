@@ -1,8 +1,12 @@
 import { useColorMode } from '@chakra-ui/react'
-import { Faded } from 'baby-i-am-faded'
+import { Faded, FadedProps } from 'baby-i-am-faded'
 // import { Faded, FadedProps } from 'baby-i-am-faded'
-import React, { ComponentType, ElementType, useMemo } from 'react'
-import 'intersection-observer'
+import React, {
+    ComponentType,
+    ElementType,
+    PropsWithoutRef,
+    useMemo,
+} from 'react'
 
 export function useFaded({
     animate = undefined,
@@ -10,10 +14,13 @@ export function useFaded({
     ...rest
 }): { Faded: ElementType } {
     const component: ComponentType = useMemo(() => {
-        const defaultProps = {
+        const defaultProps: FadedProps = {
             cascade: true,
+            animationName:
+                typeof animate === 'string' ? animate : 'landingBlocksFadeDown',
             threshold: 0.1,
             duration: 400,
+            whenInView: true,
             triggerOnce,
             children: [],
         }

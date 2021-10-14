@@ -3,9 +3,9 @@ const withTM = require('next-transpile-modules')(['landing-blocks', 'dokz'])
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
     enabled: !!process.env.ANAL,
 })
-const { withDokz } = require('dokz/dist/plugin')
 
-const composed = compose(withBundleAnalyzer, withTM, withDokz)
+
+const composed = compose(withBundleAnalyzer, withTM, )
 
 module.exports = composed({
     pageExtensions: ['js', 'jsx', 'mdx', 'tsx'],
