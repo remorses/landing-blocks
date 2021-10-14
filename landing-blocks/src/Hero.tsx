@@ -53,6 +53,7 @@ export function Hero({
                     textAlign={['center', 'center', image ? 'left' : 'center']}
                 >
                     <Col
+                        as={Faded}
                         align={[
                             'center',
                             null,
