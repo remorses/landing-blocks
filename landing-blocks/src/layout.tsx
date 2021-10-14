@@ -70,6 +70,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
             dark = false,
             primary = undefined,
             pageWidth = undefined,
+            as = 'div',
             ...props
         },
         ref,
@@ -113,6 +114,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
                             {floatingElement}
                         </Col>
                         <Stack
+                            as={as}
                             zIndex={1}
                             align='stretch'
                             // px={['0px', '0px', '20px']}
