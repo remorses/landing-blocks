@@ -2,6 +2,7 @@ import { Box, Stack } from '@chakra-ui/react'
 import React, { ReactNode } from 'react'
 import { Bullet } from './Bullet'
 import { Heading } from './Heading'
+import { useFaded } from './hooks'
 import { Col, PageContainer, PageContainerProps } from './layout'
 import { Subheading } from './Subheading'
 import { getPageContainerProps } from './support'
@@ -30,9 +31,11 @@ export function Banner({
 }: BannerProps) {
     const [spacing, rest] = getPageContainerProps(props)
     const direction = flip ? 'row-reverse' : 'row'
+    const { Faded } = useFaded({ animate })
     return (
         <PageContainer {...spacing}>
             <Stack
+                as={Faded}
                 align='center'
                 spacing='40px'
                 bg='gray.100'
