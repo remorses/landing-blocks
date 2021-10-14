@@ -10,7 +10,7 @@ export type DividerProps = {
     animate?: any
 } & PageContainerProps
 
-export const Divider = ({ heading = '', ...rest }: DividerProps) => {
+export const Divider = ({ heading = '', animate, ...rest }: DividerProps) => {
     const { Faded } = useFaded({ animate })
     return (
         <PageContainer as={Faded} {...rest}>
