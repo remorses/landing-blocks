@@ -160,10 +160,7 @@ const globalStyles = css`
             transform: translate3d(0px, -1em, 0px);
         }
         to {
-            opacity: 1;
             transform: none;
         }
     }
-
-
 `
