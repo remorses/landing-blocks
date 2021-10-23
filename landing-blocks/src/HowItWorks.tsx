@@ -81,8 +81,8 @@ const Step = ({
             {...rest}
         >
             <Stack as={Faded} minW='300px' maxW='500px' flex='1' spacing='40px'>
-                <Stack direction='row' align='flex-end' opacity={0.3}>
-                    <Box opacity={0.5} lineHeight='60px' fontSize='80px'>
+                <Stack direction='row' align='flex-end' opacity={0.4}>
+                    <Box opacity={0.7} lineHeight='60px' fontSize='80px'>
                         {number}
                     </Box>
                     <Heading
