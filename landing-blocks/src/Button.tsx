@@ -26,11 +26,9 @@ export const Button: FC<ButtonProps> = forwardRef(
     ({ bg = 'primary', animate, ...props }: ButtonProps, ref) => {
         const realBg = useColor(bg)
         const lightness = Color(realBg as any).getLightness()
-        // console.log({ lightness })
+        
         const isDark = lightness < 0.7
         const color = isDark ? 'white' : 'black'
-        // console.log('bg', bg)
-        // console.log('color', color)
         if (!props.children) {
             return <Fragment />
         }
@@ -44,12 +42,16 @@ export const Button: FC<ButtonProps> = forwardRef(
             return css``
         }, [animate])
 
+        const style = useMemo(() => {
+            return makeStyle(realBg)
+        }, [realBg])
+
         return (
             <B
-                css={animationCss}
+                css={[style, animationCss]}
                 ref={ref as any}
                 as={props.href ? 'a' : 'button'}
-                transition='all 0.1s ease-in-out'
+                // transition='all 0.1s ease-in-out'
                 px='20px'
                 d='block'
                 width='auto'
@@ -57,12 +59,50 @@ export const Button: FC<ButtonProps> = forwardRef(
                 bg={bg}
                 fontSize='text'
                 fontWeight='medium'
-                _hover={{ shadow: 'xl', transform: 'scale(1.1)' }}
+                // _hover={{ shadow: 'xl', transform: 'scale(1.1)' }}
                 {...props}
             />
         )
     },
 )
+
+const makeStyle = (bg) => {
+    const highlight = Color(bg).setAlpha(0.2).toHSL().toString()
+    return css`
+        & {
+            box-shadow: 0 0 0 0 ${highlight};
+            animation: landingBlocksPulseAnimation 1.75s infinite
+                cubic-bezier(0.66, 0, 0, 1);
+        }
+
+        @keyframes landingBlocksPulseAnimation {
+            to {
+                box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+            }
+        }
+
+        & {
+            transition: transform 0.15s;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+        }
+
+        &::after {
+            content: '';
+            background-color: ${bg};
+            transition: transform 0.15s;
+            border-radius: 7px;
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+        }
+
+        &:hover::after {
+            transform: scale(1.08);
+        }
+    `
+}
 
 function makeAnimationCss(keyframes) {
     return css`
