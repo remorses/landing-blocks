@@ -12,6 +12,7 @@ import { useColor } from './support'
 
 export type ButtonProps = ButtonProps_ & {
     href?: string
+    biggerOnHover?: boolean
     animate?: boolean | keyof typeof myAnimations
 }
 
@@ -23,10 +24,19 @@ const myAnimations: any = {
 }
 
 export const Button: FC<ButtonProps> = forwardRef(
-    ({ bg = 'primary', animate, ...props }: ButtonProps, ref) => {
+    (
+        {
+            bg = 'primary',
+            className = '',
+            biggerOnHover = false,
+            animate,
+            ...props
+        }: ButtonProps,
+        ref,
+    ) => {
         const realBg = useColor(bg)
         const lightness = Color(realBg as any).getLightness()
-        
+
         const isDark = lightness < 0.7
         const color = isDark ? 'white' : 'black'
         if (!props.children) {
@@ -48,11 +58,12 @@ export const Button: FC<ButtonProps> = forwardRef(
 
         return (
             <B
-                css={[style, animationCss]}
+                css={[biggerOnHover ? style : {}, animationCss]}
                 ref={ref as any}
                 as={props.href ? 'a' : 'button'}
                 // transition='all 0.1s ease-in-out'
                 px='20px'
+                className={className}
                 d='block'
                 width='auto'
                 color={color}
@@ -99,7 +110,7 @@ const makeStyle = (bg) => {
         }
 
         &:hover::after {
-            transform: scale(1.08);
+            transform: scale(1.06);
         }
     `
 }

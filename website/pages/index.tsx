@@ -34,7 +34,6 @@ const BG_IMG = 'linear-gradient(281deg, #a18aaf 0%, #5e629d 100%)'
 const Page = () => (
     <LandingProvider primary='white'>
         <Stack
-
             pb='100px'
             // mt='-100px'
             spacing='60px'
@@ -60,7 +59,7 @@ const Page = () => (
                 }
                 cta={
                     <NextLink href='#demos'>
-                        <LandingButton animate>See the demos</LandingButton>
+                        <LandingButton biggerOnHover>See the demos</LandingButton>
                     </NextLink>
                 }
                 fingerprint='Completely open source'
@@ -295,5 +294,3 @@ const DemosLinks = ({ ...rest }) => {
 }
 
 export default Page
-
-
