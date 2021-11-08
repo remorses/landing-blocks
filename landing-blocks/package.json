@@ -43,16 +43,16 @@
         "typescript": "^3.8.3"
     },
     "peerDependencies": {
-        "react": "*",
-        "react-dom": "*",
         "@chakra-ui/react": "*",
-        "framer-motion": "*",
         "@emotion/react": "*",
-        "@emotion/styled": "*"
+        "@emotion/styled": "*",
+        "framer-motion": "*",
+        "react": "*",
+        "react-dom": "*"
     },
     "dependencies": {
         "@emotion/styled": "11",
-        "baby-i-am-faded": "^3.0.3",
+        "baby-i-am-faded": "^4.0.7",
         "color-js": "^1.0.5",
         "intersection-observer": "^0.7.0",
         "lodash.get": "^4.4.2",
