@@ -52,13 +52,13 @@ export const Button: FC<ButtonProps> = forwardRef(
             return css``
         }, [animate])
 
-        const style = useMemo(() => {
-            return makeStyle(realBg)
+        const biggerOnHoverStyle = useMemo(() => {
+            return makeBiggerOnHoverStyle(realBg)
         }, [realBg])
 
         return (
             <B
-                css={[biggerOnHover ? style : {}, animationCss]}
+                css={[biggerOnHover ? biggerOnHoverStyle : {}, animationCss]}
                 ref={ref as any}
                 as={props.href ? 'a' : 'button'}
                 // transition='all 0.1s ease-in-out'
@@ -77,7 +77,7 @@ export const Button: FC<ButtonProps> = forwardRef(
     },
 )
 
-const makeStyle = (bg) => {
+const makeBiggerOnHoverStyle = (bg) => {
     const highlight = Color(bg).setAlpha(0.2).toHSL().toString()
     return css`
         & {
