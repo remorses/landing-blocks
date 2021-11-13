@@ -119,7 +119,7 @@ export function LandingProvider({
                 <Stack
                     // overflowX='hidden'
                     width='100%'
-                    height='100%'
+                    minHeight='100%'
                     overflowX='hidden'
                     fontFamily={fontFamily}
                     spacing={spacing}
@@ -139,21 +139,11 @@ const globalStyles = css`
     * {
         box-sizing: border-box;
     }
-    html {
-        height: 100%;
-        width: 100%;
-        scroll-behavior: smooth;
-    }
     #__next {
         min-height: 100%;
         /* height: 100%; */
     }
-    body {
-        height: 100%;
-        width: 100%;
-        overflow: auto;
-        overflow-x: hidden;
-    }
+    
     @keyframes landingBlocksFadeDown {
         from {
             opacity: 0;
