@@ -52,7 +52,7 @@
     },
     "dependencies": {
         "@emotion/styled": "11",
-        "baby-i-am-faded": "^4.0.7",
+        "baby-i-am-faded": "^4.0.10",
         "color-js": "^1.0.5",
         "intersection-observer": "^0.7.0",
         "lodash.get": "^4.4.2",

@@ -22,7 +22,7 @@ importers:
       '@types/node': ^12.0.7
       '@types/react': ^16.9.31
       '@types/react-mailchimp-subscribe': ^2.0.2
-      baby-i-am-faded: ^4.0.7
+      baby-i-am-faded: ^4.0.10
       color-js: ^1.0.5
       dotenv: ^8.2.0
       intersection-observer: ^0.7.0
@@ -42,7 +42,7 @@ importers:
       utility-types: ^3.10.0
     dependencies:
       '@emotion/styled': 11.3.0_46bfc1ba0451bdd80e82acd8d1841d8b
-      baby-i-am-faded: 4.0.7_react@17.0.2
+      baby-i-am-faded: 4.0.10_react@17.0.2
       color-js: 1.0.5
       intersection-observer: 0.7.0
       lodash.get: 4.4.2
@@ -79,7 +79,7 @@ importers:
       '@next/bundle-analyzer': ^9.4.4
       '@types/node': ^13.13.0
       async-sema: ^3.1.0
-      baby-i-am-faded: ^4.0.7
+      baby-i-am-faded: ^4.0.10
       capture-website: ^0.8.1
       compose-function: ^3.0.3
       dokz: ^2.0.9
@@ -100,7 +100,7 @@ importers:
       '@emotion/react': 11.4.1_react@17.0.2
       '@emotion/styled': 11.3.0_a004d704e6197b43c0d970f424150c43
       '@next/bundle-analyzer': 9.5.5
-      baby-i-am-faded: 4.0.7_react@17.0.2
+      baby-i-am-faded: 4.0.10_react@17.0.2
       dokz: 2.0.9_160e7a03dcef42d34f4dd141a2c3da5f
       landing-blocks: link:../landing-blocks
       next: 11.1.2_a3e970960e8a13b8e22ad7b14787bf42
@@ -2390,8 +2390,8 @@ packages:
       - react
     dev: false
 
-  /baby-i-am-faded/4.0.7_react@17.0.2:
-    resolution: {integrity: sha512-FFZK3FGiakmVXcGMvySqjyth7/N6VAIIZbOyCbL6tyaftJicQTBc/1k78VMDRQh7OJQQUaNdWvLlLZZl1LbPzg==}
+  /baby-i-am-faded/4.0.10_react@17.0.2:
+    resolution: {integrity: sha512-swk8IE5r8DXSOlUT+XeAov9HAGJXgCEXid7jVFpRzbf8unnCJYN0ISTIZ1iEqDxYM9hFoHdPc2yYxvVgrm3Fpg==}
     peerDependencies:
       react: '*'
     dependencies:
