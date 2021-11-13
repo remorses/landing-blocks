@@ -17,7 +17,7 @@ export function useFaded({
         const defaultProps: FadedProps = {
             cascade: true,
             animationName:
-                typeof animate === 'string' ? animate : 'landingBlocksFadeDown',
+                typeof animate === 'string' ? animate : undefined,
             threshold: 0.2,
             duration: 400,
             whenInView: true,
