@@ -115,7 +115,7 @@ export const PageContainer: FC<PageContainerProps> = forwardRef(
                         </Col>
                         <Stack
                             as={as}
-                            
+                            position={'relative'}
                             align='stretch'
                             // px={['0px', '0px', '20px']}
                             w='100%'
