@@ -14,13 +14,11 @@ export const Link = forwardRef<LinkProps, any>(
                 ref={ref}
                 w='fit-content'
                 position='relative'
-                lineHeight='1.4em'
                 textDecoration='none'
                 // color='primary'
                 fontWeight='medium'
                 borderBottom='2px solid'
                 borderColor='transparent'
-                py='0.2em'
                 isTruncated
                 transition='all 0.2s ease-in-out 0s'
                 _hover={{
