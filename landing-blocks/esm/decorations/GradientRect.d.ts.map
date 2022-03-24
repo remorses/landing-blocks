@@ -1,0 +1,1 @@
+{"version":3,"file":"GradientRect.d.ts","sourceRoot":"","sources":["../../src/decorations/GradientRect.tsx"],"names":[],"mappings":"AAAA,OAAO,EAAO,QAAQ,EAAE,MAAM,kBAAkB,CAAA;AAEhD,OAAc,EAAE,EAAE,EAAE,MAAM,OAAO,CAAA;AAuBjC,eAAO,MAAM,YAAY,EAAE,EAAE,CAAC;IAC1B,OAAO,CAAC,EAAE,MAAM,CAAA;IAChB,SAAS,CAAC,EAAE,MAAM,CAAA;IAClB,UAAU,CAAC,EAAE,MAAM,CAAA;CACtB,GAAG,QAAQ,CAoBX,CAAA"}

@@ -22,7 +22,7 @@ importers:
       '@types/node': ^17.0.23
       '@types/react': ^17.0.42
       '@types/react-mailchimp-subscribe': ^2.0.2
-      baby-i-am-faded: link:siilats/baby-i-am-faded/baby-i-am-faded
+      baby-i-am-faded: ^4.0.10
       color-js: ^1.0.5
       dotenv: ^16.0.0
       intersection-observer: ^0.12.0
@@ -33,7 +33,6 @@ importers:
       react: ^17.0.2
       react-dom: ^17.0.2
       react-mailchimp-subscribe: ^2.1.0
-      react-script-hook: ^1.6.0
       react-twitter-embed: ^4.0.4
       react-typical: ^0.1.3
       react-typist: ^2.0.5
@@ -49,7 +48,6 @@ importers:
       lodash.merge: 4.6.2
       prism-react-renderer: 1.3.1_react@17.0.2
       react-mailchimp-subscribe: 2.1.3_react@17.0.2
-      react-script-hook: 1.6.0_react-dom@17.0.2+react@17.0.2
       react-twitter-embed: 4.0.4_react-dom@17.0.2+react@17.0.2
       react-typical: 0.1.3_react-dom@17.0.2+react@17.0.2
       react-typist: 2.0.5_react-dom@17.0.2+react@17.0.2
@@ -5038,16 +5036,6 @@ packages:
       tslib: 1.14.1
       use-callback-ref: 1.2.5_react@17.0.2
       use-sidecar: 1.0.5_react@17.0.2
-    dev: false
-
-  /react-script-hook/1.6.0_react-dom@17.0.2+react@17.0.2:
-    resolution: {integrity: sha512-aJm72XGWV+wJTKiqHmAaTNC/JQZV/Drv6A1kd1VQlzhzAXLqtBRBeTt3iTESImGe5TaBDHUOUeaGNw4v+7bqDw==}
-    peerDependencies:
-      react: ^16.8.6 || ^17.0.0
-      react-dom: ^16.8.6 || ^17.0.0
-    dependencies:
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
     dev: false
 
   /react-simple-code-editor/0.11.0_react-dom@17.0.2+react@17.0.2:
