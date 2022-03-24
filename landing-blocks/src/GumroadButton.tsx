@@ -1,6 +1,5 @@
 import { Link, useColorMode } from '@chakra-ui/react'
 import React, { FC, forwardRef, ReactNode } from 'react'
-import useScript from 'react-script-hook'
 
 export type GumroadButtonProps = {
     singlePurchase?: boolean
@@ -18,14 +17,6 @@ export const GumroadButton: FC<GumroadButtonProps> = forwardRef(
         }: GumroadButtonProps,
         ref,
     ) => {
-        const [loading, error] = useScript({
-            src: 'https://gumroad.com/js/gumroad.js',
-            // checkForExisting: true
-        })
-        if (loading || error) {
-            return <Placeholder children={error?.message} />
-        }
-
         return (
             <Placeholder
                 ref={ref as any}
