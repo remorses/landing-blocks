@@ -11,7 +11,6 @@ import {
     PageContainer,
     Section,
     SectionTitle,
-    GumroadButton,
     Footer,
 } from 'landing-blocks/src'
 import { Box, Stack } from '@chakra-ui/react'
@@ -193,16 +192,7 @@ const Page = () => (
     </LandingProvider>
 )
 
-export const BuyDemosButton = ({ ...rest }) => {
-    // TODO add the right productId
-    return (
-        <Box w='auto' shadow='lg' {...rest}>
-            <GumroadButton productId={GUMROAD_PRODUCT_ID}>
-                Download the demos code
-            </GumroadButton>
-        </Box>
-    )
-}
+
 
 export const LandingCardsLinks = ({ ...rest }) => {
     return (

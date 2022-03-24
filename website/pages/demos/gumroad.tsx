@@ -1,5 +1,5 @@
 import { Box, Link } from '@chakra-ui/react'
-import { Feature, Footer, GumroadButton, Hero, LandingProvider, NavBar, Pricing, TestimonialsTweets } from 'landing-blocks/src'
+import { Feature, Footer, Hero, LandingProvider, NavBar, Pricing, TestimonialsTweets } from 'landing-blocks/src'
 import React from 'react'
 import { FiCheck } from 'react-icons/fi'
 
@@ -19,9 +19,7 @@ const Page = () => (
             heading='Create, your way'
             subheading='Part spreadsheet, part database, and entirely flexible, teams use Airtable to organize their work, their way.'
             image={<img width='500px' src='/airtable/hero.png' />}
-            cta={
-                <GumroadButton singlePurchase productId='demo'></GumroadButton>
-            }
+
             fingerprint='Already using Airtable? Sign in'
         />
         <Feature
