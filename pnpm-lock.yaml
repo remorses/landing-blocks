@@ -22,7 +22,7 @@ importers:
       '@types/node': ^17.0.23
       '@types/react': ^17.0.42
       '@types/react-mailchimp-subscribe': ^2.0.2
-      baby-i-am-faded: ^4.0.10
+      baby-i-am-faded: link:siilats/baby-i-am-faded/baby-i-am-faded
       color-js: ^1.0.5
       dotenv: ^16.0.0
       intersection-observer: ^0.12.0
