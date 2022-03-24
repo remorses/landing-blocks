@@ -135,7 +135,7 @@ const Page = () => (
                 </h2>
             }
             subheading='Completely customizable, reusable and pretty by default'
-            cta={<BuyDemosButton />}
+            cta={"test"}
         />
         <LandingCardsLinks alignSelf='center' py='40px' />
         <Section spacing='30px' bg={BG} backgroundImage={BG_IMG}>
@@ -151,7 +151,7 @@ const Page = () => (
                     </h2>
                 }
                 subheading='Awesome landing pages recreated with Landing Blocks to show its great customizability and extensibility'
-                cta={<BuyDemosButton />}
+                cta={"test"}
             />
             <DemosLinks alignSelf='center' py='40px' />
         </Section>
